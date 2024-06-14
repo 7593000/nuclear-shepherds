@@ -1,0 +1,1611 @@
+fileFormatVersion: 2
+guid: a8273aa7e63ee5e459e8fc3188a82126
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Objects-of-environment_6
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 704
+        width: 160
+        height: 128
+      alignment: 9
+      pivot: {x: 0.65219134, y: 0.34813833}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34f69dd79610e7f47ac55217e19b3ac9
+      internalID: 1344246467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_9
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 736
+        width: 128
+        height: 96
+      alignment: 9
+      pivot: {x: 0.31003237, y: 0.7544028}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28965612811767c4ca276a321020cd99
+      internalID: -644752449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_12
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 736
+        width: 97
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9f4827c108c27e41947c97e580658aa
+      internalID: -491603728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_15
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 672
+        width: 64
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5780897, y: 0.044477843}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b038bf8e583fdc419bdd1c2908a0653
+      internalID: 862362243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 256
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5141335, y: 0.5094223}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e6e7a7bc484d414f91aba13e4e27144
+      internalID: -1137310256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_70
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 640
+        width: 32
+        height: 96
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7779efe3fa634f4c938a22e5fc2a25d
+      internalID: 1003265628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_71
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 640
+        width: 32
+        height: 96
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 820575370c9b54a46856593a3b0644fb
+      internalID: 1809809765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_72
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 672
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.44793892, y: 0.044478416}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08b5f07327c83e347999d6fabd77b827
+      internalID: -157101982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_101
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 640
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.4869852, y: 0.0835228}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f399ef4620f28c542a3423b8bd26d399
+      internalID: -1279119608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_111
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 64
+        height: 160
+      alignment: 9
+      pivot: {x: 0.7017312, y: 0.07831669}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2847241a6a9dff848b4a75a2c6587906
+      internalID: -993673912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_113
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 480
+        width: 64
+        height: 160
+      alignment: 9
+      pivot: {x: 0.25271666, y: 0.24490777}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 933e1b13b427dd142bf783775e2571e6
+      internalID: -939207055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_118
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 480
+        width: 96
+        height: 160
+      alignment: 9
+      pivot: {x: 0.21801026, y: 0.10955258}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df7445cf91ad3294ea648828ed622077
+      internalID: 1160528328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_139
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 576
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.037970543}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a933357ca2f63834182630a3ca5bedda
+      internalID: 1938166633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_143
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 576
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.48698488, y: 0.10955238}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6aa33293022ade4aa44e693a261f745
+      internalID: 1094933681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_156
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 512
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.49572182, y: 0.089315414}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d826eccb100897c4186d5a50bce27e8e
+      internalID: -20759234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_159
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 416
+        width: 96
+        height: 160
+      alignment: 9
+      pivot: {x: 0.49999967, y: 0.18243618}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab6ec10f01dd27b488a4595d31857716
+      internalID: 426605785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_173
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 512
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.4914446, y: 0.13209534}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 766638d7266c07944a1ab64aa3b96624
+      internalID: -2055962089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_174
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 512
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.06792545}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b55c27259dfe1ab42a16db55be2fe9f1
+      internalID: 2048468311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_182
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 512
+        width: 160
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.17788076}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b55cf895bade87409a0510d901f26dd
+      internalID: -1690507058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_184
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 480
+        width: 96
+        height: 160
+      alignment: 9
+      pivot: {x: 0.72559196, y: 0.1512003}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f447db23bb6bcc14c905030853228e9f
+      internalID: 269647169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_187
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 480
+        width: 64
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.13209534}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb1f0470f276b004d88541c69c6fe4e1
+      internalID: -1446975184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_189
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 448
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12353897}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f837d5ea85aa2bc498e4ccd73a3028ed
+      internalID: -1339318147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_190
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 480
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.54277897, y: 0.14065075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d1c80a600dbda344ba7b985520e5a25
+      internalID: 1008312276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_194
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 384
+        width: 160
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5044586, y: 0.21572518}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17c3f3deae4506443ae97ea1c0c3899c
+      internalID: 1359474724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_200
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 352
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.49452293, y: 0.102903366}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbb74c8a65bbc3c4c9e945314d865de9
+      internalID: 1045401543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_202
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 416
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.48288822, y: 0.14492893}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd32261798441cb4ba8707008a666010
+      internalID: 521958861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_222
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 352
+        width: 160
+        height: 96
+      alignment: 9
+      pivot: {x: 0.49561843, y: 0.05086994}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e30039f643afed5468a376727fbcaa8b
+      internalID: -632759925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_244
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c8d86bd26922c940b58cbe663f5f0c6
+      internalID: -939421186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_245
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 352
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47984739524736a4da81c76b5e132d09
+      internalID: 1546219397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_247
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 384
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d672d593534fe1a42a32562f63039bf1
+      internalID: -245713952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_250
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 352
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.48904562, y: 0.15493655}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5b3249733a756c4eaf3e21cc54b9601
+      internalID: -445922464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_272
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 288
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.49269724, y: 0.20970869}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0160ee2f466fa5b4f874035e62ea4145
+      internalID: -27588855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_275
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 288
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.4858284, y: 0.0937438}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e00b12a6dc7ff846abc007afa1a2d0a
+      internalID: 879759383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_281
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5146059, y: 0.1275506}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5711f704df0afee4e926bac3ee25e9d5
+      internalID: -1191934860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_284
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 288
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.4926971, y: 0.13302803}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e22f80b231a87f43a50b81c82044079
+      internalID: -1382188095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_291
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 288
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56a9b7f0a3aa8ff46b6690dbe904c601
+      internalID: -330677301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_300
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.49055243, y: 0.018161774}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46d524d6debc25f419c0d261799220ac
+      internalID: -465537613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_315
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19850badd98972e48bf1a90eb47e0cef
+      internalID: -1660916781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_317
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 224
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.51889586, y: 0.065399885}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bc804f6a016f9f48b7f83fe5832d7a1
+      internalID: -2003990382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_318
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 224
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.23546124, y: 0.055952072}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6311cd55b9fda54c937bae2ac9c75d4
+      internalID: -1690558084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_319
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 224
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.48110437, y: 0.055952072}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eae1f29d3b0a3949bf0c3699583448e
+      internalID: -2082631707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_320
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 224
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 569245b7eb696b94286eaaaa508341aa
+      internalID: 61731288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_322
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 224
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c9651365c4cf994ca37c132d07571db
+      internalID: -1671576944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_335
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 224
+        width: 128
+        height: 160
+      alignment: 9
+      pivot: {x: 0.45540667, y: 0.04961977}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe8b883ae985cce42a1ed44fffde18cd
+      internalID: 1251286400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_339
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 160
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.32364082, y: 0.17404985}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad252fa6cd4ad7c4b980cb78e85e4b19
+      internalID: -1981102329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_342
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 160
+        width: 128
+        height: 64
+      alignment: 9
+      pivot: {x: 0.41496968, y: 0.17404985}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d580f7e8351e19340a8737b2011582e1
+      internalID: -1917200182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_343
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 192
+        width: 224
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1c56a97f5e9d92499a4f50e4f2fa1cc
+      internalID: -983036412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_351
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.34253645, y: 0.1362586}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc64a07a9b2183d48bc6ede926057c43
+      internalID: -1857908500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_369
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 127
+        width: 224
+        height: 96
+      alignment: 9
+      pivot: {x: 0.50318474, y: 0.22501548}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdd9987ae99702d41bf5f2546f005de3
+      internalID: -818580722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_377
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 224
+        height: 128
+      alignment: 9
+      pivot: {x: 0.49681458, y: 0.120967515}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86efde224249d274eb5f3becbc0f783a
+      internalID: -906007791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects-of-environment_407
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 160
+      alignment: 9
+      pivot: {x: 0.50557375, y: 0.080834195}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e3ed767e4e51e940a163ab52db4ca5a
+      internalID: -703705940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Objects-of-environment_0: -1738745067
+      Objects-of-environment_1: 1622238411
+      Objects-of-environment_10: -1264318945
+      Objects-of-environment_100: 1688554408
+      Objects-of-environment_101: -1279119608
+      Objects-of-environment_102: -605850564
+      Objects-of-environment_103: 240950725
+      Objects-of-environment_104: 2089639087
+      Objects-of-environment_105: 694207897
+      Objects-of-environment_106: 1207404077
+      Objects-of-environment_107: -1633257110
+      Objects-of-environment_108: -281231685
+      Objects-of-environment_109: -2046216075
+      Objects-of-environment_11: 1447727353
+      Objects-of-environment_110: -359629909
+      Objects-of-environment_111: -993673912
+      Objects-of-environment_112: -975227115
+      Objects-of-environment_113: -939207055
+      Objects-of-environment_114: 445815020
+      Objects-of-environment_115: 536287355
+      Objects-of-environment_116: -35386221
+      Objects-of-environment_117: -357150828
+      Objects-of-environment_118: 1160528328
+      Objects-of-environment_119: 902109102
+      Objects-of-environment_12: -491603728
+      Objects-of-environment_120: 1409773845
+      Objects-of-environment_121: 680222635
+      Objects-of-environment_122: 827864725
+      Objects-of-environment_123: 721838299
+      Objects-of-environment_124: 2072790164
+      Objects-of-environment_125: 172559093
+      Objects-of-environment_126: 1921162920
+      Objects-of-environment_127: 2047484192
+      Objects-of-environment_128: 1511856913
+      Objects-of-environment_129: 1044062712
+      Objects-of-environment_13: -1138134714
+      Objects-of-environment_130: 502687058
+      Objects-of-environment_131: -465181686
+      Objects-of-environment_132: -1264120942
+      Objects-of-environment_133: -1025915672
+      Objects-of-environment_134: 387537333
+      Objects-of-environment_135: 1281171801
+      Objects-of-environment_136: -1182130572
+      Objects-of-environment_137: 2137575724
+      Objects-of-environment_138: -797072077
+      Objects-of-environment_139: 1938166633
+      Objects-of-environment_14: -862942295
+      Objects-of-environment_140: 25201566
+      Objects-of-environment_141: 560653936
+      Objects-of-environment_142: -1347110536
+      Objects-of-environment_143: 1094933681
+      Objects-of-environment_144: -714099379
+      Objects-of-environment_145: 116488163
+      Objects-of-environment_146: -1569742586
+      Objects-of-environment_147: -486734396
+      Objects-of-environment_148: -1540811256
+      Objects-of-environment_149: 1872996181
+      Objects-of-environment_15: 862362243
+      Objects-of-environment_150: 802339152
+      Objects-of-environment_151: 2028030313
+      Objects-of-environment_152: 969166587
+      Objects-of-environment_153: 896849521
+      Objects-of-environment_154: -1480880536
+      Objects-of-environment_155: 791611002
+      Objects-of-environment_156: -20759234
+      Objects-of-environment_157: -1842527021
+      Objects-of-environment_158: 1490819710
+      Objects-of-environment_159: 426605785
+      Objects-of-environment_16: 2093247397
+      Objects-of-environment_160: -1978037282
+      Objects-of-environment_161: -1779882047
+      Objects-of-environment_162: 1322655386
+      Objects-of-environment_163: 991705045
+      Objects-of-environment_164: 1075584802
+      Objects-of-environment_165: -962292531
+      Objects-of-environment_166: -1548728036
+      Objects-of-environment_167: -1618395287
+      Objects-of-environment_168: -2000283120
+      Objects-of-environment_169: 1970799384
+      Objects-of-environment_17: -1137310256
+      Objects-of-environment_170: 973794395
+      Objects-of-environment_171: 1950061469
+      Objects-of-environment_172: -1732686194
+      Objects-of-environment_173: -2055962089
+      Objects-of-environment_174: 2048468311
+      Objects-of-environment_175: 1057289571
+      Objects-of-environment_176: -793390760
+      Objects-of-environment_177: -732470953
+      Objects-of-environment_178: 1947737959
+      Objects-of-environment_179: 1596838262
+      Objects-of-environment_18: 1778718712
+      Objects-of-environment_180: 358568729
+      Objects-of-environment_181: 2095495385
+      Objects-of-environment_182: -1690507058
+      Objects-of-environment_183: 919380996
+      Objects-of-environment_184: 269647169
+      Objects-of-environment_185: -529969923
+      Objects-of-environment_186: 1154555671
+      Objects-of-environment_187: -1446975184
+      Objects-of-environment_188: 1701373994
+      Objects-of-environment_189: -1339318147
+      Objects-of-environment_19: -310724059
+      Objects-of-environment_190: 1008312276
+      Objects-of-environment_191: 880014761
+      Objects-of-environment_192: 1119921286
+      Objects-of-environment_193: 671961264
+      Objects-of-environment_194: 1359474724
+      Objects-of-environment_195: -528281052
+      Objects-of-environment_196: -1792802114
+      Objects-of-environment_197: -461662831
+      Objects-of-environment_198: 2019181789
+      Objects-of-environment_199: -824637626
+      Objects-of-environment_2: 1891971529
+      Objects-of-environment_20: -1341012364
+      Objects-of-environment_200: 1045401543
+      Objects-of-environment_201: -1257188079
+      Objects-of-environment_202: 521958861
+      Objects-of-environment_203: 948016208
+      Objects-of-environment_204: 2047880116
+      Objects-of-environment_205: -211518602
+      Objects-of-environment_206: -1971002222
+      Objects-of-environment_207: 210884480
+      Objects-of-environment_208: 123235510
+      Objects-of-environment_209: -658388001
+      Objects-of-environment_21: 1543839678
+      Objects-of-environment_210: -846993223
+      Objects-of-environment_211: 49640397
+      Objects-of-environment_212: -1815572907
+      Objects-of-environment_213: -975918245
+      Objects-of-environment_214: 1553226487
+      Objects-of-environment_215: 1189654320
+      Objects-of-environment_216: 1453939
+      Objects-of-environment_217: -263915397
+      Objects-of-environment_218: -1959964309
+      Objects-of-environment_219: -114142430
+      Objects-of-environment_22: 1527952860
+      Objects-of-environment_220: -1403978206
+      Objects-of-environment_221: 1560673229
+      Objects-of-environment_222: -632759925
+      Objects-of-environment_223: 1394466878
+      Objects-of-environment_224: -1535406340
+      Objects-of-environment_225: -1808321415
+      Objects-of-environment_226: -580231344
+      Objects-of-environment_227: -1888449008
+      Objects-of-environment_228: 191110523
+      Objects-of-environment_229: -1116283378
+      Objects-of-environment_23: 130372948
+      Objects-of-environment_230: 33929006
+      Objects-of-environment_231: 273168565
+      Objects-of-environment_232: 839969745
+      Objects-of-environment_233: -1990560880
+      Objects-of-environment_234: 1943037119
+      Objects-of-environment_235: 444515244
+      Objects-of-environment_236: -1004374526
+      Objects-of-environment_237: -184732824
+      Objects-of-environment_238: -796888961
+      Objects-of-environment_239: 1732247564
+      Objects-of-environment_24: 1221513718
+      Objects-of-environment_240: -914628741
+      Objects-of-environment_241: -1893056228
+      Objects-of-environment_242: -281738128
+      Objects-of-environment_243: 1036329519
+      Objects-of-environment_244: -939421186
+      Objects-of-environment_245: 1546219397
+      Objects-of-environment_246: -331907535
+      Objects-of-environment_247: -245713952
+      Objects-of-environment_248: 1443063405
+      Objects-of-environment_249: 966361814
+      Objects-of-environment_25: -999328564
+      Objects-of-environment_250: -445922464
+      Objects-of-environment_251: -1346771140
+      Objects-of-environment_252: -1536359859
+      Objects-of-environment_253: -467184267
+      Objects-of-environment_254: 902779251
+      Objects-of-environment_255: -736502678
+      Objects-of-environment_256: -883585515
+      Objects-of-environment_257: -1726147526
+      Objects-of-environment_258: 987649293
+      Objects-of-environment_259: 1202056830
+      Objects-of-environment_26: -989947330
+      Objects-of-environment_260: -1507551327
+      Objects-of-environment_261: -1388488792
+      Objects-of-environment_262: -2024061054
+      Objects-of-environment_263: 1901623714
+      Objects-of-environment_264: 438851102
+      Objects-of-environment_265: -768101380
+      Objects-of-environment_266: -1661911894
+      Objects-of-environment_267: 1377548076
+      Objects-of-environment_268: -1564496680
+      Objects-of-environment_269: -31875416
+      Objects-of-environment_27: 843505378
+      Objects-of-environment_270: 553926373
+      Objects-of-environment_271: 772220628
+      Objects-of-environment_272: -27588855
+      Objects-of-environment_273: 335139265
+      Objects-of-environment_274: -289215867
+      Objects-of-environment_275: 879759383
+      Objects-of-environment_276: 1623604013
+      Objects-of-environment_277: 974988008
+      Objects-of-environment_278: -1754904569
+      Objects-of-environment_279: 96980033
+      Objects-of-environment_28: 2006644630
+      Objects-of-environment_280: 1107406320
+      Objects-of-environment_281: -1191934860
+      Objects-of-environment_282: -1899233968
+      Objects-of-environment_283: -1951946826
+      Objects-of-environment_284: -1382188095
+      Objects-of-environment_285: 1489953085
+      Objects-of-environment_286: 25886146
+      Objects-of-environment_287: -146784911
+      Objects-of-environment_288: 394325242
+      Objects-of-environment_289: -1281841133
+      Objects-of-environment_29: 512125718
+      Objects-of-environment_290: 1336643831
+      Objects-of-environment_291: -330677301
+      Objects-of-environment_292: -2092633365
+      Objects-of-environment_293: -1330325652
+      Objects-of-environment_294: -1234470693
+      Objects-of-environment_295: 1794493231
+      Objects-of-environment_296: 771727175
+      Objects-of-environment_297: 552465748
+      Objects-of-environment_298: -202827183
+      Objects-of-environment_299: -187421465
+      Objects-of-environment_3: 445949465
+      Objects-of-environment_30: -882546800
+      Objects-of-environment_300: -465537613
+      Objects-of-environment_301: -554658887
+      Objects-of-environment_302: -1457400044
+      Objects-of-environment_303: 2111914527
+      Objects-of-environment_304: -55024600
+      Objects-of-environment_305: -1356680305
+      Objects-of-environment_306: -944841475
+      Objects-of-environment_307: 321541525
+      Objects-of-environment_308: -361605650
+      Objects-of-environment_309: 1587372118
+      Objects-of-environment_31: 36595058
+      Objects-of-environment_310: 23201985
+      Objects-of-environment_311: -1681883783
+      Objects-of-environment_312: -17632448
+      Objects-of-environment_313: -324024481
+      Objects-of-environment_314: 741815437
+      Objects-of-environment_315: -1660916781
+      Objects-of-environment_316: -1037817900
+      Objects-of-environment_317: -2003990382
+      Objects-of-environment_318: -1690558084
+      Objects-of-environment_319: -2082631707
+      Objects-of-environment_32: 925255585
+      Objects-of-environment_320: 61731288
+      Objects-of-environment_321: -1706253398
+      Objects-of-environment_322: -1671576944
+      Objects-of-environment_323: 766594723
+      Objects-of-environment_324: -1783324303
+      Objects-of-environment_325: 613545432
+      Objects-of-environment_326: -402420223
+      Objects-of-environment_327: -1723317210
+      Objects-of-environment_328: 1614994309
+      Objects-of-environment_329: 794962979
+      Objects-of-environment_33: -318482126
+      Objects-of-environment_330: 1101167357
+      Objects-of-environment_331: 779686524
+      Objects-of-environment_332: -1522981370
+      Objects-of-environment_333: -837293514
+      Objects-of-environment_334: -152804326
+      Objects-of-environment_335: 1251286400
+      Objects-of-environment_336: -1530890117
+      Objects-of-environment_337: 830909933
+      Objects-of-environment_338: -1812451617
+      Objects-of-environment_339: -1981102329
+      Objects-of-environment_34: -491191885
+      Objects-of-environment_340: 1049974495
+      Objects-of-environment_341: 2098960292
+      Objects-of-environment_342: -1917200182
+      Objects-of-environment_343: -983036412
+      Objects-of-environment_344: 2070783561
+      Objects-of-environment_345: 677059055
+      Objects-of-environment_346: -1560979326
+      Objects-of-environment_347: -895072342
+      Objects-of-environment_348: 90513916
+      Objects-of-environment_349: -1160130642
+      Objects-of-environment_35: -715198260
+      Objects-of-environment_350: 1625221719
+      Objects-of-environment_351: -1857908500
+      Objects-of-environment_352: -533088585
+      Objects-of-environment_353: 317895675
+      Objects-of-environment_354: 931378854
+      Objects-of-environment_355: -1207261936
+      Objects-of-environment_356: 1198480441
+      Objects-of-environment_357: -366221676
+      Objects-of-environment_358: -2064567299
+      Objects-of-environment_359: -924045678
+      Objects-of-environment_36: 980597889
+      Objects-of-environment_360: 2108899408
+      Objects-of-environment_361: -1378345084
+      Objects-of-environment_362: 845597461
+      Objects-of-environment_363: -159491184
+      Objects-of-environment_364: 166048709
+      Objects-of-environment_365: -1539805297
+      Objects-of-environment_366: 864622802
+      Objects-of-environment_367: -669054195
+      Objects-of-environment_368: 441762023
+      Objects-of-environment_369: -818580722
+      Objects-of-environment_37: 849896337
+      Objects-of-environment_370: -763045145
+      Objects-of-environment_371: -1072571517
+      Objects-of-environment_372: 360974002
+      Objects-of-environment_373: -241016488
+      Objects-of-environment_374: 1754917971
+      Objects-of-environment_375: -287858721
+      Objects-of-environment_376: 2056476327
+      Objects-of-environment_377: -906007791
+      Objects-of-environment_378: -2103409543
+      Objects-of-environment_379: -1301488253
+      Objects-of-environment_38: -1230797961
+      Objects-of-environment_380: -1148526468
+      Objects-of-environment_381: 2043661828
+      Objects-of-environment_382: 2006060562
+      Objects-of-environment_383: 1641336179
+      Objects-of-environment_384: 505953385
+      Objects-of-environment_385: 1084711120
+      Objects-of-environment_386: 723112618
+      Objects-of-environment_387: -638825025
+      Objects-of-environment_388: -349675067
+      Objects-of-environment_389: -747554143
+      Objects-of-environment_39: 2065710362
+      Objects-of-environment_390: -2075198046
+      Objects-of-environment_391: -186438702
+      Objects-of-environment_392: 1251590044
+      Objects-of-environment_393: 1251125149
+      Objects-of-environment_394: 788981603
+      Objects-of-environment_395: -1225250410
+      Objects-of-environment_396: 1779193114
+      Objects-of-environment_397: -659983319
+      Objects-of-environment_398: 1750254365
+      Objects-of-environment_399: -1336464352
+      Objects-of-environment_4: 360948452
+      Objects-of-environment_40: 1544642828
+      Objects-of-environment_400: -2052008590
+      Objects-of-environment_401: 847556387
+      Objects-of-environment_402: 1745706658
+      Objects-of-environment_403: -123232465
+      Objects-of-environment_404: 844238562
+      Objects-of-environment_405: -880631008
+      Objects-of-environment_406: 865765246
+      Objects-of-environment_407: -703705940
+      Objects-of-environment_408: 426785467
+      Objects-of-environment_409: 785911380
+      Objects-of-environment_41: -1469010257
+      Objects-of-environment_410: -417105120
+      Objects-of-environment_411: 2101444046
+      Objects-of-environment_412: -1236771655
+      Objects-of-environment_42: 1398782873
+      Objects-of-environment_43: -2081930450
+      Objects-of-environment_44: -1861517552
+      Objects-of-environment_45: 1291171486
+      Objects-of-environment_46: -1655985459
+      Objects-of-environment_47: 780104150
+      Objects-of-environment_48: 703561188
+      Objects-of-environment_49: -2067132744
+      Objects-of-environment_5: -907336066
+      Objects-of-environment_50: 1639869203
+      Objects-of-environment_51: 1997398273
+      Objects-of-environment_52: 795558527
+      Objects-of-environment_53: 39138937
+      Objects-of-environment_54: -855801411
+      Objects-of-environment_55: -139454197
+      Objects-of-environment_56: -1367563661
+      Objects-of-environment_57: 530527123
+      Objects-of-environment_58: -1634265472
+      Objects-of-environment_59: 1157720609
+      Objects-of-environment_6: 1344246467
+      Objects-of-environment_60: 1925350406
+      Objects-of-environment_61: 497462319
+      Objects-of-environment_62: 259811627
+      Objects-of-environment_63: -2145518376
+      Objects-of-environment_64: -1057337305
+      Objects-of-environment_65: 231873466
+      Objects-of-environment_66: -1212469239
+      Objects-of-environment_67: -728020404
+      Objects-of-environment_68: 67425912
+      Objects-of-environment_69: -1098574522
+      Objects-of-environment_7: -106221524
+      Objects-of-environment_70: 1003265628
+      Objects-of-environment_71: 1809809765
+      Objects-of-environment_72: -157101982
+      Objects-of-environment_73: 662772779
+      Objects-of-environment_74: 246215203
+      Objects-of-environment_75: 1790380941
+      Objects-of-environment_76: -936310073
+      Objects-of-environment_77: -225701957
+      Objects-of-environment_78: 1482612916
+      Objects-of-environment_79: 1015354411
+      Objects-of-environment_8: -1841720776
+      Objects-of-environment_80: 1783511370
+      Objects-of-environment_81: -1470733579
+      Objects-of-environment_82: -1480779682
+      Objects-of-environment_83: 605124211
+      Objects-of-environment_84: -1248457872
+      Objects-of-environment_85: -1730306156
+      Objects-of-environment_86: 1330879580
+      Objects-of-environment_87: 356658356
+      Objects-of-environment_88: 1035281665
+      Objects-of-environment_89: -550963456
+      Objects-of-environment_9: -644752449
+      Objects-of-environment_90: 949856803
+      Objects-of-environment_91: 1499944110
+      Objects-of-environment_92: 510681724
+      Objects-of-environment_93: 764531940
+      Objects-of-environment_94: -1799181459
+      Objects-of-environment_95: 1126538457
+      Objects-of-environment_96: -906278361
+      Objects-of-environment_97: -2010397437
+      Objects-of-environment_98: 1221665188
+      Objects-of-environment_99: 259554778
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
