@@ -16,6 +16,6 @@ MonoBehaviour:
   _luck: 0.278
   _distance: 36.8
   _typeWeapon: 0
-  _occupiedArea: 3
+  _occupiedArea: 16
   _cost: 0
   _sprite: {fileID: 1175794048, guid: 99e22c8768f223e4d93fe15f4ad3cfb7, type: 3}
