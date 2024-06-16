@@ -1,9 +1,9 @@
 /// <summary>
 /// Тип оружия
 /// </summary>
-public enum TypeWeapons
+public enum TypeWeapons : byte
 {
-    
+
     NONE,
     /// <summary>
     /// Без оружия,рукопашный бой
@@ -20,7 +20,7 @@ public enum TypeWeapons
     /// <summary>
     /// Огнемет 
     /// </summary>
-   FLAMETHROWER,
+    FLAMETHROWER,
     /// <summary>
     /// Ракетница
     /// </summary>
@@ -28,18 +28,52 @@ public enum TypeWeapons
     /// <summary>
     /// Лазер
     /// </summary>
-   LASER,
-   /// <summary>
-   /// Миниган
-   /// </summary>
-   MINIGUN,
-  /// <summary>
-  /// Электрические заряды
-  /// </summary>
-  ELECTRICCHARGES, 
-  /// <summary>
-  /// Снаряды
-  /// </summary>
-  SHELLS
+    LASER,
+    /// <summary>
+    /// Миниган
+    /// </summary>
+    MINIGUN,
+    /// <summary>
+    /// Электрические заряды
+    /// </summary>
+    ELECTRICCHARGES,
+    /// <summary>
+    /// Снаряды
+    /// </summary>
+    SHELLS
 
+}
+
+/// <summary>
+/// Состояние юнита 
+/// </summary>
+public enum StateUnit : byte
+{
+    NONE,
+    /// <summary>
+    /// Бездействие
+    /// </summary>
+    IDLE,
+    /// <summary>
+    /// Движение
+    /// </summary>
+    MOVE,
+    /// <summary>
+    /// Атака
+    /// </summary>
+    ATTACK,
+    /// <summary>
+    /// Поиск брамина для атаки
+    /// </summary>
+    SEARCH,
+    /// <summary>
+    /// Юнит мертв
+    /// </summary>
+    DEAD
+}
+
+public enum StateUnitList : byte
+{
+    MOVE,
+    OTHER
 }
