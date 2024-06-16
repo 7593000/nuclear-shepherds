@@ -3,6 +3,10 @@
 /// </summary>
 public class AttackState : StateComponent, IUnitState
 {
+    public AttackState( UnitsEngine engine ) : base( engine )
+    {
+    }
+
     public void EnterState( UnitComponent unit )
     {
 

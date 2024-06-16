@@ -3,6 +3,10 @@
 /// </summary>
 public class SearchState : StateComponent, IUnitState
 {
+    public SearchState( UnitsEngine engine ) : base( engine )
+    {
+    }
+
     public void EnterState( UnitComponent unit )
     {
         _engine.AddUnit(unit, StateUnitList.OTHER );

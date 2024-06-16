@@ -1,13 +1,15 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
-public abstract class StateComponent : MonoBehaviour
+public abstract class StateComponent  
 {
     protected UnitsEngine _engine;
 
-    public void Container( UnitsEngine engine )
+    public StateComponent( UnitsEngine engine )
     {
-
-        _engine = engine;
+        _engine = engine;   
     }
- 
+
+    
+  
 }

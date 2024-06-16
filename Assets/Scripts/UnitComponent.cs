@@ -3,11 +3,9 @@ using UnityEngine;
 public abstract class UnitComponent : MonoBehaviour
 {
     [SerializeField]
-    private UnitConfig _config;
-    private float _health;
-    private float _speed;
-
-    public IUnitState CurrentState { get; private set; }//состояние юнита
+    protected UnitConfig _config; 
+  
+    public IUnitState CurrentState { get; private set; }
 
 
     public IUnitState IdleState { get; private set; }
@@ -16,15 +14,23 @@ public abstract class UnitComponent : MonoBehaviour
     public IUnitState SearchState { get; private set; }
     public IUnitState DeadState { get; private set; }
 
-    protected virtual void Awake()
-    {
+    public abstract void Move();
 
+   public void Container(UnitsEngine  engine)
+    {
+     
         IdleState = new IdleState();
-        MoveState = new MoveState();
-        AttackState = new AttackState();
-        SearchState = new SearchState();
+        MoveState = new MoveState( engine );
+        AttackState = new AttackState( engine );
+        SearchState = new SearchState( engine );
         DeadState = new DeadState();
 
+    }
+    //TODO=>TEMP
+    private void Awake()
+    {
+        Container( FindObjectOfType<UnitsEngine>() );
+        SetState(MoveState);
     }
 
     public void SetState( IUnitState newState )
@@ -34,7 +40,7 @@ public abstract class UnitComponent : MonoBehaviour
         CurrentState?.EnterState( this );
 
     }
- 
+
 
     public void UpdateUnit()
     {
@@ -43,4 +49,7 @@ public abstract class UnitComponent : MonoBehaviour
             CurrentState?.UpdateState( this );
         }
     }
+
+
+
 }
