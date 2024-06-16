@@ -1,0 +1,85 @@
+using UnityEngine;
+
+[CreateAssetMenu( fileName = "_friend" , menuName = "Configuration/add config units" , order = 1 )]
+
+public class UnitConfig : ScriptableObject
+{
+ 
+    [SerializeField, Tooltip("Имя юнита")] 
+    private string _name;
+ 
+    [SerializeField,Tooltip( "Шанс поразить цель" ), Range( 0.1f , 1f )]
+    private float _luck;
+
+    [SerializeField, Tooltip( "Дальность атаки" ), Range( 0f , 100f )]
+    private float _distance;
+
+    [SerializeField, Tooltip( "Тип используемого оружия" )]
+    private TypeWeapons _typeWeapon;
+
+    [SerializeField, Tooltip( "Занимаемое количество клеток на карте при установки юнита" ), Range( 1 , 19 )]
+    private int _occupiedArea;
+
+
+    [SerializeField, Tooltip( "Сокорсть движения" )]
+    private float _speed;
+
+    [SerializeField, Tooltip( "Стоимость найма" )]
+    private int _cost;
+#if UNITY_EDITOR
+    [SerializeField, Tooltip( "Спрайт юнита для визуализации в инспекторе" )]
+    private Sprite _sprite;
+#endif
+
+
+    [Space]
+    [Header( "Характеристики защиты" )]
+    [SerializeField, Tooltip( "Защита от огнестрельного оружия" )] private float _firearms;
+    [SerializeField, Tooltip( "Защита от огня" )] private float _fire;
+    [SerializeField, Tooltip( "Защита от энергетического оружия" )] private float _energyWeapons;
+
+
+
+    /// <summary>
+    /// Получить имя юнита
+    /// </summary>
+    public string GetName => _name;
+    /// <summary>
+    /// Получмить уровень удачи при попадании
+    /// </summary>
+    public float GetLuck => _luck;
+    /// <summary>
+    /// Получить дистанцию атаки
+    /// </summary>
+    public float GetDistance => _distance;
+    /// <summary>
+    /// Получить тип используемого оружия
+    /// </summary>
+    public TypeWeapons GetTypeWeapons => _typeWeapon;
+    /// <summary>
+    /// Получить количество занимаемых клеток на поле
+    /// </summary>
+    public int GetOccupiedArea => _occupiedArea;
+    /// <summary>
+    /// Получить скорость передвижения юнита
+    /// </summary>
+    public float GetSpeed => _speed;
+    /// <summary>
+    /// Получить коэффициент защиты от огнестрельного оружия
+    /// </summary>
+    public float GetProtectionFirearms => _firearms;
+    /// <summary>
+    /// Получить коэффициент защиты от огня
+    /// </summary>
+    public float GetProtectionFire => _fire;
+    /// <summary>
+    /// Получить коэффициент защиты от энергетического оружия
+    /// </summary>
+    public float GetProtectionEnergyWeapons => _energyWeapons;
+
+
+
+#if UNITY_EDITOR
+    public Sprite GetSprite => _sprite;
+#endif
+}
