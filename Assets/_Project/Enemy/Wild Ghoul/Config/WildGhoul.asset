@@ -17,7 +17,7 @@ MonoBehaviour:
   _distance: 1
   _typeWeapon: 1
   _occupiedArea: 1
-  _speed: 2
+  _speed: 0.5
   _cost: 0
   _sprite: {fileID: -940772182, guid: f13fff25564cc12408229b392c9a1f4b, type: 3}
   _firearms: 0
