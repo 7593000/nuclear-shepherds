@@ -1,24 +1,56 @@
+using UnityEngine;
+
+
 /// <summary>
 /// Состояние : Поиск цели ( поиск брамина для атаки ) 
 /// </summary>
 public class SearchState : StateComponent, IUnitState
 {
-    public SearchState( UnitsEngine engine ) : base( engine )
+
+    public SearchState(GameHub gameHub) : base(gameHub)
     {
     }
 
-    public void EnterState( UnitComponent unit )
+    public void EnterState(UnitComponent unit)
     {
-        _engine.AddUnit(unit, StateUnitList.OTHER );
+        _gameHub.GetUnitsUpdateEngine.AddUnit(unit, StateUnitList.MOVE);
+
+        unit.GetTarget = SearchTargetAttack(unit).transform;
+ 
+        if (unit.GetTarget == null) { unit.SetState(unit.NoneState); }
     }
 
-    public void ExitState( UnitComponent unit )
+    public void ExitState(UnitComponent unit)
     {
-     _engine.RemoveUnit(unit, StateUnitList.OTHER);
+        _gameHub.GetUnitsUpdateEngine.RemoveUnit(unit, StateUnitList.MOVE);
+ 
     }
 
-    public void UpdateState( UnitComponent unit )
+    public void UpdateState(UnitComponent unit)
+    {   
+        unit.Move();
+    }
+
+
+    private Brahmin SearchTargetAttack(UnitComponent unit)
     {
-        throw new System.NotImplementedException();
+        float closestDistanceSqr = Mathf.Infinity;
+        Brahmin closestBrahmin = null;
+        Vector3 unitPosition = unit.transform.position;
+
+        foreach (Brahmin brahmin in _gameHub.GetBrahmin.GetBrahminList)
+        {
+            Vector3 directionToTarget = brahmin.transform.position - unitPosition;
+            float dSqrToTarget = directionToTarget.sqrMagnitude;
+            if (dSqrToTarget < closestDistanceSqr)
+            {
+                closestDistanceSqr = dSqrToTarget;
+                closestBrahmin = brahmin;
+            }
+
+
+        }
+
+        return closestBrahmin != null? closestBrahmin : null;
     }
 }

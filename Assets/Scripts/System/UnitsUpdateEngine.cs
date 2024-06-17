@@ -2,17 +2,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public sealed class UnitsEngine : MonoBehaviour
+/// <summary>
+/// Обновление событий для юнитов 
+/// </summary>
+public sealed class UnitsUpdateEngine : MonoBehaviour
 {
     [SerializeField, Tooltip( "Время для обнавления статусов" )]
-    private float _timerUpdate = 1f;
+    private float _timerUpdate = 0.5f;
     private List<UnitComponent> _moveStateUnits = new();
     private List<UnitComponent> _otherStateUnits = new();
 
     //TODO => возможно . на удаление закрытых списков 
     public IReadOnlyList<UnitComponent> GetUnitsMove => _moveStateUnits;
     public IReadOnlyList<UnitComponent> GetUnitsOther => _otherStateUnits;
+
+
     /// <summary>
     /// Добавить юнит в лист состояния 
     /// </summary>
@@ -98,16 +102,16 @@ public sealed class UnitsEngine : MonoBehaviour
         {
             return;
         }
-
-        foreach ( UnitComponent unit in _moveStateUnits )
+        for (int i = _moveStateUnits.Count - 1; i >= 0; i--)
+         
         {
-            if ( unit.gameObject.activeSelf )
+            if (_moveStateUnits[i].gameObject.activeSelf )
             {
-                unit.UpdateUnit();
+                _moveStateUnits[i].UpdateUnit();
             }
             else
             {
-                RemoveUnit( unit , StateUnitList.MOVE );
+                RemoveUnit(_moveStateUnits[i], StateUnitList.MOVE );
             }
         }
     }

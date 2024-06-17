@@ -3,11 +3,11 @@ using UnityEngine;
 
 public abstract class StateComponent  
 {
-    protected UnitsEngine _engine;
+    protected GameHub _gameHub;
 
-    public StateComponent( UnitsEngine engine )
+    public StateComponent(GameHub gameHub)
     {
-        _engine = engine;   
+        _gameHub = gameHub;   
     }
 
     
