@@ -1,7 +1,7 @@
 /// <summary>
 /// Тип оружия
 /// </summary>
-public enum TypeWeapons : byte
+public enum TypeWeapons  : byte
 {
 
     NONE,
@@ -75,5 +75,6 @@ public enum StateUnit : byte
 public enum StateUnitList : byte
 {
     MOVE,
-    OTHER
+    OTHER,
+    ATTACK
 }

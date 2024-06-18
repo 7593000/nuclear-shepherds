@@ -4,25 +4,26 @@ using UnityEngine;
 /// <summary>
 /// Состояние : Поиск цели ( поиск брамина для атаки ) 
 /// </summary>
-public class SearchState : StateComponent, IUnitState
+public class SearchState : IUnitState
 {
 
-    public SearchState(GameHub gameHub) : base(gameHub)
-    {
-    }
+    //public SearchState(GameHub gameHub) : base(gameHub)
+    //{
+    //}
 
     public void EnterState(UnitComponent unit)
     {
-        _gameHub.GetUnitsUpdateEngine.AddUnit(unit, StateUnitList.MOVE);
+        unit.GetGameHub.GetUnitsUpdateEngine.AddUnit(unit, StateUnitList.MOVE);
 
-        unit.GetTarget = SearchTargetAttack(unit).transform;
- 
+        Brahmin  brahmin = SearchTargetAttack(unit);
+        unit.GetTarget = brahmin.transform;
+        unit.GetTargetForAttack = brahmin;
         if (unit.GetTarget == null) { unit.SetState(unit.NoneState); }
     }
 
     public void ExitState(UnitComponent unit)
     {
-        _gameHub.GetUnitsUpdateEngine.RemoveUnit(unit, StateUnitList.MOVE);
+        unit.GetGameHub.GetUnitsUpdateEngine.RemoveUnit(unit, StateUnitList.MOVE);
  
     }
 
@@ -38,7 +39,7 @@ public class SearchState : StateComponent, IUnitState
         Brahmin closestBrahmin = null;
         Vector3 unitPosition = unit.transform.position;
 
-        foreach (Brahmin brahmin in _gameHub.GetBrahmin.GetBrahminList)
+        foreach (Brahmin brahmin in unit.GetGameHub.GetBrahmin.GetBrahminList)
         {
             Vector3 directionToTarget = brahmin.transform.position - unitPosition;
             float dSqrToTarget = directionToTarget.sqrMagnitude;

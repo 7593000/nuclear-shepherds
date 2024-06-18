@@ -3,12 +3,12 @@ using UnityEngine;
 
 public abstract class StateComponent  
 {
-    protected GameHub _gameHub;
+    //protected GameHub _gameHub;
 
-    public StateComponent(GameHub gameHub)
-    {
-        _gameHub = gameHub;   
-    }
+    //public StateComponent(GameHub gameHub)
+    //{
+    //    _gameHub = gameHub;   
+    //}
 
     
   

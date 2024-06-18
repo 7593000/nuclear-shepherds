@@ -2,9 +2,10 @@
 /// <summary>
 /// Состояние : Движение к цели
 /// </summary>
-public class MoveState : StateComponent, IUnitState
+public class MoveState :   IUnitState
 {
-    public MoveState(GameHub gameHub) : base(gameHub) { }
+    //public MoveState(GameHub gameHub) : base(gameHub) { }
+   
     private int _goalCount;
     private float _activeDistance = 1.2f;
     private float _activeDistanceSqr;
@@ -13,22 +14,22 @@ public class MoveState : StateComponent, IUnitState
     public void EnterState(UnitComponent unit)
     {
 
-        if (_gameHub.GetPointsTarget.GetTargets.Count == 0)
+        if (unit.GetGameHub.GetPointsTarget.GetTargets.Count == 0)
         {
             unit.SetState(unit.NoneState);
             return;
         }
-        _goalCount = _gameHub.GetPointsTarget.GetTargets.Count;
+        _goalCount = unit.GetGameHub.GetPointsTarget.GetTargets.Count;
         _activeDistanceSqr = _activeDistance * _activeDistance;
-        unit.GetTarget = _gameHub.GetPointsTarget.GetTargets[unit.GetSelectedGoal].transform;
+        unit.GetTarget = unit.GetGameHub.GetPointsTarget.GetTargets[unit.GetSelectedGoal].transform;
 
-        _gameHub.GetUnitsUpdateEngine.AddUnit(unit, StateUnitList.MOVE);
+        unit.GetGameHub.GetUnitsUpdateEngine.AddUnit(unit, StateUnitList.MOVE);
              
     }
 
     public void ExitState(UnitComponent unit)
     {
-        _gameHub.GetUnitsUpdateEngine.RemoveUnit(unit, StateUnitList.MOVE);
+        unit.GetGameHub.GetUnitsUpdateEngine.RemoveUnit(unit, StateUnitList.MOVE);
     }
 
     public void UpdateState(UnitComponent unit)
@@ -44,7 +45,7 @@ public class MoveState : StateComponent, IUnitState
             {
 
                 unit.GetSelectedGoal++;
-                unit.GetTarget = _gameHub.GetPointsTarget.GetTargets[unit.GetSelectedGoal].transform;
+                unit.GetTarget = unit.GetGameHub.GetPointsTarget.GetTargets[unit.GetSelectedGoal].transform;
             }
             else
             {

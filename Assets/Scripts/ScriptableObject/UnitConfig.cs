@@ -24,7 +24,7 @@ public class UnitConfig : ScriptableObject
     [SerializeField, Tooltip( "Сокорсть движения" )]
     private float _speed;
 
-    [SerializeField, Tooltip( "Стоимость найма" )]
+    [SerializeField, Tooltip( "Стоимость найма : количество едениц получаемых за убийсмтво" )]
     private int _cost;
 #if UNITY_EDITOR
     [SerializeField, Tooltip( "Спрайт юнита для визуализации в инспекторе" )]

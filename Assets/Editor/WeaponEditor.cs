@@ -2,15 +2,15 @@
 using UnityEditor;
 using UnityEngine; 
 
-[CustomEditor( typeof( CreateWeapons ) )]
+[CustomEditor( typeof( WeaponsConfig ) )]
 public class WeaponEditor : Editor
 {
-    CreateWeapons weapon;
+    WeaponsConfig weapon;
 
     private void OnEnable()
     {
         
-        weapon = target as CreateWeapons;
+        weapon = target as WeaponsConfig;
     }
     public override void OnInspectorGUI()
     {
@@ -23,7 +23,7 @@ public class WeaponEditor : Editor
         
         Texture2D texture = AssetPreview.GetAssetPreview( weapon.GetSprite );
         
-        GUILayout.Label( "" , GUILayout.Height( 80 ) , GUILayout.Width( 80 ) );
+        GUILayout.Label( "" , GUILayout.Height( 200 ) , GUILayout.Width(200) );
         
         GUI.DrawTexture( GUILayoutUtility.GetLastRect() , texture );
     }

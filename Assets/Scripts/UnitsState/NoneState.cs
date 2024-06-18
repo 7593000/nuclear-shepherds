@@ -1,9 +1,9 @@
 ﻿using System.Diagnostics;
 using static UnityEngine.GraphicsBuffer;
 
-public class NoneState :StateComponent, IUnitState
+public class NoneState : IUnitState
 {
-    public NoneState(GameHub engine) : base(engine) { }
+   // public NoneState(GameHub engine) : base(engine) { }
 
     public void EnterState(UnitComponent unit)
     {

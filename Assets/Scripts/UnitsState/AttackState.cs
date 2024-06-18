@@ -3,11 +3,9 @@ using UnityEngine;
 /// <summary>
 /// Состояние: Атака цели
 /// </summary>
-public class AttackState : StateComponent, IUnitState
+public class AttackState :  IUnitState
 {
-    public AttackState(GameHub gameHub) : base(gameHub)
-    {
-    }
+     
 
     public void EnterState( UnitComponent unit )
     {
