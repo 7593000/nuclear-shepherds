@@ -16,6 +16,9 @@ public class WeaponsConfig : ScriptableObject
 
     [SerializeField, Tooltip( "Наносимый урод" )]
     private float _damage;
+    [Space]
+    [SerializeField,Tooltip("Звук выстрела")]
+    private AudioClip _audioClip;
 
 #if UNITY_EDITOR
     [SerializeField, Tooltip( "Спрайт оружия для визуализации в инспекторе" )]
@@ -24,6 +27,7 @@ public class WeaponsConfig : ScriptableObject
     public float GetSpeedAttack => _speedAttack;
     public float GetDamage => _damage;
     public float GetRechargeTime => _rechargeTime;
+    public AudioClip GetAudioClip => _audioClip;
 
 #if UNITY_EDITOR
     public Sprite GetSprite => _sprite;

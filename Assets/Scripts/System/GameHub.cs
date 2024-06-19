@@ -7,6 +7,7 @@ public class GameHub : MonoBehaviour
 {
     [SerializeField]
     private UnitsUpdateEngine _unitsEngine;
+     
     [SerializeField]
     private PointsTargerEngine _points;
     [SerializeField]
@@ -18,6 +19,7 @@ public class GameHub : MonoBehaviour
     public UnitsUpdateEngine GetUnitsUpdateEngine => _unitsEngine;
     public PointsTargerEngine GetPointsTarget => _points; 
     public BrahminManager GetBrahmin => _brahmin;   
+   
     private void Awake()
     {
         _unitsEngine ??= FindAnyObjectByType<UnitsUpdateEngine>(); 

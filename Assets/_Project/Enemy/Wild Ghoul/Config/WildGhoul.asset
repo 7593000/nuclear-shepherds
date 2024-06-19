@@ -13,13 +13,15 @@ MonoBehaviour:
   m_Name: WildGhoul
   m_EditorClassIdentifier: 
   _name: "\u0414\u0438\u043A\u0438\u0439 \u0433\u0443\u043B\u044C"
-  _luck: 0.471
-  _distance: 1
-  _typeWeapon: 1
+  _health: 100
+  _luck: 0.55
+  _distance: 1.1
   _occupiedArea: 1
   _speed: 0.5
   _cost: 0
-  _sprite: {fileID: -940772182, guid: f13fff25564cc12408229b392c9a1f4b, type: 3}
+  _typeWeapon: 1
+  _config: {fileID: 11400000, guid: 9b53894a397d5f2438fce9d92c255ea0, type: 2}
   _firearms: 0
   _fire: 0
   _energyWeapons: 0
+  _sprite: {fileID: -940772182, guid: f13fff25564cc12408229b392c9a1f4b, type: 3}

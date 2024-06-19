@@ -2,24 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Brahmin : MonoBehaviour, IHealth
+public class Brahmin : UnitComponent, ITakeDamage, IHealth, IMovable
 {
-  
-
-    public void Health(float damage)
+    public float Health()
     {
-        throw new System.NotImplementedException();
+     return _config.GetHealth;
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public void Move()
     {
+        //TODO => Выбор рандомной точки от начальной. возврат на начальную точку. повтор.
+    }
+
+    public void TakeDamage(float damage)
+    {
+        _health.TakeDamage(damage);
         
     }
 
-    // Update is called once per frame
-    void Update()
+ 
+    protected override void Initialized()
     {
-        
+        base.Initialized();
+        _health.Container(this);
     }
 }

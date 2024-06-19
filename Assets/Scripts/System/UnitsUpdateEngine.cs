@@ -77,16 +77,16 @@ public sealed class UnitsUpdateEngine : MonoBehaviour
     {
         while (true)
         {
-
-            foreach (UnitComponent unit in _otherStateUnits)
+            for (int i = _otherStateUnits.Count - 1; i >= 0; i--)
+              
             {
-                if (unit.gameObject.activeSelf)
+                if (_otherStateUnits[i].gameObject.activeSelf)
                 {
-                    unit.UpdateUnit();
+                    _otherStateUnits[i].UpdateUnit();
                 }
                 else
                 {
-                    RemoveUnit(unit, StateUnitList.OTHER);
+                    RemoveUnit(_otherStateUnits[i], StateUnitList.OTHER);
                 }
             }
             yield return new WaitForSeconds(_timerUpdate);

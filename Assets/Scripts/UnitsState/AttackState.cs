@@ -5,22 +5,24 @@ using UnityEngine;
 /// </summary>
 public class AttackState :  IUnitState
 {
-     
 
+    IAttack _attack ;
     public void EnterState( UnitComponent unit )
     {
-
-       // _gameHub.GetUnitsUpdateEngine.AddUnit( unit , StateUnitList.OTHER );
+        _attack = unit.GetComponent<IAttack>();
+        unit.GetGameHub.GetUnitsUpdateEngine.AddUnit( unit , StateUnitList.OTHER );
+       
     }
 
     public void ExitState( UnitComponent unit )
     {
-       // _gameHub.GetUnitsUpdateEngine.RemoveUnit( unit , StateUnitList.OTHER );
+        unit.GetGameHub.GetUnitsUpdateEngine.RemoveUnit( unit , StateUnitList.OTHER );
     }
 
     public void UpdateState( UnitComponent unit )
     {
-        throw new System.NotImplementedException();
+
+        _attack.Attack();
     }
 
 

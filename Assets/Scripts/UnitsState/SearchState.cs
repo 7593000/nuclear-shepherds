@@ -7,30 +7,58 @@ using UnityEngine;
 public class SearchState : IUnitState
 {
 
-    //public SearchState(GameHub gameHub) : base(gameHub)
-    //{
-    //}
+    IMovable _movable;
+    Brahmin _brahmin;
+
+
+    private float _activeDistanceSqr;
 
     public void EnterState(UnitComponent unit)
     {
+        _movable = unit.GetComponent<IMovable>();
         unit.GetGameHub.GetUnitsUpdateEngine.AddUnit(unit, StateUnitList.MOVE);
+        _activeDistanceSqr = unit.GetDistance * unit.GetDistance;
+        _brahmin = SearchTargetAttack(unit);
 
-        Brahmin  brahmin = SearchTargetAttack(unit);
-        unit.GetTarget = brahmin.transform;
-        unit.GetTargetForAttack = brahmin;
-        if (unit.GetTarget == null) { unit.SetState(unit.NoneState); }
+        if (_brahmin == null) { 
+            unit.SetState(unit.NoneState); 
+            return; 
+        }
+
+
+        unit.GetTarget = _brahmin.transform;
+        unit.GetTargetForAttack = _brahmin;
+
+
     }
 
     public void ExitState(UnitComponent unit)
     {
         unit.GetGameHub.GetUnitsUpdateEngine.RemoveUnit(unit, StateUnitList.MOVE);
- 
+
     }
 
     public void UpdateState(UnitComponent unit)
-    {   
-        unit.Move();
+    {
+        if (!_brahmin.gameObject.activeSelf)
+        {
+            _brahmin = SearchTargetAttack(unit);
+
+            if (_brahmin == null) { unit.SetState(unit.NoneState); return; }
+        }
+
+        float distanceSquared = (unit.transform.position - unit.GetTarget.position).sqrMagnitude;
+
+
+        if (distanceSquared < _activeDistanceSqr)
+        {
+            unit.SetState(unit.AttackState);
+        }
+        _movable.Move();
     }
+
+
+
 
 
     private Brahmin SearchTargetAttack(UnitComponent unit)
@@ -52,6 +80,6 @@ public class SearchState : IUnitState
 
         }
 
-        return closestBrahmin != null? closestBrahmin : null;
+        return closestBrahmin != null ? closestBrahmin : null;
     }
 }

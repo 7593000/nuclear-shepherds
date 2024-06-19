@@ -4,8 +4,8 @@ using UnityEngine;
 
 public abstract class WeaponsComponent
 {
-    [SerializeField]
-    private WeaponsConfig _config;
+    protected WeaponsConfig _config;
+
     [SerializeField]
     private AudioClip _audio;
     [SerializeField]
@@ -13,29 +13,23 @@ public abstract class WeaponsComponent
 
     private float _speedAttackTemp = 0;
     private float _rechargeTimeTemp = 0;
-    public float SpeedAttack { get; private set; }
-    public float Damage { get; private set; }
+    public float SpeedAttack { get; protected set; }
+    public float Damage { get; protected set; }
 
 
-    WeaponsComponent()
-    {
-        SpeedAttack = _config.GetSpeedAttack;
-        Damage = _config.GetDamage;
-
-    }
-
+    
 
     //TODO => Перенести в отдельный класс , привязать к интерфейсу оружия. 
     public void Attack(UnitComponent unit)
     {
 
 
-        if (!RechargeTime()) return;
+      //  if (!RechargeTime()) return;
 
-        if (CalculatingAttackSpeed()) return;
+       // if (CalculatingAttackSpeed()) return;
         _speedAttackTemp = 0f;
-
-        unit.GetTargetForAttack.Health(CalculatingDamage(unit.Luck));
+        unit.GetTargetForAttack.TakeDamage(CalculatingDamage(unit.Luck));
+   
 
 
 
@@ -65,7 +59,7 @@ public abstract class WeaponsComponent
     /// <returns></returns>
     private float CalculatingDamage(float luck)
     {
-        if (CritCalculation(luck)) return (Damage + Damage * luck / 100);
+        if (CritCalculation(luck)) return (Damage + Damage * luck  );
 
         return Damage;
     }

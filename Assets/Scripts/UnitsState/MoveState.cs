@@ -6,6 +6,7 @@ public class MoveState :   IUnitState
 {
     //public MoveState(GameHub gameHub) : base(gameHub) { }
    
+    private IMovable _movable;
     private int _goalCount;
     private float _activeDistance = 1.2f;
     private float _activeDistanceSqr;
@@ -13,7 +14,7 @@ public class MoveState :   IUnitState
 
     public void EnterState(UnitComponent unit)
     {
-
+        _movable = unit.GetComponent<IMovable>();
         if (unit.GetGameHub.GetPointsTarget.GetTargets.Count == 0)
         {
             unit.SetState(unit.NoneState);
@@ -53,7 +54,7 @@ public class MoveState :   IUnitState
             }
 
         }
-        unit.Move();
+        _movable.Move();
 
 
 

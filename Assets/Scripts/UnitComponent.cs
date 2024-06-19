@@ -1,65 +1,59 @@
 using UnityEngine;
 
-public abstract class UnitComponent : MonoBehaviour, IAttack , IHealth
+public abstract class UnitComponent : MonoBehaviour
 {
- 
-    [SerializeField]
-    protected UnitConfig _config;
-    [SerializeField] protected WeaponsComponent _weapons;
-    [SerializeField]
-    protected GameHub _gameHub;
+
+    [SerializeField] protected UnitConfig _config;
+    [SerializeField] public Health _health;
+    [SerializeField] protected GameHub _gameHub;
+                     private Weapon _weapons;
+
+    public GameHub GetGameHub => _gameHub;
+    public Weapon GetWeapons => _weapons;
     /// <summary>
-    /// Выбранная цель для действий : Движение к цели; Атака цели;
+    /// Цель юнита для атаки 
+    /// </summary>
+    public ITakeDamage GetTargetForAttack;
+    /// <summary>
+    /// Выбранная цель для действий : индекс цели в списке  TODO=> перенести метод в класс врагов
     /// </summary>
     public int GetSelectedGoal;
+    /// <summary>
+    /// Взять цель у юнита
+    /// </summary>
     public Transform GetTarget;
-    public IHealth GetTargetForAttack;
-    public GameHub GetGameHub => _gameHub;
-    public WeaponsComponent GetWeapons => _weapons;
+
     protected StateUnit GetStateUnit => StateUnit.IDLE;
-   
+
     public IUnitState CurrentState { get; private set; }
 
-    public float Luck {  get; private set; }    
-     public IUnitState NoneState   { get; private set; } //Погранничное состояние
-    public IUnitState IdleState   { get; private set; }    //бездействие
-    public IUnitState MoveState   { get; private set; } // Двигаться 
+    public float Luck { get; private set; }
+    public float GetDistance { get; private set; }
+
+
+    public IUnitState NoneState { get; private set; } //Погранничное состояние
+    public IUnitState IdleState { get; private set; }    //бездействие
+    public IUnitState MoveState { get; private set; } // Двигаться 
     public IUnitState AttackState { get; private set; } //Атаковать
     public IUnitState SearchState { get; private set; } //Поиск врага(брамина)
-    public IUnitState DeadState   { get; private set; }   // Смерть
-    
-    
-    public void Attack()
-    {
-        GetWeapons.Attack(this);
+    public IUnitState DeadState { get; private set; }   // Смерть
 
+    protected virtual void Container(GameHub gameHub)
+    {
+
+        _gameHub = gameHub;
     }
-
-    public void Health(float damage)
+    protected virtual void Initialized()
     {
-
-    }
-
-    public abstract void Move();
-
-    public void Container(GameHub gameHub)
-    {
-    
-        _gameHub    = gameHub;
+        _weapons = new Weapon(_config.GetWeaponsConfig);
         Luck = _config.GetLuck;
-        NoneState   = new NoneState();
-        IdleState   = new IdleState();
-        MoveState   = new MoveState();
+        GetDistance = _config.GetDistance;
+        NoneState = new NoneState();
+        IdleState = new IdleState();
+        MoveState = new MoveState();
         AttackState = new AttackState();
         SearchState = new SearchState();
-        DeadState   = new DeadState();
-
-    }
-    //TODO=>TEMP
-    private void Awake()
-    {
-        Container(FindObjectOfType<GameHub>());
-        SetState(MoveState);
+        DeadState = new DeadState();
     }
 
     public void SetState(IUnitState newState)
@@ -78,6 +72,20 @@ public abstract class UnitComponent : MonoBehaviour, IAttack , IHealth
             CurrentState?.UpdateState(this);
         }
     }
+     
 
+    
+    //TODO=>TEMP
+    private void Awake()
+    {
+        Container(FindObjectOfType<GameHub>());
+     
+    }
+    private void Start()
+    {
+        Initialized();
+        SetState(MoveState);
+    }
+  
 
 }
