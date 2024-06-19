@@ -1,17 +1,14 @@
-using UnityEngine;
-
 /// <summary>
 /// Состояние: Атака цели
 /// </summary>
-public class AttackState :  IUnitState
+public class AttackState : IUnitState
 {
-
-    IAttack _attack;
+    private IAttack _attack;
     public void EnterState( UnitComponent unit )
     {
         _attack = unit.GetComponent<IAttack>();
         unit.GetGameHub.GetUnitsUpdateEngine.AddUnit( unit , StateUnitList.OTHER );
-       
+
     }
 
     public void ExitState( UnitComponent unit )
@@ -21,12 +18,18 @@ public class AttackState :  IUnitState
 
     public void UpdateState( UnitComponent unit )
     {
-     
+
+        if ( unit.GetTargetForAttack.IsDead )
+        {
+            unit.SetState( unit. NoneState );
+            unit.gameObject.SetActive( false );  
+        }
+
         _attack.Attack();
 
     }
 
 
 
-    
+
 }

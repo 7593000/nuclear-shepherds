@@ -55,22 +55,31 @@ public class PointsTargerEngine : MonoBehaviour
 
     private void CheckingAngle()
     {
-         
-
-        for (int i = 0; i < _target.Count - 2; i++)
+        for ( int i = 0; i < _target.Count - 2; i++ )
         {
-            Vector3 VectorAB = (_target[i].transform.position - _target[i + 1].transform.position).normalized;
-            Vector3 VectorBC = (_target[i + 1].transform.position - _target[i + 2].transform.position).normalized;
+            Vector3 pointA = _target[ i ].transform.position;
+            Vector3 pointB = _target[ i + 1 ].transform.position;
+            Vector3 pointC = _target[ i + 2 ].transform.position;
 
-            float dotProduct = Vector3.Dot(VectorAB, VectorBC);
-            float angle = Mathf.Acos(dotProduct) * Mathf.Rad2Deg;
-#if UNITY_EDITOR 
-            _target[i + 1].AnglePoint = angle;
+            Vector3 vectorAB = ( pointB - pointA ).normalized;
+            Vector3 vectorBC = ( pointC - pointB ).normalized;
+
+            
+
+            float angleFromAtoB = Mathf.Atan2( vectorAB.y , vectorAB.x ) * Mathf.Rad2Deg;
+            if ( angleFromAtoB < 0 )
+            {
+                angleFromAtoB += 360;
+            }
+
+#if UNITY_EDITOR
+            _target[ i + 1 ].AnglePoint = angleFromAtoB;
 #endif
-            if (_target[i + 1] == null) return;
-           
-        }
+            
 
+            if ( _target[ i + 1 ] == null )
+                return;
+        }
     }
 #endif
 

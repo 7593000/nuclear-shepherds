@@ -3,6 +3,7 @@ using UnityEngine;
 public abstract class UnitComponent : MonoBehaviour
 {
 
+    [SerializeField] private Animator _animator;
     [SerializeField] protected UnitConfig _config;
     [SerializeField] public Health _health;
     [SerializeField] protected GameHub _gameHub;
@@ -14,7 +15,7 @@ public abstract class UnitComponent : MonoBehaviour
     /// <summary>
     /// Цель юнита для атаки 
     /// </summary>
-    public ITakeDamage GetTargetForAttack;
+    public IHealth GetTargetForAttack;
     /// <summary>
     /// Выбранная цель для действий : индекс цели в списке  TODO=> перенести метод в класс врагов
     /// </summary>
@@ -23,6 +24,8 @@ public abstract class UnitComponent : MonoBehaviour
     /// Взять цель у юнита
     /// </summary>
     public Transform GetTarget;
+
+    public Animator GetAminator => _animator;
 
     protected StateUnit GetStateUnit => StateUnit.IDLE;
 
@@ -42,6 +45,7 @@ public abstract class UnitComponent : MonoBehaviour
     protected virtual void Container(GameHub gameHub)
     {
 
+        
         _gameHub = gameHub;
     }
     protected virtual void Initialized()
@@ -58,6 +62,7 @@ public abstract class UnitComponent : MonoBehaviour
         SearchState = new SearchState();
         DeadState = new DeadState();
         _attack = new Attack(_config.GetWeaponsConfig, Luck);
+
     }
 
     public void SetState(IUnitState newState)
@@ -83,6 +88,7 @@ public abstract class UnitComponent : MonoBehaviour
     private void Awake()
     {
         Container(FindObjectOfType<GameHub>());
+        _animator = GetComponent<Animator>();
 
     }
     private void Start()

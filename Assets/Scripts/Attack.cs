@@ -19,7 +19,7 @@ public class Attack
         Luck = luck;
     }
 
-    public void AttackTarget(ITakeDamage unit)
+    public void AttackTarget( IHealth unit )
     {
         //  if (!RechargeTime()) return;
 
