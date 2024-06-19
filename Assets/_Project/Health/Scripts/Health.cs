@@ -8,7 +8,7 @@ public class Health: MonoBehaviour
     [SerializeField]
     private Image _healthFilled;
     [SerializeField] private float MaxHealth;
-    [SerializeField] private float CurrentHealth;
+    [SerializeField] public float CurrentHealth { get; private set; }
 
     public void Container(IHealth unit)
     {
@@ -26,7 +26,7 @@ public class Health: MonoBehaviour
 
     private void UnitIsDead()
     {
-        
+        Debug.Log("Цель мертва");
     }
 
     public void UpdateHealthVisual(float currentHealth, float maxHealth)

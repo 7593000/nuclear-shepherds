@@ -6,7 +6,7 @@ using UnityEngine;
 public class AttackState :  IUnitState
 {
 
-    IAttack _attack ;
+    IAttack _attack;
     public void EnterState( UnitComponent unit )
     {
         _attack = unit.GetComponent<IAttack>();
@@ -21,8 +21,9 @@ public class AttackState :  IUnitState
 
     public void UpdateState( UnitComponent unit )
     {
-
+     
         _attack.Attack();
+
     }
 
 

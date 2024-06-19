@@ -1,41 +1,37 @@
-
 using UnityEngine;
 
-//TODO=> DEL
-
-
-public abstract class WeaponsComponent
+public class Attack
 {
-    protected WeaponsConfig _config;
-
-    [SerializeField]
-    private AudioClip _audio;
-    [SerializeField]
-    private Animator _animator;
+    WeaponsConfig _weapon;
 
     private float _speedAttackTemp = 0;
     private float _rechargeTimeTemp = 0;
     public float SpeedAttack { get; protected set; }
     public float Damage { get; protected set; }
+    public float Luck { get; protected set; }
 
 
-    
-
-    //TODO => Перенести в отдельный класс , привязать к интерфейсу оружия. 
-   // public void Attack(UnitComponent unit)
-          public void Attack(ITakeDamage unit, float luck =  0 )
+    public Attack(WeaponsConfig weapon, float luck)
     {
+        _weapon = weapon;
+        Damage = _weapon.GetDamage;
+        SpeedAttack = _weapon.GetSpeedAttack;
+        Luck = luck;
+    }
 
-      //  if (!RechargeTime()) return;
+    public void AttackTarget(ITakeDamage unit)
+    {
+        //  if (!RechargeTime()) return;
 
-       // if (CalculatingAttackSpeed()) return;
+        // if (CalculatingAttackSpeed()) return;
         _speedAttackTemp = 0f;
-        unit.TakeDamage(CalculatingDamage(luck));
-   
-
-
+                
+            unit.TakeDamage(CalculatingDamage());
+         
 
     }
+
+
 
     /// <summary>
     /// Метод перезагрузки, включить анимацию состояния ожидания, прекратить атаку и начать отчет времени перезарядки 
@@ -43,8 +39,8 @@ public abstract class WeaponsComponent
     private bool RechargeTime()
     {
         _rechargeTimeTemp += Time.deltaTime;
-        return _rechargeTimeTemp <= _config.GetRechargeTime;
-      
+        return _rechargeTimeTemp <= _weapon.GetRechargeTime;
+
     }
     /// <summary>
     /// Расчет возможности использования оружия 
@@ -59,9 +55,9 @@ public abstract class WeaponsComponent
     /// Рассчет наносимого урона: урон * удача
     /// </summary>
     /// <returns></returns>
-    private float CalculatingDamage(float luck)
+    private float CalculatingDamage()
     {
-        if (CritCalculation(luck)) return (Damage + Damage * luck  );
+        if (CritCalculation()) return (Damage + Damage * Luck);
 
         return Damage;
     }
@@ -71,12 +67,14 @@ public abstract class WeaponsComponent
     /// </summary>
     /// <param name="luck"></param>
     /// <returns></returns>
-    public bool CritCalculation(float luck) => RandomRange() < luck;
+    public bool CritCalculation() => RandomRange() < Luck;
 
 
     public float RandomRange()
     {
         return Random.Range(0f, 1f);
     }
+
+
 
 }

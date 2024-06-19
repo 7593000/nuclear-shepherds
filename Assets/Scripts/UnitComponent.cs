@@ -6,10 +6,11 @@ public abstract class UnitComponent : MonoBehaviour
     [SerializeField] protected UnitConfig _config;
     [SerializeField] public Health _health;
     [SerializeField] protected GameHub _gameHub;
-                     private Weapon _weapons;
-
+    //  private Weapon _weapons;
+    private Attack _attack;
     public GameHub GetGameHub => _gameHub;
-    public Weapon GetWeapons => _weapons;
+    // public Weapon GetWeapons => _weapons;
+    public Attack GetAttack => _attack;
     /// <summary>
     /// Цель юнита для атаки 
     /// </summary>
@@ -45,15 +46,18 @@ public abstract class UnitComponent : MonoBehaviour
     }
     protected virtual void Initialized()
     {
-        _weapons = new Weapon(_config.GetWeaponsConfig);
+
         Luck = _config.GetLuck;
+
         GetDistance = _config.GetDistance;
+
         NoneState = new NoneState();
         IdleState = new IdleState();
         MoveState = new MoveState();
         AttackState = new AttackState();
         SearchState = new SearchState();
         DeadState = new DeadState();
+        _attack = new Attack(_config.GetWeaponsConfig, Luck);
     }
 
     public void SetState(IUnitState newState)
@@ -72,20 +76,20 @@ public abstract class UnitComponent : MonoBehaviour
             CurrentState?.UpdateState(this);
         }
     }
-     
 
-    
+
+
     //TODO=>TEMP
     private void Awake()
     {
         Container(FindObjectOfType<GameHub>());
-     
+
     }
     private void Start()
     {
         Initialized();
         SetState(MoveState);
     }
-  
+
 
 }

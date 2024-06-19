@@ -1,5 +1,5 @@
-public class Weapon : WeaponsComponent 
-
+public class Weapon : WeaponsComponent
+//TODO=> DEL
 
 {
     public Weapon(WeaponsConfig config)

@@ -16,6 +16,7 @@ public class SearchState : IUnitState
     public void EnterState(UnitComponent unit)
     {
         _movable = unit.GetComponent<IMovable>();
+
         unit.GetGameHub.GetUnitsUpdateEngine.AddUnit(unit, StateUnitList.MOVE);
         _activeDistanceSqr = unit.GetDistance * unit.GetDistance;
         _brahmin = SearchTargetAttack(unit);
