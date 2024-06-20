@@ -43,11 +43,17 @@ public class Enemy : UnitComponent, IHealth, IAttack, IMovable
 
     }
 
-
     protected override void Initialized()
     {
         base.Initialized();
         _health.Container( this );
     }
+
+    protected override void Start()
+    {
+        base.Start();
+        SetState(MoveState);
+    }
+
 }
 

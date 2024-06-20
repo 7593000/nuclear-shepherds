@@ -24,10 +24,10 @@ public abstract class UnitComponent : MonoBehaviour
     /// Взять цель у юнита
     /// </summary>
     public Transform GetTarget;
-
+    public TypeUnit GetTypeUnit => _config.GetTypeUnit;
     public Animator GetAminator => _animator;
 
-    protected StateUnit GetStateUnit => StateUnit.IDLE;
+    //protected StateUnit GetStateUnit => StateUnit.IDLE;
 
     public IUnitState CurrentState { get; private set; }
 
@@ -67,6 +67,8 @@ public abstract class UnitComponent : MonoBehaviour
 
     public void SetState(IUnitState newState)
     {
+        Debug.Log("NewState: " + newState);
+
         CurrentState?.ExitState(this);
         CurrentState = newState;
         CurrentState?.EnterState(this);
@@ -91,10 +93,10 @@ public abstract class UnitComponent : MonoBehaviour
         _animator = GetComponent<Animator>();
 
     }
-    private void Start()
+    protected virtual void Start()
     {
         Initialized();
-        SetState(MoveState);
+       
     }
 
 

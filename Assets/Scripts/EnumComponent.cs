@@ -1,3 +1,12 @@
+
+
+public enum TypeUnit : byte
+{
+    NONE,
+    BRO,
+    EMENY
+}
+
 /// <summary>
 /// Тип оружия
 /// </summary>

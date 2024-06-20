@@ -4,28 +4,33 @@
 public class AttackState : IUnitState
 {
     private IAttack _attack;
-    public void EnterState( UnitComponent unit )
+    public void EnterState(UnitComponent unit)
     {
         _attack = unit.GetComponent<IAttack>();
-        unit.GetGameHub.GetUnitsUpdateEngine.AddUnit( unit , StateUnitList.OTHER );
+        unit.GetGameHub.GetUnitsUpdateEngine.AddUnit(unit, StateUnitList.OTHER);
 
     }
 
-    public void ExitState( UnitComponent unit )
+    public void ExitState(UnitComponent unit)
     {
-        unit.GetGameHub.GetUnitsUpdateEngine.RemoveUnit( unit , StateUnitList.OTHER );
+        unit.GetGameHub.GetUnitsUpdateEngine.RemoveUnit(unit, StateUnitList.OTHER);
     }
 
-    public void UpdateState( UnitComponent unit )
+    public void UpdateState(UnitComponent unit)
     {
 
-        if ( unit.GetTargetForAttack.IsDead )
+        if (unit.GetTargetForAttack != null)
         {
-            unit.SetState( unit. NoneState );
-            unit.gameObject.SetActive( false );  
+
+            _attack.Attack();
+            //unit.gameObject.SetActive( false );  
+        }
+        else
+        {
+            unit.SetState(unit.IdleState);
         }
 
-        _attack.Attack();
+
 
     }
 

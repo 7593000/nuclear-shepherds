@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class UnitConfig : ScriptableObject
 {
- 
+
+    [SerializeField, Tooltip("Бро или нет")]
+    private TypeUnit _unitType;
+    [Space]
     [SerializeField, Tooltip("Имя юнита")] 
     private string _name;
+
     [SerializeField, Tooltip("Количество жизней")]
     private float _health;
  
@@ -44,6 +48,11 @@ public class UnitConfig : ScriptableObject
     [SerializeField, Tooltip("Спрайт юнита для визуализации в инспекторе")]
     private Sprite _sprite;
 #endif
+    /// <summary>
+    /// Получить принадлежность юнита 
+    /// </summary>
+
+    public TypeUnit GetTypeUnit => _unitType;
     /// <summary>
     /// Получить имя юнита
     /// </summary>
