@@ -13,7 +13,7 @@ public abstract class UnitComponent : MonoBehaviour
     private Damage _damage;
     public GameHub GetGameHub => _gameHub;
     // public Weapon GetWeapons => _weapons;
-    public Damage GetAttack => _damage;
+    public Damage GetDamane => _damage;
     /// <summary>
     /// Цель юнита для атаки 
     /// </summary>

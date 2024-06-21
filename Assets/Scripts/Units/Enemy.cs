@@ -34,7 +34,7 @@ public class Enemy : UnitComponent, IHealth, IAttack, IMovable
     public void Attack()
     {
 
-        GetAttack.AttackTarget( GetTargetForAttack );
+        GetDamane.DamageTarget( GetTargetForAttack );
 
 
         //SetState(NoneState);

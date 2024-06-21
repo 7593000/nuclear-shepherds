@@ -7,28 +7,28 @@ public class Friends : UnitComponent, IAttack
     private LineRenderer _lineRenderer;
     private CircleCollider2D _circleCollider;
     private int _segments = 46;
-    private List<IHealth> _enemies = new List<IHealth>();
- 
-    
-    
+    private List<UnitComponent> _enemies = new();
+
+
+
     public void Attack()
     {
 
-        GetAttack.AttackTarget(GetTargetForAttack);
-       
+        GetDamane.DamageTarget(GetTargetForAttack);
+
     }
     protected override void Start()
     {
         base.Start();
-       
-    
+
+
         _lineRenderer = GetComponent<LineRenderer>();
         _circleCollider = GetComponent<CircleCollider2D>();
         _circleCollider.radius = _config.GetDistance;
         _lineRenderer.positionCount = _segments + 1;
         _lineRenderer.useWorldSpace = false;
         CreateCircle();
-      SetState(IdleState);
+        SetState(IdleState);
     }
 
 
@@ -50,20 +50,21 @@ public class Friends : UnitComponent, IAttack
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("1");
 
-        if (other.TryGetComponent<UnitComponent>(out UnitComponent unit))
+
+        if (other.TryGetComponent(out UnitComponent unit))
         {
-           
+
             if (unit.GetTypeUnit == TypeUnit.ENEMY)
             {
-               
+
 
                 IHealth enemy = unit.GetComponent<IHealth>();
-                if (enemy != null && !_enemies.Contains(enemy) && !enemy.IsDead)
+
+                if (enemy != null && !_enemies.Contains(unit) && !enemy.IsDead)
                 {
-                    _enemies.Add(enemy);
-                    GetTarget = unit.transform;
+                    _enemies.Add(unit);
+
                     SelectEnemyForAttack();
                 }
             }
@@ -72,23 +73,24 @@ public class Friends : UnitComponent, IAttack
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.TryGetComponent<UnitComponent>(out UnitComponent unit))
+        if (other.TryGetComponent(out UnitComponent unit))
         {
             IHealth enemy = unit.GetComponent<IHealth>();
-            if (enemy != null && _enemies.Contains(enemy))
+            if (enemy != null && _enemies.Contains(unit))
             {
-                _enemies.Remove(enemy);
-               
+                _enemies.Remove(unit);
+
 
                 if (GetTargetForAttack == enemy)
                 {
                     GetTargetForAttack = null;
-                   
+
                 }
             }
             if (_enemies.Count > 0)
             {
-                GetTargetForAttack = _enemies[0];
+
+                GetTargetForAttack = _enemies[0].GetComponent<IHealth>();
             }
             else
             {
@@ -101,16 +103,17 @@ public class Friends : UnitComponent, IAttack
     {
         if (_enemies.Count > 0)
         {
-            foreach (IHealth enemy in _enemies)
+            foreach (UnitComponent enemy in _enemies)
             {
                 // Проверка на уязвимость противника  
-                if (enemy != null && (!enemy.IsDead || GetTargetForAttack == null))
+                if (enemy != null && (!enemy.GetComponent<IHealth>().IsDead || GetTargetForAttack == null))
                 {
-                    GetTargetForAttack = enemy;
+                    GetTarget = enemy.transform;
+                    GetTargetForAttack = enemy.GetComponent<IHealth>();
                     break;
                 }
             }
-           
+
             SetState(AttackState);
 
         }
@@ -119,7 +122,7 @@ public class Friends : UnitComponent, IAttack
         {
             GetTarget = null;
         }
-       
+
 
     }
 }
