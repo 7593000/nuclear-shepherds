@@ -12,10 +12,12 @@ public sealed class UnitsUpdateEngine : MonoBehaviour
     private List<UnitComponent> _moveStateUnits = new();
     private List<UnitComponent> _otherStateUnits = new();
     private List<UnitComponent> _attackUpdate = new();
+    private List<UnitComponent> _followGoal = new();
 
     //TODO => возможно . на удаление закрытых списков 
     public IReadOnlyList<UnitComponent> GetUnitsMove => _moveStateUnits;
     public IReadOnlyList<UnitComponent> GetUnitsOther => _otherStateUnits;
+    public IReadOnlyList<UnitComponent> GetFollowGoal => _followGoal;
     //TODO => возможно . на удаление закрытых списков 
 
 
@@ -37,6 +39,11 @@ public sealed class UnitsUpdateEngine : MonoBehaviour
             case StateUnitList.ATTACK:
                 _attackUpdate.Add(unit);
                 break;
+            case StateUnitList.DIRECT:
+                _followGoal.Add(unit);
+                break;
+
+
         }
     }
 
@@ -60,25 +67,47 @@ public sealed class UnitsUpdateEngine : MonoBehaviour
                 {
                     _otherStateUnits.Remove(unit);
                 }
-
-
                 break;
-                case StateUnitList.ATTACK:
-                _attackUpdate.Remove(unit);
+            case StateUnitList.ATTACK:
+                if (_otherStateUnits.Contains(unit))
+                {
+                    _attackUpdate.Remove(unit);
+                }
+                break;
+            case StateUnitList.DIRECT:
+                if (_otherStateUnits.Contains(unit))
+                {
+                    _followGoal.Remove(unit);
+                }
                 break;
         }
-
-
-
-
     }
+
+    private IEnumerator FollowGoal()
+    {
+        while (true)
+        {
+            for (int i = 0; i < _followGoal.Count; i++)
+            {
+                //  _followGoal[i].GetDirectionView = _followGoal[i].GetTargetForAttack;
+                _followGoal[i].StartAnimation.ChangeDirection();
+            }
+
+
+            yield return new WaitForSeconds(_timerUpdate); //TODO => в переменную
+
+        }
+    }
+
+
+
 
     private IEnumerator UpdateOtherStates()
     {
         while (true)
         {
-            for (int i = _otherStateUnits.Count - 1; i >= 0; i--)
-              
+            for (int i = 0; i < _otherStateUnits.Count; i++)
+
             {
                 if (_otherStateUnits[i].gameObject.activeSelf)
                 {
@@ -96,11 +125,13 @@ public sealed class UnitsUpdateEngine : MonoBehaviour
     private void OnEnable()
     {
         StartCoroutine(UpdateOtherStates());
+        StartCoroutine(FollowGoal());
     }
 
     private void OnDisable()
     {
         StopCoroutine(UpdateOtherStates());
+        StopCoroutine(FollowGoal());
     }
 
 

@@ -30,7 +30,7 @@ public class Brahmin : UnitComponent, IHealth, IMovable
         else
         {
             IsActive = false;
-            GetAminator.SetTrigger( "Dead");
+            GetAnimator.SetTrigger( "Dead");
           //  gameObject.SetActive( false );
         }
 

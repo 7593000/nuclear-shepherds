@@ -10,7 +10,7 @@ public class MoveState :   IUnitState
     private int _goalCount;
     private float _activeDistance = 1.2f;
     private float _activeDistanceSqr;
-
+    private TargetPoint _targetPoint;
 
     public void EnterState(UnitComponent unit)
     {
@@ -22,15 +22,22 @@ public class MoveState :   IUnitState
         }
         _goalCount = unit.GetGameHub.GetPointsTarget.GetTargets.Count;
         _activeDistanceSqr = _activeDistance * _activeDistance;
-        unit.GetTarget = unit.GetGameHub.GetPointsTarget.GetTargets[unit.GetSelectedGoal].transform;
+
+        _targetPoint = unit.GetGameHub.GetPointsTarget.GetTargets[unit.GetSelectedGoal];
+       
+        unit.GetTarget = _targetPoint.transform;
+
+        unit.GetDirectionView = _targetPoint.GetAngleForanimation;
 
         unit.GetGameHub.GetUnitsUpdateEngine.AddUnit(unit, StateUnitList.MOVE);
-             
+
+        unit.StartAnimation.ToRun(StateUnit.MOVE);
     }
 
     public void ExitState(UnitComponent unit)
     {
         unit.GetGameHub.GetUnitsUpdateEngine.RemoveUnit(unit, StateUnitList.MOVE);
+        unit.StartAnimation.ToRun(StateUnit.IDLE);
     }
 
     public void UpdateState(UnitComponent unit)
@@ -46,7 +53,9 @@ public class MoveState :   IUnitState
             {
 
                 unit.GetSelectedGoal++;
-                unit.GetTarget = unit.GetGameHub.GetPointsTarget.GetTargets[unit.GetSelectedGoal].transform;
+                unit.GetTarget = _targetPoint.transform;
+                unit.GetDirectionView = _targetPoint.GetAngleForanimation;
+                unit.StartAnimation.ToRun(StateUnit.MOVE);
             }
             else
             {

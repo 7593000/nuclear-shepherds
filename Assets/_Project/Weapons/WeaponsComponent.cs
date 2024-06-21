@@ -22,7 +22,7 @@ public abstract class WeaponsComponent
     
 
     //TODO => Перенести в отдельный класс , привязать к интерфейсу оружия. 
-   // public void Attack(UnitComponent unit)
+   // public void Damage(UnitComponent unit)
           public void Attack(ITakeDamage unit, float luck =  0 )
     {
 

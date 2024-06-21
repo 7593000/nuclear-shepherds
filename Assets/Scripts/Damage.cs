@@ -1,20 +1,20 @@
 using UnityEngine;
 
-public class Attack
+public class Damage
 {
     WeaponsConfig _weapon;
 
     private float _speedAttackTemp = 0;
     private float _rechargeTimeTemp = 0;
     public float SpeedAttack { get; protected set; }
-    public float Damage { get; protected set; }
+    public float DamageValue { get; protected set; }
     public float Luck { get; protected set; }
 
 
-    public Attack(WeaponsConfig weapon, float luck)
+    public Damage(WeaponsConfig weapon, float luck)
     {
         _weapon = weapon;
-        Damage = _weapon.GetDamage;
+        DamageValue = _weapon.GetDamage;
         SpeedAttack = _weapon.GetSpeedAttack;
         Luck = luck;
     }
@@ -57,9 +57,9 @@ public class Attack
     /// <returns></returns>
     private float CalculatingDamage()
     {
-        if (CritCalculation()) return (Damage + Damage * Luck);
+        if (CritCalculation()) return (DamageValue + DamageValue * Luck);
 
-        return Damage;
+        return DamageValue;
     }
 
     /// <summary>

@@ -4,7 +4,7 @@ public enum TypeUnit : byte
 {
     NONE,
     BRO,
-    EMENY
+    ENEMY
 }
 
 /// <summary>
@@ -85,5 +85,6 @@ public enum StateUnitList : byte
 {
     MOVE,
     OTHER,
-    ATTACK
+    ATTACK,
+    DIRECT
 }

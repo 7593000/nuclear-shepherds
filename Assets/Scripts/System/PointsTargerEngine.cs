@@ -62,7 +62,7 @@ public class PointsTargerEngine : MonoBehaviour
             Vector3 pointC = _target[ i + 2 ].transform.position;
 
             Vector3 vectorAB = ( pointB - pointA ).normalized;
-            Vector3 vectorBC = ( pointC - pointB ).normalized;
+           
 
             
 

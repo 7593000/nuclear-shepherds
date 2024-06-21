@@ -21,22 +21,24 @@ public class Health : MonoBehaviour
     {
 
         CurrentHealth -= damage;
-        UpdateHealthVisual( CurrentHealth , MaxHealth );
-        if ( CurrentHealth <= 0 )
+
+        if (CurrentHealth <= 0)
         {
             UnitIsDead();
         }
+        UpdateHealthVisual( CurrentHealth , MaxHealth );
+       
     }
 
     private void UnitIsDead()
     {
-        Debug.Log( _healthUnit.IsDead );
+       
         Debug.Log( "Цель мертва" );
         
         _healthUnit.IsDead = true;
          HealthBotVisible(false);
 
-        //TODO => EVENT SENT -1 Жизнь
+        //TODO => проверка в другом классе на количвество браминов.  
     }
 
     public void UpdateHealthVisual( float currentHealth , float maxHealth )

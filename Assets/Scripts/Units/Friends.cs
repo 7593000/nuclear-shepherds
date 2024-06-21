@@ -15,7 +15,7 @@ public class Friends : UnitComponent, IAttack
     {
 
         GetAttack.AttackTarget(GetTargetForAttack);
-        Debug.Log("ATTACK");
+       
     }
     protected override void Start()
     {
@@ -45,20 +45,25 @@ public class Friends : UnitComponent, IAttack
         }
     }
 
+
+
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-     
+        Debug.Log("1");
 
         if (other.TryGetComponent<UnitComponent>(out UnitComponent unit))
         {
-            Debug.Log("GetComponent " + other.GetComponent<UnitComponent>());
-            if (unit.GetTypeUnit == TypeUnit.EMENY)
+           
+            if (unit.GetTypeUnit == TypeUnit.ENEMY)
             {
+               
+
                 IHealth enemy = unit.GetComponent<IHealth>();
                 if (enemy != null && !_enemies.Contains(enemy) && !enemy.IsDead)
                 {
                     _enemies.Add(enemy);
-                    Debug.Log("ENTER");
+                    GetTarget = unit.transform;
                     SelectEnemyForAttack();
                 }
             }
@@ -73,9 +78,12 @@ public class Friends : UnitComponent, IAttack
             if (enemy != null && _enemies.Contains(enemy))
             {
                 _enemies.Remove(enemy);
+               
+
                 if (GetTargetForAttack == enemy)
                 {
                     GetTargetForAttack = null;
+                   
                 }
             }
             if (_enemies.Count > 0)
@@ -88,7 +96,7 @@ public class Friends : UnitComponent, IAttack
             }
         }
     }
-
+    //TODO=> Переделать IHealth на UnityComponent
     private void SelectEnemyForAttack()
     {
         if (_enemies.Count > 0)
@@ -102,11 +110,16 @@ public class Friends : UnitComponent, IAttack
                     break;
                 }
             }
-            Debug.Log("SetState: "+ CurrentState);
-            Debug.Log("_currentTarget: " + GetTargetForAttack);
+           
             SetState(AttackState);
 
         }
+
+        else
+        {
+            GetTarget = null;
+        }
+       
 
     }
 }
