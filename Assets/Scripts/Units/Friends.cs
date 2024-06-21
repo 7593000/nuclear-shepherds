@@ -13,9 +13,15 @@ public class Friends : UnitComponent, IAttack
 
     public void Attack()
     {
+        float damage = GetDamane.DamageTarget();
+        Debug.Log(damage);
 
-        GetDamane.DamageTarget(GetTargetForAttack);
-
+        if ( damage >= 0 )
+        {
+            StartAnimation.ToRun( StateUnit.ATTACK );
+            GetTargetForAttack.TakeDamage( damage );
+         
+        }
     }
     protected override void Start()
     {
@@ -28,19 +34,19 @@ public class Friends : UnitComponent, IAttack
         _lineRenderer.positionCount = _segments + 1;
         _lineRenderer.useWorldSpace = false;
         CreateCircle();
-        SetState(IdleState);
+        SetState( IdleState );
     }
 
 
     private void CreateCircle()
     {
         float angle = 0f;
-        for (int i = 0; i < _segments + 1; i++)
+        for ( int i = 0; i < _segments + 1; i++ )
         {
-            float x = Mathf.Sin(Mathf.Deg2Rad * angle) * _config.GetDistance;
-            float y = Mathf.Cos(Mathf.Deg2Rad * angle) * _config.GetDistance;
+            float x = Mathf.Sin( Mathf.Deg2Rad * angle ) * _config.GetDistance;
+            float y = Mathf.Cos( Mathf.Deg2Rad * angle ) * _config.GetDistance;
 
-            _lineRenderer.SetPosition(i, new Vector3(x, y, 0));
+            _lineRenderer.SetPosition( i , new Vector3( x , y , 0 ) );
             angle += 360f / _segments;
         }
     }
@@ -48,22 +54,22 @@ public class Friends : UnitComponent, IAttack
 
 
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D( Collider2D other )
     {
 
 
-        if (other.TryGetComponent(out UnitComponent unit))
+        if ( other.TryGetComponent( out UnitComponent unit ) )
         {
 
-            if (unit.GetTypeUnit == TypeUnit.ENEMY)
+            if ( unit.GetTypeUnit == TypeUnit.ENEMY )
             {
 
 
                 IHealth enemy = unit.GetComponent<IHealth>();
 
-                if (enemy != null && !_enemies.Contains(unit) && !enemy.IsDead)
+                if ( enemy != null && !_enemies.Contains( unit ) && !enemy.IsDead )
                 {
-                    _enemies.Add(unit);
+                    _enemies.Add( unit );
 
                     SelectEnemyForAttack();
                 }
@@ -71,58 +77,57 @@ public class Friends : UnitComponent, IAttack
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    private void OnTriggerExit2D( Collider2D other )
     {
-        if (other.TryGetComponent(out UnitComponent unit))
+        if ( other.TryGetComponent( out UnitComponent unit ) )
         {
             IHealth enemy = unit.GetComponent<IHealth>();
-            if (enemy != null && _enemies.Contains(unit))
+            if ( enemy != null && _enemies.Contains( unit ) )
             {
-                _enemies.Remove(unit);
+                _enemies.Remove( unit );
 
 
-                if (GetTargetForAttack == enemy)
+                if ( GetTargetForAttack == enemy )
                 {
                     GetTargetForAttack = null;
-
+                    GetTarget = null;
                 }
-            }
-            if (_enemies.Count > 0)
-            {
 
-                GetTargetForAttack = _enemies[0].GetComponent<IHealth>();
-            }
-            else
-            {
-                GetTargetForAttack = null;
+
+                if ( _enemies.Count > 0 )
+                {
+                    SelectEnemyForAttack();
+                }
             }
         }
     }
-    //TODO=> Переделать IHealth на UnityComponent
+
+
     private void SelectEnemyForAttack()
     {
-        if (_enemies.Count > 0)
+        if ( _enemies.Count > 0 )
         {
-            foreach (UnitComponent enemy in _enemies)
+            foreach ( UnitComponent enemy in _enemies )
             {
-                // Проверка на уязвимость противника  
-                if (enemy != null && (!enemy.GetComponent<IHealth>().IsDead || GetTargetForAttack == null))
+                IHealth enemyHealth = enemy.GetComponent<IHealth>();
+                if ( enemyHealth != null && !enemyHealth.IsDead )
                 {
                     GetTarget = enemy.transform;
-                    GetTargetForAttack = enemy.GetComponent<IHealth>();
+                    GetTargetForAttack = enemyHealth;
                     break;
                 }
             }
 
-            SetState(AttackState);
 
+            if ( GetTarget != null )
+            {
+                SetState( AttackState );
+            }
         }
-
         else
         {
             GetTarget = null;
+            GetTargetForAttack = null;
         }
-
-
     }
 }

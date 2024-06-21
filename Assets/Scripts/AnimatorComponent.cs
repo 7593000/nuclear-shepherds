@@ -62,6 +62,9 @@ public class AnimatorComponent : MonoBehaviour
 
     public void ChangeDirection()
     {
+        if ( _unit.GetTarget == null )
+            return;
+
         Vector3 pointA = _unit.transform.position;
         Vector3 pointB = _unit.GetTarget.position;
         
@@ -83,7 +86,7 @@ public class AnimatorComponent : MonoBehaviour
         if (angle < 0)
         {
             angle += 360;
-        } Debug.Log(angle);
+        }  
 
         if (angle >= 0 && angle < 45)
             return (1, 0);

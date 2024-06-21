@@ -24,9 +24,20 @@ public class WeaponsConfig : ScriptableObject
     [SerializeField, Tooltip( "Спрайт оружия для визуализации в инспекторе" )]
     private Sprite _sprite;
 #endif
+    /// <summary>
+    /// Продолжительность воздействия оружия
+    /// </summary>
+    public float GetDuratuion => _duration;
+    /// <summary>
+    /// Скорость атаки
+    /// </summary>
     public float GetSpeedAttack => _speedAttack;
-    public float GetDamage => _damage;
+    /// <summary>
+    /// Время перезарядки
+    /// </summary>
     public float GetRechargeTime => _rechargeTime;
+    public float GetDamage => _damage;
+
     public AudioClip GetAudioClip => _audioClip;
 
 #if UNITY_EDITOR

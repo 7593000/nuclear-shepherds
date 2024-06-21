@@ -4,7 +4,7 @@ public class Enemy : UnitComponent, IHealth, IAttack, IMovable
 
 {
     public bool IsDead { get; set; } = false;
-   
+
     public void Move()
     {
 
@@ -15,31 +15,39 @@ public class Enemy : UnitComponent, IHealth, IAttack, IMovable
 
     public void TakeDamage( float damage )
     {
-        
+
 
         if ( !IsDead )
         {
-            _health.TakeDamage( damage );
+            float health = _health.TakeDamage( damage );
+          
+            if ( health <= 0 )
+            {
+                gameObject.SetActive( false );
+            }
         }
         else
         {
-            gameObject.SetActive( false );  
+            gameObject.SetActive( false );
         }
 
 
     }
-     
+
     public float Health() => _config.GetHealth;
 
     public void Attack()
     {
 
-        GetDamane.DamageTarget( GetTargetForAttack );
+        float damage = GetDamane.DamageTarget();
+       
 
+        if ( damage >= 0 )
+        {
+            StartAnimation.ToRun( StateUnit.ATTACK );
+            GetTargetForAttack.TakeDamage( damage );
 
-        //SetState(NoneState);
-        //gameObject.SetActive(false);
-
+        }
 
     }
 
@@ -52,7 +60,7 @@ public class Enemy : UnitComponent, IHealth, IAttack, IMovable
     protected override void Start()
     {
         base.Start();
-        SetState(MoveState);
+        SetState( MoveState );
     }
 
 }

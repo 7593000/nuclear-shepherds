@@ -13,7 +13,7 @@ public class AttackState : IUnitState
         unit.GetGameHub.GetUnitsUpdateEngine.AddUnit(unit, StateUnitList.DIRECT);
 
 
-        unit.StartAnimation.ToRun(StateUnit.ATTACK);
+       // unit.StartAnimation.ToRun(StateUnit.ATTACK);
        
 
 
@@ -24,8 +24,9 @@ public class AttackState : IUnitState
 
     public void ExitState(UnitComponent unit)
     {
+        unit.GetGameHub.GetUnitsUpdateEngine.RemoveUnit( unit , StateUnitList.DIRECT );
         unit.GetGameHub.GetUnitsUpdateEngine.RemoveUnit(unit, StateUnitList.OTHER);//todo=> переправить на ATtack
-        unit.GetGameHub.GetUnitsUpdateEngine.RemoveUnit(unit, StateUnitList.DIRECT);
+      
 
        
     }

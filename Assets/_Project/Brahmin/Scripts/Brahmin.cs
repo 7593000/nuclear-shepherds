@@ -1,17 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public class Brahmin : UnitComponent, IHealth, IMovable
 {
 
- 
+
     public bool IsDead { get; set; } = false;
     public bool IsActive { get; private set; } = true;
-   
+
     public float Health()
     {
-     return _config.GetHealth;
+        return _config.GetHealth;
     }
 
     public void Move()
@@ -19,20 +15,26 @@ public class Brahmin : UnitComponent, IHealth, IMovable
         //TODO => Выбор рандомной точки от начальной. возврат на начальную точку. повтор.
     }
 
-    public void TakeDamage(float damage)
+    public void TakeDamage( float damage )
     {
-        if ( !IsActive ) return;
-        
+        if ( !IsActive )
+        {
+            return;
+        }
+
         if ( !IsDead )
         {
-            _health.TakeDamage( damage );
+            float health = _health.TakeDamage( damage );
+            if ( health <= 0 )
+            {
+                gameObject.SetActive( false );
+            }
         }
         else
         {
-            IsActive = false;
-            GetAnimator.SetTrigger( "Dead");
-          //  gameObject.SetActive( false );
+            gameObject.SetActive( false );
         }
+
 
     }
 
@@ -40,6 +42,6 @@ public class Brahmin : UnitComponent, IHealth, IMovable
     protected override void Initialized()
     {
         base.Initialized();
-        _health.Container(this);
+        _health.Container( this );
     }
 }

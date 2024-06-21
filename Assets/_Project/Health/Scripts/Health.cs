@@ -17,7 +17,7 @@ public class Health : MonoBehaviour
         UpdateHealthVisual( CurrentHealth , MaxHealth );
     }
 
-    public void TakeDamage( float damage )
+    public float TakeDamage( float damage )
     {
 
         CurrentHealth -= damage;
@@ -27,7 +27,8 @@ public class Health : MonoBehaviour
             UnitIsDead();
         }
         UpdateHealthVisual( CurrentHealth , MaxHealth );
-       
+        
+        return CurrentHealth;
     }
 
     private void UnitIsDead()
