@@ -1,4 +1,7 @@
 
+using System;
+using System.Diagnostics;
+
 /// <summary>
 /// Состояние : Движение к цели
 /// </summary>
@@ -37,12 +40,12 @@ public class MoveState :   IUnitState
     public void ExitState(UnitComponent unit)
     {
         unit.GetGameHub.GetUnitsUpdateEngine.RemoveUnit(unit, StateUnitList.MOVE);
-        unit.StartAnimation.ToRun(StateUnit.IDLE);
+         unit.StartAnimation.ToRun(StateUnit.IDLE);
     }
 
     public void UpdateState(UnitComponent unit)
     {
-
+        
 
         float distanceSquared = (unit.transform.position - unit.GetTarget.position).sqrMagnitude;
         _activeDistanceSqr = _activeDistance * _activeDistance;
@@ -51,11 +54,14 @@ public class MoveState :   IUnitState
         {
             if (unit.GetSelectedGoal < _goalCount - 1)
             {
-
+               
                 unit.GetSelectedGoal++;
+                _targetPoint = unit.GetGameHub.GetPointsTarget.GetTargets[ unit.GetSelectedGoal ];
                 unit.GetTarget = _targetPoint.transform;
+               // unit.GetTarget = unit.GetGameHub.GetPointsTarget.GetTargets[ unit.GetSelectedGoal ].transform;
                 unit.GetDirectionView = _targetPoint.GetAngleForanimation;
                 unit.StartAnimation.ToRun(StateUnit.MOVE);
+                GameHub.Logger( unit.GetDirectionView[0]+" :: " + unit.GetDirectionView[1] );
             }
             else
             {

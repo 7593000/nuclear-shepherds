@@ -26,7 +26,7 @@ public class Enemy : UnitComponent, IHealth, IAttack, IMovable
                 gameObject.SetActive( false );
             }
         }
-        else
+        else //TODO => DEL? 
         {
             gameObject.SetActive( false );
         }

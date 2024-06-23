@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d26c15ee3fe0a09409c2112b20f5e458, type: 3}
   m_Name: WildGhoul
   m_EditorClassIdentifier: 
-  _unitType: 2
+  _unitType: 3
   _name: "\u0414\u0438\u043A\u0438\u0439 \u0433\u0443\u043B\u044C"
   _health: 100
   _luck: 0.55
   _distance: 1.1
   _occupiedArea: 1
-  _speed: 1
+  _speed: 3.56
   _cost: 0
   _typeWeapon: 1
   _config: {fileID: 11400000, guid: 9b53894a397d5f2438fce9d92c255ea0, type: 2}

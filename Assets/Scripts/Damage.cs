@@ -1,6 +1,8 @@
 using System.Threading.Tasks;
 using UnityEngine;
-
+/// <summary>
+/// Расчет нанесения урона оружием 
+/// </summary>
 public class Damage
 {
     WeaponsConfig _weapon;

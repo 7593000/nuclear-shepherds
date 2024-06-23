@@ -25,4 +25,4 @@ MonoBehaviour:
   _firearms: 0
   _fire: 0
   _energyWeapons: 0
-  _sprite: {fileID: 0}
+  _sprite: {fileID: 84117879, guid: 68bc0787bdef1a54db390cddff4883e5, type: 3}

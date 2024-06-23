@@ -14,6 +14,8 @@ public class GameHub : MonoBehaviour
     private CreatePoolEnemy _poolEnemy;
     [SerializeField]
     private BrahminManager _brahmin;
+    [SerializeField]
+    private BottomPanel _bottomPanel;
 
 
     public UnitsUpdateEngine GetUnitsUpdateEngine => _unitsEngine;
@@ -24,5 +26,16 @@ public class GameHub : MonoBehaviour
     {
         _unitsEngine ??= FindAnyObjectByType<UnitsUpdateEngine>(); 
         _points??= FindAnyObjectByType<PointsTargerEngine>(); 
+        _bottomPanel??= FindFirstObjectByType<BottomPanel>();  
+    }
+
+    private void Start()
+    {
+        _bottomPanel.Initialized();
+    }
+
+    public static void Logger(string txt)
+    {
+        Debug.Log( txt );
     }
 }

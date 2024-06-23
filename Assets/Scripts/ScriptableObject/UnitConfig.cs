@@ -5,16 +5,16 @@ using UnityEngine;
 public class UnitConfig : ScriptableObject
 {
 
-    [SerializeField, Tooltip("Бро или нет")]
+    [SerializeField, Tooltip( "Бро или нет" )]
     private TypeUnit _unitType;
     [Space]
-    [SerializeField, Tooltip("Имя юнита")] 
+    [SerializeField, Tooltip( "Имя юнита" )]
     private string _name;
 
-    [SerializeField, Tooltip("Количество жизней")]
+    [SerializeField, Tooltip( "Количество жизней" )]
     private float _health;
- 
-    [SerializeField,Tooltip( "Шанс поразить цель" ), Range( 0.1f , 1f )]
+
+    [SerializeField, Tooltip( "Шанс поразить цель" ), Range( 0.1f , 1f )]
     private float _luck;
 
     [SerializeField, Tooltip( "Дальность атаки" ), Range( 0f , 100f )]
@@ -28,11 +28,11 @@ public class UnitConfig : ScriptableObject
 
     [SerializeField, Tooltip( "Стоимость найма : количество едениц получаемых за убийсмтво" )]
     private int _cost;
-    
-    
-    [SerializeField, Tooltip("Тип используемого оружия")]
+
+
+    [SerializeField, Tooltip( "Тип используемого оружия" )]
     private TypeWeapons _typeWeapon;
-    [SerializeField, Tooltip("Конфиг для оружия")]
+    [SerializeField, Tooltip( "Конфиг для оружия" )]
     private WeaponsConfig _config;
 
 
@@ -45,7 +45,7 @@ public class UnitConfig : ScriptableObject
 
 #if UNITY_EDITOR
     [Space]
-    [SerializeField, Tooltip("Спрайт юнита для визуализации в инспекторе")]
+    [SerializeField, Tooltip( "Спрайт юнита для визуализации в инспекторе" )]
     private Sprite _sprite;
 #endif
     /// <summary>
@@ -57,6 +57,10 @@ public class UnitConfig : ScriptableObject
     /// Получить имя юнита
     /// </summary>
     public string GetName => _name;
+    /// <summary>
+    /// Стоимость юнита
+    /// </summary>
+    public int GetCost => _cost;
     /// <summary>
     /// Количество жизней
     /// </summary>
@@ -97,9 +101,6 @@ public class UnitConfig : ScriptableObject
     /// Получить конфиг используемого оружия
     /// </summary>
     public WeaponsConfig GetWeaponsConfig => _config;
-
-
-#if UNITY_EDITOR
     public Sprite GetSprite => _sprite;
-#endif
+
 }

@@ -14,7 +14,7 @@ public class Friends : UnitComponent, IAttack
     public void Attack()
     {
         float damage = GetDamane.DamageTarget();
-        Debug.Log(damage);
+      
 
         if ( damage >= 0 )
         {

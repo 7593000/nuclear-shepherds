@@ -4,6 +4,7 @@ public enum TypeUnit : byte
 {
     NONE,
     BRO,
+    BRAHMIN,
     ENEMY
 }
 
