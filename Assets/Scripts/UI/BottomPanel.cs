@@ -33,7 +33,7 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IPointerEnterHan
         _canvas = GetComponentInParent<Canvas>();
 
         _dragShadow = Instantiate( _shadowPrefab );
-        _dragShadow.SetActive( false ); // Скрываем тень по умолчанию
+        _dragShadow.SetActive( false );  
       
         if ( _canvas != null )
         {
@@ -88,9 +88,12 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IPointerEnterHan
             if ( cardUnit != null )
             {
                 // Устанавливаем спрайт тени
-                _dragShadow.GetComponent<Image>().sprite  = cardUnit.GetSprite;
-                _dragShadow.GetComponent<Image>().SetNativeSize();
-                // Обновляем позицию тени
+               
+                RectTransform shadowRectTransform = _dragShadow.GetComponent<RectTransform>();
+                Vector2 spriteOriginSize = cardUnit.GetSprite.rect.size * 2;//Todo=> времянка 
+                shadowRectTransform.sizeDelta = spriteOriginSize;
+                _dragShadow.GetComponent<Image>().sprite = cardUnit.GetSprite;
+              
                 UpdateDragShadowPosition( eventData );
                 _dragShadow.SetActive( true ); 
             }

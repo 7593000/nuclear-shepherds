@@ -96,7 +96,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: -1546385049, guid: 259a9b63dc858704197259a4e0f646eb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -120,8 +120,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcad83490dbaa6045a0aea6aa164cd80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _configUnit: {fileID: 11400000, guid: c5f5caa89fdf2994bb3e19b08c31a71f, type: 2}
-  _health: {fileID: 0}
+  _animator: {fileID: 0}
+  _config: {fileID: 11400000, guid: c5f5caa89fdf2994bb3e19b08c31a71f, type: 2}
+  _health: {fileID: 2554346683654334190}
   _gameHub: {fileID: 0}
   GetSelectedGoal: 0
   GetTarget: {fileID: 0}
@@ -221,6 +222,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7664094369448325479, guid: ae4f1a5fe58b1e24eb04bba29c76f5a6, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8611144760141951171, guid: ae4f1a5fe58b1e24eb04bba29c76f5a6, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -231,3 +240,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2193439795532415673, guid: ae4f1a5fe58b1e24eb04bba29c76f5a6, type: 3}
   m_PrefabInstance: {fileID: 2088474950444209105}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2554346683654334190 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4578221422378136895, guid: ae4f1a5fe58b1e24eb04bba29c76f5a6, type: 3}
+  m_PrefabInstance: {fileID: 2088474950444209105}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4d3c0623126ad3409b9f0e36bab96f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
