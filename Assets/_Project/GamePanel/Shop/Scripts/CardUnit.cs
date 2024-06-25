@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class CardUnit : CardUnitComponent
 {
 
-
+    private UnitConfig _config;
     [SerializeField]
     private TMP_Text _price;
     [SerializeField]
@@ -13,11 +13,11 @@ public class CardUnit : CardUnitComponent
     private Image _image;
     private int _occupiedArea;
 
- 
+
     public string GetPrice => _price.ToString();
     public Sprite GetSprite => _image.sprite;
- 
-    
+
+    public UnitConfig GetConfig=> _config;
     /// <summary>
     /// Инициализация карточки юнита 
     /// </summary>
@@ -26,13 +26,14 @@ public class CardUnit : CardUnitComponent
     /// <param name="occupiedArea">Количество занимаемых клеток на поле </param>
     public void Initialized( UnitConfig config )
     {
+        _config = config;
         _name = config.GetName;
         _price.text = config.GetCost.ToString();
         _image.sprite = config.GetSprite;
         _occupiedArea = config.GetOccupiedArea;
         _typeWeapon = config.GetTypeWeapons.ToString();
         _damage = config.GetWeaponsConfig.GetDamage.ToString();
-        _luck = (config.GetLuck *100).ToString();
+        _luck = ( config.GetLuck * 100 ).ToString();
 
     }
 }

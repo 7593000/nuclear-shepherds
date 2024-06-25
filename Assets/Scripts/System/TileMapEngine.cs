@@ -6,7 +6,7 @@ public class TileMapEngine : MonoBehaviour
     public Tilemap tilemap;
     private Vector3Int _lastHighlightedCell;
     private bool _hasHighlightedCell = false;
-   
+    private bool _canPlace = true;
     // —оседние клетки дл€ четных и нечетных р€дов
 
     private readonly Vector3Int[] _neighborCellsOdd =
@@ -30,8 +30,8 @@ public class TileMapEngine : MonoBehaviour
         new (0, -1, 0), // Bottom Right
         new (-1, -1, 0)  // Bottom Left
     };
-
-    void Update()
+    /*
+    void Updates()
     {
         Vector2 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3Int cellPosition = tilemap.WorldToCell(mouseWorldPos);
@@ -61,7 +61,41 @@ public class TileMapEngine : MonoBehaviour
 
         }
     }
+    */
 
+    public bool CheckedCell()
+    {
+        ClearHighlightNeighbors( _lastHighlightedCell , ParityCheckAxisY( _lastHighlightedCell.y ) );
+        return true;
+    }
+    public Vector3 GetPositionCell()
+    {
+        Vector2 mouseWorldPos = Camera.main.ScreenToWorldPoint( Input.mousePosition );
+        Vector3Int cellPosition = tilemap.WorldToCell( mouseWorldPos );
+ 
+        if ( _hasHighlightedCell && cellPosition != _lastHighlightedCell )
+        {
+            ClearHighlightNeighbors( _lastHighlightedCell , ParityCheckAxisY( _lastHighlightedCell.y ) );
+
+            _hasHighlightedCell = false;
+        }
+
+        if ( tilemap.GetTile( cellPosition ) != null )
+        {
+
+            HighlightNeighbors( cellPosition , ParityCheckAxisY( cellPosition.y ) );
+
+            _lastHighlightedCell = cellPosition;
+            _hasHighlightedCell = true;
+
+        }
+        Vector3 worldPositionCell = tilemap.CellToWorld( _lastHighlightedCell );
+        if(_canPlace)
+        {
+            return worldPositionCell;
+        }
+        return Vector3.zero;
+    }
     /// <summary>
     /// ѕроверка на четность по оси Y. 
     /// ≈сли нечетна€, то идет смещение дл€ соседних €чеек

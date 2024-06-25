@@ -6,8 +6,9 @@ using static Unity.Collections.AllocatorManager;
 
 #if UNITY_EDITOR
 #endif
-public class BottomPanel : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler, IBeginDragHandler, IDragHandler 
+public class BottomPanel : MonoBehaviour, IPointerClickHandler,  IBeginDragHandler, IDragHandler  , IEndDragHandler
 {
+    private GameHub _gameHub;
     [SerializeField]
     private List<UnitConfig> _unitConfigs;
     [SerializeField]
@@ -23,15 +24,16 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IPointerEnterHan
     private Vector3 _startPositionCard;
     private Transform _draggedTransform;
     private GameObject _dragShadow;
-
+    private CardUnit _activeCard = null;
     public GameObject _shadowPrefab;
 
-    public void Initialized()
+    public void Initialized(GameHub gameHub )
     {
+        _gameHub = gameHub;
+        
+        _canvas = GetComponentInParent<Canvas>();
         _shopWindow ??= FindFirstObjectByType<ShopWindow>();
         _screenPanel ??= FindFirstObjectByType<ScreenPanel>();
-        _canvas = GetComponentInParent<Canvas>();
-
         _dragShadow = Instantiate( _shadowPrefab );
         _dragShadow.SetActive( false );  
       
@@ -69,14 +71,7 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IPointerEnterHan
         }
         
     }
-    public void OnPointerEnter( PointerEventData eventData )
-    {
-        Debug.Log( "Move" );
-    }
-    public void OnPointerExit( PointerEventData eventData )
-    {
-        
-    }
+    
 
     public void OnBeginDrag( PointerEventData eventData )
     {
@@ -87,8 +82,9 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IPointerEnterHan
             CardUnit cardUnit = clickedObject.GetComponent<CardUnit>();
             if ( cardUnit != null )
             {
+                _activeCard = cardUnit;
                 // Устанавливаем спрайт тени
-               
+
                 RectTransform shadowRectTransform = _dragShadow.GetComponent<RectTransform>();
                 Vector2 spriteOriginSize = cardUnit.GetSprite.rect.size * 2;//Todo=> времянка 
                 shadowRectTransform.sizeDelta = spriteOriginSize;
@@ -112,23 +108,42 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IPointerEnterHan
     {
         if ( _dragShadow != null )
         {
-            _dragShadow.SetActive( false );  
+            
        //TODO => проверка позиции. возможно ли разместить юнит на карте. если нет
-        
+
+            if (  _gameHub.GetTileMap.CheckedCell() )
+            {
+                
+                Debug.Log( "Установлен юнит" );
+                UnitComponent unit= Instantiate( _activeCard.GetConfig.GetPrefab );
+                unit.transform.position = _dragShadow.transform.position;
+                _dragShadow.SetActive( false );
+                _dragShadow.GetComponent<Image>().sprite = null;
+            }
+
+
         }
+        _activeCard = null;
     }
 
     private void UpdateDragShadowPosition( PointerEventData eventData )
     {
         if ( _canvas != null )
-        {
-            RectTransformUtility.ScreenPointToWorldPointInRectangle(
-                _canvas.transform as RectTransform ,
-                eventData.position ,
-                eventData.pressEventCamera ,
-                out Vector3 globalPosition
-            );
-            _dragShadow.transform.position = globalPosition;
+         {
+        //    RectTransformUtility.ScreenPointToWorldPointInRectangle(
+        //        _canvas.transform as RectTransform ,
+        //        eventData.position ,
+        //        eventData.pressEventCamera ,
+        //        out Vector3 globalPosition
+        //    );
+            
+          
+            
+                _dragShadow.transform.position = _gameHub.GetTileMap.GetPositionCell();
+
+             
+          
+         //   _dragShadow.transform.position = globalPosition;
         }
     }
 

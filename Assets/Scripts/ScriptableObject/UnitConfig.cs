@@ -42,12 +42,13 @@ public class UnitConfig : ScriptableObject
     [SerializeField, Tooltip( "Защита от огня" )] private float _fire;
     [SerializeField, Tooltip( "Защита от энергетического оружия" )] private float _energyWeapons;
 
-
-#if UNITY_EDITOR
+    [SerializeField, Tooltip( "Префаб юнита" )] private UnitComponent _unitPrefab;
+ 
     [Space]
-    [SerializeField, Tooltip( "Спрайт юнита для визуализации в инспекторе" )]
+    [SerializeField, Tooltip( "Спрайт юнита" )]
     private Sprite _sprite;
-#endif
+    
+ 
     /// <summary>
     /// Получить принадлежность юнита 
     /// </summary>
@@ -101,6 +102,7 @@ public class UnitConfig : ScriptableObject
     /// Получить конфиг используемого оружия
     /// </summary>
     public WeaponsConfig GetWeaponsConfig => _config;
+    public UnitComponent GetPrefab => _unitPrefab;
     public Sprite GetSprite => _sprite;
 
 }

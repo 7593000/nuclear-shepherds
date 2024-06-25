@@ -16,12 +16,13 @@ public class GameHub : MonoBehaviour
     private BrahminManager _brahmin;
     [SerializeField]
     private BottomPanel _bottomPanel;
-
+    [SerializeField]
+    private TileMapEngine _tileMapEngine;   
 
     public UnitsUpdateEngine GetUnitsUpdateEngine => _unitsEngine;
     public PointsTargerEngine GetPointsTarget => _points; 
     public BrahminManager GetBrahmin => _brahmin;   
-   
+   public TileMapEngine GetTileMap => _tileMapEngine;
     private void Awake()
     {
         _unitsEngine ??= FindAnyObjectByType<UnitsUpdateEngine>(); 
@@ -31,7 +32,7 @@ public class GameHub : MonoBehaviour
 
     private void Start()
     {
-        _bottomPanel.Initialized();
+        _bottomPanel.Initialized(this);
     }
 
     public static void Logger(string txt)

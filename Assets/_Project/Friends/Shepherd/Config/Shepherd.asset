@@ -25,4 +25,5 @@ MonoBehaviour:
   _firearms: 0
   _fire: 0
   _energyWeapons: 0
+  _unitPrefab: {fileID: 6797377760339903826, guid: 1991ce10dffff1b4d8f025f77108f3cb, type: 3}
   _sprite: {fileID: 84117879, guid: 68bc0787bdef1a54db390cddff4883e5, type: 3}
