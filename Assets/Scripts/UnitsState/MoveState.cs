@@ -61,7 +61,7 @@ public class MoveState :   IUnitState
                // unit.GetTarget = unit.GetGameHub.GetPointsTarget.GetTargets[ unit.GetSelectedGoal ].transform;
                 unit.GetDirectionView = _targetPoint.GetAngleForanimation;
                 unit.StartAnimation.ToRun(StateUnit.MOVE);
-                GameHub.Logger( unit.GetDirectionView[0]+" :: " + unit.GetDirectionView[1] );
+               // GameHub.Logger( unit.GetDirectionView[0]+" :: " + unit.GetDirectionView[1] );
             }
             else
             {
