@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
-
+[RequireComponent(typeof(LineRenderer))]
 public class Friends : UnitComponent, IAttack
 
 {
@@ -8,28 +8,10 @@ public class Friends : UnitComponent, IAttack
     private CircleCollider2D _circleCollider;
     private int _segments = 46;
     private List<UnitComponent> _enemies = new();
-  public Vector2Int Size = Vector2Int.one;
+    
 
     
-    public float radius = 1f;
-
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.yellow;
-
-        Vector3[] hexagonVertices = new Vector3[ 6 ];
-
-        for ( int i = 0; i < 6; i++ )
-        {
-            float angle = i * Mathf.PI / 3;
-            hexagonVertices[ i ] = new Vector3( Mathf.Cos( angle ) , Mathf.Sin( angle ) , 0 ) * radius;
-        }
-
-        for ( int i = 0; i < 6; i++ )
-        {
-            Gizmos.DrawLine( transform.position + hexagonVertices[ i ] , transform.position + hexagonVertices[ ( i + 1 ) % 6 ] );
-        }
-    }
+   
     public void Attack()
     {
         float damage = GetDamane.DamageTarget();

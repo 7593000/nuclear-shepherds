@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 5014723091029476661}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 61.94, y: 15.74, z: -0.375705}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -98,7 +98,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: -101651952, guid: 68bc0787bdef1a54db390cddff4883e5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -128,8 +128,6 @@ MonoBehaviour:
   _gameHub: {fileID: 0}
   GetSelectedGoal: 0
   GetTarget: {fileID: 0}
-  Size: {x: 1, y: 1}
-  radius: 1
 --- !u!58 &3175844978782895902
 CircleCollider2D:
   m_ObjectHideFlags: 0

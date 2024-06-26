@@ -12,11 +12,11 @@ public class CardUnit : CardUnitComponent
 
     private Image _image;
     private int _occupiedArea;
-
+    private float _distance;
 
     public string GetPrice => _price.ToString();
     public Sprite GetSprite => _image.sprite;
-
+    public float GetDistance => _distance;
     public UnitConfig GetConfig=> _config;
     /// <summary>
     /// Инициализация карточки юнита 
@@ -30,10 +30,11 @@ public class CardUnit : CardUnitComponent
         _name = config.GetName;
         _price.text = config.GetCost.ToString();
         _image.sprite = config.GetSprite;
-        _occupiedArea = config.GetOccupiedArea;
+        _occupiedArea = config.GetOccupiedArea; //todo => del
         _typeWeapon = config.GetTypeWeapons.ToString();
         _damage = config.GetWeaponsConfig.GetDamage.ToString();
         _luck = ( config.GetLuck * 100 ).ToString();
+        _distance = config.GetDistance;
 
     }
 }

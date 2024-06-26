@@ -1,99 +1,92 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class TileMapEngine : MonoBehaviour
 {
-    public Tilemap tilemap;
+    public Tilemap _tilemap;
+    private TilemapRenderer _tilemapRenderer;
     private Vector3Int _lastHighlightedCell;
     private bool _hasHighlightedCell = false;
-    private bool _canPlace = true;
-    // Соседние клетки для четных и нечетных рядов
+    [SerializeField] private bool _canPlace = false; ///Возможность разместить юнита на клетках 
+    [SerializeField] private List<Vector3Int> _occupiedCells = new(); //Лист с занятыми ячейками
 
+
+    // Соседние клетки для четных и нечетных рядов
     private readonly Vector3Int[] _neighborCellsOdd =
-    {
+   {
         new (0, 0, 0), //Центральная
-        new (1, 0, 0),  // Right
-        new (-1, 0, 0), // Left
-        new (1, 1, 0),  // Top Right
-        new (0, 1, 0),  // Top Left
-        new (1, -1, 0), // Bottom Right
-        new (0, -1, 0)  // Bottom Left
+        new (1, 0, 0),  // В
+        new (-1, 0, 0), // С
+        new (1, 1, 0),  // СВ
+        new (0, 1, 0),  // СЗ
+        new (1, -1, 0), // ЮВ
+        new (0, -1, 0)  // ЮЗ
     };
 
     private readonly Vector3Int[] _neighborCellsEven =
     {
         new (0, 0, 0),//Центральная
-        new (1, 0, 0),  // Right
-        new (-1, 0, 0), // Left
-        new (0, 1, 0),  // Top Right
-        new (-1, 1, 0), // Top Left
-        new (0, -1, 0), // Bottom Right
-        new (-1, -1, 0)  // Bottom Left
+        new (1, 0, 0),  // В
+        new (-1, 0, 0), // С
+        new (0, 1, 0),  // СВ
+        new (-1, 1, 0), // СЗ
+        new (0, -1, 0), // ЮВ
+        new (-1, -1, 0)  // ЮЗ
     };
-    /*
-    void Updates()
+
+    /// <summary>
+    /// Включать - выключать рендер tilemap
+    /// </summary>
+    /// <param name="status"></param>
+    public void TileMapActivity(bool status)
     {
-        Vector2 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector3Int cellPosition = tilemap.WorldToCell(mouseWorldPos);
+        _tilemapRenderer.enabled = status;
 
-
-        if (Input.GetMouseButtonUp(0)) // Если нажата левая кнопка мыши
-        {
-
-            HighlightNeighbors(cellPosition, ParityCheckAxisY(cellPosition.y));
-        }
-         
-          
-        if (_hasHighlightedCell && cellPosition != _lastHighlightedCell)
-        {
-            ClearHighlightNeighbors(_lastHighlightedCell,  ParityCheckAxisY(_lastHighlightedCell.y));
-           
-            _hasHighlightedCell = false;
-        }
-
-        if (tilemap.GetTile(cellPosition) != null)
-        {
-          
-            HighlightNeighbors(cellPosition, ParityCheckAxisY(cellPosition.y));
-          
-            _lastHighlightedCell = cellPosition;
-            _hasHighlightedCell = true;
-
-        }
     }
-    */
 
+    /// <summary>
+    /// Получить статус ячейки, возможно ли размещать на нее юнит или нет
+    /// </summary>
+    /// <returns></returns>
     public bool CheckedCell()
     {
-        ClearHighlightNeighbors( _lastHighlightedCell , ParityCheckAxisY( _lastHighlightedCell.y ) );
-        return true;
+        ClearHighlightNeighbors(_lastHighlightedCell, ParityCheckAxisY(_lastHighlightedCell.y));
+        return _canPlace;
+
     }
+
+
+    /// <summary>
+    /// Получить позицию клетки под юнитом для установки
+    /// </summary>
+    /// <returns> Vector3 </returns>
     public Vector3 GetPositionCell()
     {
-        Vector2 mouseWorldPos = Camera.main.ScreenToWorldPoint( Input.mousePosition );
-        Vector3Int cellPosition = tilemap.WorldToCell( mouseWorldPos );
- 
-        if ( _hasHighlightedCell && cellPosition != _lastHighlightedCell )
-        {
-            ClearHighlightNeighbors( _lastHighlightedCell , ParityCheckAxisY( _lastHighlightedCell.y ) );
+        _canPlace = false;
+        Vector2 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3Int cellPosition = _tilemap.WorldToCell(mouseWorldPos);
 
+        if (_hasHighlightedCell && cellPosition != _lastHighlightedCell)
+        {
+            ClearHighlightNeighbors(_lastHighlightedCell, ParityCheckAxisY(_lastHighlightedCell.y));
             _hasHighlightedCell = false;
         }
 
-        if ( tilemap.GetTile( cellPosition ) != null )
+        if (_tilemap.GetTile(cellPosition) != null)
         {
-
-            HighlightNeighbors( cellPosition , ParityCheckAxisY( cellPosition.y ) );
-
+            HighlightNeighbors(cellPosition, ParityCheckAxisY(cellPosition.y));
             _lastHighlightedCell = cellPosition;
             _hasHighlightedCell = true;
-
         }
-        Vector3 worldPositionCell = tilemap.CellToWorld( _lastHighlightedCell );
-        if(_canPlace)
+
+        Vector3 worldPositionCell = _tilemap.CellToWorld(_lastHighlightedCell);
+
+        if (_canPlace)
         {
             return worldPositionCell;
         }
+
         return Vector3.zero;
     }
     /// <summary>
@@ -102,19 +95,9 @@ public class TileMapEngine : MonoBehaviour
     /// </summary>
     /// <param name="y">значения координаты по оси Y для выбранной ячейки</param>
     /// <returns>Массив с векторами для соседних ячеек</returns>
-     private Vector3Int[] ParityCheckAxisY(int y)
+    private Vector3Int[] ParityCheckAxisY(int y)
     {
-        Vector3Int[] neighborCells;
-
-        if ( y % 2 == 0)
-        {
-            neighborCells = _neighborCellsEven;
-        }
-        else
-        {
-            neighborCells = _neighborCellsOdd ;
-        }
-        return neighborCells;
+        return (y % 2 == 0) ? _neighborCellsEven : _neighborCellsOdd;
     }
 
     /// <summary>
@@ -122,72 +105,135 @@ public class TileMapEngine : MonoBehaviour
     /// </summary>
     /// <param name="cellPosition">выбраннная ячейка</param>
     /// <param name="neighbors"> Массив векторов соседей</param>
-    void HighlightNeighbors(Vector3Int cellPosition, Vector3Int[] neighbors, bool lockCell = false)
+    private void HighlightNeighbors(Vector3Int cellPosition, Vector3Int[] neighbors)
     {
+        bool shouldHighlightRed = false;
+
         foreach (var direction in neighbors)
         {
             Vector3Int neighborPosition = cellPosition + direction;
-            HighlightTile(neighborPosition);
+            if (_occupiedCells.Contains(neighborPosition) || _tilemap.GetTile(neighborPosition) == null)
+            {
+                shouldHighlightRed = true;
+                break;
+            }
         }
-        HighlightTile(cellPosition);
+
+        foreach (var direction in neighbors)
+        {
+            Vector3Int neighborPosition = cellPosition + direction;
+            HighlightTile(neighborPosition, shouldHighlightRed);
+        }
+    }
+
+    /// <summary>
+    /// Добавить ячейки в лист с занятыми ячейками
+    /// </summary>
+    /// <param name="cellPosition"></param>
+    /// <param name="neighbors"></param>
+    public void AddCell(Vector3Int cellPosition)
+    {
+        var neighbors = ParityCheckAxisY(_lastHighlightedCell.y);
+
+        foreach (var direction in neighbors)
+        {
+            Vector3Int neighborPosition = cellPosition + direction;
+            TileBase currentTile = _tilemap.GetTile(neighborPosition);
+
+            if (currentTile != null) _occupiedCells.Add(neighborPosition);
+
+
+        }
+
+    }
+    /// <summary>
+    /// Удаление ячеек из спсика занятых 
+    /// </summary>
+    /// <param name="cellPosition"></param>
+    /// <param name="neighbors"></param>
+    public void RemoveCell(Vector3Int cellPosition)
+    {
+        var neighbors = ParityCheckAxisY(cellPosition.y);
+
+        foreach (var direction in neighbors)
+        {
+            Vector3Int neighborPosition = cellPosition + direction;
+            TileBase currentTile = _tilemap.GetTile(neighborPosition);
+            if (currentTile != null)
+            {
+                _occupiedCells.Remove(neighborPosition);
+            }
+        }
+
     }
 
 
 
-
-     /// <summary>
-     /// перебор соседей и очистка ячеек при потери фокуса 
-     /// </summary>
-     /// <param name="cellPosition">Выбранная ячейка</param>
-     /// <param name="neighbors">Массив с векторами соседей</param>
-    void ClearHighlightNeighbors(Vector3Int cellPosition, Vector3Int[] neighbors)
+    /// <summary>
+    /// перебор соседей и очистка ячеек при потери фокуса 
+    /// </summary>
+    /// <param name="cellPosition">Выбранная ячейка</param>
+    /// <param name="neighbors">Массив с векторами соседей</param>
+    private void ClearHighlightNeighbors(Vector3Int cellPosition, Vector3Int[] neighbors)
     {
         foreach (var direction in neighbors)
         {
             Vector3Int neighborPosition = cellPosition + direction;
-         
+
             ClearHighlightTile(neighborPosition);
         }
+
     }
 
-     
+
 
     /// <summary>
     /// Очистить ячейку
     /// </summary>
     /// <param name="cellPosition"></param>
-    void ClearHighlightTile(Vector3Int cellPosition)
+    private void ClearHighlightTile(Vector3Int cellPosition)
     {
-        TileBase currentTile = tilemap.GetTile(cellPosition);
+        TileBase currentTile = _tilemap.GetTile(cellPosition);
 
         if (currentTile != null)
         {
-            tilemap.SetTileFlags(cellPosition, TileFlags.None); // Разрешаем изменение тайла
-            tilemap.SetColor(cellPosition, Color.white); // Сбрасываем цвет тайла на белый
+            _tilemap.SetTileFlags(cellPosition, TileFlags.None); // Разрешаем изменение тайла
+            _tilemap.SetColor(cellPosition, Color.white); // Сбрасываем цвет тайла на белый
+
+
         }
+        //  _canPlace = true;
     }
 
-     
+
     /// <summary>
     /// Выделить ячеку
     /// </summary>
     /// <param name="cellPosition"></param>
-    void HighlightTile(Vector3Int cellPosition)
+    private void HighlightTile(Vector3Int cellPosition, bool shouldHighlightRed)
     {
-        TileBase currentTile = tilemap.GetTile(cellPosition);
+        TileBase currentTile = _tilemap.GetTile(cellPosition);
 
         if (currentTile != null)
         {
-            // Изменение цвета тайла
-            tilemap.SetTileFlags(cellPosition, TileFlags.None); // Разрешаем изменение тайла
-             
- 
-                tilemap.SetColor(cellPosition, Color.green); // Изменяем цвет тайла на красный
-            
+            _tilemap.SetTileFlags(cellPosition, TileFlags.None); // Разрешаем изменение тайла
+            _tilemap.SetColor(cellPosition, shouldHighlightRed ? Color.red : Color.green); // Устанавливаем цвет
+            _canPlace = !shouldHighlightRed;
         }
         else
         {
-            Debug.Log("Ячейка не обнаруженна!");
+            _tilemap.SetTileFlags(cellPosition, TileFlags.None);
+            _tilemap.SetColor(cellPosition, Color.red);
+            _canPlace = false;
+            Debug.Log("Ячейка не обнаружена!");
         }
+    }
+
+
+
+    private void Start()
+    {
+        _tilemapRenderer = _tilemap.GetComponent<TilemapRenderer>();
+        _tilemapRenderer.enabled = false;
     }
 }
