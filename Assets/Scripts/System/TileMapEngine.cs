@@ -87,7 +87,8 @@ public class TileMapEngine : MonoBehaviour
             return worldPositionCell;
         }
 
-        return Vector3.zero;
+        return mouseWorldPos;
+        
     }
     /// <summary>
     /// Проверка на четность по оси Y. 

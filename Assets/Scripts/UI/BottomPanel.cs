@@ -19,26 +19,27 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IBeginDragHandle
 
     private string _textInfo;
     private Canvas _canvas;
-    public GameObject _shadowPrefab;
-    private GameObject _dragShadow;
+    public ShadowSprite _shadowPrefab;
+    private ShadowSprite _dragShadow;
     private CardUnit _activeCard = null;
-    private bool _tilemapStatus = false;    
+    private bool _tilemapStatus = false;
     private Vector3 _positionForUnit;
-  
-    
-    public void Initialized(GameHub gameHub)
+
+
+    public void Initialized( GameHub gameHub )
     {
         _gameHub = gameHub;
 
         _canvas = GetComponentInParent<Canvas>();
         _shopWindow ??= FindFirstObjectByType<ShopWindow>();
         _screenPanel ??= FindFirstObjectByType<ScreenPanel>();
-        _dragShadow = Instantiate(_shadowPrefab);
-        _dragShadow.SetActive(false);
+        _dragShadow = Instantiate( _shadowPrefab );
+        _dragShadow.Initialize( _canvas );
+        _dragShadow.gameObject.SetActive( false );
 
-        if (_canvas != null)
+        if ( _canvas != null )
         {
-            _dragShadow.transform.SetParent(_canvas.transform, false);
+            _dragShadow.transform.SetParent( _canvas.transform , false );
         }
         CreateCards();
 
@@ -47,24 +48,24 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IBeginDragHandle
 
     private void CreateCards()
     {
-        foreach (UnitConfig unitConfig in _unitConfigs)
+        foreach ( UnitConfig unitConfig in _unitConfigs )
         {
-            _shopWindow.AddUnitsForSell(unitConfig);
+            _shopWindow.AddUnitsForSell( unitConfig );
         }
     }
-    public void OnPointerClick(PointerEventData eventData)
+    public void OnPointerClick( PointerEventData eventData )
     {
         GameObject clickedObject = eventData.pointerCurrentRaycast.gameObject;
 
-        if (clickedObject != null)
+        if ( clickedObject != null )
         {
 
             CardUnit cardUnit = clickedObject.GetComponent<CardUnit>();
-            if (cardUnit != null)
+            if ( cardUnit != null )
             {
-                _textInfo = string.Format(_formatText, cardUnit.GetName, cardUnit.GetTypeWeapon, cardUnit.GetDamage, cardUnit.GetLuch);
+                _textInfo = string.Format( _formatText , cardUnit.GetName , cardUnit.GetTypeWeapon , cardUnit.GetDamage , cardUnit.GetLuch );
 
-                _screenPanel.ShowText(_textInfo);
+                _screenPanel.ShowText( _textInfo );
             }
 
         }
@@ -72,20 +73,22 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IBeginDragHandle
     }
 
 
-    public void OnBeginDrag(PointerEventData eventData)
+    public void OnBeginDrag( PointerEventData eventData )
     {
         GameObject clickedObject = eventData.pointerCurrentRaycast.gameObject;
 
-        if (clickedObject != null)
+        if ( clickedObject != null )
         {
             CardUnit cardUnit = clickedObject.GetComponent<CardUnit>();
-            if (cardUnit != null)
+            
+            if ( cardUnit != null )
             {
+                
                 _activeCard = cardUnit;
-                if(_tilemapStatus == false)
+                if ( _tilemapStatus == false )
                 {
                     _tilemapStatus = true;
-                    _gameHub.GetTileMap.TileMapActivity(_tilemapStatus);
+                    _gameHub.GetTileMap.TileMapActivity( _tilemapStatus );
                 }
 
                 // Устанавливаем спрайт тени
@@ -93,70 +96,70 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IBeginDragHandle
                 Vector2 spriteOriginSize = cardUnit.GetSprite.rect.size * 2;//Todo=> времянка 
                 shadowRectTransform.sizeDelta = spriteOriginSize;
                 _dragShadow.GetComponent<Image>().sprite = cardUnit.GetSprite;
+                _dragShadow.CreateCircle(cardUnit.GetDistance);
                 _dragShadow.transform.position = transform.position;
-              
-                _dragShadow.SetActive(true);
-                _dragShadow.GetComponent<ShadowSprite>().CreateCircle(cardUnit.GetDistance);
-                UpdateDragShadowPosition(eventData);
-               
+
+                _dragShadow.gameObject.SetActive( true );
+
+                UpdateDragShadowPosition( eventData );
+
             }
         }
     }
 
-    public void OnDrag(PointerEventData eventData)
+    public void OnDrag( PointerEventData eventData )
     {
-        if (_dragShadow != null)
+        if ( _dragShadow != null )
         {
-            UpdateDragShadowPosition(eventData);
+            UpdateDragShadowPosition( eventData );
         }
     }
 
-    public void OnEndDrag(PointerEventData eventData)
+    public void OnEndDrag( PointerEventData eventData )
     {
-         if (_dragShadow != null)
+        if ( _dragShadow != null )
+        {
+            if ( _gameHub.GetTileMap.CheckedCell() )
             {
-                if (_gameHub.GetTileMap.CheckedCell())
-                {
-                    Debug.Log("Установлен юнит");
+                
 
-                    UnitComponent unit = Instantiate(_activeCard.GetConfig.GetPrefab);
-                   
-                if (unit != null)
-                    {
-                        Vector3Int cellPosition = _gameHub.GetTileMap._tilemap.WorldToCell(_dragShadow.transform.position);
-                        unit.transform.position = _dragShadow.transform.position;
-                        _dragShadow.SetActive(false);
-                        
-                        _dragShadow.transform.position = transform.position;
-                        _gameHub.GetTileMap.AddCell(cellPosition);
-                  
-                    if (_tilemapStatus == true)
-                    {
-                        _tilemapStatus = false;
-                        _gameHub.GetTileMap.TileMapActivity(_tilemapStatus);
-                    }
+                UnitComponent unit = Instantiate( _activeCard.GetConfig.GetPrefab );
+
+                if ( unit != null )
+                {
+                    Vector3Int cellPosition = _gameHub.GetTileMap._tilemap.WorldToCell( _dragShadow.transform.position );
+                    unit.transform.position = _dragShadow.transform.position;
+               
+                    _gameHub.GetTileMap.AddCell( cellPosition );
+ 
                 }
-                    else
-                    {
-                        Debug.LogError("С юнитом беда");
-                    }
+                else
+                {
+                    Debug.LogError( "С юнитом беда" );
                 }
             }
-            _activeCard = null;
-         
+        }
+        _tilemapStatus = false;
+        _gameHub.GetTileMap.TileMapActivity( _tilemapStatus );
+        _dragShadow.gameObject.SetActive( false );
+        _dragShadow.transform.position = transform.position;
+        _activeCard = null;
+
+
     }
 
-    private void UpdateDragShadowPosition(PointerEventData eventData)
+    private void UpdateDragShadowPosition( PointerEventData eventData )
     {
-        if (_canvas != null)
+        if ( _canvas != null )
         {
             _positionForUnit = _gameHub.GetTileMap.GetPositionCell();
             _dragShadow.transform.position = _positionForUnit;
         }
+
     }
 
 
 
-    
+
 }
 

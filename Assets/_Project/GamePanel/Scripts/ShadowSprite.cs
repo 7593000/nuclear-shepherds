@@ -1,7 +1,12 @@
+using System;
+using Unity.VisualScripting;
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
- 
+using UnityEngine.UI;
+
 public class ShadowSprite : MonoBehaviour
 {
+    [SerializeField] private Canvas _canvas; // Canvas компонент
     [SerializeField] private LineRenderer _lineRenderer;
     [SerializeField] private int _segments = 46;
 
@@ -9,24 +14,36 @@ public class ShadowSprite : MonoBehaviour
     {
         // Проверяем и инициализируем LineRenderer
         _lineRenderer ??= GetComponent<LineRenderer>();
-        _lineRenderer.useWorldSpace = false;
+      
+    }
+    public void Initialize( Canvas canvas )
+    {
+        _canvas = canvas;
     }
 
-    public void CreateCircle(float radius, int segments = 46)
+    public void CreateCircle( float radius , int segments = 46 )
     {
-        _segments = segments;
-        _lineRenderer.positionCount = _segments + 1;
 
-        float angleIncrement = 360f / _segments;
-        float angle = 0f;
-
-        for (int i = 0; i <= _segments; i++)
+        if ( _lineRenderer == null )
         {
-            float x = Mathf.Sin(Mathf.Deg2Rad * angle) * radius;
-            float y = Mathf.Cos(Mathf.Deg2Rad * angle) * radius;
+            Debug.LogError( "LineRenderer не добавлен" );
+            return;
+        }
+        _lineRenderer.positionCount = segments + 1;
+        _lineRenderer.useWorldSpace = false;
+        Vector3 canvasScale = _canvas.transform.localScale;
+        float scaledRadius = radius / canvasScale.x;
 
-            _lineRenderer.SetPosition(i, new Vector3(x, y, 0f));
-            angle += angleIncrement;
+        float angle = 0f;
+        for ( int i = 0; i < _segments + 1; i++ )
+        {
+            float x = Mathf.Sin( Mathf.Deg2Rad * angle ) * scaledRadius;
+            float y = Mathf.Cos( Mathf.Deg2Rad * angle ) * scaledRadius;
+
+            _lineRenderer.SetPosition( i , new Vector3( x , y , 0 ) );
+            angle += 360f / _segments;
         }
     }
+
+   
 }
