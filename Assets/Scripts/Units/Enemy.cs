@@ -1,8 +1,13 @@
+using System;
 using UnityEngine;
 
 public class Enemy : UnitComponent, IHealth, IAttack, IMovable
 
 {
+
+    public static event Action<int> OnCoins;
+
+
     public bool IsDead { get; set; } = false;
 
     public void Move()
@@ -23,7 +28,12 @@ public class Enemy : UnitComponent, IHealth, IAttack, IMovable
           
             if ( health <= 0 )
             {
+
                 gameObject.SetActive( false );
+                Debug.Log("Противник уничтожен");
+
+                OnCoins?.Invoke(GetCost);
+               
             }
         }
         else //TODO => DEL? 

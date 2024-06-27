@@ -32,6 +32,7 @@ public abstract class UnitComponent : MonoBehaviour
     public TypeUnit GetTypeUnit => _config.GetTypeUnit;
     public Animator GetAnimator => _animator;
     public AnimatorComponent StartAnimation => _animatorComponent;
+    public int GetCost => _config.GetCost;
     /// <summary>
     /// направление движения [-1;0;1]
     /// </summary>

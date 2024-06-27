@@ -15,6 +15,9 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IBeginDragHandle
     [SerializeField]
     private ScreenPanel _screenPanel;
     [SerializeField]
+    private WalletPanel _walletPanel;
+    private Wallet _wallet;
+    [SerializeField]
     private string _formatText = "Юнит: {0}\nОружие: {1}\nУрон: {2}\nУдача: {3}";
 
     private string _textInfo;
@@ -23,26 +26,53 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IBeginDragHandle
     private ShadowSprite _dragShadow;
     private CardUnit _activeCard = null;
     private bool _tilemapStatus = false;
+    [SerializeField] private bool _transfer = false;
     private Vector3 _positionForUnit;
 
 
-    public void Initialized( GameHub gameHub )
+    public void Initialized(GameHub gameHub)
     {
         _gameHub = gameHub;
-
         _canvas = GetComponentInParent<Canvas>();
+
+
+        _wallet = gameHub.GetWalletEngine.GetWallet;
+       
+      
+
+      
         _shopWindow ??= FindFirstObjectByType<ShopWindow>();
         _screenPanel ??= FindFirstObjectByType<ScreenPanel>();
-        _dragShadow = Instantiate( _shadowPrefab );
-        _dragShadow.Initialize( _canvas );
-        _dragShadow.gameObject.SetActive( false );
+        _dragShadow = Instantiate(_shadowPrefab);
+        _dragShadow.Initialize(_canvas);
+        _dragShadow.gameObject.SetActive(false);
 
-        if ( _canvas != null )
+        _wallet.OnCoinsChanged += (int value) => ChangingNumberCoins(value);
+  
+
+        if (_canvas != null)
         {
-            _dragShadow.transform.SetParent( _canvas.transform , false );
+            _dragShadow.transform.SetParent(_canvas.transform, false);
         }
-        CreateCards();
 
+       
+        CreateCards();
+        ChangingNumberCoins(_wallet.Coins);
+
+    }
+
+    private void OnDestroy()
+    {
+        _wallet.OnCoinsChanged -= (int value) => ChangingNumberCoins(value);
+
+    }
+  
+
+    private void ChangingNumberCoins(int value)
+    {
+        
+        _walletPanel.SetText(value);
+        _shopWindow.ChangingCoins(value);
 
     }
 
@@ -53,6 +83,8 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IBeginDragHandle
             _shopWindow.AddUnitsForSell( unitConfig );
         }
     }
+
+    #region DRAG AND DROP LOGIC
     public void OnPointerClick( PointerEventData eventData )
     {
         GameObject clickedObject = eventData.pointerCurrentRaycast.gameObject;
@@ -72,19 +104,22 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IBeginDragHandle
 
     }
 
-
     public void OnBeginDrag( PointerEventData eventData )
     {
+        
+
         GameObject clickedObject = eventData.pointerCurrentRaycast.gameObject;
 
         if ( clickedObject != null )
         {
             CardUnit cardUnit = clickedObject.GetComponent<CardUnit>();
             
-            if ( cardUnit != null )
+            if ( cardUnit != null && cardUnit.IsActive )
             {
-                
+                Debug.Log("D");
+                _transfer = true;
                 _activeCard = cardUnit;
+
                 if ( _tilemapStatus == false )
                 {
                     _tilemapStatus = true;
@@ -93,9 +128,9 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IBeginDragHandle
 
                 // Устанавливаем спрайт тени
                 RectTransform shadowRectTransform = _dragShadow.GetComponent<RectTransform>();
-                Vector2 spriteOriginSize = cardUnit.GetSprite.rect.size * 2;//Todo=> времянка 
+                Vector2 spriteOriginSize = cardUnit.GetSprite.sprite.rect.size * 2;//Todo=> времянка 
                 shadowRectTransform.sizeDelta = spriteOriginSize;
-                _dragShadow.GetComponent<Image>().sprite = cardUnit.GetSprite;
+                _dragShadow.GetComponent<Image>().sprite = cardUnit.GetSprite.sprite;
                 _dragShadow.CreateCircle(cardUnit.GetDistance);
                 _dragShadow.transform.position = transform.position;
 
@@ -109,6 +144,8 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IBeginDragHandle
 
     public void OnDrag( PointerEventData eventData )
     {
+        if (!_transfer) return;
+
         if ( _dragShadow != null )
         {
             UpdateDragShadowPosition( eventData );
@@ -117,34 +154,39 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IBeginDragHandle
 
     public void OnEndDrag( PointerEventData eventData )
     {
-        if ( _dragShadow != null )
+        if (!_transfer) return;
+        if ( _dragShadow != null)
         {
             if ( _gameHub.GetTileMap.CheckedCell() )
             {
-                
-
-                UnitComponent unit = Instantiate( _activeCard.GetConfig.GetPrefab );
-
-                if ( unit != null )
+                if (_wallet.TakeCurrency(_activeCard.GetPrice ))
                 {
-                    Vector3Int cellPosition = _gameHub.GetTileMap._tilemap.WorldToCell( _dragShadow.transform.position );
-                    unit.transform.position = _dragShadow.transform.position;
-               
-                    _gameHub.GetTileMap.AddCell( cellPosition );
- 
+                    UnitComponent unit = Instantiate(_activeCard.GetConfig.GetPrefab);
+
+                    if (unit != null)
+                    {
+                        Vector3Int cellPosition = _gameHub.GetTileMap._tilemap.WorldToCell(_dragShadow.transform.position);
+                        unit.transform.position = _dragShadow.transform.position;
+
+                        _gameHub.GetTileMap.AddCell(cellPosition);
+
+                    }
+                    else
+                    {
+                        Debug.LogError("С юнитом беда");
+                    }
                 }
-                else
-                {
-                    Debug.LogError( "С юнитом беда" );
-                }
+
+         
             }
         }
         _tilemapStatus = false;
         _gameHub.GetTileMap.TileMapActivity( _tilemapStatus );
         _dragShadow.gameObject.SetActive( false );
         _dragShadow.transform.position = transform.position;
+       
         _activeCard = null;
-
+        _transfer = false;
 
     }
 
@@ -158,7 +200,7 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IBeginDragHandle
 
     }
 
-
+    #endregion
 
 
 }
