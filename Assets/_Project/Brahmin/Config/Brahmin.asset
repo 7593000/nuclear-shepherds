@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unitType: 2
   _name: "\u0411\u0440\u0430\u043C\u0438\u043D"
-  _health: 500
-  _luck: 0
+  _health: 100
+  _luck: 0.518
   _distance: 0
   _occupiedArea: 0
   _speed: 1
@@ -25,4 +25,5 @@ MonoBehaviour:
   _firearms: 1
   _fire: 1
   _energyWeapons: 1
+  _unitPrefab: {fileID: 0}
   _sprite: {fileID: -1723787956, guid: 259a9b63dc858704197259a4e0f646eb, type: 3}

@@ -36,7 +36,9 @@ public class GameHub : MonoBehaviour
     {
         _walletEngine.Initialized(100);
         _bottomPanel.Initialized(this);
-        
+        _brahmin.Initialized();
+
+
     }
 
     //Todo=> TEMP

@@ -64,15 +64,44 @@ public class SearchState : IUnitState
 
     private Brahmin SearchTargetAttack(UnitComponent unit)
     {
+        
+        return RandomBrahmin(unit);
+      
+    }
+
+    /// <summary>
+    /// Получить рандомного брамина
+    /// </summary>
+    /// <param name="unit"></param>
+    /// <returns></returns>
+    private Brahmin RandomBrahmin( UnitComponent unit )
+    {
+       
+        int randomIndex = Random.Range( 0 , unit.GetGameHub.GetBrahmin.GetBrahminList.Count );
+
+        return unit.GetGameHub.GetBrahmin.GetBrahminList[ randomIndex ];
+    }
+
+
+    ///TODO => Решить , какой метод поиска брамина оставить.. рандом или ближайщего 
+   
+
+    /// <summary>
+    /// Получить ближайщего брамина 
+    /// </summary>
+    /// <param name="unit"></param>
+    /// <returns></returns>
+    private Brahmin GetBrahminDistance( UnitComponent unit )
+    {
         float closestDistanceSqr = Mathf.Infinity;
         Brahmin closestBrahmin = null;
         Vector3 unitPosition = unit.transform.position;
 
-        foreach (Brahmin brahmin in unit.GetGameHub.GetBrahmin.GetBrahminList)
+        foreach ( Brahmin brahmin in unit.GetGameHub.GetBrahmin.GetBrahminList )
         {
             Vector3 directionToTarget = brahmin.transform.position - unitPosition;
             float dSqrToTarget = directionToTarget.sqrMagnitude;
-            if (dSqrToTarget < closestDistanceSqr)
+            if ( dSqrToTarget < closestDistanceSqr )
             {
                 closestDistanceSqr = dSqrToTarget;
                 closestBrahmin = brahmin;
@@ -80,7 +109,7 @@ public class SearchState : IUnitState
 
 
         }
-
         return closestBrahmin != null ? closestBrahmin : null;
     }
+
 }
