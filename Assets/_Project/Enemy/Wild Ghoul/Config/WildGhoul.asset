@@ -19,7 +19,7 @@ MonoBehaviour:
   _distance: 1.1
   _occupiedArea: 1
   _speed: 1.5
-  _cost: 10
+  _cost: 50
   _typeWeapon: 1
   _config: {fileID: 11400000, guid: 9b53894a397d5f2438fce9d92c255ea0, type: 2}
   _firearms: 0

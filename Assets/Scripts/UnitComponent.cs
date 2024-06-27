@@ -1,4 +1,3 @@
-using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public abstract class UnitComponent : MonoBehaviour
@@ -56,7 +55,7 @@ public abstract class UnitComponent : MonoBehaviour
     protected virtual void Container(GameHub gameHub)
     {
 
-        
+
         _gameHub = gameHub;
     }
     protected virtual void Initialized()
@@ -82,7 +81,7 @@ public abstract class UnitComponent : MonoBehaviour
 
     public void SetState(IUnitState newState)
     {
-       
+
         CurrentState?.ExitState(this);
         CurrentState = newState;
         CurrentState?.EnterState(this);
@@ -110,7 +109,7 @@ public abstract class UnitComponent : MonoBehaviour
     protected virtual void Start()
     {
         Initialized();
-       
+
     }
 
 

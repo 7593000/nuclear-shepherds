@@ -89,3 +89,19 @@ public enum StateUnitList : byte
     ATTACK,
     DIRECT
 }
+
+/// <summary>
+/// Перечисление границ экрана для движения камеры
+/// </summary>
+public enum BorderType : byte
+{
+    NONE,
+    LEFT,
+    RIGHT,
+    TOP,
+    BOTTOM,
+    ANGLETR,
+    ANGLETL,
+    ANGLEBR,
+    ANGLEBL
+}

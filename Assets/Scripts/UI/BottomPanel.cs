@@ -116,7 +116,7 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IBeginDragHandle
             
             if ( cardUnit != null && cardUnit.IsActive )
             {
-                Debug.Log("D");
+                
                 _transfer = true;
                 _activeCard = cardUnit;
 
