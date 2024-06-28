@@ -32,7 +32,7 @@ public class BrahminStartPosition : MonoBehaviour
     {
         
         int count = _cellPosition.Count;
-        Debug.Log( count );
+      
         while ( count > 0 )
         {
             Vector3Int pos = RandomCellPosition();

@@ -47,62 +47,81 @@ public class UnitConfig : ScriptableObject
     [Space]
     [SerializeField, Tooltip( "Спрайт юнита" )]
     private Sprite _sprite;
-    
- 
+     
     /// <summary>
     /// Получить принадлежность юнита 
     /// </summary>
 
     public TypeUnit GetTypeUnit => _unitType;
+    
     /// <summary>
     /// Получить имя юнита
     /// </summary>
     public string GetName => _name;
+    
     /// <summary>
     /// Стоимость юнита
     /// </summary>
     public int GetCost => _cost;
+    
     /// <summary>
     /// Количество жизней
     /// </summary>
     public float GetHealth => _health;
+    
     /// <summary>
     /// Получмить уровень удачи при попадании
     /// </summary>
     public float GetLuck => _luck;
+    
     /// <summary>
     /// Получить дистанцию атаки
     /// </summary>
     public float GetDistance => _distance;
+    
     /// <summary>
     /// Получить тип используемого оружия
     /// </summary>
     public TypeWeapons GetTypeWeapons => _typeWeapon;
+    
     /// <summary>
     /// Получить количество занимаемых клеток на поле
     /// </summary>
     public int GetOccupiedArea => _occupiedArea;
+    
     /// <summary>
     /// Получить скорость передвижения юнита
     /// </summary>
     public float GetSpeed => _speed;
+    
     /// <summary>
     /// Получить коэффициент защиты от огнестрельного оружия
     /// </summary>
     public float GetProtectionFirearms => _firearms;
+    
     /// <summary>
     /// Получить коэффициент защиты от огня
     /// </summary>
     public float GetProtectionFire => _fire;
+    
     /// <summary>
     /// Получить коэффициент защиты от энергетического оружия
     /// </summary>
     public float GetProtectionEnergyWeapons => _energyWeapons;
+    
     /// <summary>
     /// Получить конфиг используемого оружия
     /// </summary>
     public WeaponsConfig GetWeaponsConfig => _config;
+    
+    /// <summary>
+    /// Получить префаб юнита
+    /// </summary>
     public UnitComponent GetPrefab => _unitPrefab;
+    
+    /// <summary>
+    /// Получить спрайт юнита
+    /// </summary>
     public Sprite GetSprite => _sprite;
 
 }

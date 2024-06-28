@@ -1,9 +1,13 @@
 public class Brahmin : UnitComponent, IHealth, IMovable
 {
-
-
+    public BrahminManager _manager;
     public bool IsDead { get; set; } = false;
     public bool IsActive { get; private set; } = true;
+
+    public void Initialized(BrahminManager manager)
+    {
+        _manager = manager;
+    }
 
     public float Health()
     {
@@ -28,12 +32,10 @@ public class Brahmin : UnitComponent, IHealth, IMovable
             if ( health <= 0 )
             {
                 gameObject.SetActive( false );
+                _manager.DeadBrahmin(this);
             }
         }
-        else
-        {
-            gameObject.SetActive( false );
-        }
+        
 
 
     }

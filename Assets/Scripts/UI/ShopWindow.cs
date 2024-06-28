@@ -9,6 +9,8 @@ public class ShopWindow : MonoBehaviour
     private CardUnit _prefCardUnit;
     [SerializeField] private List<CardUnit> _cards = new();
 
+
+
     public void AddUnitsForSell( UnitConfig unit )
     {
         if (_prefCardUnit == unit) Debug.LogError("нет префама CardUnit");    

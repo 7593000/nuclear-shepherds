@@ -9,16 +9,25 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IBeginDragHandle
 {
     private GameHub _gameHub;
     [SerializeField]
-    private List<UnitConfig> _unitConfigs;
+    private List<UnitConfig> _unitConfigs = new();
     [SerializeField]
     private ShopWindow _shopWindow;
+    [Space]
+    [Header("Текстовые элементы на панеле")]
     [SerializeField]
-    private ScreenPanel _screenPanel;
+    private TextPanel _screenPanel;
     [SerializeField]
-    private WalletPanel _walletPanel;
+    private TextPanel _walletPanel;
+    [SerializeField]
+    private TextPanel _brahminCountText;
+    [SerializeField]
+    private TextPanel _wavelCountText;
+
+    private WaveEngine _waveEngine;
+    private BrahminManager _brahminManager;
     private Wallet _wallet;
     [SerializeField]
-    private string _formatText = "Юнит: {0}\nОружие: {1}\nУрон: {2}\nУдача: {3}";
+    private string _formatTextForScreenPanel = "Юнит: {0}\nОружие: {1}\nУрон: {2}\nУдача: {3}";
 
     private string _textInfo;
     private Canvas _canvas;
@@ -37,18 +46,20 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IBeginDragHandle
 
 
         _wallet = gameHub.GetWalletEngine.GetWallet;
-       
-      
+        _brahminManager = gameHub.GetBrahmin;
+        _waveEngine = gameHub.GetWaveEngine;
 
-      
-        _shopWindow ??= FindFirstObjectByType<ShopWindow>();
+
+         _shopWindow ??= FindFirstObjectByType<ShopWindow>();
         _screenPanel ??= FindFirstObjectByType<ScreenPanel>();
         _dragShadow = Instantiate(_shadowPrefab);
         _dragShadow.Initialize(_canvas);
         _dragShadow.gameObject.SetActive(false);
 
         _wallet.OnCoinsChanged += (int value) => ChangingNumberCoins(value);
-  
+        _brahminManager.OnBrahmin += (int value) => ChangingText(_brahminCountText, value.ToString());
+        _waveEngine.OnWave+=(int value) => ChangingText(_wavelCountText, value.ToString());
+        ChangingText(_brahminCountText, _brahminManager.GetBrahminList.Count.ToString());
 
         if (_canvas != null)
         {
@@ -64,14 +75,26 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IBeginDragHandle
     private void OnDestroy()
     {
         _wallet.OnCoinsChanged -= (int value) => ChangingNumberCoins(value);
-
+        _brahminManager.OnBrahmin -= (int value) => ChangingText(_brahminCountText, value.ToString());
+        _waveEngine.OnWave -= (int value) => ChangingText(_wavelCountText, value.ToString());
     }
   
-
-    private void ChangingNumberCoins(int value)
+    /// <summary>
+    /// Изменять текст на панеле 
+    /// </summary>
+    /// <param name="panel">в какой панеле менять текст</param>
+    /// <param name="value">Значение для изменения </param>
+    private void ChangingText(TextPanel panel, string value)
     {
-        
-        _walletPanel.SetText(value);
+      
+        panel.SetText(value);
+
+    }
+
+
+    private void ChangingNumberCoins( int value)
+    {
+        ChangingText(_walletPanel, value.ToString());
         _shopWindow.ChangingCoins(value);
 
     }
@@ -95,9 +118,10 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IBeginDragHandle
             CardUnit cardUnit = clickedObject.GetComponent<CardUnit>();
             if ( cardUnit != null )
             {
-                _textInfo = string.Format( _formatText , cardUnit.GetName , cardUnit.GetTypeWeapon , cardUnit.GetDamage , cardUnit.GetLuch );
+                _textInfo = string.Format( _formatTextForScreenPanel , cardUnit.GetName , cardUnit.GetTypeWeapon , cardUnit.GetDamage , cardUnit.GetLuch );
 
-                _screenPanel.ShowText( _textInfo );
+                ChangingText(_screenPanel, _textInfo);
+                //_screenPanel.ShowText( _textInfo );
             }
 
         }

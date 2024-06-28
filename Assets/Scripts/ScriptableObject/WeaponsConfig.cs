@@ -1,5 +1,5 @@
 using UnityEngine;
-[CreateAssetMenu( fileName = "_weapon" , menuName = "Configuration/Weapons" , order = 1 )]
+[CreateAssetMenu( fileName = "_weapon" , menuName = "Configuration/Weapons" , order = 2 )]
 public class WeaponsConfig : ScriptableObject
 {
     [SerializeField, Tooltip( "Тип оружия" )]
