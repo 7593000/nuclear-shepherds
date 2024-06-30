@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: Frequency
   m_EditorClassIdentifier: 
   _enemy:
-  - _enemyConfig:
-    - {fileID: 11400000, guid: 38f6ca7ac0e803e47836cb9bd765e620, type: 2}
-    _percentageAppearance: 9
-    _percentageRatio: 100
+  - _enemyConfig: {fileID: 11400000, guid: 38f6ca7ac0e803e47836cb9bd765e620, type: 2}
+    _percentageAppearance: 30
+    _percentageRatio: 1

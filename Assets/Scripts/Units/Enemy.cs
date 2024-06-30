@@ -4,9 +4,14 @@ using UnityEngine;
 public class Enemy : UnitComponent, IHealth, IAttack, IMovable
 
 {
-
     public static event Action<int> OnCoins;
+    [SerializeField, Tooltip("Уровень противника")] private LevelEnemy _levelEnemy;
+    /// <summary>
+    /// Проверка врага: Свободен ли он для добавление в список волны.
+    /// </summary>
+    public bool BusyWave { get; set; } = false;
 
+    public LevelEnemy GetLevelEnemy => _levelEnemy;
 
     public bool IsDead { get; set; } = false;
 
@@ -70,7 +75,7 @@ public class Enemy : UnitComponent, IHealth, IAttack, IMovable
     protected override void Start()
     {
         base.Start();
-        SetState( MoveState );
+        SetState( MoveState ); //TODO=DEL - перенести 
     }
 
 }

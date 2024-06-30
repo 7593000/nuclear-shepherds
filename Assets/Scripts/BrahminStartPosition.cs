@@ -51,7 +51,7 @@ public class BrahminStartPosition : MonoBehaviour
 
     private Vector3Int RandomCellPosition()
     {
-        ;
+       
         int randomIndex = Random.Range( 0 , _cellPosition.Count );
 
         return _cellPosition[ randomIndex ];

@@ -28,10 +28,11 @@ public abstract class UnitComponent : MonoBehaviour
     /// Взять цель у юнита
     /// </summary>
     public Transform GetTarget;
-    public TypeUnit GetTypeUnit => _config.GetTypeUnit;
+    public UnitConfig GetConfig => _config;
+    public TypeUnit GetTypeUnit => GetConfig.GetTypeUnit;
     public Animator GetAnimator => _animator;
     public AnimatorComponent StartAnimation => _animatorComponent;
-    public int GetCost => _config.GetCost;
+    public int GetCost => GetConfig.GetCost;
     /// <summary>
     /// направление движения [-1;0;1]
     /// </summary>
@@ -52,7 +53,7 @@ public abstract class UnitComponent : MonoBehaviour
     public IUnitState SearchState { get; private set; } //Поиск врага(брамина)
     public IUnitState DeadState { get; private set; }   // Смерть
 
-    protected virtual void Container(GameHub gameHub)
+    public virtual void Container(GameHub gameHub)
     {
 
 
@@ -61,17 +62,16 @@ public abstract class UnitComponent : MonoBehaviour
     protected virtual void Initialized()
     {
 
-        Luck = _config.GetLuck;
+        Luck = GetConfig.GetLuck;
+        GetDistance = GetConfig.GetDistance;
 
-        GetDistance = _config.GetDistance;
-
-        NoneState = new NoneState();
-        IdleState = new IdleState();
-        MoveState = new MoveState();
+        NoneState   = new NoneState();
+        IdleState   = new IdleState();
+        MoveState   = new MoveState();
         AttackState = new AttackState();
         SearchState = new SearchState();
-        DeadState = new DeadState();
-        _damage = new Damage(_config.GetWeaponsConfig, Luck);
+        DeadState   = new DeadState();
+        _damage     = new Damage(GetConfig.GetWeaponsConfig, Luck);
 
         _animatorComponent = gameObject.AddComponent<AnimatorComponent>();
         _animatorComponent.Container(this);

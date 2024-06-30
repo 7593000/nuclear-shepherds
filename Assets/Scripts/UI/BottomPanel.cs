@@ -8,8 +8,7 @@ using UnityEngine.UI;
 public class BottomPanel : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     private GameHub _gameHub;
-    [SerializeField]
-    private List<UnitConfig> _unitConfigs = new();
+ 
     [SerializeField]
     private ShopWindow _shopWindow;
     [Space]
@@ -101,7 +100,7 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IBeginDragHandle
 
     private void CreateCards()
     {
-        foreach ( UnitConfig unitConfig in _unitConfigs )
+        foreach ( UnitConfig unitConfig in _gameHub.GetGameData.GetFriendsConfigs )
         {
             _shopWindow.AddUnitsForSell( unitConfig );
         }
