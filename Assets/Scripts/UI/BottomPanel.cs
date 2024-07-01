@@ -50,7 +50,7 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IBeginDragHandle
 
 
          _shopWindow ??= FindFirstObjectByType<ShopWindow>();
-        _screenPanel ??= FindFirstObjectByType<ScreenPanel>();
+       
         _dragShadow = Instantiate(_shadowPrefab);
         _dragShadow.Initialize(_canvas);
         _dragShadow.gameObject.SetActive(false);
@@ -120,7 +120,7 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IBeginDragHandle
                 _textInfo = string.Format( _formatTextForScreenPanel , cardUnit.GetName , cardUnit.GetTypeWeapon , cardUnit.GetDamage , cardUnit.GetLuch );
 
                 ChangingText(_screenPanel, _textInfo);
-                //_screenPanel.ShowText( _textInfo );
+               
             }
 
         }

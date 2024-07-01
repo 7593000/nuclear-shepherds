@@ -11,17 +11,18 @@ public class Damage
     public float _speedAttack;
     private float _duration;
     private float _rechargeTime;
-    public float DamageValue { get; protected set; }
-    public float Luck { get; protected set; }
-
+  //  public float DamageValue { get; protected set; }
+   // public float Luck { get; protected set; }
+    private float _luck;
+    private float _damage;
     public Damage( WeaponsConfig weapon , float luck )
     {
         _weapon = weapon;
         _duration = _weapon.GetDuratuion;
         _rechargeTime = _weapon.GetRechargeTime; 
         _speedAttack = _weapon.GetSpeedAttack;
-        DamageValue = _weapon.GetDamage;
-        Luck = luck;
+        _damage = _weapon.GetDamage;
+        _luck = luck;
     }
 
     private async Task AttackCooldown( float attackSpeed )
@@ -29,8 +30,12 @@ public class Damage
         await Task.Delay( ( int )( attackSpeed * 1000 ) );
     }
 
-    public float DamageTarget()
+    public float DamageTarget(float damageRatio = 1, float speedAttackRation = 1, float luckRation = 1)
     {
+        _luck *= luckRation;
+        _damage *= damageRatio;
+        _speedAttack *= speedAttackRation;
+
         //TODO => вставить отслеждивание Duration оружия .
         if ( _canAttack )
         {
@@ -58,9 +63,9 @@ public class Damage
     {
         if ( CritCalculation() )
         {
-            return DamageValue + ( DamageValue * Luck );
+            return _damage + (_damage * _luck);
         }
-        return DamageValue;
+        return _damage;
     }
 
     /// <summary>
@@ -68,7 +73,7 @@ public class Damage
     /// </summary>
     /// <param name="luck"></param>
     /// <returns></returns>
-    private bool CritCalculation() => RandomRange() < Luck;
+    private bool CritCalculation() => RandomRange() < _luck;
 
     public float RandomRange()
     {

@@ -19,9 +19,11 @@ public class GameHub : MonoBehaviour
     private BrahminManager _brahminEngine;
     [SerializeField]
     private BottomPanel _bottomPanel;
+    [SerializeField] 
+    private WindowInfoUnit _windowInfoUnit;
     [SerializeField]
     private TileMapEngine _tileMapEngine;
-
+    
     public GameData GetGameData => _gameData;
     public UnitsUpdateEngine GetUnitsUpdateEngine => _unitsEngine;
     public PointsTargerEngine GetPointsTarget => _points;
@@ -30,6 +32,7 @@ public class GameHub : MonoBehaviour
     public WalletEngine GetWalletEngine => _walletEngine;
     public WaveEngine GetWaveEngine => _waveEngine;
     public PoolEnemy GetPoolEnemy => _poolEnemy ;
+    public WindowInfoUnit GetWindowInfoUnit => _windowInfoUnit;
     private void Awake()
     {
         _gameData??= GetComponent<GameData>();   
@@ -39,6 +42,7 @@ public class GameHub : MonoBehaviour
         _bottomPanel ??= GetComponent<BottomPanel>();
         _walletEngine ??= GetComponent<WalletEngine>();
         _poolEnemy??= GetComponent<PoolEnemy>();
+        _windowInfoUnit??= FindFirstObjectByType<WindowInfoUnit>();
     }
 
     private void Start()

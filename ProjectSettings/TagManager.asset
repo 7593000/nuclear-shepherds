@@ -41,3 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: InfoUnits
+    uniqueID: 320187827
+    locked: 0
+  - name: UIInterface
+    uniqueID: 20118571
+    locked: 0

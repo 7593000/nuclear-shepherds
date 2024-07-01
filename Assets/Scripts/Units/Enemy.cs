@@ -53,16 +53,16 @@ public class Enemy : UnitComponent, IHealth, IAttack, IMovable
 
     public void Attack()
     {
+        float damage = GetDamageClass.DamageTarget(_unitData.DamageRatio, _unitData.SpeedAttackRatio, _unitData.LuckRatio);
 
-        float damage = GetDamane.DamageTarget();
-       
-
-        if ( damage >= 0 )
+        if (damage >= 0)
         {
-            StartAnimation.ToRun( StateUnit.ATTACK );
-            GetTargetForAttack.TakeDamage( damage );
+            StartAnimation.ToRun(StateUnit.ATTACK);
+            GetTargetForAttack.TakeDamage(damage);
 
         }
+
+       
 
     }
 
