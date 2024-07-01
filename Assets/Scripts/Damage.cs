@@ -5,24 +5,24 @@ using UnityEngine;
 /// </summary>
 public class Damage
 {
-    WeaponsConfig _weapon;
+    private WeaponsConfig _weapon;
 
     private bool _canAttack = true;
     public float _speedAttack;
     private float _duration;
     private float _rechargeTime;
-  //  public float DamageValue { get; protected set; }
-   // public float Luck { get; protected set; }
+    //  public float DamageValue { get; protected set; }
+    // public float Luck { get; protected set; }
     private float _luck;
     private float _damage;
-    public Damage( WeaponsConfig weapon , float luck )
+    public Damage( WeaponsConfig weapon )
     {
         _weapon = weapon;
         _duration = _weapon.GetDuratuion;
-        _rechargeTime = _weapon.GetRechargeTime; 
+        _rechargeTime = _weapon.GetRechargeTime;
         _speedAttack = _weapon.GetSpeedAttack;
         _damage = _weapon.GetDamage;
-        _luck = luck;
+
     }
 
     private async Task AttackCooldown( float attackSpeed )
@@ -30,11 +30,11 @@ public class Damage
         await Task.Delay( ( int )( attackSpeed * 1000 ) );
     }
 
-    public float DamageTarget(float damageRatio = 1, float speedAttackRation = 1, float luckRation = 1)
+    public float DamageTarget( float damageRatio = 1 , float speedAttackRation = 1 , float luckRation = 1 )
     {
-        _luck *= luckRation;
-        _damage *= damageRatio;
-        _speedAttack *= speedAttackRation;
+        _luck += luckRation;
+        _damage += damageRatio;
+        _speedAttack += speedAttackRation;
 
         //TODO => вставить отслеждивание Duration оружия .
         if ( _canAttack )
@@ -63,7 +63,7 @@ public class Damage
     {
         if ( CritCalculation() )
         {
-            return _damage + (_damage * _luck);
+            return _damage + ( _damage * _luck );
         }
         return _damage;
     }
@@ -79,6 +79,6 @@ public class Damage
     {
         return Random.Range( 0f , 1f );
     }
- 
- 
+
+
 }

@@ -27,15 +27,26 @@ public class UnitConfig : ScriptableObject
     [SerializeField, Tooltip( "Сокорсть движения" )]
     private float _speed;
 
-    [SerializeField, Tooltip( "Стоимость найма : количество едениц получаемых за убийсмтво" )]
-    private int _cost;
-
+ 
 
     [SerializeField, Tooltip( "Тип используемого оружия" )]
     private TypeWeapons _typeWeapon;
     [SerializeField, Tooltip( "Конфиг для оружия" )]
     private WeaponsConfig _config;
 
+    [Space]
+    [Header("Настройки для обновления юнита")]
+    [SerializeField, Tooltip( "Стоимость найма : количество едениц получаемых за убийсмтво" )]
+    private int _cost;
+    [SerializeField, Tooltip( "Стоиомсть повышения юнита" )]
+    private int _costUpgrade;
+    [Header( "Коэффициенты повышения характеристик:" )]
+    [SerializeField, Tooltip( "Коэффициент урона" )]
+    public float _damageRatio;
+    [SerializeField, Tooltip( "Коэффициент скорости атаки" )]
+    public float _speedAttackRatio;
+    [SerializeField, Tooltip( "Коэффициент удачи" )]
+    public float _luckRatio;
 
     [Space]
     [Header( "Характеристики защиты" )]
@@ -44,82 +55,87 @@ public class UnitConfig : ScriptableObject
     [SerializeField, Tooltip( "Защита от энергетического оружия" )] private float _energyWeapons;
 
     [SerializeField, Tooltip( "Префаб юнита" )] private UnitComponent _unitPrefab;
- 
+
     [Space]
     [SerializeField, Tooltip( "Спрайт юнита" )]
     private Sprite _sprite;
-     
+
     /// <summary>
     /// Получить принадлежность юнита 
     /// </summary>
 
     public TypeUnit GetTypeUnit => _unitType;
-    
+
     /// <summary>
     /// Получить имя юнита
     /// </summary>
     public string GetName => _name;
-    
+
     /// <summary>
     /// Стоимость юнита
     /// </summary>
     public int GetCost => _cost;
-    
+    /// <summary>
+    /// Получить данные для обнавления юнита:[стоимость, урон, скорость атаки, удача] 
+    /// </summary>
+    public float[] GetRatio => new float[] {_costUpgrade, _damageRatio , _speedAttackRatio , _luckRatio };
+ 
+
     /// <summary>
     /// Количество жизней
     /// </summary>
     public float GetHealth => _health;
-    
+
     /// <summary>
     /// Получмить уровень удачи при попадании
     /// </summary>
     public float GetLuck => _luck;
-    
+
     /// <summary>
     /// Получить дистанцию атаки
     /// </summary>
     public float GetDistance => _distance;
-    
+
     /// <summary>
     /// Получить тип используемого оружия
     /// </summary>
     public TypeWeapons GetTypeWeapons => _typeWeapon;
-    
+
     /// <summary>
     /// Получить количество занимаемых клеток на поле
     /// </summary>
     public int GetOccupiedArea => _occupiedArea;
-    
+
     /// <summary>
     /// Получить скорость передвижения юнита
     /// </summary>
     public float GetSpeed => _speed;
-    
+
     /// <summary>
     /// Получить коэффициент защиты от огнестрельного оружия
     /// </summary>
     public float GetProtectionFirearms => _firearms;
-    
+
     /// <summary>
     /// Получить коэффициент защиты от огня
     /// </summary>
     public float GetProtectionFire => _fire;
-    
+
     /// <summary>
     /// Получить коэффициент защиты от энергетического оружия
     /// </summary>
     public float GetProtectionEnergyWeapons => _energyWeapons;
-    
+
     /// <summary>
     /// Получить конфиг используемого оружия
     /// </summary>
     public WeaponsConfig GetWeaponsConfig => _config;
-    
+
     /// <summary>
     /// Получить префаб юнита
     /// </summary>
     public UnitComponent GetPrefab => _unitPrefab;
-    
+
     /// <summary>
     /// Получить спрайт юнита
     /// </summary>

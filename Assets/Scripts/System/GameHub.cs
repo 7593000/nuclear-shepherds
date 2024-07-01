@@ -47,7 +47,7 @@ public class GameHub : MonoBehaviour
 
     private void Start()
     {
-        _walletEngine.Initialized(100);
+        _walletEngine.Initialized(1000);
         _poolEnemy.Initialized( this );
         _bottomPanel.Initialized(this);
         _brahminEngine.Initialized(this);

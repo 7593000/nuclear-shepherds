@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 [RequireComponent(typeof(LineRenderer))]
-public class Friends : UnitComponent, IAttack, IPointerClickHandler, IPointerEnterHandler
+public class Friends : UnitComponent, IAttack, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 
 {
    
@@ -10,9 +10,9 @@ public class Friends : UnitComponent, IAttack, IPointerClickHandler, IPointerEnt
     private LineRenderer _lineRenderer;
     [SerializeField] private AttackTrigger _trigger;
     private int _segments = 46;
-   // private List<UnitComponent> _enemies = new();
+  
 
-
+    
 
     public void Attack()
     {
@@ -37,7 +37,7 @@ public class Friends : UnitComponent, IAttack, IPointerClickHandler, IPointerEnt
 
             if (hit != null)
             {
-                _lineRenderer.enabled = true;
+               _lineRenderer.enabled = true;
                 _gameHub.GetWindowInfoUnit.WindowInfo(this);
             }
         }
@@ -46,7 +46,25 @@ public class Friends : UnitComponent, IAttack, IPointerClickHandler, IPointerEnt
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log("dfsdfsdf");
+        GameObject clickedObject = eventData.pointerCurrentRaycast.gameObject;
+
+        if ( clickedObject != null )
+        {
+            UnitComponent hit = clickedObject.GetComponentInParent<UnitComponent>();
+
+            if ( hit != null )
+            {
+                _lineRenderer.enabled = true;
+                //todo - > установить курсор
+            }
+        }
+
+    }
+
+    public void OnPointerExit( PointerEventData eventData )
+    {
+        //Todo => установить стандартный курсор
+        _lineRenderer.enabled = false;
     }
 
     protected override void Start()

@@ -19,9 +19,13 @@ MonoBehaviour:
   _distance: 6
   _occupiedArea: 1
   _speed: 0
-  _cost: 50
   _typeWeapon: 2
   _config: {fileID: 11400000, guid: 66a2e95831cbed44a864d8963c9b28aa, type: 2}
+  _cost: 50
+  _costUpgrade: 150
+  _damageRatio: 1.1
+  _speedAttackRatio: 0.4
+  _luckRatio: 0.05
   _firearms: 0
   _fire: 0
   _energyWeapons: 0
