@@ -18,8 +18,8 @@ public class UnitConfig : ScriptableObject
     [SerializeField, Tooltip( "Шанс поразить цель" ), Range( 0.1f , 1f )]
     private float _luck;
 
-    [SerializeField, Tooltip( "Дальность атаки" ), Range( 0f , 100f )]
-    private float _distance;
+    //[SerializeField, Tooltip( "Дальность атаки" ), Range( 0f , 100f )]
+    //private float _distance;
 
     [SerializeField, Tooltip( "Занимаемое количество клеток на карте при установки юнита" ), Range( 1 , 19 )]
     private int _occupiedArea;
@@ -94,7 +94,7 @@ public class UnitConfig : ScriptableObject
     /// <summary>
     /// Получить дистанцию атаки
     /// </summary>
-    public float GetDistance => _distance;
+   // public float GetDistance => _distance;
 
     /// <summary>
     /// Получить тип используемого оружия

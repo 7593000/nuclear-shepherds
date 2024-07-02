@@ -50,7 +50,7 @@ public abstract class UnitComponent : MonoBehaviour
     /// </summary>
     public IUnitState CurrentState { get; private set; }
 
-    public float GetDistance { get; private set; }
+ 
 
 
     public IUnitState NoneState { get; private set; } //Погранничное состояние
@@ -71,7 +71,7 @@ public abstract class UnitComponent : MonoBehaviour
 
         _unitData = new UnitData( GetConfig );
 
-        GetDistance = GetConfig.GetDistance;
+       
 
         NoneState = new NoneState();
         IdleState = new IdleState();

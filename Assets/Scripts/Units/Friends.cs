@@ -85,8 +85,8 @@ public class Friends : UnitComponent, IAttack, IPointerClickHandler, IPointerEnt
         float angle = 0f;
         for (int i = 0; i < _segments + 1; i++)
         {
-            float x = Mathf.Sin(Mathf.Deg2Rad * angle) * _config.GetDistance;
-            float y = Mathf.Cos(Mathf.Deg2Rad * angle) * _config.GetDistance;
+            float x = Mathf.Sin(Mathf.Deg2Rad * angle) * _config.GetWeaponsConfig.GetDistance ;
+            float y = Mathf.Cos(Mathf.Deg2Rad * angle) * _config.GetWeaponsConfig.GetDistance;
 
             _lineRenderer.SetPosition(i, new Vector3(x, y, 0));
             angle += 360f / _segments;

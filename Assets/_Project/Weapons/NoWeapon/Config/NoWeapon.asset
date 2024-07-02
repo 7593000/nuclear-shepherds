@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: NoWeapon
   m_EditorClassIdentifier: 
   _type: 1
-  _duration: 0
   _speedAttack: 2
+  _rechargeTime: 0
+  _weaponAmmo: 0
   _damage: 2
+  _distance: 1.1
+  _audioClip: {fileID: 0}
   _sprite: {fileID: 21300000, guid: 70b9076d7e9658d49a656a928a1ecf0b, type: 3}

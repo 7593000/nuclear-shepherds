@@ -18,7 +18,7 @@ public class AttackTrigger : MonoBehaviour
     {
         _unit = unit;
         _collider = GetComponent<CircleCollider2D>();
-        _collider.radius = _unit.GetDistance;
+        _collider.radius = _unit.GetConfig.GetWeaponsConfig.GetDistance;
        
     }
 

@@ -18,7 +18,7 @@ public class SearchState : IUnitState
         _movable = unit.GetComponent<IMovable>();
 
         unit.GetGameHub.GetUnitsUpdateEngine.AddUnit(unit, StateUnitList.MOVE);
-        _activeDistanceSqr = unit.GetDistance * unit.GetDistance;
+        _activeDistanceSqr = unit.GetConfig.GetWeaponsConfig.GetDistance * unit.GetConfig.GetWeaponsConfig.GetDistance;
         _brahmin = SearchTargetAttack(unit);
 
         if (_brahmin == null) { 

@@ -15,6 +15,8 @@ public class WeaponsConfig : ScriptableObject
     [SerializeField,Tooltip("Количество боеприпасов у оружия")] private int _weaponAmmo;
     [SerializeField, Tooltip( "Наносимый урод" )]
     private float _damage;
+    [SerializeField, Tooltip( "Дистанция атаки" )]
+    private float _distance;
     [Space]
     [SerializeField,Tooltip("Звук выстрела")]
     private AudioClip _audioClip;
@@ -40,7 +42,10 @@ public class WeaponsConfig : ScriptableObject
     /// Урон оружия
     /// </summary>
     public float GetDamage => _damage;
-
+    /// <summary>
+    /// Дистанция атаки
+    /// </summary>
+    public float GetDistance => _distance;
     public AudioClip GetAudioClip => _audioClip;
 
 #if UNITY_EDITOR

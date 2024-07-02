@@ -33,7 +33,7 @@ public class CardUnit : CardUnitComponent
         _typeWeapon = config.GetTypeWeapons.ToString();
         _damage = config.GetWeaponsConfig.GetDamage.ToString();
         _luck = (config.GetLuck * 100).ToString();
-        _distance = config.GetDistance;
+        _distance = config.GetWeaponsConfig.GetDistance;
 
 
     }
