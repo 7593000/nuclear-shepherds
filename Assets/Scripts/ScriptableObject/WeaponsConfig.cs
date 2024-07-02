@@ -5,15 +5,14 @@ public class WeaponsConfig : ScriptableObject
     [SerializeField, Tooltip( "Тип оружия" )]
     private TypeWeapons _type;
    
-    //TODO => DEL
-    [SerializeField, Tooltip("Продолжительность воздействия оружия")]
-    private float _duration;
+ 
    
     [SerializeField, Tooltip( "Скорость атаки" )]
     private float _speedAttack;
     [SerializeField, Tooltip("Время перезарядки/Время новой атаки")]
-    private float _rechargeTime;
+    private int _rechargeTime;
 
+    [SerializeField,Tooltip("Количество боеприпасов у оружия")] private int _weaponAmmo;
     [SerializeField, Tooltip( "Наносимый урод" )]
     private float _damage;
     [Space]
@@ -24,10 +23,7 @@ public class WeaponsConfig : ScriptableObject
     [SerializeField, Tooltip( "Спрайт оружия для визуализации в инспекторе" )]
     private Sprite _sprite;
 #endif
-    /// <summary>
-    /// Продолжительность воздействия оружия
-    /// </summary>
-    public float GetDuratuion => _duration;
+ 
     /// <summary>
     /// Скорость атаки
     /// </summary>
@@ -35,7 +31,14 @@ public class WeaponsConfig : ScriptableObject
     /// <summary>
     /// Время перезарядки
     /// </summary>
-    public float GetRechargeTime => _rechargeTime;
+    public int GetRechargeTime => _rechargeTime;
+    /// <summary>
+    /// Получить количество боеприпасов у оружия
+    /// </summary>
+    public int GetWeaponAmmo => _weaponAmmo;    
+    /// <summary>
+    /// Урон оружия
+    /// </summary>
     public float GetDamage => _damage;
 
     public AudioClip GetAudioClip => _audioClip;

@@ -11,7 +11,7 @@ public abstract class UnitComponent : MonoBehaviour
     [SerializeField] protected GameHub _gameHub;
 
 
-    private Damage _damage;
+    [SerializeField] private Damage _damage;
 
     public GameHub GetGameHub => _gameHub;
 
@@ -37,12 +37,12 @@ public abstract class UnitComponent : MonoBehaviour
     public AnimatorComponent StartAnimation => _animatorComponent;
 
     public int GetCost => GetConfig.GetCost;
-
+    public Vector3Int CellPosition;
     /// <summary>
     /// направление движения [-1;0;1]
     /// </summary>
     public int[] GetDirectionView { get; set; } = new int[ 2 ];
-
+    
     //protected StateUnit GetStateUnit => StateUnit.IDLE;
 
     /// <summary>
@@ -80,7 +80,7 @@ public abstract class UnitComponent : MonoBehaviour
         SearchState = new SearchState();
         DeadState = new DeadState();
 
-        _damage = new Damage( GetConfig.GetWeaponsConfig );
+        _damage = new Damage( GetConfig.GetWeaponsConfig, _unitData.Luck + _unitData.LuckRatio);
 
         _animatorComponent = gameObject.AddComponent<AnimatorComponent>();
         _animatorComponent.Container( this );
@@ -106,8 +106,15 @@ public abstract class UnitComponent : MonoBehaviour
             CurrentState?.UpdateState( this );
         }
     }
-
-
+    /// <summary>
+    /// удаление юнита 
+    /// </summary>
+    public void DeactiveUnit()
+    {
+        gameObject.SetActive( false );
+        Debug.Log("Юнит уничтожен");
+        //TODO=> плей анимации смерти
+    }
 
     //TODO=>TEMP
     private void Awake()
@@ -123,13 +130,16 @@ public abstract class UnitComponent : MonoBehaviour
     }
     public void UpdateLevel()
     {
-
+        
        _unitData.Level += 1;
         _unitData.DamageRatio += GetConfig.GetRatio[ 1 ] * _unitData.Level;
         
         _unitData.SpeedAttackRatio += GetConfig.GetRatio[ 2 ] * _unitData.Level;
         _unitData.LuckRatio += GetConfig.GetRatio[ 3 ] * _unitData.Level;
-        
+
+        _damage.SetLuck( _unitData.Luck + _unitData.LuckRatio );
+        _damage.SetDamage(_unitData.Damage + _unitData.DamageRatio);
+        _damage.SetSpeedAttack(_unitData.SpeedAttack + _unitData.SpeedAttackRatio);
     }
 
 }/// <summary>

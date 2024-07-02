@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Flamethromer
   m_EditorClassIdentifier: 
   _type: 4
-  _duration: 2
-  _speedAttack: 3
-  _damage: 50
+  _speedAttack: 0.1
+  _rechargeTime: 7
+  _weaponAmmo: 20
+  _damage: 5
+  _audioClip: {fileID: 0}
   _sprite: {fileID: 21300000, guid: a2c344f0688cac34e9f76f95508408df, type: 3}

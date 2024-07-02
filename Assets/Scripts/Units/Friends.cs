@@ -1,22 +1,21 @@
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 [RequireComponent(typeof(LineRenderer))]
 public class Friends : UnitComponent, IAttack, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 
 {
-   
+
 
     private LineRenderer _lineRenderer;
     [SerializeField] private AttackTrigger _trigger;
     private int _segments = 46;
-  
 
-    
+
+
 
     public void Attack()
     {
-        float damage = GetDamageClass.DamageTarget(_unitData.DamageRatio, _unitData.SpeedAttackRatio,_unitData.LuckRatio);
+        float damage = GetDamageClass.DamageTarget();
 
         if (damage >= 0)
         {
@@ -30,14 +29,14 @@ public class Friends : UnitComponent, IAttack, IPointerClickHandler, IPointerEnt
     public void OnPointerClick(PointerEventData eventData)
     {
         GameObject clickedObject = eventData.pointerCurrentRaycast.gameObject;
-     
+
         if (clickedObject != null)
         {
             UnitComponent hit = clickedObject.GetComponentInParent<UnitComponent>();
 
             if (hit != null)
             {
-               _lineRenderer.enabled = true;
+                _lineRenderer.enabled = true;
                 _gameHub.GetWindowInfoUnit.WindowInfo(this);
             }
         }
@@ -48,11 +47,11 @@ public class Friends : UnitComponent, IAttack, IPointerClickHandler, IPointerEnt
     {
         GameObject clickedObject = eventData.pointerCurrentRaycast.gameObject;
 
-        if ( clickedObject != null )
+        if (clickedObject != null)
         {
             UnitComponent hit = clickedObject.GetComponentInParent<UnitComponent>();
 
-            if ( hit != null )
+            if (hit != null)
             {
                 _lineRenderer.enabled = true;
                 //todo - > установить курсор
@@ -61,7 +60,7 @@ public class Friends : UnitComponent, IAttack, IPointerClickHandler, IPointerEnt
 
     }
 
-    public void OnPointerExit( PointerEventData eventData )
+    public void OnPointerExit(PointerEventData eventData)
     {
         //Todo => установить стандартный курсор
         _lineRenderer.enabled = false;
@@ -71,14 +70,14 @@ public class Friends : UnitComponent, IAttack, IPointerClickHandler, IPointerEnt
     {
         base.Start();
 
-      
+
         _lineRenderer = GetComponent<LineRenderer>();
         _lineRenderer.positionCount = _segments + 1;
         _lineRenderer.useWorldSpace = false;
         CreateCircle();
         _trigger.Initialized(this);
         SetState(IdleState);
-        
+
     }
 
     private void CreateCircle()
@@ -96,5 +95,5 @@ public class Friends : UnitComponent, IAttack, IPointerClickHandler, IPointerEnt
         _lineRenderer.enabled = false;
     }
 
-     
+
 }

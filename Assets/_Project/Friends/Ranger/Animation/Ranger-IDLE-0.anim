@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shepherd-IDLE-0
+  m_Name: Ranger-IDLE-0
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -32,12 +32,6 @@ AnimationClip:
       value: {fileID: 27215120, guid: bfe400bb56a9e6b4fa6aa9fac5e5ecd5, type: 3}
     - time: 1
       value: {fileID: 1748165001, guid: bfe400bb56a9e6b4fa6aa9fac5e5ecd5, type: 3}
-    - time: 1.2
-      value: {fileID: 1873157406, guid: 68bc0787bdef1a54db390cddff4883e5, type: 3}
-    - time: 1.4
-      value: {fileID: 1551786735, guid: 68bc0787bdef1a54db390cddff4883e5, type: 3}
-    - time: 1.6
-      value: {fileID: -1412953643, guid: 68bc0787bdef1a54db390cddff4883e5, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -66,15 +60,12 @@ AnimationClip:
     - {fileID: -667534786, guid: bfe400bb56a9e6b4fa6aa9fac5e5ecd5, type: 3}
     - {fileID: 27215120, guid: bfe400bb56a9e6b4fa6aa9fac5e5ecd5, type: 3}
     - {fileID: 1748165001, guid: bfe400bb56a9e6b4fa6aa9fac5e5ecd5, type: 3}
-    - {fileID: 1873157406, guid: 68bc0787bdef1a54db390cddff4883e5, type: 3}
-    - {fileID: 1551786735, guid: 68bc0787bdef1a54db390cddff4883e5, type: 3}
-    - {fileID: -1412953643, guid: 68bc0787bdef1a54db390cddff4883e5, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.8000001
+    m_StopTime: 1.2
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

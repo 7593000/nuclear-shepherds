@@ -31,7 +31,7 @@ public class Brahmin : UnitComponent, IHealth, IMovable
             float health = _health.TakeDamage( damage );
             if ( health <= 0 )
             {
-                gameObject.SetActive( false );
+                DeactiveUnit();
                 _manager.DeadBrahmin(this);
             }
         }

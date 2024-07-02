@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d26c15ee3fe0a09409c2112b20f5e458, type: 3}
+  m_Name: Ranger
+  m_EditorClassIdentifier: 
+  _unitType: 1
+  _name: "\u0420\u0435\u0439\u043D\u0434\u0436\u0435\u0440"
+  _health: 0
+  _luck: 0.4
+  _distance: 6
+  _occupiedArea: 1
+  _speed: 0
+  _typeWeapon: 4
+  _config: {fileID: 11400000, guid: 69d3c1dfd540bfe4d991164bfd84c22e, type: 2}
+  _cost: 150
+  _costUpgrade: 300
+  _damageRatio: 1
+  _speedAttackRatio: 0.4
+  _luckRatio: 0.05
+  _firearms: 0
+  _fire: 0
+  _energyWeapons: 0
+  _unitPrefab: {fileID: 6797377760339903826, guid: 1991ce10dffff1b4d8f025f77108f3cb, type: 3}
+  _sprite: {fileID: -595309953, guid: bfe400bb56a9e6b4fa6aa9fac5e5ecd5, type: 3}

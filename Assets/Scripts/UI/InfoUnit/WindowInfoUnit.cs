@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class WindowInfoUnit : MonoBehaviour
 {
-    // private Canvas _canvas;
+
     private CanvasGroup _group;
     private UnitComponent _unit;
- 
+
 
     [SerializeField] private float _cost = 1000f;
     [Space]
@@ -23,64 +23,93 @@ public class WindowInfoUnit : MonoBehaviour
 
     private void Start()
     {
-        //_canvas = GetComponent<Canvas>();
+
         _group = GetComponent<CanvasGroup>();
 
-        CanvasStatus( false );
+        CanvasStatus(false);
     }
 
-    private void CanvasStatus( bool status )
+    /// <summary>
+    /// јктивность меню , показать - скрыть
+    /// </summary>
+    private void CanvasStatus(bool status)
     {
         _group.alpha = status ? 1 : 0;
         _group.blocksRaycasts = status;
         _group.interactable = status;
 
     }
+    public void DismissUnit()
+    {
+        Vector3Int positionUnit = Vector3Int.CeilToInt(_unit.transform.position);
+        Debug.Log(positionUnit);
+        _unit.GetGameHub.GetTileMap.RemoveCell(_unit.CellPosition);
+        _unit.DeactiveUnit();
+
+        CanvasStatus(false);
+
+    }
 
     public void CloseWindowInfo()
     {
-        CanvasStatus( false );
+        CanvasStatus(false);
     }
     public void UpgradeUnit()
     {
+        if (CheckedLevel()) { return; }
         _unit.UpdateLevel();
         ShowInfo();
     }
-    public void WindowInfo( UnitComponent unit )
+    public void WindowInfo(UnitComponent unit)
     {
         _unit = unit;
-        CanvasStatus( true );
+        CanvasStatus(true);
         ShowInfo();
     }
 
     private void ShowInfo()
     {
-        float costUpgrade = _unit.GetConfig.GetRatio[ 0 ];
-        float damageRation = _unit.GetConfig.GetRatio[ 1 ];
-        float speedAttackRatio = _unit.GetConfig.GetRatio[ 2 ];
-        float luckRation = _unit.GetConfig.GetRatio[ 3 ];
+        bool isMaxLevel = CheckedLevel();
+        string maxLevelText = "MAX";
+
+        float costUpgrade = _unit.GetConfig.GetRatio[0];
+        float damageRation = _unit.GetConfig.GetRatio[1];
+        float speedAttackRatio = _unit.GetConfig.GetRatio[2];
+        float luckRation = _unit.GetConfig.GetRatio[3];
 
         float damage = _unit.GetUnitData.Damage + _unit.GetUnitData.DamageRatio;
         float speedAttack = _unit.GetUnitData.SpeedAttack + _unit.GetUnitData.SpeedAttackRatio;
-        float luck = _unit.GetUnitData.Luck +_unit.GetUnitData.LuckRatio;
+        float luck = _unit.GetUnitData.Luck + _unit.GetUnitData.LuckRatio;
 
-        float newDamageValue = damage + damageRation * (_unit.GetUnitData.Level+1);
-        float newSpeedAttackValue = speedAttack + speedAttackRatio * (_unit.GetUnitData.Level+1);
-        float newLuckValue = luck + luckRation * ( _unit.GetUnitData.Level + 1 );
+        string newDamageValue = isMaxLevel ? maxLevelText : (damage + damageRation * (_unit.GetUnitData.Level + 1)).ToString();
+        string newSpeedAttackValue = isMaxLevel ? maxLevelText : (speedAttack + speedAttackRatio * (_unit.GetUnitData.Level + 1)).ToString();
+        string newLuckValue = isMaxLevel ? maxLevelText : ( luck + luckRation * (_unit.GetUnitData.Level + 1)).ToString(); 
+        string cost = isMaxLevel ? maxLevelText : (costUpgrade * _unit.GetUnitData.Level).ToString();
 
-        float cost = costUpgrade * _unit.GetUnitData.Level;
+        _nameUnit.SetText(_unit.GetConfig.GetName);
+        _level.SetText(_unit.GetUnitData.Level.ToString());
+        _costUdgrade.SetText(cost );
 
-        _nameUnit.SetText( _unit.GetConfig.GetName );
-        _level.SetText( _unit.GetUnitData.Level.ToString() );
-        _costUdgrade.SetText( cost.ToString() );
+        _currentDamage.SetText(damage.ToString());
+        _currentSpeedAttack.SetText(speedAttack.ToString());
+        _currentLuck.SetText(luck.ToString());
 
-        _currentDamage.SetText( damage.ToString() );
-        _currentSpeedAttack.SetText( speedAttack.ToString() );
-        _currentLuck.SetText( luck.ToString() );
+        _newDamage.SetText(newDamageValue);
+        _newSpeedAttack.SetText(newSpeedAttackValue);
+        _newLuck.SetText(newLuckValue );
 
-        _newDamage.SetText( newDamageValue.ToString() );
-        _newSpeedAttack.SetText( newSpeedAttackValue.ToString() );
-        _newLuck.SetText( newLuckValue.ToString() );
+    }
 
+
+    /// <summary>
+    /// ѕроверка уровн€ юнита, если максимальный, то блочим возможность повысить уровень 
+    /// </summary>
+    /// <returns></returns>
+    private bool CheckedLevel()
+    {
+        int maxLevel = 4;
+        int currentLevel = _unit.GetUnitData.Level;
+
+        return currentLevel >= maxLevel;
     }
 }

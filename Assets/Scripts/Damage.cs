@@ -1,84 +1,161 @@
+ 
 using System.Threading.Tasks;
 using UnityEngine;
+
 /// <summary>
 /// Расчет нанесения урона оружием 
 /// </summary>
+[System.Serializable]
 public class Damage
 {
     private WeaponsConfig _weapon;
-
-    private bool _canAttack = true;
-    public float _speedAttack;
-    private float _duration;
-    private float _rechargeTime;
-    //  public float DamageValue { get; protected set; }
-    // public float Luck { get; protected set; }
-    private float _luck;
+    [SerializeField] private bool _canAttack = true;
+    [SerializeField] private bool _isRecharge = false;
+    [SerializeField] private float _speedAttack;
+    [SerializeField] private int _rechargeTime;
+    [SerializeField] private int _weaponAmmo;
+    [SerializeField] private float _luck;
     private float _damage;
-    public Damage( WeaponsConfig weapon )
+
+    public Damage(WeaponsConfig weapon, float luck)
     {
         _weapon = weapon;
-        _duration = _weapon.GetDuratuion;
-        _rechargeTime = _weapon.GetRechargeTime;
         _speedAttack = _weapon.GetSpeedAttack;
+        _rechargeTime = _weapon.GetRechargeTime;
+        _weaponAmmo = _weapon.GetWeaponAmmo;
+        _luck = luck;
         _damage = _weapon.GetDamage;
-
     }
 
-    private async Task AttackCooldown( float attackSpeed )
+    /// <summary>
+    /// Изменения значения удачи
+    /// </summary>
+    /// <param name="newLuck"></param>
+    public void SetLuck(float newLuck)
     {
-        await Task.Delay( ( int )( attackSpeed * 1000 ) );
+        _luck = newLuck;
     }
 
-    public float DamageTarget( float damageRatio = 1 , float speedAttackRation = 1 , float luckRation = 1 )
+    /// <summary>
+    /// Изменения скорости атаки
+    /// </summary>
+    /// <param name="newSpeedAttack"></param>
+    public void SetSpeedAttack(float newSpeedAttack)
     {
-        _luck += luckRation;
-        _damage += damageRatio;
-        _speedAttack += speedAttackRation;
+        _speedAttack = newSpeedAttack;
+    }
 
-        //TODO => вставить отслеждивание Duration оружия .
-        if ( _canAttack )
+    /// <summary>
+    /// Изменения урона
+    /// </summary>
+    /// <param name="newDamage"></param>
+    public void SetDamage(float newDamage)
+    {
+        _damage = newDamage;
+    }
+
+    /// <summary>
+    /// Нанесение урона цели
+    /// </summary>
+    /// <returns>Значение урона или -1, если атака невозможна</returns>
+    public float DamageTarget()
+    {
+        if (!WeaponAmmoCount())
         {
-            _canAttack = false;
+            Debug.Log("Перезярядка!");
+            // Запуск перезарядки
+            RechargeWeapon();
+             
+         
+           
+          
+        }
 
+
+        if (_canAttack && !_isRecharge )
+        {
             float damage = CalculatingDamage();
-            CooldownWeapon(); // Запуск перезарядки
-
+            _weaponAmmo--;
+            // Запуск перезарядки
+            CooldownWeapon( );
+            Debug.Log("Выстрел!");
             return damage;
         }
+       
+
         return -1;
     }
 
-    private async void CooldownWeapon()
+    /// <summary>
+    /// Проверка наличия боеприпасов
+    /// </summary>
+    /// <returns>true, если боеприпасы есть, иначе false</returns>
+    private bool WeaponAmmoCount()
     {
-        await AttackCooldown( _speedAttack );
-        _canAttack = true;
+        return _weaponAmmo > 0;
     }
 
     /// <summary>
     /// Рассчет наносимого урона: урон * удача
     /// </summary>
-    /// <returns></returns>
+    /// <returns>Значение урона</returns>
     private float CalculatingDamage()
     {
-        if ( CritCalculation() )
+        if (CritCalculation())
         {
-            return _damage + ( _damage * _luck );
+            return _damage + (_damage * _luck);
         }
         return _damage;
     }
 
     /// <summary>
-    /// Расчет крита 
+    /// Расчет крита
     /// </summary>
-    /// <param name="luck"></param>
-    /// <returns></returns>
+    /// <returns>true, если критический удар произошел, иначе false</returns>
     private bool CritCalculation() => RandomRange() < _luck;
 
+    /// <summary>
+    /// Генерация случайного числа
+    /// </summary>
+    /// <returns>Случайное число от 0 до 1</returns>
     public float RandomRange()
     {
-        return Random.Range( 0f , 1f );
+        return Random.Range(0f, 1f);
     }
 
+    #region ASYNC METHOD
+    // TODO=> вынести в один метод
+    /// <summary>
+    /// Запуск отчета  скорость атаки
+    /// </summary>
+    /// <param name="typeCoolDown">Время задержки</param>
+    private async void CooldownWeapon( )
+    {
+        _canAttack = false;
+        await AttackCooldown(_speedAttack);
+        _canAttack = true;
+    }
 
+    /// <summary>
+    /// Запуск отчета перезарядки
+    /// </summary> 
+    private async void RechargeWeapon()
+    {
+        _isRecharge = true;
+        await AttackCooldown(_rechargeTime);
+        _isRecharge = false;
+        _weaponAmmo = _weapon.GetWeaponAmmo;
+    }
+
+    /// <summary>
+    /// Задержка атаки
+    /// </summary>
+    /// <param name="timer">Время задержки в секундах</param>
+    /// <returns>Task для асинхронного ожидания</returns>
+    private async Task AttackCooldown(float timer)
+    {
+        await Task.Delay((int)(timer * 1000));
+    }
+
+    #endregion
 }

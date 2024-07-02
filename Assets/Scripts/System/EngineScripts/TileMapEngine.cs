@@ -86,7 +86,7 @@ public class TileMapEngine : MonoBehaviour
         {
             return worldPositionCell;
         }
-
+        
         return mouseWorldPos;
         
     }
@@ -154,6 +154,7 @@ public class TileMapEngine : MonoBehaviour
     /// <param name="neighbors"></param>
     public void RemoveCell(Vector3Int cellPosition)
     {
+
         var neighbors = ParityCheckAxisY(cellPosition.y);
 
         foreach (var direction in neighbors)

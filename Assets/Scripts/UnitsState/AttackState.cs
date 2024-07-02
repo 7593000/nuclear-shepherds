@@ -9,7 +9,7 @@ public class AttackState : IUnitState
     public void EnterState(UnitComponent unit)
     {
         _attack = unit.GetComponent<IAttack>();
-        unit.GetGameHub.GetUnitsUpdateEngine.AddUnit(unit, StateUnitList.OTHER);//todo=> переправить на ATtack
+        unit.GetGameHub.GetUnitsUpdateEngine.AddUnit(unit, StateUnitList.ATTACK  );//todo=> переправить на ATtack
         unit.GetGameHub.GetUnitsUpdateEngine.AddUnit(unit, StateUnitList.DIRECT);
 
 
@@ -25,7 +25,7 @@ public class AttackState : IUnitState
     public void ExitState(UnitComponent unit)
     {
         unit.GetGameHub.GetUnitsUpdateEngine.RemoveUnit( unit , StateUnitList.DIRECT );
-        unit.GetGameHub.GetUnitsUpdateEngine.RemoveUnit(unit, StateUnitList.OTHER);//todo=> переправить на ATtack
+        unit.GetGameHub.GetUnitsUpdateEngine.RemoveUnit(unit, StateUnitList.ATTACK);//todo=> переправить на ATtack
       
 
        
@@ -36,10 +36,9 @@ public class AttackState : IUnitState
 
         if (unit.GetTargetForAttack != null)
         {
-          //  unit.GetDirectionView = unit.GetGameHub.GetPointsTarget.GetTargets[unit.GetSelectedGoal].GetAngleForanimation;
-            
+             
             _attack.Attack();
-            //unit.gameObject.SetActive( false );  
+             
         }
         else
         {

@@ -190,7 +190,7 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IBeginDragHandle
                     {
                         Vector3Int cellPosition = _gameHub.GetTileMap._tilemap.WorldToCell(_dragShadow.transform.position);
                         unit.transform.position = _dragShadow.transform.position;
-
+                        unit.CellPosition = cellPosition;
                         _gameHub.GetTileMap.AddCell(cellPosition);
 
                     }

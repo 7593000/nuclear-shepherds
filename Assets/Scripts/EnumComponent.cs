@@ -62,6 +62,21 @@ public enum TypeWeapons  : byte
 
 }
 
+public enum StatusWeapon : byte
+{
+    NONE,
+    /// <summary>
+    /// Наносит урон
+    /// </summary>
+    DAMAGE,
+    /// <summary>
+    /// Перезарядка
+    /// </summary>
+    RECHARGE 
+   
+}
+
+
 /// <summary>
 /// Состояние юнита 
 /// </summary>

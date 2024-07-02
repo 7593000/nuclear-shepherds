@@ -1,31 +1,31 @@
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 /// <summary>
 /// Обновление событий для юнитов 
 /// </summary>
 public sealed class UnitsUpdateEngine : MonoBehaviour
 {
-    [SerializeField, Tooltip("Время для обнавления статусов")]
+    [SerializeField, Tooltip("Время для обновления статусов")]
     private float _timerUpdate = 0.5f;
+
+    [SerializeField, Tooltip("Минимальное время задержки для атаки")]
+    private float _minAttackDelay = 0.1f;
+
     private List<UnitComponent> _moveStateUnits = new();
     private List<UnitComponent> _otherStateUnits = new();
     private List<UnitComponent> _attackUpdate = new();
     private List<UnitComponent> _followGoal = new();
 
-    //TODO => возможно . на удаление закрытых списков 
+    //TODO => возможно на удаление закрытых списков 
     public IReadOnlyList<UnitComponent> GetUnitsMove => _moveStateUnits;
     public IReadOnlyList<UnitComponent> GetUnitsOther => _otherStateUnits;
     public IReadOnlyList<UnitComponent> GetFollowGoal => _followGoal;
-    //TODO => возможно . на удаление закрытых списков 
-
-
 
     /// <summary>
     /// Добавить юнит в лист состояния 
     /// </summary>
-
     public void AddUnit(UnitComponent unit, StateUnitList list)
     {
         switch (list)
@@ -42,43 +42,27 @@ public sealed class UnitsUpdateEngine : MonoBehaviour
             case StateUnitList.DIRECT:
                 _followGoal.Add(unit);
                 break;
-
-
         }
     }
 
     /// <summary>
     /// Удалить юнит из листа состояния
     /// </summary>
-
     public void RemoveUnit(UnitComponent unit, StateUnitList list)
     {
         switch (list)
         {
             case StateUnitList.MOVE:
-                if (_moveStateUnits.Contains(unit))
-                {
-                    _moveStateUnits.Remove(unit);
-                }
+                _moveStateUnits.Remove(unit);
                 break;
             case StateUnitList.OTHER:
-
-                if (_otherStateUnits.Contains(unit))
-                {
-                    _otherStateUnits.Remove(unit);
-                }
+                _otherStateUnits.Remove(unit);
                 break;
             case StateUnitList.ATTACK:
-                if (_otherStateUnits.Contains(unit))
-                {
-                    _attackUpdate.Remove(unit);
-                }
+                _attackUpdate.Remove(unit);
                 break;
             case StateUnitList.DIRECT:
-                if (_otherStateUnits.Contains(unit))
-                {
-                    _followGoal.Remove(unit);
-                }
+                _followGoal.Remove(unit);
                 break;
         }
     }
@@ -89,25 +73,17 @@ public sealed class UnitsUpdateEngine : MonoBehaviour
         {
             for (int i = 0; i < _followGoal.Count; i++)
             {
-                //  _followGoal[i].GetDirectionView = _followGoal[i].GetTargetForAttack;
                 _followGoal[i].StartAnimation.ChangeDirection();
             }
-
-
-            yield return new WaitForSeconds(_timerUpdate); //TODO => в переменную
-
+            yield return new WaitForSeconds(_timerUpdate);  
         }
     }
-
-
-
 
     private IEnumerator UpdateOtherStates()
     {
         while (true)
         {
             for (int i = 0; i < _otherStateUnits.Count; i++)
-
             {
                 if (_otherStateUnits[i].gameObject.activeSelf)
                 {
@@ -122,37 +98,54 @@ public sealed class UnitsUpdateEngine : MonoBehaviour
         }
     }
 
+    private IEnumerator UpdateAttackStates()
+    {
+        while (true)
+        {
+            for (int i = 0; i < _attackUpdate.Count; i++)
+            {
+                if (_attackUpdate[i].gameObject.activeSelf)
+                {
+                    _attackUpdate[i].UpdateUnit();
+                }
+                else
+                {
+                    RemoveUnit(_attackUpdate[i], StateUnitList.ATTACK);
+                }
+            }
+            yield return new WaitForSeconds(_minAttackDelay); // Минимальная задержка для атаки
+        }
+    }
+
     private void OnEnable()
     {
         StartCoroutine(UpdateOtherStates());
         StartCoroutine(FollowGoal());
+        StartCoroutine(UpdateAttackStates());
     }
 
     private void OnDisable()
     {
         StopCoroutine(UpdateOtherStates());
         StopCoroutine(FollowGoal());
+        StopCoroutine(UpdateAttackStates());
     }
-
 
     private void Update()
     {
-        if (_moveStateUnits.Count <= 0)
+        if (_moveStateUnits.Count > 0)
         {
-            return;
-        }
-        for (int i = _moveStateUnits.Count - 1; i >= 0; i--)
-
-        {
-            if (_moveStateUnits[i].gameObject.activeSelf)
+            for (int i = _moveStateUnits.Count - 1; i >= 0; i--)
             {
-                _moveStateUnits[i].UpdateUnit();
-            }
-            else
-            {
-                RemoveUnit(_moveStateUnits[i], StateUnitList.MOVE);
+                if (_moveStateUnits[i].gameObject.activeSelf)
+                {
+                    _moveStateUnits[i].UpdateUnit();
+                }
+                else
+                {
+                    RemoveUnit(_moveStateUnits[i], StateUnitList.MOVE);
+                }
             }
         }
     }
-
 }

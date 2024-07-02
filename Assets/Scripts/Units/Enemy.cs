@@ -33,9 +33,9 @@ public class Enemy : UnitComponent, IHealth, IAttack, IMovable
           
             if ( health <= 0 )
             {
-
-                gameObject.SetActive( false );
-                Debug.Log("Противник уничтожен");
+                DeactiveUnit();
+               
+               
 
                 OnCoins?.Invoke(GetCost);
                
@@ -53,7 +53,7 @@ public class Enemy : UnitComponent, IHealth, IAttack, IMovable
 
     public void Attack()
     {
-        float damage = GetDamageClass.DamageTarget(_unitData.DamageRatio, _unitData.SpeedAttackRatio, _unitData.LuckRatio);
+        float damage = GetDamageClass.DamageTarget();
 
         if (damage >= 0)
         {
