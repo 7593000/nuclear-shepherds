@@ -19,9 +19,17 @@ public class Friends : UnitComponent, IAttack, IPointerClickHandler, IPointerEnt
 
         if (damage >= 0)
         {
-            StartAnimation.ToRun(StateUnit.ATTACK);
+            
+               
+                StartAnimation.ToRun(StateUnit.ATTACK);
+            
+           
             GetTargetForAttack.TakeDamage(damage);
 
+        }
+        else
+        {
+            StartAnimation.ToRun(StateUnit.IDLE);
         }
     }
 

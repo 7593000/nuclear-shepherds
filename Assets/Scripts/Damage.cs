@@ -76,8 +76,12 @@ public class Damage
         {
             float damage = CalculatingDamage();
             _weaponAmmo--;
-            // Запуск перезарядки
-            CooldownWeapon( );
+           
+            if(_speedAttack  > 0f)
+            {
+                CooldownWeapon();
+            }
+         
             Debug.Log("Выстрел!");
             return damage;
         }

@@ -9,7 +9,8 @@ public sealed class UnitsUpdateEngine : MonoBehaviour
 {
     [SerializeField, Tooltip("Время для обновления статусов")]
     private float _timerUpdate = 0.5f;
-
+    [SerializeField, Tooltip("Время для обновления статусов, анимация")]
+    private float _timerUpdateDirect = 1.5f;
     [SerializeField, Tooltip("Минимальное время задержки для атаки")]
     private float _minAttackDelay = 0.1f;
 
@@ -75,7 +76,7 @@ public sealed class UnitsUpdateEngine : MonoBehaviour
             {
                 _followGoal[i].StartAnimation.ChangeDirection();
             }
-            yield return new WaitForSeconds(_timerUpdate);  
+            yield return new WaitForSeconds(_timerUpdateDirect);  
         }
     }
 
@@ -107,6 +108,7 @@ public sealed class UnitsUpdateEngine : MonoBehaviour
                 if (_attackUpdate[i].gameObject.activeSelf)
                 {
                     _attackUpdate[i].UpdateUnit();
+                    
                 }
                 else
                 {

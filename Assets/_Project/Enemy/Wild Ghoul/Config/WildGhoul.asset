@@ -16,9 +16,8 @@ MonoBehaviour:
   _name: "\u0414\u0438\u043A\u0438\u0439 \u0433\u0443\u043B\u044C"
   _health: 100
   _luck: 0.55
-  _distance: 1.1
   _occupiedArea: 1
-  _speed: 1.1
+  _speed: 3
   _typeWeapon: 1
   _config: {fileID: 11400000, guid: 9b53894a397d5f2438fce9d92c255ea0, type: 2}
   _cost: 50

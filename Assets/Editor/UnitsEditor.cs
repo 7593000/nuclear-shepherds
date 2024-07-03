@@ -23,7 +23,7 @@ public class EnemyEditor : Editor
         
         Texture2D texture = AssetPreview.GetAssetPreview( enemy.GetSprite );
         
-        GUILayout.Label( "" , GUILayout.Height( 128 ) , GUILayout.Width( 64 ) );
+        GUILayout.Label( "" , GUILayout.Height( 64 ) , GUILayout.Width( 64 ) );
         
         GUI.DrawTexture( GUILayoutUtility.GetLastRect() , texture );
     }

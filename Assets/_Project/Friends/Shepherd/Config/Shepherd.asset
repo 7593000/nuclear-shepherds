@@ -16,7 +16,6 @@ MonoBehaviour:
   _name: "\u041F\u0430\u0441\u0442\u0443\u0445"
   _health: 0
   _luck: 0.4
-  _distance: 6
   _occupiedArea: 1
   _speed: 0
   _typeWeapon: 2
@@ -30,4 +29,4 @@ MonoBehaviour:
   _fire: 0
   _energyWeapons: 0
   _unitPrefab: {fileID: 6797377760339903826, guid: 1991ce10dffff1b4d8f025f77108f3cb, type: 3}
-  _sprite: {fileID: 84117879, guid: 68bc0787bdef1a54db390cddff4883e5, type: 3}
+  _sprite: {fileID: 21300000, guid: e031eba9eb0c3f849b6bc76c19e87110, type: 3}
