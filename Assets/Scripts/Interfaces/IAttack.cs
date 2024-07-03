@@ -3,7 +3,7 @@ using UnityEngine;
 
 public interface IAttack 
 {
-    void Attack();
+    void Attack(float damage);
   
 
 }

@@ -4,8 +4,10 @@ public class WeaponsConfig : ScriptableObject
 {
     [SerializeField, Tooltip( "Тип оружия" )]
     private TypeWeapons _type;
-   
- 
+    //[SerializeField, Tooltip( "Воздействие по площади" )] private bool _areaOfEffect;
+    [SerializeField, Tooltip( "Количество юнитов попадающие под воздействие оружия AoE" )] private int _numberStriking = 1;
+    [SerializeField, Tooltip( "Радиус воздейсвия оружия  ( для АоЕ ) " )]
+    private float _radiusAoE = 0f;
    
     [SerializeField, Tooltip( "Скорость атаки" )]
     private float _speedAttack;
@@ -25,7 +27,13 @@ public class WeaponsConfig : ScriptableObject
     [SerializeField, Tooltip( "Спрайт оружия для визуализации в инспекторе" )]
     private Sprite _sprite;
 #endif
- 
+
+    public TypeWeapons GetTypeWeapons => _type;
+    /// <summary>
+    /// Получить количество юнитов попадающие под воздействие оружия
+    /// </summary>
+    public int GetNumberStriking => _numberStriking;
+    public float GetRadiusAoE => _radiusAoE;
     /// <summary>
     /// Скорость атаки
     /// </summary>

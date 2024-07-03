@@ -90,7 +90,7 @@ public class AnimatorComponent : MonoBehaviour
     private (float, float) Comparison(int angle)
     {
         
-        Debug.Log(angle);
+      
 
         if (angle < 0)
         {
@@ -99,7 +99,7 @@ public class AnimatorComponent : MonoBehaviour
 
         if (angle >= 0 && angle < 45)
         {
-            Debug.Log(angle + " 1, 0 ");
+           
 
             _positionX = 1;
             _positionY = 0;
@@ -108,41 +108,39 @@ public class AnimatorComponent : MonoBehaviour
         }
         else if (angle >= 45 && angle < 90)
         {
-            Debug.Log(angle + "1, 1");
+            
             _positionX = 1;
             _positionY = 1;
-            // return (1, 1);
+           
         }
         else if (angle >= 90 && angle < 157)
         {
-            Debug.Log(angle + "-1, 1");
+           
             _positionX = -1;
             _positionY = 1;
-            //  return (-1, 1);
+           
         }
         else if (angle >= 157 && angle < 202)
         {
-            Debug.Log(angle + "-1, 0");
+           
             _positionX = -1;
             _positionY = 0;
-            // return (-1, 0);
+           
         }
         else if (angle >= 202 && angle < 270)
-        {
-            Debug.Log(angle + "-1, -1");
+        { 
             _positionX = -1;
             _positionY =-1;
-            // return (-1, -1);
+           
         }
         else if (angle >= 270 && angle < 360)
         {
-            Debug.Log(angle + "1, -1");
+           
             _positionX =  1;
             _positionY = -1;
-            //return (1, -1);
+            
         }
-        Debug.Log(angle + "0, 0");
-
+         
         _unit.GetDirectionView[0] = _positionX;
         _unit.GetDirectionView[1] = _positionY;
         return (_positionX, _positionY);

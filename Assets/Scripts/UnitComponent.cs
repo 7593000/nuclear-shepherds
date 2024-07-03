@@ -12,9 +12,9 @@ public abstract class UnitComponent : MonoBehaviour
 
 
     [SerializeField] private Damage _damage;
-
+    [SerializeField] protected IAttack _attack;
     public GameHub GetGameHub => _gameHub;
-
+    public IAttack Attack => _attack;
     /// Получить ссылку на класс Damage
     /// </summary>
     public Damage GetDamageClass => _damage;
@@ -61,26 +61,27 @@ public abstract class UnitComponent : MonoBehaviour
     public IUnitState DeadState { get; private set; }   // Смерть
 
     public virtual void Container( GameHub gameHub )
-    {
-
-
+    { 
         _gameHub = gameHub;
     }
     protected virtual void Initialized()
     {
 
         _unitData = new UnitData( GetConfig );
-
-       
-
+         
         NoneState = new NoneState();
         IdleState = new IdleState();
         MoveState = new MoveState();
         AttackState = new AttackState();
         SearchState = new SearchState();
         DeadState = new DeadState();
-
+         
         _damage = new Damage( GetConfig.GetWeaponsConfig, _unitData.Luck + _unitData.LuckRatio);
+       
+        TypeWeapons typeWeapon = GetConfig.GetWeaponsConfig.GetTypeWeapons;
+
+        _attack = WeaponFactory.CreateWeapon( typeWeapon , this );
+
 
         _animatorComponent = gameObject.AddComponent<AnimatorComponent>();
         _animatorComponent.Container( this );
@@ -88,7 +89,7 @@ public abstract class UnitComponent : MonoBehaviour
 
 
     }
-
+ 
     public void SetState( IUnitState newState )
     {
 

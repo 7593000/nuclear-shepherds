@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: Gun
   m_EditorClassIdentifier: 
   _type: 2
+  _numberStriking: 1
+  _radiusAoE: 0
   _speedAttack: 1
   _rechargeTime: 5
   _weaponAmmo: 12
   _damage: 15
   _distance: 8
-  _audioClip: {fileID: 0}
+  _audioClip: {fileID: 8300000, guid: 760b451c5f0a9a64dad6f1d443964d20, type: 3}
   _sprite: {fileID: 21300000, guid: 66133ff049a8df344808ad33754eb322, type: 3}

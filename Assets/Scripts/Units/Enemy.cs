@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class Enemy : UnitComponent, IHealth, IAttack, IMovable
+public class Enemy : UnitComponent, IHealth,  IMovable
 
 {
     public static event Action<int> OnCoins;
@@ -51,25 +51,28 @@ public class Enemy : UnitComponent, IHealth, IAttack, IMovable
 
     public float Health() => _config.GetHealth;
 
-    public void Attack()
-    {
-        float damage = GetDamageClass.DamageTarget();
+    //public void Attack()
+    //{
+    //    float damage = GetDamageClass.DamageTarget();
 
-        if (damage >= 0)
-        {
-            StartAnimation.ToRun(StateUnit.ATTACK);
-            GetTargetForAttack.TakeDamage(damage);
+    //    if (damage >= 0)
+    //    {
+    //        StartAnimation.ToRun(StateUnit.ATTACK);
+    //        GetTargetForAttack.TakeDamage(damage);
 
-        }
+    //    }
 
        
 
-    }
+    //}
 
     protected override void Initialized()
     {
         base.Initialized();
         _health.Container( this );
+      
+      
+          
     }
 
     protected override void Start()
@@ -77,6 +80,6 @@ public class Enemy : UnitComponent, IHealth, IAttack, IMovable
         base.Start();
         SetState( MoveState ); //TODO=DEL - перенести 
     }
-
+    
 }
 
