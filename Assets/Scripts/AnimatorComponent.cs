@@ -25,7 +25,7 @@ public class AnimatorComponent : MonoBehaviour
         //    return;
         //}
 
-        _currentStatus = state;
+        //_currentStatus = state;//TODO => DEL
         switch (state)
         {
 
@@ -104,7 +104,7 @@ public class AnimatorComponent : MonoBehaviour
             _positionX = 1;
             _positionY = 0;
 
-            // return (1, 0);
+          
         }
         else if (angle >= 45 && angle < 90)
         {

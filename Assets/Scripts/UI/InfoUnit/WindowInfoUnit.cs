@@ -42,7 +42,7 @@ public class WindowInfoUnit : MonoBehaviour
     public void DismissUnit()
     {
         Vector3Int positionUnit = Vector3Int.CeilToInt(_unit.transform.position);
-        Debug.Log(positionUnit);
+     
         _unit.GetGameHub.GetTileMap.RemoveCell(_unit.CellPosition);
         _unit.DeactiveUnit();
 
@@ -57,7 +57,9 @@ public class WindowInfoUnit : MonoBehaviour
     public void UpgradeUnit()
     {
         if (CheckedLevel()) { return; }
+     
         _unit.UpdateLevel();
+      
         ShowInfo();
     }
     public void WindowInfo(UnitComponent unit)
@@ -78,26 +80,25 @@ public class WindowInfoUnit : MonoBehaviour
         float luckRation = _unit.GetConfig.GetRatio[3];
 
         float damage = _unit.GetUnitData.Damage + _unit.GetUnitData.DamageRatio;
-        float speedAttack = _unit.GetUnitData.SpeedAttack + _unit.GetUnitData.SpeedAttackRatio;
+        float speedAttack = Mathf.Max(0, _unit.GetUnitData.SpeedAttack - _unit.GetUnitData.SpeedAttackRatio);
         float luck = _unit.GetUnitData.Luck + _unit.GetUnitData.LuckRatio;
 
-        string newDamageValue = isMaxLevel ? maxLevelText : (damage + damageRation * (_unit.GetUnitData.Level + 1)).ToString();
-        string newSpeedAttackValue = isMaxLevel ? maxLevelText : (speedAttack + speedAttackRatio * (_unit.GetUnitData.Level + 1)).ToString();
-        string newLuckValue = isMaxLevel ? maxLevelText : ( luck + luckRation * (_unit.GetUnitData.Level + 1)).ToString(); 
-        string cost = isMaxLevel ? maxLevelText : (costUpgrade * _unit.GetUnitData.Level).ToString();
+        string newDamageValue = isMaxLevel ? maxLevelText : (damage + damageRation * (_unit.GetUnitData.Level)).ToString("F1");
+        string newSpeedAttackValue = isMaxLevel ? maxLevelText : Mathf.Max(0, speedAttack - speedAttackRatio * (_unit.GetUnitData.Level)).ToString("F1");
+        string newLuckValue = isMaxLevel ? maxLevelText : (luck + luckRation * (_unit.GetUnitData.Level)).ToString("F1");
+        string cost = isMaxLevel ? maxLevelText : (costUpgrade * _unit.GetUnitData.Level).ToString("F1");
 
         _nameUnit.SetText(_unit.GetConfig.GetName);
         _level.SetText(_unit.GetUnitData.Level.ToString());
-        _costUdgrade.SetText(cost );
+        _costUdgrade.SetText(cost);
 
-        _currentDamage.SetText(damage.ToString());
-        _currentSpeedAttack.SetText(speedAttack.ToString());
-        _currentLuck.SetText(luck.ToString());
+        _currentDamage.SetText(damage.ToString("F1"));
+        _currentSpeedAttack.SetText(speedAttack.ToString("F1"));
+        _currentLuck.SetText(luck.ToString("F1"));
 
         _newDamage.SetText(newDamageValue);
         _newSpeedAttack.SetText(newSpeedAttackValue);
-        _newLuck.SetText(newLuckValue );
-
+        _newLuck.SetText(newLuckValue);
     }
 
 

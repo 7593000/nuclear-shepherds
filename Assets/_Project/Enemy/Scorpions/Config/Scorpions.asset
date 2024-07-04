@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unitType: 3
   _name: "\u0421\u043A\u043E\u0440\u043F\u0438\u043E\u043D"
-  _health: 100
-  _luck: 0.55
+  _health: 150
+  _luck: 0.665
   _occupiedArea: 1
   _speed: 3
   _typeWeapon: 1
   _config: {fileID: 11400000, guid: 9b53894a397d5f2438fce9d92c255ea0, type: 2}
-  _cost: 50
+  _cost: 60
   _costUpgrade: 0
   _damageRatio: 0
   _speedAttackRatio: 0

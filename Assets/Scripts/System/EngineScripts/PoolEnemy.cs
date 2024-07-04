@@ -62,8 +62,8 @@ public class PoolEnemy : MonoBehaviour
         {
             foreach ( UnitComponent unit in tempList )
             {
-                if (  unit.TryGetComponent<Enemy>( out Enemy enemy) )
-              // if ( !unit.gameObject.activeSelf )
+                if (  unit.TryGetComponent( out Enemy enemy) )
+             
                 {
                     if(!enemy.BusyWave)
                     {

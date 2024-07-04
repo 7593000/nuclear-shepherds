@@ -1,8 +1,10 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class UnitComponent : MonoBehaviour
 {
     protected UnitData _unitData;
+    //private List<IReset> _resetDataComponents = new();
 
     [SerializeField] private Animator _animator;
     private AnimatorComponent _animatorComponent;
@@ -41,8 +43,8 @@ public abstract class UnitComponent : MonoBehaviour
     /// <summary>
     /// направление движения [-1;0;1]
     /// </summary>
-    public int[] GetDirectionView { get; set; } = new int[ 2 ];
-    
+    public int[] GetDirectionView { get; set; } = new int[2];
+
     //protected StateUnit GetStateUnit => StateUnit.IDLE;
 
     /// <summary>
@@ -50,7 +52,7 @@ public abstract class UnitComponent : MonoBehaviour
     /// </summary>
     public IUnitState CurrentState { get; private set; }
 
- 
+
 
 
     public IUnitState NoneState { get; private set; } //Погранничное состояние
@@ -60,51 +62,61 @@ public abstract class UnitComponent : MonoBehaviour
     public IUnitState SearchState { get; private set; } //Поиск врага(брамина)
     public IUnitState DeadState { get; private set; }   // Смерть
 
-    public virtual void Container( GameHub gameHub )
-    { 
+    public virtual void Container(GameHub gameHub)
+    {
         _gameHub = gameHub;
     }
+
+  
     protected virtual void Initialized()
     {
 
-        _unitData = new UnitData( GetConfig );
-         
+        _unitData = new UnitData(GetConfig);
+
         NoneState = new NoneState();
         IdleState = new IdleState();
         MoveState = new MoveState();
         AttackState = new AttackState();
         SearchState = new SearchState();
         DeadState = new DeadState();
-         
-        _damage = new Damage( GetConfig.GetWeaponsConfig, _unitData.Luck + _unitData.LuckRatio);
-       
+
+        _damage = new Damage(GetConfig.GetWeaponsConfig, _unitData.Luck + _unitData.LuckRatio);
+
         TypeWeapons typeWeapon = GetConfig.GetWeaponsConfig.GetTypeWeapons;
 
-        _attack = WeaponFactory.CreateWeapon( typeWeapon , this );
+        _attack = WeaponFactory.CreateWeapon(typeWeapon, this);
 
 
         _animatorComponent = gameObject.AddComponent<AnimatorComponent>();
-        _animatorComponent.Container( this );
+        _animatorComponent.Container(this);
 
-
+     
 
     }
- 
-    public void SetState( IUnitState newState )
+
+    //private void CollectResettableComponents()
+    //{
+    //    IReset[] resettableComponents = GetComponentsInChildren<IReset>();
+    //    _resetDataComponents.AddRange(resettableComponents);
+    //    Debug.Log(_resetDataComponents.Count);
+    //}
+
+
+    public void SetState(IUnitState newState)
     {
 
-        CurrentState?.ExitState( this );
+        CurrentState?.ExitState(this);
         CurrentState = newState;
-        CurrentState?.EnterState( this );
+        CurrentState?.EnterState(this);
 
     }
 
 
     public void UpdateUnit()
     {
-        if ( gameObject.activeSelf )
+        if (gameObject.activeSelf)
         {
-            CurrentState?.UpdateState( this );
+            CurrentState?.UpdateState(this);
         }
     }
     /// <summary>
@@ -112,35 +124,74 @@ public abstract class UnitComponent : MonoBehaviour
     /// </summary>
     public void DeactiveUnit()
     {
-        gameObject.SetActive( false );
+        gameObject.SetActive(false);
+        SetState(NoneState);
         Debug.Log("Юнит уничтожен");
         //TODO=> плей анимации смерти
     }
 
-    //TODO=>TEMP
+    ////TODO=>TEMP ?
     private void Awake()
     {
-        Container( FindObjectOfType<GameHub>() );
+        Container(FindObjectOfType<GameHub>());
         _animator = GetComponent<Animator>();
 
+
     }
+
+
+
+    //public void ResetUnit()
+    //{
+
+    //    foreach (IReset resetData in _resetDataComponents)
+    //    {
+    //        resetData.ResetData();
+    //    }
+
+       
+    //    GetTargetForAttack = null;
+    //    GetSelectedGoal = 0;
+        
+      
+    //    SetState(MoveState);
+      
+
+
+
+    //}
+    //protected virtual void OnEnable()
+    //{
+    //    ResetUnit();
+    //}
+
     protected virtual void Start()
     {
+      // ResetUnit();
         Initialized();
 
     }
+
     public void UpdateLevel()
     {
-        
-       _unitData.Level += 1;
-        _unitData.DamageRatio += GetConfig.GetRatio[ 1 ] * _unitData.Level;
-        
-        _unitData.SpeedAttackRatio += GetConfig.GetRatio[ 2 ] * _unitData.Level;
-        _unitData.LuckRatio += GetConfig.GetRatio[ 3 ] * _unitData.Level;
+        if (TryGetComponent(out Friends friends))
+        {
 
-        _damage.SetLuck( _unitData.Luck + _unitData.LuckRatio );
-        _damage.SetDamage(_unitData.Damage + _unitData.DamageRatio);
-        _damage.SetSpeedAttack(_unitData.SpeedAttack + _unitData.SpeedAttackRatio);
+
+            _unitData.DamageRatio += GetConfig.GetRatio[1] * _unitData.Level;
+            _unitData.SpeedAttackRatio += GetConfig.GetRatio[2] * _unitData.Level;
+            _unitData.LuckRatio += GetConfig.GetRatio[3] * _unitData.Level;
+
+            _damage.SetLuck(_unitData.Luck + _unitData.LuckRatio);
+            _damage.SetDamage(_unitData.Damage + _unitData.DamageRatio);
+            _damage.SetSpeedAttack(Mathf.Max(0, _unitData.SpeedAttack - _unitData.SpeedAttackRatio));
+
+            _unitData.Level += 1;
+            friends.SetSpriteLevel(GetGameHub.GetGameData.GetSpriteLevel(_unitData.Level));
+
+
+
+        }
     }
 
 }/// <summary>
@@ -149,7 +200,7 @@ public abstract class UnitComponent : MonoBehaviour
 [System.Serializable]
 public struct UnitData
 {
-    public UnitData( UnitConfig config )
+    public UnitData(UnitConfig config)
     {
         Level = 1;
         DamageRatio = 0;

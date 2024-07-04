@@ -65,10 +65,10 @@ public class Damage
             Debug.Log("Перезярядка!");
             // Запуск перезарядки
             RechargeWeapon();
-             
-         
-           
-          
+
+            return -100;
+
+
         }
 
 
@@ -145,10 +145,13 @@ public class Damage
     /// </summary> 
     private async void RechargeWeapon()
     {
-        _isRecharge = true;
+        _isRecharge = true; //todo -> _isRecharge на удаление, мейби
+        _canAttack = false;
         await AttackCooldown(_rechargeTime);
         _isRecharge = false;
-        _weaponAmmo = _weapon.GetWeaponAmmo;
+        _canAttack = true;
+     
+    _weaponAmmo = _weapon.GetWeaponAmmo;
     }
 
     /// <summary>

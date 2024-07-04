@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 [RequireComponent( typeof( LineRenderer ) )]
 public class Friends : UnitComponent, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
@@ -8,29 +9,14 @@ public class Friends : UnitComponent, IPointerClickHandler, IPointerEnterHandler
     private LineRenderer _lineRenderer;
     [SerializeField] private AttackTrigger _trigger;
     private int _segments = 46;
+    [SerializeField] private Image _imagelevelSprite;
 
 
-
-
-    //public void Attack()
-    //{
-    //    float damage = GetDamageClass.DamageTarget();
-
-    //    if ( damage >= 0 )
-    //    {
-
-
-    //        StartAnimation.ToRun( StateUnit.ATTACK );
-
-            
-    //        GetTargetForAttack.TakeDamage( damage );
-
-    //    }
-    //    else
-    //    {
-    //        StartAnimation.ToRun( StateUnit.IDLE );
-    //    }
-    //}
+    public void SetSpriteLevel(Sprite img)
+    {
+        _imagelevelSprite.sprite = img;
+    }
+     
 
 
     public void OnPointerClick( PointerEventData eventData )
@@ -77,6 +63,12 @@ public class Friends : UnitComponent, IPointerClickHandler, IPointerEnterHandler
     {
         base.Start();
 
+        if (_imagelevelSprite == null)
+        {
+            Transform imageObject = transform.Find("Canvas/Image");
+            _imagelevelSprite = imageObject.GetComponent<Image>();
+        }
+
 
         _lineRenderer = GetComponent<LineRenderer>();
         _lineRenderer.positionCount = _segments + 1;
@@ -85,7 +77,8 @@ public class Friends : UnitComponent, IPointerClickHandler, IPointerEnterHandler
         _trigger.Initialized( this );
         
         SetState( IdleState );
-
+      
+      
     }
 
     private void CreateCircle()

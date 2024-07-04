@@ -1,17 +1,23 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : UnitComponent, IHealth,  IMovable
+public class Enemy : UnitComponent, IHealth,  IMovable 
 
 {
+ 
+
     public static event Action<int> OnCoins;
-    [SerializeField, Tooltip("”ровень противника")] private LevelEnemy _levelEnemy;
+    private List<IReset> _resetDataComponents = new();
+
+    [SerializeField, Tooltip("”ровень противника")] private LevelEnemy _levelEnemy;//TODO => забыл , зачем делал )))
+
     /// <summary>
     /// ѕроверка врага: —вободен ли он дл€ добавление в список волны.
     /// </summary>
     public bool BusyWave { get; set; } = false;
 
-    public LevelEnemy GetLevelEnemy => _levelEnemy;
+    public LevelEnemy GetLevelEnemy => _levelEnemy; //TODO => забыл , зачем делал )))
 
     public bool IsDead { get; set; } = false;
 
@@ -34,16 +40,17 @@ public class Enemy : UnitComponent, IHealth,  IMovable
             if ( health <= 0 )
             {
                 DeactiveUnit();
-               
-               
+                BusyWave = false;
 
-                OnCoins?.Invoke(GetCost);
+
+                 OnCoins?.Invoke(GetCost);
                
             }
         }
         else //TODO => DEL? 
         {
             gameObject.SetActive( false );
+            BusyWave = false;
         }
 
 
@@ -70,9 +77,9 @@ public class Enemy : UnitComponent, IHealth,  IMovable
     {
         base.Initialized();
         _health.Container( this );
-      
-      
-          
+        CollectResettableComponents();
+
+
     }
 
     protected override void Start()
@@ -80,6 +87,35 @@ public class Enemy : UnitComponent, IHealth,  IMovable
         base.Start();
         SetState( MoveState ); //TODO=DEL - перенести 
     }
-    
+    public void ResetUnit()
+    {
+
+        foreach (IReset resetData in _resetDataComponents)
+        {
+            resetData.ResetData();
+        }
+
+
+        GetTargetForAttack = null;
+        GetSelectedGoal = 0;
+     
+        IsDead = false;
+
+        SetState(MoveState);
+
+
+
+
+    }
+    protected virtual void OnEnable()
+    {
+        ResetUnit();
+    }
+    private void CollectResettableComponents()
+    {
+        IReset[] resettableComponents = GetComponentsInChildren<IReset>();
+        _resetDataComponents.AddRange(resettableComponents);
+       
+    }
 }
 

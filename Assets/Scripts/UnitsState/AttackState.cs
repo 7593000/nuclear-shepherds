@@ -4,44 +4,53 @@
 public class AttackState : IUnitState
 {
     private IAttack _attack;
-    public void EnterState( UnitComponent unit )
+    public void EnterState(UnitComponent unit)
     {
         _attack = unit.GetComponent<IAttack>();
-        unit.GetGameHub.GetUnitsUpdateEngine.AddUnit( unit , StateUnitList.ATTACK );
-        unit.GetGameHub.GetUnitsUpdateEngine.AddUnit( unit , StateUnitList.DIRECT );
+        unit.GetGameHub.GetUnitsUpdateEngine.AddUnit(unit, StateUnitList.ATTACK);
+        unit.GetGameHub.GetUnitsUpdateEngine.AddUnit(unit, StateUnitList.DIRECT);
 
 
     }
 
-    public void ExitState( UnitComponent unit )
+    public void ExitState(UnitComponent unit)
     {
-        unit.GetGameHub.GetUnitsUpdateEngine.RemoveUnit( unit , StateUnitList.DIRECT );
-        unit.GetGameHub.GetUnitsUpdateEngine.RemoveUnit( unit , StateUnitList.ATTACK );
+        unit.GetGameHub.GetUnitsUpdateEngine.RemoveUnit(unit, StateUnitList.DIRECT);
+        unit.GetGameHub.GetUnitsUpdateEngine.RemoveUnit(unit, StateUnitList.ATTACK);
 
     }
 
-    public void UpdateState( UnitComponent unit )
+    public void UpdateState(UnitComponent unit)
     {
-        if ( unit.GetTargetForAttack != null )
+        if (unit.GetTargetForAttack != null)
         {
 
             float damage = unit.GetDamageClass.DamageTarget();
 
-            if ( damage >= 0 )
+            if (damage >= 0)
             {
 
 
-                unit.StartAnimation.ToRun( StateUnit.ATTACK );
+                unit.StartAnimation.ToRun(StateUnit.ATTACK);
 
                 unit.Attack.Attack(damage);
-                 
+
             }
-           
+            else if (damage == -1)// -1  : оружие на кулдауне
+            {
+
+                unit.StartAnimation.ToRun(StateUnit.IDLE);
+            }
+            else if (damage == -100) //-100 : оружие на перезагрузке 
+            {
+
+                unit.StartAnimation.ToRun(StateUnit.IDLE); //TODO => добавить аним. перезарядки
+            }
 
         }
         else
         {
-            unit.SetState( unit.IdleState );
+            unit.SetState(unit.IdleState);
         }
 
 

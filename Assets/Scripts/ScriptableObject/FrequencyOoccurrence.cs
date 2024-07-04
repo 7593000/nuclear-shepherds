@@ -2,26 +2,28 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu( fileName = "Frequency" , menuName = "Configuration/Frequency of Ooccurrence" , order = 1 )]
+[CreateAssetMenu(fileName = "Frequency", menuName = "Configuration/Frequency of Ooccurrence", order = 1)]
 public class FrequencyOoccurrence : ScriptableObject
 {
+    [SerializeField, Tooltip(" + количество юнитов на новую волну")]
+    private int _addEnemy;
 
     [SerializeField]
     private List<EnemyConfiguration> _enemy = new();
 
     public IReadOnlyList<EnemyConfiguration> GetEnemyList => _enemy;
 
+    public int GetAddEnemy => _addEnemy;
 }
 
 [Serializable]
 public struct EnemyConfiguration
 {
-
     [SerializeField] private UnitConfig _enemyConfig;
 
-    [SerializeField, Tooltip( "Процент появления юнита" ), Range( 0f , 100f )]
+    [SerializeField, Tooltip("Процент появления юнита"), Range(0f, 100f)]
     private float _percentageAppearance;
-    [SerializeField, Tooltip( "щаг увеличивающий шанс появления с каждой новой волной" ), Range( 0f , 100f )]
+    [SerializeField, Tooltip("шаг увеличивающий шанс появления с каждой новой волной"), Range(0f, 100f)]
     private float _percentageRatio;
 
     public UnitConfig GetEnemyConfig => _enemyConfig;
@@ -30,13 +32,10 @@ public struct EnemyConfiguration
     /// </summary>
     public float GetPercentageAppearance => _percentageAppearance;
     /// <summary>
-    /// Правка шанса появления с каждой новой волной
+    /// Увеличивает шанс появления с каждой новой волной
     /// </summary>
-    public void GetPercentageRatio()
+    public void IncreasePercentageAppearance()
     {
-       
         _percentageAppearance += _percentageRatio;
-        
-      
     }
 }

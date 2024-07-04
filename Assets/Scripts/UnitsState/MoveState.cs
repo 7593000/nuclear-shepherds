@@ -14,6 +14,7 @@ public class MoveState : IUnitState
     public void EnterState(UnitComponent unit)
     {
         _movable = unit.GetComponent<IMovable>();
+
         if (unit.GetGameHub.GetPointsTarget.GetTargets.Count == 0)
         {
             unit.SetState(unit.NoneState);

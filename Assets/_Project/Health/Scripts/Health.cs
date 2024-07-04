@@ -2,9 +2,10 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class Health : MonoBehaviour
+public class Health : MonoBehaviour, IReset
 {
     private IHealth _healthUnit;
+   
     [SerializeField]
     private Image _healthFilled;
     [SerializeField] private float MaxHealth;
@@ -16,6 +17,18 @@ public class Health : MonoBehaviour
         MaxHealth = CurrentHealth = unit.Health();
         UpdateHealthVisual( CurrentHealth , MaxHealth );
     }
+
+
+    public void ResetData()
+    {
+
+        MaxHealth = CurrentHealth = _healthUnit.Health();
+        UpdateHealthVisual(CurrentHealth, MaxHealth);
+    }
+
+
+
+
 
     public float TakeDamage( float damage )
     {
@@ -57,4 +70,6 @@ public class Health : MonoBehaviour
 
         GetComponent<Image>().enabled = visible;
     }
+
+
 }
