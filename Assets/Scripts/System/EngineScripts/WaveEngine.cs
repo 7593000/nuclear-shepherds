@@ -1,6 +1,7 @@
 
 using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 /// <summary>
 /// Волны противников
@@ -12,25 +13,37 @@ public class WaveEngine : MonoBehaviour
     private GameHub _gameHub;
     [SerializeField] private FrequencyOoccurrence _config;
 
-    [SerializeField, Tooltip(" Текущая волна")] private int _waveNumber = 1;
+    private Dictionary<UnitConfig , List<float>> _unitConfigData = new();
 
-    [SerializeField, Tooltip("Количество вражеских юнитов в 1ой волне")]
+    private Coroutine _coroutineCreateUnit;
+    private Coroutine _coroutineStartWave;
+    [SerializeField, Tooltip( " Текущая волна" )] private int _waveNumber = 1;
+
+    [SerializeField, Tooltip( "Количество вражеских юнитов в 1ой волне" )]
     private int _numberEnemiesInWave = 5;
 
     private List<Enemy> _enemiesWave = new();
 
     //_waveNumbler * шаг увеличения процента появления у врага  + шанс появления врага .
 
-    [SerializeField, Tooltip("таймер новой генерации волны")] private float _timeNewWave = 15.0f;
-    [SerializeField, Tooltip("Точки для респавна противников")] private Transform[] _startEnemyPosition;
+    [SerializeField, Tooltip( "таймер новой генерации волны" )] private float _timeNewWave = 15.0f;
+    [SerializeField, Tooltip( "Точки для респавна противников" )] private Transform[] _startEnemyPosition;
 
     [SerializeField] private List<UnitComponent> _enemyList = new();
 
-    public void Initialized(GameHub gameHub)
+    public void Initialized( GameHub gameHub )
     {
         _gameHub = gameHub;
+
+
+
+        foreach ( EnemyConfiguration enemyConfig in _config.GetEnemyList )
+        {
+            _unitConfigData[ enemyConfig.GetEnemyConfig ] = enemyConfig.GetDataPercentage;
+
+        }
         WaveGeneration();
-        OnWave?.Invoke(_waveNumber);
+        OnWave?.Invoke( _waveNumber );
     }
 
 
@@ -41,17 +54,10 @@ public class WaveEngine : MonoBehaviour
     {
         _waveNumber = 1;
         _numberEnemiesInWave += _config.GetAddEnemy * _waveNumber;
-      
-        foreach (EnemyConfiguration enemyConfig in _config.GetEnemyList)
-        {
-            for(int i = 0;i< _waveNumber;i++)
-            {
-                enemyConfig.GetPercentageRatio();
-            }
-          
-        }
 
-        }
+
+
+    }
 
     /// <summary>
     /// Составляение волны юнитами. 
@@ -60,38 +66,39 @@ public class WaveEngine : MonoBehaviour
     {
         _enemyList.Clear();
 
-      
+
 
         int count = 0;
 
-        while (count < _numberEnemiesInWave)
-        {
-            foreach (EnemyConfiguration enemyConfig in _config.GetEnemyList)
+         while ( count < _numberEnemiesInWave )
+       {
+            foreach ( KeyValuePair<UnitConfig , List<float>> enemy in _unitConfigData )
             {
-               
+                UnitConfig configUnit = enemy.Key;
+                List<float> values = enemy.Value;
+                float percentageAppearance = values[ 0 ];
 
-                bool status = GetRange(enemyConfig.GetPercentageAppearance);
-                Debug.Log(enemyConfig.GetPercentageAppearance);
-                if (status)
+            
+                if ( GetRange( percentageAppearance ) )
                 {
-                    UnitComponent enemyUnit = _gameHub.GetPoolEnemy.GetEnemy(enemyConfig.GetEnemyConfig);
-                  
-                    if (enemyUnit.TryGetComponent(out Enemy enemy))
+                    UnitComponent enemyUnit = _gameHub.GetPoolEnemy.GetEnemy( configUnit );
+                    if ( enemyUnit.TryGetComponent( out Enemy unit ) )
                     {
                         enemyUnit.GetComponent<Enemy>().BusyWave = true;
-                        _enemyList.Add(enemyUnit);
+                        _enemyList.Add( enemyUnit );
                         count++;
-
                     }
                     else
                     {
-                        Debug.Log("Нет Enemy компонетна");
+                        Debug.Log( "Нет Enemy компонетна" );
                     }
                 }
+
+ 
             }
 
 
-        }
+       }
     }
 
     /// <summary>
@@ -99,6 +106,7 @@ public class WaveEngine : MonoBehaviour
     /// </summary>
     private void WaveGeneration()
     {
+
         CreateEnemyUnits();
         StartWave();
     }
@@ -106,53 +114,64 @@ public class WaveEngine : MonoBehaviour
 
     private void StartWave()
     {
-      //  StartCoroutine(StartSpawnEnemy());
-        StartCoroutine(StartNewWave());
+        if ( _coroutineCreateUnit != null )
+        {
+            StopCoroutine( _coroutineCreateUnit );
+            _coroutineCreateUnit = null;
+        }
+        _coroutineCreateUnit = StartCoroutine( StartSpawnEnemy() );
+        _coroutineStartWave = StartCoroutine( StartNewWave() );
     }
 
     private IEnumerator StartNewWave()
     {
-        while (true)
+        while ( true )
         {
-            StartCoroutine(StartSpawnEnemy());
-            yield return new WaitForSeconds(_timeNewWave);
-          
+
+            yield return new WaitForSeconds( _timeNewWave );
+
             _waveNumber++;
-
             _numberEnemiesInWave += _config.GetAddEnemy;
-            
-            OnWave?.Invoke(_waveNumber);
+            UpdateEnemyAppearances();
+            WaveGeneration();
+            OnWave?.Invoke( _waveNumber );
 
-            foreach (EnemyConfiguration enemyConfig in _config.GetEnemyList)
-            {
-                Debug.Log(enemyConfig.GetPercentageAppearance);
-                enemyConfig.IncreasePercentageAppearance();
-                Debug.Log(enemyConfig.GetPercentageAppearance);
-            }
 
-                CreateEnemyUnits();
-            
+
+
+
+
         }
-      
+
 
     }
 
 
     private IEnumerator StartSpawnEnemy()
     {
-        for(int i =0; i< _enemyList.Count; i++)
+        for ( int i = 0; i < _enemyList.Count; i++ )
         {
 
-            _enemyList[i].transform.position = _startEnemyPosition[1].transform.position;
-            _enemyList[i].gameObject.SetActive(true);
-            yield return new WaitForSeconds(1f);
+            _enemyList[ i ].transform.position = _startEnemyPosition[ 1 ].transform.position;
+            _enemyList[ i ].gameObject.SetActive( true );
+            yield return new WaitForSeconds( 1f );
         }
 
     }
-
-    private bool GetRange(float value)
+    /// <summary>
+    /// Обновление вероятности появления врагов
+    /// </summary>
+    private void UpdateEnemyAppearances()
     {
-        int indexRandom = Random.Range(0, 100);
+        foreach ( var enemy in _unitConfigData )
+        {
+            List<float> values = enemy.Value;
+            values[ 0 ] += values[ 1 ]; // Увеличиваем процент появления на значение шага
+        }
+    }
+    private bool GetRange( float value )
+    {
+        int indexRandom = Random.Range( 0 , 100 );
 
         return indexRandom < value;
 

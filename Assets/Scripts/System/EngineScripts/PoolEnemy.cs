@@ -3,9 +3,7 @@ using UnityEngine;
 
 public class PoolEnemy : MonoBehaviour
 {
-
     private GameHub _gameHub;
-
 
     [SerializeField] private Transform _parent;
     [SerializeField] private int _countEnemy = 20;
@@ -14,8 +12,6 @@ public class PoolEnemy : MonoBehaviour
     public void Initialized( GameHub gameHub )
     {
         _gameHub = gameHub;
-
-
         CreatePoolEnemy( _countEnemy );
     }
 
@@ -24,66 +20,55 @@ public class PoolEnemy : MonoBehaviour
     /// </summary>
     private void CreatePoolEnemy( int count )
     {
-
-
         foreach ( UnitConfig enemy in _gameHub.GetGameData.GetEnemiesConfigs )
         {
-            _pool.Add(enemy, new List<UnitComponent>());
+            _pool.Add( enemy , new List<UnitComponent>() );
 
             for ( int i = 0; i < count; i++ )
             {
-
-               
-
-                _pool[ enemy ].Add( InstantiateEnemy( enemy ) );
-
+                InstantiateEnemy( enemy );
             }
-
         }
     }
+
+    /// <summary>
+    /// Создать врага и добавить его в пул
+    /// </summary>
+    /// <param name="unitConfig">Конфигурация юнита</param>
+    /// <returns>Созданный юнит</returns>
     private UnitComponent InstantiateEnemy( UnitConfig unitConfig )
     {
         UnitComponent enemyUnit = Instantiate( unitConfig.GetPrefab , _parent );
         enemyUnit.gameObject.SetActive( false );
         enemyUnit.Container( _gameHub );
-        
+        _pool[ unitConfig ].Add( enemyUnit );  // Перенос добавления в пул здесь
+
         return enemyUnit;
     }
-
 
     /// <summary>
     /// Взять врага из пула
     /// </summary>
-    /// <returns></returns>
+    /// <param name="config">Конфигурация юнита</param>
+    /// <returns>Юнит из пула</returns>
     public UnitComponent GetEnemy( UnitConfig config )
     {
-        UnitComponent tempUnit = null;
         if ( _pool.TryGetValue( config , out List<UnitComponent> tempList ) )
         {
             foreach ( UnitComponent unit in tempList )
             {
-                if (  unit.TryGetComponent( out Enemy enemy) )
-             
+                if ( unit.TryGetComponent( out Enemy enemy ) )
                 {
-                    if(!enemy.BusyWave)
+                    if ( !enemy.BusyWave && !enemy.gameObject.activeSelf )  // Изменение проверки
                     {
-                        tempUnit = unit;
-                        break;
+                        return unit;
                     }
-                    
-
                 }
             }
-
-
         }
-        if ( tempUnit == null )
-        {
-            tempUnit = InstantiateEnemy( config );
-            _pool[ config ].Add( tempUnit );
 
-
-        }
+        // Если не найден свободный юнит, создаем новый
+        UnitComponent tempUnit = InstantiateEnemy( config );
         return tempUnit;
     }
 }
