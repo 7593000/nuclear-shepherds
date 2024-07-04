@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d961aab90cad72940a8db37b67bf42e2, type: 3}
   m_Name: Frequency
   m_EditorClassIdentifier: 
-  _addEnemy: 1
+  _addEnemy: 5
   _enemy:
   - _enemyConfig: {fileID: 11400000, guid: 38f6ca7ac0e803e47836cb9bd765e620, type: 2}
     _percentageAppearance: 80
