@@ -14,19 +14,20 @@ public class WaveEngine : MonoBehaviour
     [SerializeField] private FrequencyOoccurrence _config;
 
     private Dictionary<UnitConfig, List<float>> _unitConfigData = new();
-
-    private Coroutine _coroutineCreateUnit;
-    private Coroutine _coroutineStartWave;
-    [SerializeField, Tooltip(" Текущая волна")] private int _waveNumber = 1;
-
-    [SerializeField, Tooltip("Количество вражеских юнитов в 1ой волне")]
-    private int _numberEnemiesInWave = 5;
+    private Dictionary<UnitConfig, bool> _interestStatus = new  ();
 
     private List<Enemy> _enemiesWave = new();
 
-    //_waveNumbler * шаг увеличения процента появления у врага  + шанс появления врага .
+    private Coroutine _coroutineCreateUnit;
+    private Coroutine _coroutineStartWave;
 
-    [SerializeField, Tooltip("таймер новой генерации волны")] private float _timeNewWave = 15.0f;
+    [SerializeField, Tooltip(" Текущая волна")] private int _waveNumber = 1;
+
+   [SerializeField, Tooltip("Количество вражеских юнитов в  волне")]
+   private int _numberEnemiesInWave ;
+   
+     
+
     [SerializeField, Tooltip("Точки для респавна противников")] private Transform[] _startEnemyPosition;
     [SerializeField] private List<UnitComponent> _enemyList = new();
 
@@ -34,7 +35,7 @@ public class WaveEngine : MonoBehaviour
     public void Initialized(GameHub gameHub)
     {
         _gameHub = gameHub;
-
+        _numberEnemiesInWave = _config.GetNumberEnemiesInWave;
         CreateDictionaryData();
        
         WaveGeneration();
@@ -51,7 +52,7 @@ public class WaveEngine : MonoBehaviour
         foreach (EnemyConfiguration enemyConfig in _config.GetEnemyList)
         {
             _unitConfigData[enemyConfig.GetEnemyConfig] = enemyConfig.GetDataPercentage;
-
+            _interestStatus[enemyConfig.GetEnemyConfig] = true;
         }
 
     }
@@ -62,7 +63,7 @@ public class WaveEngine : MonoBehaviour
     public void LoadData()
     {
         _waveNumber = 1;
-        _numberEnemiesInWave += _config.GetAddEnemy * _waveNumber;
+       _numberEnemiesInWave += _config.GetAddEnemy * _waveNumber;
 
 
 
@@ -142,7 +143,7 @@ public class WaveEngine : MonoBehaviour
         while (true)
         {
 
-            yield return new WaitForSeconds(_timeNewWave);
+            yield return new WaitForSeconds(_config.GetTimeNewWave);
 
             _waveNumber++;
             _numberEnemiesInWave += _config.GetAddEnemy;
@@ -164,7 +165,6 @@ public class WaveEngine : MonoBehaviour
     {
         for (int i = 0; i < _enemyList.Count; i++)
         {
-
             _enemyList[i].transform.position = _startEnemyPosition[1].transform.position;
             _enemyList[i].gameObject.SetActive(true);
             yield return new WaitForSeconds(1f);
@@ -178,9 +178,36 @@ public class WaveEngine : MonoBehaviour
     {
         foreach (var enemy in _unitConfigData)
         {
+            UnitConfig enemyConfig = enemy.Key;
             List<float> values = enemy.Value;
-            values[0] += values[1]; // Увеличиваем процент появления на значение шага
+            float percentage = values[0];
+            float step = values[1];
+            Debug.Log(percentage);
+         // Увеличиваем процент появления на значение шага
+            if (_interestStatus[enemyConfig])
+            {
+                percentage += step;
+                if(percentage>=100f)
+                {
+                    percentage = 100;
+                    _interestStatus[enemyConfig] = false; //Уменьшаем
+                    Debug.Log("Уменьшаем");
+                }
+            }
+            else
+            {
+                percentage -= step;
+                if(percentage<= 50f)
+                {
+                    percentage = 50f;
+                    _interestStatus[enemyConfig] = true; //Увеличиваем
+                    Debug.Log("Увеличиваем");
+                }
+            }
+            values[0] = percentage;
+            Debug.Log(percentage);
         }
+
     }
     private bool GetRange(float value)
     {

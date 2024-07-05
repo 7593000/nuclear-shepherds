@@ -37,8 +37,10 @@ public class BrahminManager : MonoBehaviour
         OnBrahmin?.Invoke(_brahminList.Count);
     }
 
-    public void DeadBrahmin(Brahmin brahmin) { 
-            
+    public void DeadBrahmin(Brahmin brahmin) {
+
+        if (_brahminList.Count == 0)
+            Debug.Log("GAMEOVER");
         if(_brahminList.Contains(brahmin))
         {
             _brahminList.Remove(brahmin);

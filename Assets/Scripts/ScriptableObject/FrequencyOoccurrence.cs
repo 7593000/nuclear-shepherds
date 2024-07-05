@@ -8,12 +8,28 @@ public class FrequencyOoccurrence : ScriptableObject
     [SerializeField, Tooltip(" + количество юнитов на новую волну")]
     private int _addEnemy;
 
+    [SerializeField, Tooltip("Количество вражеских юнитов в 1ой волне")]
+    private int _numberEnemiesInWave = 5;
+  
+    [SerializeField, Tooltip("таймер новой генерации волны")] 
+    private float _timeNewWave = 15.0f;
+
     [SerializeField]
     private List<EnemyConfiguration> _enemy = new();
 
     public IReadOnlyList<EnemyConfiguration> GetEnemyList => _enemy;
-
+    /// <summary>
+    /// количество добавляемых юнитов в каждую новую волну 
+    /// </summary>
     public int GetAddEnemy => _addEnemy;
+    /// <summary>
+    /// Количество юнитов добавляемых в новой волне
+    /// </summary>
+    public int GetNumberEnemiesInWave => _numberEnemiesInWave;
+    /// <summary>
+    /// Таймер до новой волны
+    /// </summary>
+    public float GetTimeNewWave => _timeNewWave;    
 }
 
 [Serializable]
