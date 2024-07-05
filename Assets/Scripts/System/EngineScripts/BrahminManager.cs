@@ -41,6 +41,7 @@ public class BrahminManager : MonoBehaviour
 
         if (_brahminList.Count == 0)
             Debug.Log("GAMEOVER");
+
         if(_brahminList.Contains(brahmin))
         {
             _brahminList.Remove(brahmin);
