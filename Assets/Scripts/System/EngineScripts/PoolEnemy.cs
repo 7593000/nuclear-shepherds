@@ -8,7 +8,7 @@ public class PoolEnemy : MonoBehaviour
     [SerializeField] private Transform _parent;
     [SerializeField] private int _countEnemy = 20;
     private Dictionary<UnitConfig , List<UnitComponent>> _pool = new();
-
+    [SerializeField] private List<UnitComponent> _poolEnemy = new List<UnitComponent>();
     public void Initialized( GameHub gameHub )
     {
         _gameHub = gameHub;
@@ -23,7 +23,7 @@ public class PoolEnemy : MonoBehaviour
         foreach ( UnitConfig enemy in _gameHub.GetGameData.GetEnemiesConfigs )
         {
             _pool.Add( enemy , new List<UnitComponent>() );
-
+            
             for ( int i = 0; i < count; i++ )
             {
                 InstantiateEnemy( enemy );
@@ -42,7 +42,8 @@ public class PoolEnemy : MonoBehaviour
         enemyUnit.gameObject.SetActive( false );
         enemyUnit.Container( _gameHub );
         _pool[ unitConfig ].Add( enemyUnit );  // Перенос добавления в пул здесь
-
+        _poolEnemy.Add( enemyUnit );
+       
         return enemyUnit;
     }
 
@@ -65,6 +66,10 @@ public class PoolEnemy : MonoBehaviour
                     }
                 }
             }
+        }
+        else
+        {
+            Debug.Log("ERROR No COnfig");
         }
 
         // Если не найден свободный юнит, создаем новый

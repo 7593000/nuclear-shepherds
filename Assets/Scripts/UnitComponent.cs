@@ -94,13 +94,7 @@ public abstract class UnitComponent : MonoBehaviour
 
     }
 
-    //private void CollectResettableComponents()
-    //{
-    //    IReset[] resettableComponents = GetComponentsInChildren<IReset>();
-    //    _resetDataComponents.AddRange(resettableComponents);
-    //    Debug.Log(_resetDataComponents.Count);
-    //}
-
+ 
 
     public void SetState(IUnitState newState)
     {
@@ -122,10 +116,10 @@ public abstract class UnitComponent : MonoBehaviour
     /// <summary>
     /// удаление юнита 
     /// </summary>
-    public void DeactiveUnit()
+    public virtual void DeactiveUnit()
     {
         gameObject.SetActive(false);
-        SetState(NoneState);
+         SetState(NoneState);
         Debug.Log("Юнит уничтожен");
         //TODO=> плей анимации смерти
     }
@@ -138,36 +132,10 @@ public abstract class UnitComponent : MonoBehaviour
 
 
     }
-
-
-
-    //public void ResetUnit()
-    //{
-
-    //    foreach (IReset resetData in _resetDataComponents)
-    //    {
-    //        resetData.ResetData();
-    //    }
-
-       
-    //    GetTargetForAttack = null;
-    //    GetSelectedGoal = 0;
-        
-      
-    //    SetState(MoveState);
-      
-
-
-
-    //}
-    //protected virtual void OnEnable()
-    //{
-    //    ResetUnit();
-    //}
-
+     
     protected virtual void Start()
     {
-      // ResetUnit();
+      
         Initialized();
 
     }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Todo => не используется
+//Todo => не используется DEL
 public class MoveComponent : MonoBehaviour
 {
     // Start is called before the first frame update

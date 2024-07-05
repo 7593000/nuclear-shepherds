@@ -40,18 +40,12 @@ public class Enemy : UnitComponent, IHealth,  IMovable
             if ( health <= 0 )
             {
                 DeactiveUnit();
-                BusyWave = false;
-
-
-                 OnCoins?.Invoke(GetCost);
+                 
+                OnCoins?.Invoke(GetCost);
                
             }
         }
-        else //TODO => DEL? 
-        {
-            gameObject.SetActive( false );
-            BusyWave = false;
-        }
+         
 
 
     }
@@ -69,9 +63,15 @@ public class Enemy : UnitComponent, IHealth,  IMovable
 
     //    }
 
-       
+
 
     //}
+
+    public override void DeactiveUnit()
+    {
+        base.DeactiveUnit();
+        ResetUnit();
+    }
 
     protected override void Initialized()
     {
@@ -85,8 +85,11 @@ public class Enemy : UnitComponent, IHealth,  IMovable
     protected override void Start()
     {
         base.Start();
-        SetState( MoveState ); //TODO=DEL - перенести 
+        SetState(MoveState);
     }
+
+
+
     public void ResetUnit()
     {
 
@@ -99,18 +102,18 @@ public class Enemy : UnitComponent, IHealth,  IMovable
         GetTargetForAttack = null;
         GetSelectedGoal = 0;
      
+       BusyWave= false;
         IsDead = false;
 
-        SetState(MoveState);
-
-
-
-
+      
+          
     }
-    protected virtual void OnEnable()
-    {
-        ResetUnit();
-    }
+
+
+    private   void OnEnable()
+ {
+       SetState(MoveState);
+  }
     private void CollectResettableComponents()
     {
         IReset[] resettableComponents = GetComponentsInChildren<IReset>();

@@ -18,14 +18,7 @@ public class AnimatorComponent : MonoBehaviour
     public void ToRun(StateUnit state)
     {
 
-        //TODO => с этой проверкой не работает движение врагов.. так как, текующее состояние одинаковое и коодринаты для поворота не обновляются. 
-        //TODO=> проверка была сделана для дружеских обхектов. для стрельбы.. требует переделки 
-        //if ( _currentStatus == state )
-        //{
-        //    return;
-        //}
-
-        //_currentStatus = state;//TODO => DEL
+       
         switch (state)
         {
 
