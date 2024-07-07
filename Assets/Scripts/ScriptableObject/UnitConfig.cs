@@ -1,10 +1,11 @@
+using System;
 using UnityEngine;
 
 [CreateAssetMenu( fileName = "_friend" , menuName = "Configuration/add config units" , order = 1 )]
 
 public class UnitConfig : ScriptableObject
 {
-
+    [SerializeField] private int _id;
     [SerializeField, Tooltip( "Бро или нет" )]
     private TypeUnit _unitType;
     private LevelEnemy _enemy;
@@ -17,10 +18,7 @@ public class UnitConfig : ScriptableObject
 
     [SerializeField, Tooltip( "Шанс поразить цель" ), Range( 0.1f , 1f )]
     private float _luck;
-
-    //[SerializeField, Tooltip( "Дальность атаки" ), Range( 0f , 100f )]
-    //private float _distance;
-
+ 
     [SerializeField, Tooltip( "Занимаемое количество клеток на карте при установки юнита" ), Range( 1 , 19 )]
     private int _occupiedArea;
 
@@ -60,6 +58,9 @@ public class UnitConfig : ScriptableObject
     [Space]
     [SerializeField, Tooltip( "Спрайт юнита" )]
     private Sprite _sprite;
+
+    public int GetId => _id;
+
 
     /// <summary>
     /// Получить принадлежность юнита 
@@ -145,4 +146,7 @@ public class UnitConfig : ScriptableObject
     /// </summary>
     public Sprite GetSprite => _sprite;
 
+
+ 
+    
 }

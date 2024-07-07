@@ -6,7 +6,7 @@ using UnityEngine;
 /// <summary>
 /// ¬олны противников
 /// </summary>
-public class WaveEngine : MonoBehaviour
+public sealed class WaveEngine : MonoBehaviour
 {
     public event System.Action<int> OnWave; //TODO => убрать систем.. переделать Random
 

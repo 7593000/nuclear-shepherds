@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BrahminManager : MonoBehaviour
+public sealed class BrahminManager : MonoBehaviour
 {
     public event Action<int> OnBrahmin; 
 

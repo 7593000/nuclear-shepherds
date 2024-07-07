@@ -3,7 +3,7 @@ using UnityEngine;
 /// <summary>
 /// 
 /// </summary>
-public class PointsTargerEngine : MonoBehaviour
+public sealed class PointsTargerEngine : MonoBehaviour
 {
 
 

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PoolEnemy : MonoBehaviour
+public sealed class PoolEnemy : MonoBehaviour
 {
     private GameHub _gameHub;
 
@@ -20,7 +20,7 @@ public class PoolEnemy : MonoBehaviour
     /// </summary>
     private void CreatePoolEnemy( int count )
     {
-        foreach ( UnitConfig enemy in _gameHub.GetGameData.GetEnemiesConfigs )
+        foreach ( UnitConfig enemy in _gameHub.GetGameSettings.GetEnemiesConfigs )
         {
             _pool.Add( enemy , new List<UnitComponent>() );
             

@@ -39,6 +39,9 @@ public abstract class UnitComponent : MonoBehaviour
     public AnimatorComponent StartAnimation => _animatorComponent;
 
     public int GetCost => GetConfig.GetCost;
+   /// <summary>
+   /// Позиция на ячейке 
+   /// </summary>
     public Vector3Int CellPosition;
     /// <summary>
     /// направление движения [-1;0;1]
@@ -118,6 +121,7 @@ public abstract class UnitComponent : MonoBehaviour
     /// </summary>
     public virtual void DeactiveUnit()
     {
+        _gameHub.GetGameSettings.RemoteUnit( this );
         gameObject.SetActive(false);
          SetState(NoneState);
         Debug.Log("Юнит уничтожен");
@@ -157,7 +161,7 @@ public abstract class UnitComponent : MonoBehaviour
             _damage.SetSpeedAttack(Mathf.Max(0, _unitData.SpeedAttack - _unitData.SpeedAttackRatio));
 
             _unitData.Level += 1;
-            friends.SetSpriteLevel(GetGameHub.GetGameData.GetSpriteLevel(_unitData.Level));
+            friends.SetSpriteLevel(GetGameHub.GetGameSettings.GetSpriteLevel(_unitData.Level));
          
        
 

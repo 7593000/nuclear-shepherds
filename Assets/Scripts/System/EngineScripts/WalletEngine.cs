@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class WalletEngine : MonoBehaviour
+public sealed class WalletEngine : MonoBehaviour
 {
   
 

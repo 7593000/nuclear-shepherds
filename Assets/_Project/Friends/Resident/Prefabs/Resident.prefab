@@ -176,7 +176,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 84117879, guid: 68bc0787bdef1a54db390cddff4883e5, type: 3}
+  m_Sprite: {fileID: -319704201, guid: 0f23df8641b79be46bb08a7e6fe46421, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -200,12 +200,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 6683074649808798003}
-  _config: {fileID: 11400000, guid: 603e8dffa40a75a4ca2a934f09acde7f, type: 2}
+  _config: {fileID: 11400000, guid: 0a62b0a015e3cf44a91a20f0b10dc677, type: 2}
   _health: {fileID: 0}
   _gameHub: {fileID: 0}
+  _damage:
+    _canAttack: 0
+    _isRecharge: 0
+    _speedAttack: 0
+    _rechargeTime: 0
+    _weaponAmmo: 0
+    _luck: 0
   GetSelectedGoal: 0
   GetTarget: {fileID: 0}
+  CellPosition: {x: 0, y: 0, z: 0}
   _trigger: {fileID: 2906539946227434765}
+  _imagelevelSprite: {fileID: 0}
 --- !u!50 &1345114102590796291
 Rigidbody2D:
   serializedVersion: 4
@@ -466,7 +475,6 @@ GameObject:
   - component: {fileID: 8413769747758256703}
   - component: {fileID: 3420536986034289045}
   - component: {fileID: 2906539946227434765}
-  - component: {fileID: 2184362455892419031}
   m_Layer: 2
   m_Name: AttackTrigger
   m_TagString: Untagged
@@ -491,7 +499,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!58 &3420536986034289045
 CircleCollider2D:
@@ -540,26 +548,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7df19702551ca344dab108f2ce1fdfbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!223 &2184362455892419031
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5290869024483260582}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 2
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0

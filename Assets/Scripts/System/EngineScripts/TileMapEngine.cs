@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class TileMapEngine : MonoBehaviour
+public sealed class TileMapEngine : MonoBehaviour
 {
     public Tilemap _tilemap;
     private TilemapRenderer _tilemapRenderer;

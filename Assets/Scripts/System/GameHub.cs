@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class GameHub : MonoBehaviour
 {
-    [SerializeField] private GameData _gameData;
+    [SerializeField] private GameSettings _gameSettings;
     [Space] 
     [SerializeField]
     private WaveEngine _waveEngine;
@@ -23,8 +23,10 @@ public class GameHub : MonoBehaviour
     private WindowInfoUnit _windowInfoUnit;
     [SerializeField]
     private TileMapEngine _tileMapEngine;
+
+
     
-    public GameData GetGameData => _gameData;
+    public GameSettings GetGameSettings => _gameSettings;
     public UnitsUpdateEngine GetUnitsUpdateEngine => _unitsEngine;
     public PointsTargerEngine GetPointsTarget => _points;
     public BrahminManager GetBrahmin => _brahminEngine;
@@ -35,7 +37,7 @@ public class GameHub : MonoBehaviour
     public WindowInfoUnit GetWindowInfoUnit => _windowInfoUnit;
     private void Awake()
     {
-        _gameData??= GetComponent<GameData>();   
+        _gameSettings??= GetComponent<GameSettings>();   
         _waveEngine ??= GetComponent<WaveEngine>();
         _unitsEngine ??= GetComponent<UnitsUpdateEngine>();
         _points ??= GetComponent<PointsTargerEngine>();
@@ -47,7 +49,10 @@ public class GameHub : MonoBehaviour
 
     private void Start()
     {
-        _walletEngine.Initialized(1000);
+        if(GameState.Instance.IsLoading )
+        { Debug.Log( "LOAD" ); }
+        _gameSettings.Initialized();
+        _walletEngine.Initialized(_gameSettings.GetStartCoins);
         _poolEnemy.Initialized( this );
         _bottomPanel.Initialized(this);
         _brahminEngine.Initialized(this);
@@ -60,4 +65,9 @@ public class GameHub : MonoBehaviour
     {
         Debug.Log(txt);
     }
-}
+    [ContextMenu( "Save Game" )]
+    public void SaveGame()
+    { }
+
+
+    }

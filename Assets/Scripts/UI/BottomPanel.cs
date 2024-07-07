@@ -11,6 +11,8 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IBeginDragHandle
  
     [SerializeField]
     private ShopWindow _shopWindow;
+    [SerializeField]
+    private GameMenu _gameMenu;
     [Space]
     [Header("Текстовые элементы на панеле")]
     [SerializeField]
@@ -36,22 +38,24 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IBeginDragHandle
     private bool _tilemapStatus = false;
     [SerializeField] private bool _transfer = false;
     private Vector3 _positionForUnit;
-
+    
 
     public void Initialized(GameHub gameHub)
     {
         _gameHub = gameHub;
         _canvas = GetComponentInParent<Canvas>();
 
+        _shopWindow ??= FindFirstObjectByType<ShopWindow>();
+        _gameMenu ??= FindFirstObjectByType<GameMenu>();
+        _gameMenu.Initialized( _gameHub.GetGameSettings );
 
         _wallet = gameHub.GetWalletEngine.GetWallet;
         _brahminManager = gameHub.GetBrahmin;
         _waveEngine = gameHub.GetWaveEngine;
 
 
-         _shopWindow ??= FindFirstObjectByType<ShopWindow>();
-       
-        _dragShadow = Instantiate(_shadowPrefab);
+    
+         _dragShadow = Instantiate(_shadowPrefab);
         _dragShadow.Initialize(_canvas);
         _dragShadow.gameObject.SetActive(false);
 
@@ -101,10 +105,15 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IBeginDragHandle
 
     private void CreateCards()
     {
-        foreach ( UnitConfig unitConfig in _gameHub.GetGameData.GetFriendsConfigs )
+        foreach ( UnitConfig unitConfig in _gameHub.GetGameSettings.GetFriendsConfigs )
         {
             _shopWindow.AddUnitsForSell( unitConfig );
         }
+    }
+
+    public void OpenGameMenu()
+    {
+        _gameMenu.GameMenuStatus();
     }
 
     #region DRAG AND DROP LOGIC
@@ -193,7 +202,7 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IBeginDragHandle
                         unit.transform.position = _dragShadow.transform.position;
                         unit.CellPosition = cellPosition;
                         _gameHub.GetTileMap.AddCell(cellPosition);
-
+                        _gameHub.GetGameSettings.AddUnit(unit);
                     }
                     else
                     {
