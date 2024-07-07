@@ -58,6 +58,7 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IBeginDragHandle
         _wallet.OnCoinsChanged += (int value) => ChangingNumberCoins(value);
         _brahminManager.OnBrahmin += (int value) => ChangingText(_brahminCountText, value.ToString());
         _waveEngine.OnWave+=(int value) => ChangingText(_wavelCountText, value.ToString());
+     
         ChangingText(_brahminCountText, _brahminManager.GetBrahminList.Count.ToString());
 
         if (_canvas != null)

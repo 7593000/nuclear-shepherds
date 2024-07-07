@@ -1,5 +1,4 @@
 using System;
-using System.Diagnostics;
 
 /// <summary>
 /// Класс для кручения-верчения денежных едениц в егре 
@@ -8,23 +7,23 @@ public class Wallet
 {
     public event Action<int> OnCoinsChanged;
 
-    public Wallet(int count)
+    public Wallet( int count )
     {
         _coins = count;
     }
 
 
-   
+
     private int _coins;
 
     /// <summary>
     /// Добавить монеты в кошелек
     /// </summary>
     /// <param name="count">Количество добавляемой валюты</param>
-    public void AddСurrency(int count)
+    public void AddСurrency( int count )
     {
-        
-        if (count > 0)
+
+        if ( count > 0 )
         {
             Coins += count;
 
@@ -36,18 +35,18 @@ public class Wallet
     /// </summary>
     /// <param name="count">Количество забираемой валюты</param>
     /// <returns></returns>
-    public bool TakeCurrency(int count)
+    public bool TakeCurrency( int count )
     {
-        if (count < 0)
+        if ( count < 0 )
         {
             return false;
         }
-        else if(count> _coins)
+        else if ( count > _coins )
         {
             return false;
         }
 
-            Coins -= count;
+        Coins -= count;
         return true;
 
     }
@@ -59,9 +58,10 @@ public class Wallet
     public int Coins
     {
         get => _coins;
-        private set {
+        private set
+        {
             _coins = value;
-            OnCoinsChanged?.Invoke(_coins);
+            OnCoinsChanged?.Invoke( _coins );
         }
     }
 }

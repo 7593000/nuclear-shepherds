@@ -1,13 +1,12 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WindowInfoUnit : MonoBehaviour
 {
 
     private CanvasGroup _group;
     private UnitComponent _unit;
-
-
-    [SerializeField] private float _cost = 1000f;
+     
     [Space]
     [SerializeField] private TextPanel _nameUnit;
     [SerializeField] private TextPanel _level;
@@ -19,7 +18,7 @@ public class WindowInfoUnit : MonoBehaviour
     [SerializeField] private TextPanel _newSpeedAttack;
     [SerializeField] private TextPanel _newLuck;
 
-
+    [SerializeField] private Button _upgradeButton;
 
     private void Start()
     {
@@ -56,8 +55,15 @@ public class WindowInfoUnit : MonoBehaviour
     }
     public void UpgradeUnit()
     {
-        if (CheckedLevel()) { return; }
-     
+        int costUpdate = ( int )_unit.GetConfig.GetRatio[ 0 ] * _unit.GetUnitData.Level ;
+        
+        if (  CheckedLevel() || !CheckedCouns( costUpdate ) )
+        {
+           
+            return;
+        }
+       
+         
         _unit.UpdateLevel();
       
         ShowInfo();
@@ -65,12 +71,20 @@ public class WindowInfoUnit : MonoBehaviour
     public void WindowInfo(UnitComponent unit)
     {
         _unit = unit;
+         
+         
+       
+
+       
         CanvasStatus(true);
         ShowInfo();
     }
 
     private void ShowInfo()
     {
+     
+
+
         bool isMaxLevel = CheckedLevel();
         string maxLevelText = "MAX";
 
@@ -108,9 +122,19 @@ public class WindowInfoUnit : MonoBehaviour
     /// <returns></returns>
     private bool CheckedLevel()
     {
-        int maxLevel = _unit.GetGameHub.GetGameData.GetMaxLevel;
         int currentLevel = _unit.GetUnitData.Level;
+        int maxLevel = _unit.GetGameHub.GetGameData.GetMaxLevel;
 
-        return currentLevel >= maxLevel;
+        Debug.Log( maxLevel );
+        return currentLevel >=  maxLevel;
+    }
+
+    /// <summary>
+    /// Проверка возможности потратить деньги
+    /// </summary>
+   
+    private bool CheckedCouns( float coint)
+    {
+        return coint <= _unit.GetGameHub.GetWalletEngine.GetWallet.Coins;
     }
 }

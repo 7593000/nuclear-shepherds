@@ -144,6 +144,8 @@ public abstract class UnitComponent : MonoBehaviour
     {
         if (TryGetComponent(out Friends friends))
         {
+            int costUpdate = ( int )GetConfig.GetRatio[ 0 ] * GetUnitData.Level;
+            _gameHub.GetWalletEngine.GetWallet.TakeCurrency( costUpdate );
 
 
             _unitData.DamageRatio += GetConfig.GetRatio[1] * _unitData.Level;
@@ -156,8 +158,8 @@ public abstract class UnitComponent : MonoBehaviour
 
             _unitData.Level += 1;
             friends.SetSpriteLevel(GetGameHub.GetGameData.GetSpriteLevel(_unitData.Level));
-
-
+         
+       
 
         }
     }

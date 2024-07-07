@@ -77,7 +77,7 @@ public class UnitConfig : ScriptableObject
     /// </summary>
     public int GetCost => _cost;
     /// <summary>
-    /// ѕолучить данные дл€ обнавлени€ юнита:[стоимость, урон, скорость атаки, удача] 
+    /// ѕолучить данные дл€ обнавлени€ юнита:[стоимость обнавлени€, урон, скорость атаки, удача] 
     /// </summary>
     public float[] GetRatio => new float[] {_costUpgrade, _damageRatio , _speedAttackRatio , _luckRatio };
  
