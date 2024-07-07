@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : UnitComponent, IHealth,  IMovable 
 
 {
- 
+    private Protection _protection;
 
     public static event Action<int> OnCoins;
     private List<IReset> _resetDataComponents = new();
@@ -29,13 +29,16 @@ public class Enemy : UnitComponent, IHealth,  IMovable
 
     }
 
-    public void TakeDamage( float damage )
+    public void TakeDamage(TypeWeapons type , float damage )
     {
 
 
         if ( !IsDead )
         {
-            float health = _health.TakeDamage( damage );
+
+            float damageProtect = Mathf.Max (0, damage - _protection.CalculationProtection( type ));
+            
+            float health = _health.TakeDamage( damageProtect );
           
             if ( health <= 0 )
             {
@@ -49,6 +52,8 @@ public class Enemy : UnitComponent, IHealth,  IMovable
 
 
     }
+
+  
 
     public float Health() => _config.GetHealth;
 
@@ -77,6 +82,7 @@ public class Enemy : UnitComponent, IHealth,  IMovable
     {
         base.Initialized();
         _health.Container( this );
+        _protection = new Protection( this );
         CollectResettableComponents();
 
 

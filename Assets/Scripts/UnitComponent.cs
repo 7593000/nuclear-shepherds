@@ -16,7 +16,7 @@ public abstract class UnitComponent : MonoBehaviour
     [SerializeField] private Damage _damage;
     [SerializeField] protected IAttack _attack;
     public GameHub GetGameHub => _gameHub;
-    public IAttack Attack => _attack;
+    public IAttack GetAttack => _attack;
     /// Получить ссылку на класс Damage
     /// </summary>
     public Damage GetDamageClass => _damage;

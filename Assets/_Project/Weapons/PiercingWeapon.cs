@@ -7,6 +7,7 @@ using UnityEngine;
 public class PiercingWeapon : IAttack
 {
     private UnitComponent _unit;
+    private TypeWeapons _typeWeapon;
     private List<IHealth> _targetsAttack = new();
     private float _radius =1f;
     private int _maxTargets = 10; // Максимальное количество целей
@@ -16,6 +17,8 @@ public class PiercingWeapon : IAttack
         _unit = unit;
         _radius = unit.GetConfig.GetWeaponsConfig.GetRadiusAoE;
         _maxTargets = unit.GetConfig.GetWeaponsConfig.GetNumberStriking;
+  _typeWeapon = _unit.GetConfig.GetWeaponsConfig.GetTypeWeapons;
+  
         _hits = new RaycastHit2D[ _maxTargets ];
     }
 
@@ -25,7 +28,7 @@ public class PiercingWeapon : IAttack
        
         foreach ( IHealth target in _targetsAttack )
         {
-            target.TakeDamage( damage );
+            target.TakeDamage( _typeWeapon , damage );
         }
 
         //targer.TakeDamage( damage );

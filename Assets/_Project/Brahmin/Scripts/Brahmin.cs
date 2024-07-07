@@ -19,7 +19,7 @@ public class Brahmin : UnitComponent, IHealth, IMovable
         //TODO => Выбор рандомной точки от начальной. возврат на начальную точку. повтор.
     }
 
-    public void TakeDamage( float damage )
+    public void TakeDamage(TypeWeapons type , float damage )
     {
         if ( !IsActive )
         {

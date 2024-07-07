@@ -74,7 +74,7 @@ public class Damage
 
         if (_canAttack && !_isRecharge )
         {
-            float damage = CalculatingDamage();
+            float damage = _damage ; //todo => temp
             _weaponAmmo--;
            
             if(_speedAttack  > 0f)
@@ -99,33 +99,33 @@ public class Damage
         return _weaponAmmo > 0;
     }
 
-    /// <summary>
-    /// Рассчет наносимого урона: урон * удача
-    /// </summary>
-    /// <returns>Значение урона</returns>
-    private float CalculatingDamage()
-    {
-        if (CritCalculation())
-        {
-            return _damage + (_damage * _luck);
-        }
-        return _damage;
-    }
+    ///// <summary>
+    ///// Рассчет наносимого урона: урон * удача
+    ///// </summary>
+    ///// <returns>Значение урона</returns>
+    //private float CalculatingDamage()
+    //{
+    //    if (CritCalculation())
+    //    {
+    //        return _damage + (_damage * _luck);
+    //    }
+    //    return _damage;
+    //}
 
-    /// <summary>
-    /// Расчет крита
-    /// </summary>
-    /// <returns>true, если критический удар произошел, иначе false</returns>
-    private bool CritCalculation() => RandomRange() < _luck;
+    ///// <summary>
+    ///// Расчет крита
+    ///// </summary>
+    ///// <returns>true, если критический удар произошел, иначе false</returns>
+    //private bool CritCalculation() => RandomRange() < _luck;
 
-    /// <summary>
-    /// Генерация случайного числа
-    /// </summary>
-    /// <returns>Случайное число от 0 до 1</returns>
-    public float RandomRange()
-    {
-        return Random.Range(0f, 1f);
-    }
+    ///// <summary>
+    ///// Генерация случайного числа
+    ///// </summary>
+    ///// <returns>Случайное число от 0 до 1</returns>
+    //public float RandomRange()
+    //{
+    //    return Random.Range(0f, 1f);
+    //}
 
     #region ASYNC METHOD
     // TODO=> вынести в один метод

@@ -53,7 +53,8 @@ public class UnitConfig : ScriptableObject
     [SerializeField, Tooltip( "Защита от огнестрельного оружия" )] private float _firearms;
     [SerializeField, Tooltip( "Защита от огня" )] private float _fire;
     [SerializeField, Tooltip( "Защита от энергетического оружия" )] private float _energyWeapons;
-
+    [SerializeField, Tooltip( "защита от взрыва" )] private float _explosionProtection;
+    [ Space]
     [SerializeField, Tooltip( "Префаб юнита" )] private UnitComponent _unitPrefab;
 
     [Space]
@@ -125,7 +126,10 @@ public class UnitConfig : ScriptableObject
     /// Получить коэффициент защиты от энергетического оружия
     /// </summary>
     public float GetProtectionEnergyWeapons => _energyWeapons;
-
+    /// <summary>
+    ///  Получить коэффициент защиты от взрыва: Ракетницы, снаряды .. ." 
+    /// </summary>
+    public float GetProtectionExplosion => _explosionProtection;
     /// <summary>
     /// Получить конфиг используемого оружия
     /// </summary>

@@ -6,7 +6,7 @@ public interface IHealth
     /// Получить урон
     /// </summary>
     /// <param name="damage">значение урона</param>
-    public void TakeDamage( float damage );
+    public void TakeDamage( TypeWeapons type, float damage);
     /// <summary>
     /// Передать количество жизней
     /// </summary>

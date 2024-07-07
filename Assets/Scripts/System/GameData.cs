@@ -18,6 +18,10 @@ public class GameData : MonoBehaviour
     public IReadOnlyList<UnitConfig> GetEnemiesConfigs => _configEnemyUnit;
 
     /// <summary>
+    /// Взять максимальный возможный уровень 
+    /// </summary>
+    public int GetMaxLevel => _spriteLevel.Length;
+    /// <summary>
     /// Взять спрайт уровня
     /// </summary>
     public Sprite GetSpriteLevel(int index)

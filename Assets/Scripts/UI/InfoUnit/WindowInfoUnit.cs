@@ -108,7 +108,7 @@ public class WindowInfoUnit : MonoBehaviour
     /// <returns></returns>
     private bool CheckedLevel()
     {
-        int maxLevel = 4;
+        int maxLevel = _unit.GetGameHub.GetGameData.GetMaxLevel;
         int currentLevel = _unit.GetUnitData.Level;
 
         return currentLevel >= maxLevel;
