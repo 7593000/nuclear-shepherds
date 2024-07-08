@@ -22,6 +22,8 @@ public sealed class BrahminManager : MonoBehaviour
     {
         _position ??= FindFirstObjectByType<BrahminStartPosition>();
     }
+
+
     public void Initialized(GameHub gameHub)
     {
         for(int i = 0; i< _countBrahmin; i++)  

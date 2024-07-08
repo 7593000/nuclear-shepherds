@@ -76,7 +76,11 @@ public class SearchState : IUnitState
     /// <returns></returns>
     private Brahmin RandomBrahmin( UnitComponent unit )
     {
-       
+       if(unit.GetGameHub.GetBrahmin.GetBrahminList.Count == 0)
+        {
+            return null;
+        }
+
         int randomIndex = Random.Range( 0 , unit.GetGameHub.GetBrahmin.GetBrahminList.Count );
 
         return unit.GetGameHub.GetBrahmin.GetBrahminList[ randomIndex ];

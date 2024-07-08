@@ -20,7 +20,7 @@ public class Wallet
     /// Добавить монеты в кошелек
     /// </summary>
     /// <param name="count">Количество добавляемой валюты</param>
-    public void AddСurrency( int count )
+    public void AddCurrency( int count )
     {
 
         if ( count > 0 )

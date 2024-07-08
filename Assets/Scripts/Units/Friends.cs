@@ -61,7 +61,7 @@ public class Friends : UnitComponent, IPointerClickHandler, IPointerEnterHandler
     public override void DeactiveUnit()
     {
         base.DeactiveUnit();
-        _gameHub.GetGameSettings.RemoteUnit( this );
+        _gameHub.GetGameSettings.RemoveUnit( this );
     }
     protected override void Start()
     {

@@ -7,31 +7,31 @@ public class Loading : MonoBehaviour
     private void Start()
     {
 
-        LoadSceneAsync( "Game" );
+        LoadSceneAsync("Game");
     }
 
 
 
 
-    public void LoadSceneAsync( string sceneName )
+    public void LoadSceneAsync(string sceneName)
     {
 
-        StartCoroutine( LoadSceneAsyncCoroutine( sceneName ) );
+        StartCoroutine(LoadSceneAsyncCoroutine(sceneName));
     }
-    private IEnumerator LoadSceneAsyncCoroutine( string sceneName )
+    private IEnumerator LoadSceneAsyncCoroutine(string sceneName)
     {
 
-        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync( sceneName );
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
 
-        while ( !asyncOperation.isDone )
+        while (!asyncOperation.isDone)
         {
 
-            float progress = Mathf.Clamp01( asyncOperation.progress / 0.9f );
-            Debug.Log( sceneName + ": " + ( progress * 100 ) + "%" );
-            if ( progress * 100 == 100 )
+            float progress = Mathf.Clamp01(asyncOperation.progress / 0.9f);
+            Debug.Log(sceneName + ": " + (progress * 100) + "%");
+            if (progress * 100 == 100)
             {
 
-                Debug.Log( "Сцена " + sceneName + " Загружена полностью." );
+                Debug.Log("Сцена " + sceneName + " Загружена полностью.");
             }
             yield return null;
         }

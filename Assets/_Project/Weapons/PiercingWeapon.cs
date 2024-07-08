@@ -57,7 +57,7 @@ public class PiercingWeapon : IAttack
         
         for ( int i = 0; i < hitCount; i++ )
         {
-            Debug.Log( $"Hit: {_hits[ i ].collider.name}" );
+          
             if ( _hits[ i ].collider.TryGetComponent<IHealth>( out IHealth unit ) )
             {
                 _targetsAttack.Add( unit );

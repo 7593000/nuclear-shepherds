@@ -227,7 +227,7 @@ public sealed class TileMapEngine : MonoBehaviour
             _tilemap.SetTileFlags(cellPosition, TileFlags.None);
             _tilemap.SetColor(cellPosition, Color.red);
             _canPlace = false;
-            Debug.Log("Ячейка не обнаружена!");
+            
         }
     }
 

@@ -24,36 +24,50 @@ public sealed class WaveEngine : MonoBehaviour
     [SerializeField, Tooltip(" Текущая волна")] private int _waveNumber = 1;
 
    [SerializeField, Tooltip("Количество вражеских юнитов в  волне")]
-   private int _numberEnemiesInWave ;
+   private int _numberEnemiesInWave;
    
-     
+
 
     [SerializeField, Tooltip("Точки для респавна противников")] private Transform[] _startEnemyPosition;
-    [SerializeField] private List<UnitComponent> _enemyList = new();
+    [SerializeField] private List<Enemy> _enemyList = new();
 
 
     public void Initialized(GameHub gameHub)
     {
         _gameHub = gameHub;
-         
+        InitializeComponents();
+    }
+
+
+    private void InitializeComponents()
+    {
+        StopAllCoroutines();
+
         _waveNumber = _gameHub.GetGameSettings.GetGameData.Wave;
-        _numberEnemiesInWave  = _config.GetNumberEnemiesInWave + (_config.GetAddEnemy * _waveNumber);
-        OnWave?.Invoke( _waveNumber );
+
+        Debug.Log("текущая волна установлена на: " + _waveNumber);
+        _numberEnemiesInWave = _config.GetNumberEnemiesInWave + (_config.GetAddEnemy * _waveNumber);
+        Debug.Log("Количество вражеских юнитов на волне : " + _numberEnemiesInWave);
+        
+
         CreateDictionaryData();
 
 
-        for ( int i = 0; i < _waveNumber; i++ )
-        { 
+        for (int i = 0; i < _waveNumber; i++)
+        {
             UpdateEnemyAppearances();
         }
 
+
+
+        OnWave?.Invoke(_waveNumber);
         WaveGeneration();
 
+        
 
-
-
-      
     }
+
+
 
     /// <summary>
     /// Перегнать данные из SO 
@@ -76,7 +90,7 @@ public sealed class WaveEngine : MonoBehaviour
     private void CreateEnemyUnits()
     {
         
-        _enemyList.Clear();
+        //_enemyList.Clear();
 
 
 
@@ -93,18 +107,11 @@ public sealed class WaveEngine : MonoBehaviour
 
                 if (GetRange(percentageAppearance))
                 {
-                    UnitComponent enemyUnit = _gameHub.GetPoolEnemy.GetEnemy(configUnit);
-                   
-                    if (enemyUnit.TryGetComponent(out Enemy unit))
-                    {
-                        unit.BusyWave = true;
-                        _enemyList.Add(unit);
-                        count++;
-                    }
-                    else 
-                    {
-                        Debug.Log("Нет Enemy компонетна");
-                    }
+                    Enemy enemyUnit = _gameHub.GetPoolEnemy.GetEnemy(configUnit);
+                    enemyUnit.BusyWave = true;
+                    _enemyList.Add(enemyUnit);
+                    count++;
+                    
                 }
 
 
@@ -112,27 +119,31 @@ public sealed class WaveEngine : MonoBehaviour
 
 
         }
+         
     }
+
+
+     
 
     /// <summary>
     /// Генерация волны
     /// </summary>
     private void WaveGeneration()
     {
-
         CreateEnemyUnits();
+
         StartWave();
     }
 
 
     private void StartWave()
     {
-        if (_coroutineCreateUnit != null)
-        {
-            StopCoroutine(_coroutineCreateUnit);
-            _coroutineCreateUnit = null;
-        }
-        _coroutineCreateUnit = StartCoroutine(StartSpawnEnemy());
+        //if (_coroutineCreateUnit != null)
+        //{
+        //    StopCoroutine(StartSpawnEnemy());
+        //    _coroutineCreateUnit = null;
+        //}
+        //_coroutineCreateUnit = StartCoroutine(StartSpawnEnemy());
 
         if (_coroutineStartWave != null) return;
 
@@ -141,10 +152,13 @@ public sealed class WaveEngine : MonoBehaviour
 
     private IEnumerator StartNewWave()
     {
-        while (true)
-        {
+        
+        
+        yield return new WaitForSeconds(_config.GetTimeNewWave);
 
-            yield return new WaitForSeconds(_config.GetTimeNewWave);
+        //todo=> ADD SOUND START WAVE
+
+            StartCoroutine(StartSpawnEnemy());
 
             _waveNumber++;
             _numberEnemiesInWave += _config.GetAddEnemy;
@@ -153,23 +167,40 @@ public sealed class WaveEngine : MonoBehaviour
             WaveGeneration();
 
             OnWave?.Invoke(_waveNumber);
-
-
-        }
-
-
+             
+        
+         
     }
 
 
 
     private IEnumerator StartSpawnEnemy()
     {
+
+        // Спавн врагов
         for (int i = 0; i < _enemyList.Count; i++)
         {
             _enemyList[i].transform.position = _startEnemyPosition[1].transform.position;
             _enemyList[i].gameObject.SetActive(true);
             yield return new WaitForSeconds(1f);
         }
+
+        // Проверка активности врагов
+        while (_enemyList.Count > 0)
+        {
+            for (int i = _enemyList.Count - 1; i >= 0; i--)
+            {
+                if (!_enemyList[i].gameObject.activeSelf)
+                {
+                    _enemyList.Remove(_enemyList[i]);
+                  
+                   
+                }
+            }
+            yield return new WaitForSeconds(1f);
+        }
+
+        yield return StartCoroutine(StartNewWave());
 
     }
     /// <summary>
@@ -201,7 +232,7 @@ public sealed class WaveEngine : MonoBehaviour
                 if(percentage<= 50f)
                 {
                     percentage = 50f;
-                    _interestStatus[enemyConfig] = true; //Увеличиваем
+                    _interestStatus[enemyConfig] = true;  //Увеличиваем
                     
                 }
             }

@@ -62,7 +62,7 @@ public class Damage
     {
         if (!WeaponAmmoCount())
         {
-            Debug.Log("Перезярядка!");
+            
             // Запуск перезарядки
             RechargeWeapon();
 
@@ -82,7 +82,7 @@ public class Damage
                 CooldownWeapon();
             }
          
-            Debug.Log("Выстрел!");
+           
             return damage;
         }
        

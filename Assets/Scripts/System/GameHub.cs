@@ -37,32 +37,55 @@ public class GameHub : MonoBehaviour
     public WaveEngine GetWaveEngine => _waveEngine;
     public PoolEnemy GetPoolEnemy => _poolEnemy ;
     public WindowInfoUnit GetWindowInfoUnit => _windowInfoUnit;
+   
+    
     private void Awake()
     {
-        _gameSettings??= GetComponent<GameSettings>();   
-        _waveEngine ??= GetComponent<WaveEngine>();
-        _unitsEngine ??= GetComponent<UnitsUpdateEngine>();
-        _points ??= GetComponent<PointsTargerEngine>();
-        _bottomPanel ??= GetComponent<BottomPanel>();
+        _gameSettings??= GetComponent<GameSettings>();
         _walletEngine ??= GetComponent<WalletEngine>();
-        _poolEnemy??= GetComponent<PoolEnemy>();
-        _windowInfoUnit??= FindFirstObjectByType<WindowInfoUnit>();
+        _waveEngine ??= GetComponent<WaveEngine>();
+        _unitsEngine??= GetComponent<UnitsUpdateEngine>();
+        _points??= GetComponent<PointsTargerEngine>();
+        _bottomPanel??= FindFirstObjectByType<BottomPanel>();
+        _walletEngine??= GetComponent<WalletEngine>();
+        _poolEnemy ??= GetComponent<PoolEnemy>();
+        _windowInfoUnit ??= FindFirstObjectByType<WindowInfoUnit>();
+      
+      
 
 
     }
 
-    private void Start()
+    private void InitializeComponents()
     {
-      
-
-        _gameSettings.Initialized( this );
-        _walletEngine.Initialized( this );
-        _poolEnemy.Initialized( this );
+        CleanupComponents();
+        _gameSettings.Initialized(this);
+        _walletEngine.Initialized(this);
+        _poolEnemy.Initialized(this);
         _bottomPanel.Initialized(this);
         _brahminEngine.Initialized(this);
         _waveEngine.Initialized(this);
-
     }
+
+
+    private void OnEnable()
+    {
+        InitializeComponents();
+    }
+
+    private void OnDisable()
+    {
+        CleanupComponents();
+    }
+
+    private void CleanupComponents()
+    {
+        
+        
+       _bottomPanel.Cleanup();
+        _walletEngine.Cleanup();
+    }
+
     public void ReloadData()
     { 
        LoadSceneAsync( "LoadGame" );

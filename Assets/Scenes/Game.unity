@@ -2159,6 +2159,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 134020286}
   m_CullTransparentMesh: 1
+--- !u!1 &145901828
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 145901829}
+  m_Layer: 0
+  m_Name: Sliding Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &145901829
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145901828}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1306100792}
+  m_Father: {fileID: 404168668}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -20, y: -20}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &150216637
 GameObject:
   m_ObjectHideFlags: 0
@@ -2885,6 +2921,110 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1084284733}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &241589194
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 241589195}
+  - component: {fileID: 241589197}
+  - component: {fileID: 241589196}
+  - component: {fileID: 241589198}
+  - component: {fileID: 241589199}
+  m_Layer: 0
+  m_Name: LoadGame
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &241589195
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241589194}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1786990559}
+  m_Father: {fileID: 1516494183}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -1138.95, y: -517.42}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &241589196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241589194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &241589197
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241589194}
+  m_CullTransparentMesh: 1
+--- !u!114 &241589198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241589194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f41225530d008cf41acc997e7af7b58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _itemPrefab: {fileID: 3065448490513965610, guid: 8b18c7a56da275e46be38d020692d2ae, type: 3}
+  _parent: {fileID: 621532965}
+--- !u!225 &241589199
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241589194}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &244646728
 GameObject:
   m_ObjectHideFlags: 0
@@ -3447,13 +3587,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 9999999
+  m_text: 0000000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4136,6 +4276,132 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &404168667
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 404168668}
+  - component: {fileID: 404168671}
+  - component: {fileID: 404168670}
+  - component: {fileID: 404168669}
+  m_Layer: 0
+  m_Name: Scrollbar Vertical
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &404168668
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404168667}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 145901829}
+  m_Father: {fileID: 1786990559}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 20, y: -0.000061035}
+  m_Pivot: {x: 1, y: 1}
+--- !u!114 &404168669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404168667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a4db7a114972834c8e4117be1d82ba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1306100793}
+  m_HandleRect: {fileID: 1306100792}
+  m_Direction: 2
+  m_Value: -0.0000007615686
+  m_Size: 0.7129102
+  m_NumberOfSteps: 0
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &404168670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404168667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &404168671
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404168667}
+  m_CullTransparentMesh: 1
 --- !u!1 &410466789
 GameObject:
   m_ObjectHideFlags: 0
@@ -8430,6 +8696,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 620899557}
   m_CullTransparentMesh: 1
+--- !u!1 &621532964
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 621532965}
+  - component: {fileID: 621532966}
+  m_Layer: 0
+  m_Name: Content
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &621532965
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 621532964}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1726318763}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 100.18021}
+  m_SizeDelta: {x: 0, y: 348.95}
+  m_Pivot: {x: 0, y: 1}
+--- !u!114 &621532966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 621532964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 1
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1 &623696636
 GameObject:
   m_ObjectHideFlags: 0
@@ -8440,7 +8768,6 @@ GameObject:
   m_Component:
   - component: {fileID: 623696637}
   - component: {fileID: 623696639}
-  - component: {fileID: 623696648}
   - component: {fileID: 623696640}
   - component: {fileID: 623696645}
   - component: {fileID: 623696641}
@@ -8448,6 +8775,7 @@ GameObject:
   - component: {fileID: 623696644}
   - component: {fileID: 623696646}
   - component: {fileID: 623696647}
+  - component: {fileID: 623696648}
   m_Layer: 0
   m_Name: Engine
   m_TagString: Untagged
@@ -8610,7 +8938,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _parent: {fileID: 1073049325}
   _countEnemy: 20
-  _poolEnemy: []
 --- !u!114 &623696648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101571,6 +101898,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1301783420}
   m_CullTransparentMesh: 1
+--- !u!1 &1306100791
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1306100792}
+  - component: {fileID: 1306100794}
+  - component: {fileID: 1306100793}
+  m_Layer: 0
+  m_Name: Handle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1306100792
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1306100791}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 145901829}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 20, y: 20}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1306100793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1306100791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1306100794
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1306100791}
+  m_CullTransparentMesh: 1
 --- !u!1 &1306284704
 GameObject:
   m_ObjectHideFlags: 0
@@ -105739,14 +106141,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1516494186}
         m_TargetAssemblyTypeName: GameMenu, Assembly-CSharp
-        m_MethodName: LoadGame
-        m_Mode: 5
+        m_MethodName: OpenLoadGameWindows
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: NuclearShepherds-07-07-2024_23-47.fns
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1358110641
@@ -105833,6 +106235,5225 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tileForPosition: {fileID: 21645339}
   _cellPosition:
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
+  - {x: 3, y: -9, z: 0}
+  - {x: 4, y: -4, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 7, y: -11, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: 7, y: -2, z: 0}
+  - {x: 7, y: 1, z: 0}
+  - {x: 8, y: 4, z: 0}
+  - {x: 9, y: -8, z: 0}
+  - {x: 9, y: -3, z: 0}
+  - {x: 10, y: 1, z: 0}
+  - {x: 12, y: -7, z: 0}
+  - {x: 12, y: -4, z: 0}
+  - {x: 13, y: -10, z: 0}
+  - {x: 13, y: 0, z: 0}
+  - {x: 15, y: -5, z: 0}
+  - {x: 17, y: -7, z: 0}
   - {x: 3, y: -9, z: 0}
   - {x: 4, y: -4, z: 0}
   - {x: 5, y: 3, z: 0}
@@ -127706,6 +133327,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 33353240}
+  - {fileID: 241589195}
   m_Father: {fileID: 542151831}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -127763,6 +133385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dd2e6cd3ae139341bd7c2bdb817d06c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _loadGameWindow: {fileID: 241589198}
 --- !u!225 &1516494187
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -129058,6 +134681,96 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1718664093}
   m_CullTransparentMesh: 1
+--- !u!1 &1726318762
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1726318763}
+  - component: {fileID: 1726318766}
+  - component: {fileID: 1726318765}
+  - component: {fileID: 1726318764}
+  m_Layer: 0
+  m_Name: Viewport
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1726318763
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726318762}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 621532965}
+  m_Father: {fileID: 1786990559}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 1}
+--- !u!114 &1726318764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726318762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 0
+--- !u!114 &1726318765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726318762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1726318766
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726318762}
+  m_CullTransparentMesh: 1
 --- !u!1 &1752747322
 GameObject:
   m_ObjectHideFlags: 0
@@ -129371,6 +135084,114 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _countsText: {fileID: 111944834}
+--- !u!1 &1786990558
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1786990559}
+  - component: {fileID: 1786990562}
+  - component: {fileID: 1786990561}
+  - component: {fileID: 1786990560}
+  m_Layer: 0
+  m_Name: Scroll View
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1786990559
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786990558}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1726318763}
+  - {fileID: 404168668}
+  m_Father: {fileID: 241589195}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.00016785, y: 52.25}
+  m_SizeDelta: {x: 781.05, y: 248.77}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1786990560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786990558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Content: {fileID: 621532965}
+  m_Horizontal: 0
+  m_Vertical: 1
+  m_MovementType: 2
+  m_Elasticity: 0.1
+  m_Inertia: 0
+  m_DecelerationRate: 0.135
+  m_ScrollSensitivity: 5
+  m_Viewport: {fileID: 1726318763}
+  m_HorizontalScrollbar: {fileID: 0}
+  m_VerticalScrollbar: {fileID: 404168669}
+  m_HorizontalScrollbarVisibility: 2
+  m_VerticalScrollbarVisibility: 2
+  m_HorizontalScrollbarSpacing: -3
+  m_VerticalScrollbarSpacing: -3
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1786990561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786990558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1786990562
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786990558}
+  m_CullTransparentMesh: 1
 --- !u!1 &1807797472
 GameObject:
   m_ObjectHideFlags: 0
@@ -135410,9 +141231,9 @@ SceneRoots:
   m_Roots:
   - {fileID: 266566825}
   - {fileID: 519420032}
+  - {fileID: 1896420160}
   - {fileID: 2076556298}
   - {fileID: 1084284733}
   - {fileID: 1990100664}
-  - {fileID: 1896420160}
   - {fileID: 1703663396}
   - {fileID: 1360901705}

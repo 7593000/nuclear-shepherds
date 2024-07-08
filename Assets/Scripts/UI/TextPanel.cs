@@ -15,8 +15,7 @@ public abstract class TextPanel : MonoBehaviour
         }
         else
         {
-            _countsText = GetComponentInChildren<TMP_Text>();
-            _countsText.text = value;
+                
             Debug.LogError("TMP_Text нет компонента.");
         }
     }

@@ -16,6 +16,7 @@ public sealed class GameData
 
     public int Wave { get => _wave; set => _wave = value; }
     public int Coins { get => _coins; set => _coins = value; }
+
     public Dictionary<int , Dictionary<Vector3Int , int>> UnitsData
     {
         get => _unitsData;

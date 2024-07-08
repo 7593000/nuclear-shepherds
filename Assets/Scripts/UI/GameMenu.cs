@@ -3,13 +3,15 @@ using UnityEngine;
 public class GameMenu : MonoBehaviour
 {
     private GameSettings _settings;
+  [SerializeField]  private LoadGameWindow _loadGameWindow;
     private CanvasGroup _group;
     private bool _visible = false;
 
     public void Initialized(GameSettings settings)
     {
         _settings = settings;
-
+        _loadGameWindow??= FindFirstObjectByType<LoadGameWindow>();
+        _loadGameWindow.Initialized(_settings.GetMaxSaveGame);
     }
 
     private void Start()
@@ -18,6 +20,7 @@ public class GameMenu : MonoBehaviour
         _group.blocksRaycasts = false;
         _group.interactable = false;
         _group.alpha = 0f;
+
     }
     /// <summary>
     /// Активность меню , показать - скрыть
@@ -40,8 +43,11 @@ public class GameMenu : MonoBehaviour
     public void SaveGame() {
         _settings.SaveGame();
     }
-    public void LoadGame(string path) {
-        _settings.LoadGame( path );
+    public void OpenLoadGameWindows() {
+
+        _loadGameWindow.LoadWindowStatus(_settings.GetSaveGame);
+
+        // _settings.LoadGame( path );
     }
     public void ExitGame()
     {

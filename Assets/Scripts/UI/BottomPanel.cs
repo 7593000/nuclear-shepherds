@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -8,7 +7,7 @@ using UnityEngine.UI;
 public class BottomPanel : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     private GameHub _gameHub;
- 
+
     [SerializeField]
     private ShopWindow _shopWindow;
     [SerializeField]
@@ -38,31 +37,38 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IBeginDragHandle
     private bool _tilemapStatus = false;
     [SerializeField] private bool _transfer = false;
     private Vector3 _positionForUnit;
-    
+
+
 
     public void Initialized(GameHub gameHub)
     {
         _gameHub = gameHub;
+        InitializeComponents();
+
+    }
+    private void InitializeComponents()
+    {
         _canvas = GetComponentInParent<Canvas>();
 
         _shopWindow ??= FindFirstObjectByType<ShopWindow>();
         _gameMenu ??= FindFirstObjectByType<GameMenu>();
-        
 
-          _wallet = gameHub.GetWalletEngine.GetWallet;
-        _brahminManager = gameHub.GetBrahmin;
-        _waveEngine = gameHub.GetWaveEngine;
 
-        _gameMenu.Initialized( _gameHub.GetGameSettings );
+        _wallet = _gameHub.GetWalletEngine.GetWallet;
+        _brahminManager = _gameHub.GetBrahmin;
+        _waveEngine = _gameHub.GetWaveEngine;
+
+        _gameMenu.Initialized(_gameHub.GetGameSettings);
 
 
         _dragShadow = Instantiate(_shadowPrefab);
         _dragShadow.Initialize(_canvas);
         _dragShadow.gameObject.SetActive(false);
 
-        _wallet.OnCoinsChanged += ( int value ) => ChangingNumberCoins( value );
-        _brahminManager.OnBrahmin += ( int value ) => ChangingText( _brahminCountText , value.ToString() );
-        _waveEngine.OnWave += ( int value ) => ChangingText( _wavelCountText , value.ToString() );
+        _wallet.OnCoinsChanged += (int value) => ChangingNumberCoins(value);
+        _brahminManager.OnBrahmin += (int value) => ChangingText(_brahminCountText, value.ToString());
+        _waveEngine.OnWave += (int value) => ChangingText(_wavelCountText, value.ToString());
+
 
         ChangingText(_brahminCountText, _brahminManager.GetBrahminList.Count.ToString());
 
@@ -71,19 +77,43 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IBeginDragHandle
             _dragShadow.transform.SetParent(_canvas.transform, false);
         }
 
-       
+
         CreateCards();
+
         ChangingNumberCoins(_wallet.Coins);
 
+
+
     }
-   
+
+
+
+    public void Cleanup()
+    {
+        if (_wallet != null)
+        {
+            _wallet.OnCoinsChanged -= (int value) => ChangingNumberCoins(value);
+        }
+
+        if (_brahminManager != null)
+        {
+            _brahminManager.OnBrahmin -= (int value) => ChangingText(_brahminCountText, value.ToString());
+        }
+
+        if (_waveEngine != null)
+        {
+            _waveEngine.OnWave -= (int value) => ChangingText(_wavelCountText, value.ToString());
+        }
+    }
+
+
     private void OnDestroy()
     {
         _wallet.OnCoinsChanged -= (int value) => ChangingNumberCoins(value);
         _brahminManager.OnBrahmin -= (int value) => ChangingText(_brahminCountText, value.ToString());
         _waveEngine.OnWave -= (int value) => ChangingText(_wavelCountText, value.ToString());
     }
-  
+
     /// <summary>
     /// Изменять текст на панеле 
     /// </summary>
@@ -91,30 +121,34 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IBeginDragHandle
     /// <param name="value">Значение для изменения </param>
     private void ChangingText(TextPanel panel, string value)
     {
-       
+
         panel.SetText(value);
 
     }
 
 
-    private void ChangingNumberCoins( int value )
+    private void ChangingNumberCoins(int value)
     {
-          if (_walletPanelText == null)
+
+
+
+        if (_walletPanelText == null)
         {
-           //TODO=> СУКА !
+            //TODO=> СУКА !
             Debug.LogError("Wallet panel text - беда!!!.");
             return;
         }
-       ChangingText( _walletPanelText , value.ToString());
+
+        ChangingText(_walletPanelText, value.ToString());
         _shopWindow.ChangingCoins(value);
 
     }
 
     private void CreateCards()
     {
-        foreach ( UnitConfig unitConfig in _gameHub.GetGameSettings.GetFriendsConfigs )
+        foreach (UnitConfig unitConfig in _gameHub.GetGameSettings.GetFriendsConfigs)
         {
-            _shopWindow.AddUnitsForSell( unitConfig );
+            _shopWindow.AddUnitsForSell(unitConfig);
         }
     }
 
@@ -124,46 +158,46 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IBeginDragHandle
     }
 
     #region DRAG AND DROP LOGIC
-    public void OnPointerClick( PointerEventData eventData )
+    public void OnPointerClick(PointerEventData eventData)
     {
         GameObject clickedObject = eventData.pointerCurrentRaycast.gameObject;
 
-        if ( clickedObject != null )
+        if (clickedObject != null)
         {
 
             CardUnit cardUnit = clickedObject.GetComponent<CardUnit>();
-            if ( cardUnit != null )
+            if (cardUnit != null)
             {
-                _textInfo = string.Format( _formatTextForScreenPanel , cardUnit.GetName , cardUnit.GetTypeWeapon , cardUnit.GetDamage , cardUnit.GetLuch );
+                _textInfo = string.Format(_formatTextForScreenPanel, cardUnit.GetName, cardUnit.GetTypeWeapon, cardUnit.GetDamage, cardUnit.GetLuch);
 
-                ChangingText( _screenPanelText , _textInfo);
-               
+                ChangingText(_screenPanelText, _textInfo);
+
             }
 
         }
 
     }
 
-    public void OnBeginDrag( PointerEventData eventData )
+    public void OnBeginDrag(PointerEventData eventData)
     {
-        
+
 
         GameObject clickedObject = eventData.pointerCurrentRaycast.gameObject;
 
-        if ( clickedObject != null )
+        if (clickedObject != null)
         {
             CardUnit cardUnit = clickedObject.GetComponent<CardUnit>();
-            
-            if ( cardUnit != null && cardUnit.IsActive )
+
+            if (cardUnit != null && cardUnit.IsActive)
             {
-                
+
                 _transfer = true;
                 _activeCard = cardUnit;
 
-                if ( _tilemapStatus == false )
+                if (_tilemapStatus == false)
                 {
                     _tilemapStatus = true;
-                    _gameHub.GetTileMap.TileMapActivity( _tilemapStatus );
+                    _gameHub.GetTileMap.TileMapActivity(_tilemapStatus);
                 }
 
                 // Устанавливаем спрайт тени
@@ -174,32 +208,32 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IBeginDragHandle
                 _dragShadow.CreateCircle(cardUnit.GetDistance);
                 _dragShadow.transform.position = transform.position;
 
-                _dragShadow.gameObject.SetActive( true );
+                _dragShadow.gameObject.SetActive(true);
 
-                UpdateDragShadowPosition( eventData );
+                UpdateDragShadowPosition(eventData);
 
             }
         }
     }
 
-    public void OnDrag( PointerEventData eventData )
+    public void OnDrag(PointerEventData eventData)
     {
         if (!_transfer) return;
 
-        if ( _dragShadow != null )
+        if (_dragShadow != null)
         {
-            UpdateDragShadowPosition( eventData );
+            UpdateDragShadowPosition(eventData);
         }
     }
 
-    public void OnEndDrag( PointerEventData eventData )
+    public void OnEndDrag(PointerEventData eventData)
     {
         if (!_transfer) return;
-        if ( _dragShadow != null)
+        if (_dragShadow != null)
         {
-            if ( _gameHub.GetTileMap.CheckedCell() )
+            if (_gameHub.GetTileMap.CheckedCell())
             {
-                if (_wallet.TakeCurrency(_activeCard.GetPrice ))
+                if (_wallet.TakeCurrency(_activeCard.GetPrice))
                 {
                     UnitComponent unit = Instantiate(_activeCard.GetConfig.GetPrefab);
 
@@ -217,22 +251,22 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IBeginDragHandle
                     }
                 }
 
-         
+
             }
         }
         _tilemapStatus = false;
-        _gameHub.GetTileMap.TileMapActivity( _tilemapStatus );
-        _dragShadow.gameObject.SetActive( false );
+        _gameHub.GetTileMap.TileMapActivity(_tilemapStatus);
+        _dragShadow.gameObject.SetActive(false);
         _dragShadow.transform.position = transform.position;
-       
+
         _activeCard = null;
         _transfer = false;
 
     }
 
-    private void UpdateDragShadowPosition( PointerEventData eventData )
+    private void UpdateDragShadowPosition(PointerEventData eventData)
     {
-        if ( _canvas != null )
+        if (_canvas != null)
         {
             _positionForUnit = _gameHub.GetTileMap.GetPositionCell();
             _dragShadow.transform.position = _positionForUnit;

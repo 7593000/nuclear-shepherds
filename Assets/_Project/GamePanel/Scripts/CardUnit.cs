@@ -27,6 +27,7 @@ public class CardUnit : CardUnitComponent
     public void Initialized(UnitConfig config)
     {
         _config = config;
+      
         _name = config.GetName;
         _price.text = config.GetCost.ToString();
         _image.sprite = config.GetSprite;

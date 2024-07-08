@@ -7,26 +7,30 @@ public sealed class PoolEnemy : MonoBehaviour
 
     [SerializeField] private Transform _parent;
     [SerializeField] private int _countEnemy = 20;
-    private Dictionary<UnitConfig , List<UnitComponent>> _pool = new();
-    [SerializeField] private List<UnitComponent> _poolEnemy = new List<UnitComponent>();
-    public void Initialized( GameHub gameHub )
+    private Dictionary<UnitConfig, List<UnitComponent>> _pool = new();
+
+    public void Initialized(GameHub gameHub)
     {
         _gameHub = gameHub;
-        CreatePoolEnemy( _countEnemy );
+        CreatePoolEnemy(_countEnemy);
     }
 
     /// <summary>
     /// Собрать пул для вражеских юнитов
     /// </summary>
-    private void CreatePoolEnemy( int count )
+    private void CreatePoolEnemy(int count)
     {
-        foreach ( UnitConfig enemy in _gameHub.GetGameSettings.GetEnemiesConfigs )
+        foreach (UnitConfig config in _gameHub.GetGameSettings.GetEnemiesConfigs)
         {
-            _pool.Add( enemy , new List<UnitComponent>() );
-            
-            for ( int i = 0; i < count; i++ )
+            _pool.Add(config, new List<UnitComponent>());
+
+            for (int i = 0; i < count; i++)
             {
-                InstantiateEnemy( enemy );
+                Enemy enemy = InstantiateEnemy(config);
+                if (enemy != null)
+                {
+                    _pool[config].Add(enemy);
+                }
             }
         }
     }
@@ -36,14 +40,20 @@ public sealed class PoolEnemy : MonoBehaviour
     /// </summary>
     /// <param name="unitConfig">Конфигурация юнита</param>
     /// <returns>Созданный юнит</returns>
-    private UnitComponent InstantiateEnemy( UnitConfig unitConfig )
+    private Enemy InstantiateEnemy(UnitConfig unitConfig)
     {
-        UnitComponent enemyUnit = Instantiate( unitConfig.GetPrefab , _parent );
-        enemyUnit.gameObject.SetActive( false );
-        enemyUnit.Container( _gameHub );
-        _pool[ unitConfig ].Add( enemyUnit );  // Перенос добавления в пул здесь
-        _poolEnemy.Add( enemyUnit );
-       
+        Debug.Log("Создан +1 юнит");
+        UnitComponent unit = Instantiate(unitConfig.GetPrefab, _parent);
+
+        Enemy enemyUnit = unit as Enemy;
+        if (enemyUnit == null)
+        {
+            Debug.LogError("Prefab не является типом Enemy!");
+            return null;
+        }
+
+        enemyUnit.gameObject.SetActive(false);
+        enemyUnit.Container(_gameHub);
         return enemyUnit;
     }
 
@@ -52,28 +62,34 @@ public sealed class PoolEnemy : MonoBehaviour
     /// </summary>
     /// <param name="config">Конфигурация юнита</param>
     /// <returns>Юнит из пула</returns>
-    public UnitComponent GetEnemy( UnitConfig config )
+    public Enemy GetEnemy(UnitConfig config)
     {
-        if ( _pool.TryGetValue( config , out List<UnitComponent> tempList ) )
+        if (_pool.TryGetValue(config, out List<UnitComponent> tempList))
         {
-            foreach ( UnitComponent unit in tempList )
+            foreach (UnitComponent unit in tempList)
             {
-                if ( unit.TryGetComponent( out Enemy enemy ) )
+                if (unit.TryGetComponent(out Enemy enemy))
                 {
-                    if ( !enemy.BusyWave && !enemy.gameObject.activeSelf )  // Изменение проверки
+                    if (!enemy.BusyWave && !enemy.gameObject.activeSelf)
                     {
-                        return unit;
+                      
+                        return enemy;
                     }
                 }
             }
         }
         else
         {
-            Debug.Log("ERROR No COnfig");
+            Debug.LogError("ERROR:  UnitConfig null.");
         }
 
-        // Если не найден свободный юнит, создаем новый
-        UnitComponent tempUnit = InstantiateEnemy( config );
+        Debug.Log("Не найден свободный юнит, создаем новый.");
+        Enemy tempUnit = InstantiateEnemy(config);
+        if (tempUnit != null)
+        {
+            _pool[config].Add(tempUnit);
+        }
+
         return tempUnit;
     }
 }
