@@ -66,8 +66,10 @@ public sealed class WaveEngine : MonoBehaviour
         
 
     }
-
-
+/// <summary>
+/// Получить номер волны
+/// </summary>
+    public int GetWaveNumber => _waveNumber;
 
     /// <summary>
     /// Перегнать данные из SO 

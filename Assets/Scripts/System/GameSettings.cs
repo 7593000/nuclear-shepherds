@@ -68,8 +68,9 @@ public class GameSettings : MonoBehaviour
     public void SaveGame()
     {
         // Для тестирования
-        _gameData.Wave = 31;
-        _gameData.Coins = 10000;
+         _gameData.Wave = _gameHub.GetWaveEngine.GetWaveNumber;
+        _gameData.Coins = _gameHub.GetWalletEngine.GetWallet.Coins;
+        
 
         _saveLoadEngine.SaveData();
     }

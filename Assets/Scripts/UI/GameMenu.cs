@@ -11,7 +11,7 @@ public class GameMenu : MonoBehaviour
     {
         _settings = settings;
         _loadGameWindow??= FindFirstObjectByType<LoadGameWindow>();
-        _loadGameWindow.Initialized(_settings.GetMaxSaveGame);
+        _loadGameWindow.Initialized(_settings );
     }
 
     private void Start()
@@ -44,7 +44,7 @@ public class GameMenu : MonoBehaviour
         _settings.SaveGame();
     }
     public void OpenLoadGameWindows() {
-
+       
         _loadGameWindow.LoadWindowStatus(_settings.GetSaveGame);
 
         // _settings.LoadGame( path );
