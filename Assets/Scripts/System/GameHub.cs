@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class GameHub : MonoBehaviour
@@ -45,29 +47,57 @@ public class GameHub : MonoBehaviour
         _walletEngine ??= GetComponent<WalletEngine>();
         _poolEnemy??= GetComponent<PoolEnemy>();
         _windowInfoUnit??= FindFirstObjectByType<WindowInfoUnit>();
+
+
     }
 
     private void Start()
     {
-        if(GameState.Instance.IsLoading )
-        { Debug.Log( "LOAD" ); }
-        _gameSettings.Initialized();
-        _walletEngine.Initialized(_gameSettings.GetStartCoins);
+      
+
+        _gameSettings.Initialized( this );
+        _walletEngine.Initialized( this );
         _poolEnemy.Initialized( this );
         _bottomPanel.Initialized(this);
         _brahminEngine.Initialized(this);
         _waveEngine.Initialized(this);
 
     }
-
+    public void ReloadData()
+    { 
+       LoadSceneAsync( "LoadGame" );
+        
+    }
     //Todo=> TEMP
     public static void Logger(string txt)
     {
         Debug.Log(txt);
     }
-    [ContextMenu( "Save Game" )]
-    public void SaveGame()
-    { }
+    public void LoadSceneAsync( string sceneName )
+    {
+
+        StartCoroutine( LoadSceneAsyncCoroutine( sceneName ) );
+    }
+    private IEnumerator LoadSceneAsyncCoroutine( string sceneName )
+    {
+
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync( sceneName );
+
+        while ( !asyncOperation.isDone )
+        {
+            
+            float progress = Mathf.Clamp01( asyncOperation.progress / 0.9f );
+            Debug.Log(  sceneName + ": " + ( progress * 100 ) + "%" );
+            if ( progress * 100 == 100 )
+            {
+                
+                Debug.Log( "Сцена " + sceneName + " Загружена полностью." );
+            }
+            yield return null;
+        }
 
 
     }
+
+
+}

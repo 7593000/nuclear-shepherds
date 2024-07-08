@@ -58,7 +58,11 @@ public class Friends : UnitComponent, IPointerClickHandler, IPointerEnterHandler
         //Todo => установить стандартный курсор
         _lineRenderer.enabled = false;
     }
-
+    public override void DeactiveUnit()
+    {
+        base.DeactiveUnit();
+        _gameHub.GetGameSettings.RemoteUnit( this );
+    }
     protected override void Start()
     {
         base.Start();

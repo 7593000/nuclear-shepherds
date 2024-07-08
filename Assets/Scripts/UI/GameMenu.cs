@@ -40,7 +40,9 @@ public class GameMenu : MonoBehaviour
     public void SaveGame() {
         _settings.SaveGame();
     }
-    public void LoadGame() { }
+    public void LoadGame(string path) {
+        _settings.LoadGame( path );
+    }
     public void ExitGame()
     {
          

@@ -23,6 +23,7 @@ public class ShopWindow : MonoBehaviour
 
     public void ChangingCoins(int coins)
     {
+        Debug.Log( coins );
         
         foreach( CardUnit cardUnit in _cards )
         {

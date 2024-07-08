@@ -1,10 +1,10 @@
+using System.Collections.Generic;
 using UnityEngine;
-//TODO=> DEL
-
+ 
 public class GameState : MonoBehaviour
 {
     private static GameState _instance;
-
+    private GameData _gameData;
     public static GameState Instance
     {
         get
@@ -19,5 +19,7 @@ public class GameState : MonoBehaviour
         }
     }
 
-    public   bool IsLoading { get; private set; }
+    public bool IsLoading { get; set; } = false;
+    public GameData LoadedGameData { get;   set ; }
 }
+ 

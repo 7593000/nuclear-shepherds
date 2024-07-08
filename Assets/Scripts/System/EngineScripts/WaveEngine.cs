@@ -35,12 +35,24 @@ public sealed class WaveEngine : MonoBehaviour
     public void Initialized(GameHub gameHub)
     {
         _gameHub = gameHub;
-        _numberEnemiesInWave = _config.GetNumberEnemiesInWave;
+         
+        _waveNumber = _gameHub.GetGameSettings.GetGameData.Wave;
+        _numberEnemiesInWave  = _config.GetNumberEnemiesInWave + (_config.GetAddEnemy * _waveNumber);
+        OnWave?.Invoke( _waveNumber );
         CreateDictionaryData();
-       
+
+
+        for ( int i = 0; i < _waveNumber; i++ )
+        { 
+            UpdateEnemyAppearances();
+        }
+
         WaveGeneration();
 
-        OnWave?.Invoke(_waveNumber);
+
+
+
+      
     }
 
     /// <summary>
@@ -56,18 +68,7 @@ public sealed class WaveEngine : MonoBehaviour
         }
 
     }
-
-    /// <summary>
-    /// Для загрузки данных из сохранения . перенести в интерфейс
-    /// </summary>
-    public void LoadData()
-    {
-        _waveNumber = 1;
-       _numberEnemiesInWave += _config.GetAddEnemy * _waveNumber;
-
-
-
-    }
+ 
 
     /// <summary>
     /// Составляение волны юнитами. 
@@ -100,7 +101,7 @@ public sealed class WaveEngine : MonoBehaviour
                         _enemyList.Add(unit);
                         count++;
                     }
-                    else
+                    else 
                     {
                         Debug.Log("Нет Enemy компонетна");
                     }
@@ -182,7 +183,7 @@ public sealed class WaveEngine : MonoBehaviour
             List<float> values = enemy.Value;
             float percentage = values[0];
             float step = values[1];
-            Debug.Log(percentage);
+            
          // Увеличиваем процент появления на значение шага
             if (_interestStatus[enemyConfig])
             {
@@ -191,7 +192,7 @@ public sealed class WaveEngine : MonoBehaviour
                 {
                     percentage = 100;
                     _interestStatus[enemyConfig] = false; //Уменьшаем
-                    Debug.Log("Уменьшаем");
+                    
                 }
             }
             else
@@ -201,11 +202,11 @@ public sealed class WaveEngine : MonoBehaviour
                 {
                     percentage = 50f;
                     _interestStatus[enemyConfig] = true; //Увеличиваем
-                    Debug.Log("Увеличиваем");
+                    
                 }
             }
             values[0] = percentage;
-            Debug.Log(percentage);
+           
         }
 
     }

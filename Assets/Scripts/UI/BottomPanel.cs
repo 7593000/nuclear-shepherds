@@ -16,9 +16,9 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IBeginDragHandle
     [Space]
     [Header("Текстовые элементы на панеле")]
     [SerializeField]
-    private TextPanel _screenPanel;
+    private TextPanel _screenPanelText;
     [SerializeField]
-    private TextPanel _walletPanel;
+    private TextPanel _walletPanelText;
     [SerializeField]
     private TextPanel _brahminCountText;
     [SerializeField]
@@ -47,22 +47,23 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IBeginDragHandle
 
         _shopWindow ??= FindFirstObjectByType<ShopWindow>();
         _gameMenu ??= FindFirstObjectByType<GameMenu>();
-        _gameMenu.Initialized( _gameHub.GetGameSettings );
+        
 
-        _wallet = gameHub.GetWalletEngine.GetWallet;
+          _wallet = gameHub.GetWalletEngine.GetWallet;
         _brahminManager = gameHub.GetBrahmin;
         _waveEngine = gameHub.GetWaveEngine;
 
+        _gameMenu.Initialized( _gameHub.GetGameSettings );
 
-    
-         _dragShadow = Instantiate(_shadowPrefab);
+
+        _dragShadow = Instantiate(_shadowPrefab);
         _dragShadow.Initialize(_canvas);
         _dragShadow.gameObject.SetActive(false);
 
-        _wallet.OnCoinsChanged += (int value) => ChangingNumberCoins(value);
-        _brahminManager.OnBrahmin += (int value) => ChangingText(_brahminCountText, value.ToString());
-        _waveEngine.OnWave+=(int value) => ChangingText(_wavelCountText, value.ToString());
-     
+        _wallet.OnCoinsChanged += ( int value ) => ChangingNumberCoins( value );
+        _brahminManager.OnBrahmin += ( int value ) => ChangingText( _brahminCountText , value.ToString() );
+        _waveEngine.OnWave += ( int value ) => ChangingText( _wavelCountText , value.ToString() );
+
         ChangingText(_brahminCountText, _brahminManager.GetBrahminList.Count.ToString());
 
         if (_canvas != null)
@@ -75,7 +76,7 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IBeginDragHandle
         ChangingNumberCoins(_wallet.Coins);
 
     }
-
+   
     private void OnDestroy()
     {
         _wallet.OnCoinsChanged -= (int value) => ChangingNumberCoins(value);
@@ -90,15 +91,21 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IBeginDragHandle
     /// <param name="value">Значение для изменения </param>
     private void ChangingText(TextPanel panel, string value)
     {
-      
+       
         panel.SetText(value);
 
     }
 
 
-    private void ChangingNumberCoins( int value)
+    private void ChangingNumberCoins( int value )
     {
-        ChangingText(_walletPanel, value.ToString());
+          if (_walletPanelText == null)
+        {
+           //TODO=> СУКА !
+            Debug.LogError("Wallet panel text - беда!!!.");
+            return;
+        }
+       ChangingText( _walletPanelText , value.ToString());
         _shopWindow.ChangingCoins(value);
 
     }
@@ -129,7 +136,7 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IBeginDragHandle
             {
                 _textInfo = string.Format( _formatTextForScreenPanel , cardUnit.GetName , cardUnit.GetTypeWeapon , cardUnit.GetDamage , cardUnit.GetLuch );
 
-                ChangingText(_screenPanel, _textInfo);
+                ChangingText( _screenPanelText , _textInfo);
                
             }
 

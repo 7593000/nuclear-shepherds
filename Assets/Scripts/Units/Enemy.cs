@@ -57,20 +57,7 @@ public class Enemy : UnitComponent, IHealth,  IMovable
 
     public float Health() => _config.GetHealth;
 
-    //public void Attack()
-    //{
-    //    float damage = GetDamageClass.DamageTarget();
-
-    //    if (damage >= 0)
-    //    {
-    //        StartAnimation.ToRun(StateUnit.ATTACK);
-    //        GetTargetForAttack.TakeDamage(damage);
-
-    //    }
-
-
-
-    //}
+   
 
     public override void DeactiveUnit()
     {

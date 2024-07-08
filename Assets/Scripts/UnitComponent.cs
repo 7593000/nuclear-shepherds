@@ -121,9 +121,10 @@ public abstract class UnitComponent : MonoBehaviour
     /// </summary>
     public virtual void DeactiveUnit()
     {
-        _gameHub.GetGameSettings.RemoteUnit( this );
+       // _gameHub.GetGameSettings.RemoteUnit( this );
+        SetState( NoneState );
         gameObject.SetActive(false);
-         SetState(NoneState);
+        
         Debug.Log("Юнит уничтожен");
         //TODO=> плей анимации смерти
     }

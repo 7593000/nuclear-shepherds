@@ -1,7 +1,9 @@
 
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using UnityEngine;
 [Serializable]
 public sealed class SaveLoadEngine
@@ -22,7 +24,7 @@ public sealed class SaveLoadEngine
         _fileName = "NuclearShepherds-" + DateAndTime + ".fns";
 
         string path = Path.Combine( Application.persistentDataPath , _fileName );
-        SavePlayerPrefs();
+        SavePrefs();
         using ( FileStream stream = new( path , FileMode.Create ) )
         using ( BinaryWriter writer = new( stream ) )
         {
@@ -30,68 +32,105 @@ public sealed class SaveLoadEngine
             writer.Write( _data.Coins );
 
 
-            foreach ( KeyValuePair<int , Dictionary<UnityEngine.Vector3Int , int>> unitConfig in _data.UnitsData )
-            {
+            //foreach ( KeyValuePair<int , Dictionary<UnityEngine.Vector3Int , int>> unitConfig in _data.UnitsData )
+            //{
 
-                writer.Write( unitConfig.Key );
+            //    writer.Write( unitConfig.Key );
 
-                foreach ( KeyValuePair<UnityEngine.Vector3Int , int> unitConfigValue in unitConfig.Value )
-                {
+            //    foreach ( KeyValuePair<UnityEngine.Vector3Int , int> unitConfigValue in unitConfig.Value )
+            //    {
 
-                    writer.Write( unitConfigValue.Key.x );
-                    writer.Write( unitConfigValue.Key.y );
-                    writer.Write( unitConfigValue.Key.z );
+            //        writer.Write( unitConfigValue.Key.x );
+            //        writer.Write( unitConfigValue.Key.y );
+            //        writer.Write( unitConfigValue.Key.z );
 
-                    writer.Write( unitConfigValue.Value );
-                }
+            //        writer.Write( unitConfigValue.Value );
+            //    }
 
-            }
+            //}
         }
 
 
 
     }
+   
 
-
-    private void SavePlayerPrefs()
+    private void SavePrefs()
     {
- 
-         
+        List<string> saveGame = new();
 
-            int currentCount = PlayerPrefs.GetInt( "countSave" , 0 );
-
-
-            if ( currentCount >= MAXSAVECOUNT )
-            {
-                currentCount = 0;
-            }
-
-          
-            string saveKey = currentCount.ToString();
-
-          
-            PlayerPrefs.SetString( saveKey , _fileName );
-
-            
-            currentCount++;
-
-            
-            PlayerPrefs.SetInt( "countSave" , currentCount );
-
-      
-        PlayerPrefs.Save();
-        }
        
-      
- 
+        int currentCount = PlayerPrefs.GetInt( "countSave" , 0 );
+
+       
+        if ( PlayerPrefs.HasKey( "saveGame" ) )
+        {
+            string arrPrefs = PlayerPrefs.GetString( "saveGame" );
+            string[] words = arrPrefs.Split( new char[] { ',' } , System.StringSplitOptions.RemoveEmptyEntries );
+
+          
+            saveGame.AddRange( words );
+        }
+
+       
+        if ( saveGame.Count >= MAXSAVECOUNT )
+        {
+            saveGame[ currentCount % MAXSAVECOUNT ] = _fileName; // Замена старого сохранения по кругу
+        }
+        else
+        {
+            saveGame.Add( _fileName );  
+        }
+
+         
+        currentCount++;
+        PlayerPrefs.SetInt( "countSave" , currentCount );
+
+       
+        string stringSave = string.Join( "," , saveGame );
+        PlayerPrefs.SetString( "saveGame" , stringSave );
+        PlayerPrefs.Save();
+
+     
+        GameHub.Logger( stringSave );
+    }
+
+
+
+
 
 
     public GameData LoadData( string path )
     {
-        if ( File.Exists( path ) )
+        string fullPath = Path.Combine( Application.persistentDataPath , path );
+        if ( File.Exists( fullPath ) )
         {
+            GameHub.Logger( "OK FILE: " + path );
 
+            using ( FileStream stream = new FileStream( fullPath , FileMode.Open ) )
+            using ( BinaryReader reader = new BinaryReader( stream ) )
+            {
+                try
+                {
+                    int wave = reader.ReadInt32();
+                    int coins = reader.ReadInt32();
+
+                    GameHub.Logger( $"Wave: {wave}, Coins: {coins}" );
+
+                    GameData data = new GameData( wave , coins );
+                    return data;
+                }
+                catch ( EndOfStreamException ex )
+                {
+                    GameHub.Logger( "Error reading file: " + ex.Message );
+                    return null;
+                }
+            }
         }
-        return null;
+        else
+        {
+            GameHub.Logger( "File not found: " + path );
+            return null;
+        }
     }
 }

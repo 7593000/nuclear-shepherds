@@ -1,24 +1,26 @@
-using System;
 using UnityEngine;
 
 public sealed class WalletEngine : MonoBehaviour
 {
-  
-
-     private Wallet _wallet;
 
 
-    public void Initialized(int value)
+    private Wallet _wallet;
+
+
+    public void Initialized( GameHub gameHub )
     {
-        _wallet = new Wallet(value);
+        
 
-        Enemy.OnCoins +=(int value)=> _wallet.AddÑurrency(value);
+        _wallet = new Wallet( gameHub.GetGameSettings.GetGameData.Coins );
+         
+        Enemy.OnCoins += ( int value ) => _wallet.AddÑurrency( value );
+
+     
     }
-
-
-    private void OnDestroy()
+    private void OnDisable()
     {
-        Enemy.OnCoins -= (int value) => _wallet.AddÑurrency(value);
+    
+        Enemy.OnCoins -= ( int value ) => _wallet.AddÑurrency( value );
     }
 
     public Wallet GetWallet => _wallet;
