@@ -214,7 +214,7 @@ MonoBehaviour:
   GetTarget: {fileID: 0}
   CellPosition: {x: 0, y: 0, z: 0}
   _trigger: {fileID: 2906539946227434765}
-  _imagelevelSprite: {fileID: 0}
+  _imagelevelSprite: {fileID: 5092844642113724161}
 --- !u!50 &1345114102590796291
 Rigidbody2D:
   serializedVersion: 4

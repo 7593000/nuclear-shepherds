@@ -121,7 +121,7 @@ public abstract class UnitComponent : MonoBehaviour
     /// </summary>
     public virtual void DeactiveUnit()
     {
-       // _gameHub.GetGameSettings.RemoteUnit( this );
+    
         SetState( NoneState );
         gameObject.SetActive(false);
         
@@ -134,7 +134,7 @@ public abstract class UnitComponent : MonoBehaviour
     {
         Container(FindObjectOfType<GameHub>());
         _animator = GetComponent<Animator>();
-
+       
 
     }
      
@@ -144,29 +144,41 @@ public abstract class UnitComponent : MonoBehaviour
         Initialized();
 
     }
-
-    public void UpdateLevel()
+ 
+    public void UpdateLevel( )
     {
+         
+
         if (TryGetComponent(out Friends friends))
         {
             int costUpdate = ( int )GetConfig.GetRatio[ 0 ] * GetUnitData.Level;
             _gameHub.GetWalletEngine.GetWallet.TakeCurrency( costUpdate );
 
 
-            _unitData.DamageRatio += GetConfig.GetRatio[1] * _unitData.Level;
-            _unitData.SpeedAttackRatio += GetConfig.GetRatio[2] * _unitData.Level;
-            _unitData.LuckRatio += GetConfig.GetRatio[3] * _unitData.Level;
+            _unitData.DamageRatio += GetConfig.GetRatio[1] * _unitData.Level;  
+            _unitData.SpeedAttackRatio += GetConfig.GetRatio[2] * _unitData.Level;  
+            _unitData.LuckRatio += GetConfig.GetRatio[3] * _unitData.Level; 
 
             _damage.SetLuck(_unitData.Luck + _unitData.LuckRatio);
             _damage.SetDamage(_unitData.Damage + _unitData.DamageRatio);
             _damage.SetSpeedAttack(Mathf.Max(0, _unitData.SpeedAttack - _unitData.SpeedAttackRatio));
 
-            _unitData.Level += 1;
-            friends.SetSpriteLevel(GetGameHub.GetGameSettings.GetSpriteLevel(_unitData.Level));
+           
+                _unitData.Level += 1;
          
-       
+            Sprite levelSprite = _gameHub.GetGameSettings.GetSpriteLevel(_unitData.Level);
 
+
+
+           
+            friends.SetSpriteLevel(levelSprite);
         }
+        else
+        {
+            Debug.LogError("Error Friends не найден");
+        }
+        Debug.Log($"Level: {_unitData.Level}");
+        Debug.Log($"DamageRatio: {_unitData.DamageRatio}, SpeedAttackRatio: {_unitData.SpeedAttackRatio}, LuckRatio: {_unitData.LuckRatio}");
     }
 
 }/// <summary>
@@ -175,22 +187,23 @@ public abstract class UnitComponent : MonoBehaviour
 [System.Serializable]
 public struct UnitData
 {
+
+  
     public UnitData(UnitConfig config)
     {
-        Level = 1;
-        DamageRatio = 0;
-        SpeedAttackRatio = 0;
-        LuckRatio = 0;
+         Level = 1;
+         DamageRatio = 0;
+         SpeedAttackRatio = 0;
+         LuckRatio = 0;
 
         Damage = config.GetWeaponsConfig.GetDamage;
         SpeedAttack = config.GetWeaponsConfig.GetSpeedAttack;
         Luck = config.GetLuck;
 
-
-
     }
+ 
+    
     public int Level { get; set; }
-
     public float Damage { get; private set; }
     public float SpeedAttack { get; private set; }
     public float Luck { get; private set; }

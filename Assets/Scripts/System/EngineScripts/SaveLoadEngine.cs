@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using Unity.VisualScripting;
 using UnityEngine;
 [Serializable]
 public sealed class SaveLoadEngine
@@ -16,40 +17,40 @@ public sealed class SaveLoadEngine
     }
 
     public int GetMaxSaveData => MAXSAVECOUNT;
-
     public void SaveData()
     {
-        string DateAndTime = DateTime.Now.ToString("dd-MM-yyyy_HH-mm");
-        _fileName = "NuclearShepherds-" + DateAndTime + ".fns";
+        string dateAndTime = DateTime.Now.ToString("dd-MM-yyyy_HH-mm");
+        _fileName = "NuclearShepherds-" + dateAndTime + ".fns";
 
         string path = Path.Combine(Application.persistentDataPath, _fileName);
         SavePrefs();
+
         using FileStream stream = new(path, FileMode.Create);
         using BinaryWriter writer = new(stream);
-        writer.Write(_data.Wave);
-        writer.Write(_data.Coins);
+        {
+            writer.Write(_data.Wave);
+            writer.Write(_data.Coins);
 
+            foreach (KeyValuePair<int, Dictionary<Vector3Int, int>> unitID in _data.UnitsData)
+            {
+                writer.Write(unitID.Key);
+              
+                writer.Write(unitID.Value.Count); // Записываем количество элементов в словаре
 
-        //foreach ( KeyValuePair<int , Dictionary<UnityEngine.Vector3Int , int>> unitConfig in _data.UnitsData )
-        //{
+                foreach (KeyValuePair<Vector3Int, int> unitPositionAndLevel in unitID.Value)
+                {
+                    
 
-        //    writer.Write( unitConfig.Key );
-
-        //    foreach ( KeyValuePair<UnityEngine.Vector3Int , int> unitConfigValue in unitConfig.Value )
-        //    {
-
-        //        writer.Write( unitConfigValue.Key.x );
-        //        writer.Write( unitConfigValue.Key.y );
-        //        writer.Write( unitConfigValue.Key.z );
-
-        //        writer.Write( unitConfigValue.Value );
-        //    }
-
-        //}
-
-
-
+                    writer.Write(unitPositionAndLevel.Key.x);
+                    writer.Write(unitPositionAndLevel.Key.y);
+                    writer.Write(unitPositionAndLevel.Key.z);
+                    writer.Write(unitPositionAndLevel.Value); // уровень
+                }
+            }
+        }
     }
+
+
 
     public string LoadData()
     {
@@ -61,6 +62,10 @@ public sealed class SaveLoadEngine
         else return null;
     }
 
+
+    /// <summary>
+    /// Вспомогательное сохранение имен сохранений 
+    /// </summary>
     private void SavePrefs()
     {
         List<string> saveGame = new();
@@ -101,34 +106,59 @@ public sealed class SaveLoadEngine
         GameHub.Logger(stringSave);
     }
 
+    /// <summary>
+    /// Загрузка данных из файла сохранения
+    /// </summary>
+    /// <param name="path"></param>
+    /// <returns></returns>
     public GameData LoadData(string path)
     {
+        Dictionary<int, Dictionary<Vector3Int, int>> unitPositionAndLevel = new();
         string fullPath = Path.Combine(Application.persistentDataPath, path);
+
         if (File.Exists(fullPath))
         {
-            GameHub.Logger("OK FILE: " + path);
-
-            using FileStream stream = new FileStream(fullPath, FileMode.Open);
-            using BinaryReader reader = new BinaryReader(stream);
-            try
+            using FileStream stream = new(fullPath, FileMode.Open);
+            using BinaryReader reader = new(stream);
             {
-                int wave = reader.ReadInt32();
-                int coins = reader.ReadInt32();
+                try
+                {
+                    int wave = reader.ReadInt32();
+                    int coins = reader.ReadInt32();
 
-               
+                    while (stream.Position < stream.Length)
+                    {
+                        int unitID = reader.ReadInt32();
+                        int count = reader.ReadInt32(); // количество записей в файле
 
-                GameData data = new GameData(wave, coins);
-                return data;
-            }
-            catch (EndOfStreamException ex)
-            {
-                GameHub.Logger("Error reading file: " + ex.Message);
-                return null;
+                        if (!unitPositionAndLevel.ContainsKey(unitID))
+                        {
+                            unitPositionAndLevel[unitID] = new Dictionary<Vector3Int, int>();
+                        }
+
+                        for (int i = 0; i < count; i++)
+                        {
+                            Vector3Int unitPositionCell = new(reader.ReadInt32(), reader.ReadInt32(), reader.ReadInt32());
+                            int level = reader.ReadInt32();
+
+                            GameHub.Logger(unitPositionCell.ToString());
+                            unitPositionAndLevel[unitID].Add(unitPositionCell, level);
+                        }
+                    }
+
+                    GameData data = new(wave, coins, unitPositionAndLevel);
+                    return data;
+                }
+                catch (EndOfStreamException ex)
+                {
+                    GameHub.Logger("Ошибка чтения файла: " + ex.Message);
+                    return null;
+                }
             }
         }
         else
         {
-            GameHub.Logger("File not found: " + path);
+            GameHub.Logger("Файл не найден: " + path);
             return null;
         }
     }

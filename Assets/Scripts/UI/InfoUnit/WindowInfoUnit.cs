@@ -40,7 +40,7 @@ public class WindowInfoUnit : MonoBehaviour
     }
     public void DismissUnit()
     {
-        Vector3Int positionUnit = Vector3Int.CeilToInt(_unit.transform.position);
+        //Vector3Int positionUnit = Vector3Int.CeilToInt(_unit.transform.position);
      
         _unit.GetGameHub.GetTileMap.RemoveCell(_unit.CellPosition);
         _unit.DeactiveUnit();
@@ -125,7 +125,7 @@ public class WindowInfoUnit : MonoBehaviour
         int currentLevel = _unit.GetUnitData.Level;
         int maxLevel = _unit.GetGameHub.GetGameSettings.GetMaxLevel;
 
-        Debug.Log( maxLevel );
+      
         return currentLevel >=  maxLevel;
     }
 

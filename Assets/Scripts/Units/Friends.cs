@@ -10,11 +10,25 @@ public class Friends : UnitComponent, IPointerClickHandler, IPointerEnterHandler
     [SerializeField] private AttackTrigger _trigger;
     private int _segments = 46;
     [SerializeField] private Image _imagelevelSprite;
-
-
+   
+    
     public void SetSpriteLevel(Sprite img)
     {
+        if (img == null)
+        {
+            Debug.LogError("Sprite =  null");
+            return;
+        }
+
+        if (_imagelevelSprite == null)
+        {
+            Debug.LogError("SpriteRenderer  =  null");
+            return;
+        }
+
         _imagelevelSprite.sprite = img;
+   
+   
     }
      
 

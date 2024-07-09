@@ -8,7 +8,7 @@ public class UnitConfig : ScriptableObject
     [SerializeField] private int _id;
     [SerializeField, Tooltip( "Бро или нет" )]
     private TypeUnit _unitType;
-    private LevelEnemy _enemy;
+ 
     [Space]
     [SerializeField, Tooltip( "Имя юнита" )]
     private string _name;

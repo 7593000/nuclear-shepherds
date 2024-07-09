@@ -12,6 +12,7 @@ public sealed class TileMapEngine : MonoBehaviour
     [SerializeField] private List<Vector3Int> _occupiedCells = new(); //Лист с занятыми ячейками
 
 
+
     // Соседние клетки для четных и нечетных рядов
     private readonly Vector3Int[] _neighborCellsOdd =
    {
@@ -34,6 +35,8 @@ public sealed class TileMapEngine : MonoBehaviour
         new (0, -1, 0), // ЮВ
         new (-1, -1, 0)  // ЮЗ
     };
+
+    public Tilemap GetTileMap => _tilemap;
 
     /// <summary>
     /// Включать - выключать рендер tilemap
