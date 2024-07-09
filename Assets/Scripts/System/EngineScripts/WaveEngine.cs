@@ -132,7 +132,7 @@ public sealed class WaveEngine : MonoBehaviour
     /// </summary>
     private void WaveGeneration()
     {
-        CreateEnemyUnits();
+       
 
         StartWave();
     }
@@ -154,8 +154,9 @@ public sealed class WaveEngine : MonoBehaviour
 
     private IEnumerator StartNewWave()
     {
-        
-        
+
+        CreateEnemyUnits();
+
         yield return new WaitForSeconds(_config.GetTimeNewWave);
 
         //todo=> ADD SOUND START WAVE
