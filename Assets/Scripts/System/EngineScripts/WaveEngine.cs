@@ -110,7 +110,9 @@ public sealed class WaveEngine : MonoBehaviour
                 if (GetRange(percentageAppearance))
                 {
                     Enemy enemyUnit = _gameHub.GetPoolEnemy.GetEnemy(configUnit);
+                    
                     enemyUnit.BusyWave = true;
+                    
                     _enemyList.Add(enemyUnit);
                     count++;
                     
@@ -184,7 +186,9 @@ public sealed class WaveEngine : MonoBehaviour
         for (int i = 0; i < _enemyList.Count; i++)
         {
             _enemyList[i].transform.position = _startEnemyPosition[1].transform.position;
+            _enemyList[i].Initialized(_gameHub);
             _enemyList[i].gameObject.SetActive(true);
+            
             yield return new WaitForSeconds(1f);
         }
 

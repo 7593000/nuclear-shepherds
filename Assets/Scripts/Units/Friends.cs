@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -77,9 +78,11 @@ public class Friends : UnitComponent, IPointerClickHandler, IPointerEnterHandler
         base.DeactiveUnit();
         _gameHub.GetGameSettings.RemoveUnit( this );
     }
-    protected override void Start()
+  
+
+    private void Start()
     {
-        base.Start();
+        
 
         if (_imagelevelSprite == null)
         {

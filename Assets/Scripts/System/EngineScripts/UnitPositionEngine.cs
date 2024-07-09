@@ -46,17 +46,15 @@ public class UnitPositionEngine : MonoBehaviour
                     friend.transform.position =  positionUnit;
                     friend.CellPosition = positionUnitInt;
                     _gameHub.GetTileMap.AddCell(positionUnitInt);
-                    
+                    friend.Initialized( _gameHub );
                     units.Add(friend);
-                    
-                    
-                    //if (level > 1)
-                    //{
-                    // for(int i = 0 ; i < level; i++)
 
-                    //        friend.UpdateLevel();
-                      
-                    //}
+
+                    
+
+                            friend.UpdateLevel( level );
+
+                   
 
 
                 }
@@ -67,12 +65,7 @@ public class UnitPositionEngine : MonoBehaviour
             }
             
         }
-        foreach (var unit in units)
-        {
-            for (int i = 0; i < 4; i++)
-                unit.UpdateLevel();
-      
-        }
+        
 
         units.ForEach(unit => { _gameHub.GetGameSettings.AddUnit(unit); });
 

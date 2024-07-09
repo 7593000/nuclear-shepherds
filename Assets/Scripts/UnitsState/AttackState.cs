@@ -7,60 +7,67 @@ using UnityEngine;
 public class AttackState : IUnitState
 {
     private IAttack _attack;
-    private float _damage = 0 ;
+    private float _damage = 0;
     private float _luck;
-    public void EnterState(UnitComponent unit)
+    public void EnterState( UnitComponent unit )
     {
         _attack = unit.GetAttack; //todo=> del
         _luck = unit.GetConfig.GetLuck;
-        unit.GetGameHub.GetUnitsUpdateEngine.AddUnit(unit, StateUnitList.ATTACK);
-        unit.GetGameHub.GetUnitsUpdateEngine.AddUnit(unit, StateUnitList.DIRECT);
+        unit.GetGameHub.GetUnitsUpdateEngine.AddUnit( unit , StateUnitList.ATTACK );
+        unit.GetGameHub.GetUnitsUpdateEngine.AddUnit( unit , StateUnitList.DIRECT );
 
 
     }
 
-    public void ExitState(UnitComponent unit)
+    public void ExitState( UnitComponent unit )
     {
-        unit.GetGameHub.GetUnitsUpdateEngine.RemoveUnit(unit, StateUnitList.DIRECT);
-        unit.GetGameHub.GetUnitsUpdateEngine.RemoveUnit(unit, StateUnitList.ATTACK);
+        unit.GetGameHub.GetUnitsUpdateEngine.RemoveUnit( unit , StateUnitList.DIRECT );
+        unit.GetGameHub.GetUnitsUpdateEngine.RemoveUnit( unit , StateUnitList.ATTACK );
 
     }
 
-    public void UpdateState(UnitComponent unit)
+    public void UpdateState( UnitComponent unit )
     {
-        if (unit.GetTargetForAttack != null)
+        if ( unit.GetTargetForAttack != null )
         {
-          
+
 
             _damage = unit.GetDamageClass.DamageTarget();
 
-            if ( _damage >= 0)
+            if ( _damage >= 0 )
             {
 
                 float damageAndCrit = CalculatingDamage();
 
-                unit.StartAnimation.ToRun(StateUnit.ATTACK);
+                unit.StartAnimation.ToRun( StateUnit.ATTACK );
 
                 _attack.Attack( damageAndCrit ); ///Передать урон классу оружия для нанесения урона врагу 
 
             }
-            else if ( _damage == -1)// -1  : оружие на кулдауне
+            else if ( _damage == -1 )// -1  : оружие на кулдауне
             {
 
-                unit.StartAnimation.ToRun(StateUnit.IDLE);
+                unit.StartAnimation.ToRun( StateUnit.IDLE );
             }
-            else if ( _damage == -100) //-100 : оружие на перезагрузке 
+            else if ( _damage == -100 ) //-100 : оружие на перезагрузке 
             {
 
-                unit.StartAnimation.ToRun(StateUnit.IDLE); //TODO => добавить аним. перезарядки
+                unit.StartAnimation.ToRun( StateUnit.IDLE ); //TODO => добавить аним. перезарядки
             }
 
         }
         else
         {
-            unit.SetState(unit.IdleState);
+            unit.SetState( unit.IdleState );
         }
 
+        if ( unit.GetTargetForAttack.IsDead )
+        {
+            if ( unit.GetTypeUnit == TypeUnit.ENEMY )
+            {
+                unit.SetState( unit.SearchState );
+            }
+        }
 
 
 

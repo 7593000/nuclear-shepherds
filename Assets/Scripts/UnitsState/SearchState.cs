@@ -41,12 +41,10 @@ public class SearchState : IUnitState
 
     public void UpdateState(UnitComponent unit)
     {
-        if (!_brahmin.gameObject.activeSelf)
-        {
-            _brahmin = SearchTargetAttack(unit);
+        
+        if ( _brahmin == null )
+            unit.gameObject.SetActive(false);
 
-            if (_brahmin == null) { unit.SetState(unit.NoneState); return; }
-        }
 
         float distanceSquared = (unit.transform.position - unit.GetTarget.position).sqrMagnitude;
 

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _addEnemy: 1
   _numberEnemiesInWave: 5
-  _timeNewWave: 20
+  _timeNewWave: 10
   _enemy:
   - _enemyConfig: {fileID: 11400000, guid: 38f6ca7ac0e803e47836cb9bd765e620, type: 2}
     _percentageAppearance: 100

@@ -4,11 +4,20 @@ public class Brahmin : UnitComponent, IHealth, IMovable
     public bool IsDead { get; set; } = false;
     public bool IsActive { get; private set; } = true;
 
-    public void Initialized(BrahminManager manager)
+ 
+    public void Initialized(BrahminManager manager, GameHub gameHub )
     {
         _manager = manager;
+        Initialized( gameHub );
+
+
     }
 
+    protected override void AddComponentsUnit()
+    {
+        base.AddComponentsUnit();
+        _health.Container( this );
+    }
     public float Health()
     {
         return _config.GetHealth;
@@ -31,8 +40,9 @@ public class Brahmin : UnitComponent, IHealth, IMovable
             float health = _health.TakeDamage( damage );
             if ( health <= 0 )
             {
+                _manager.DeadBrahmin( this );
                 DeactiveUnit();
-                _manager.DeadBrahmin(this);
+             
             }
         }
         
@@ -41,9 +51,9 @@ public class Brahmin : UnitComponent, IHealth, IMovable
     }
 
 
-    protected override void Initialized()
-    {
-        base.Initialized();
-        _health.Container( this );
-    }
+    //public override void Initialized(GameHub gameHub )
+    //{
+    //    base.Initialized(FindObjectOfType<GameHub>() ); //TODO=>DEL
+    //  
+    //}
 }

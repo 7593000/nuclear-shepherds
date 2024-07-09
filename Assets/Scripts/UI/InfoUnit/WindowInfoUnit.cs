@@ -62,9 +62,9 @@ public class WindowInfoUnit : MonoBehaviour
            
             return;
         }
-       
-         
-        _unit.UpdateLevel();
+        int level = _unit.GetUnitData.Level;
+        level++;
+        _unit.UpdateLevel( level );
       
         ShowInfo();
     }
@@ -82,7 +82,7 @@ public class WindowInfoUnit : MonoBehaviour
 
     private void ShowInfo()
     {
-     
+        Debug.Log( _unit.GetUnitData.Level );
 
 
         bool isMaxLevel = CheckedLevel();
@@ -106,9 +106,9 @@ public class WindowInfoUnit : MonoBehaviour
         _level.SetText(_unit.GetUnitData.Level.ToString());
         _costUdgrade.SetText(cost);
 
-        _currentDamage.SetText(damage.ToString("F1"));
-        _currentSpeedAttack.SetText(speedAttack.ToString("F1"));
-        _currentLuck.SetText(luck.ToString("F1"));
+        _currentDamage.SetText(damage.ToString("F2"));
+        _currentSpeedAttack.SetText(speedAttack.ToString("F2"));
+        _currentLuck.SetText(luck.ToString("F2"));
 
         _newDamage.SetText(newDamageValue);
         _newSpeedAttack.SetText(newSpeedAttackValue);

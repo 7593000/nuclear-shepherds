@@ -6,7 +6,7 @@ public abstract class UnitComponent : MonoBehaviour
     protected UnitData _unitData;
     //private List<IReset> _resetDataComponents = new();
 
-    [SerializeField] private Animator _animator;
+    [SerializeField] protected Animator _animator;
     private AnimatorComponent _animatorComponent;
     [SerializeField] protected UnitConfig _config;
     [SerializeField] public Health _health;
@@ -65,16 +65,19 @@ public abstract class UnitComponent : MonoBehaviour
     public IUnitState SearchState { get; private set; } //Поиск врага(брамина)
     public IUnitState DeadState { get; private set; }   // Смерть
 
-    public virtual void Container(GameHub gameHub)
+ 
+    public virtual void Initialized( GameHub gameHub )
     {
         _gameHub = gameHub;
+        AddComponentsUnit();
+
     }
-
-  
-    protected virtual void Initialized()
+    protected virtual void AddComponentsUnit()
     {
+        if ( _gameHub == null )
+            _gameHub = FindObjectOfType<GameHub>();
 
-        _unitData = new UnitData(GetConfig);
+        _unitData = new UnitData( GetConfig );
 
         NoneState = new NoneState();
         IdleState = new IdleState();
@@ -83,21 +86,20 @@ public abstract class UnitComponent : MonoBehaviour
         SearchState = new SearchState();
         DeadState = new DeadState();
 
-        _damage = new Damage(GetConfig.GetWeaponsConfig, _unitData.Luck + _unitData.LuckRatio);
+        _animator = GetComponent<Animator>();
+
+        _damage = new Damage( GetConfig.GetWeaponsConfig , _unitData.Luck + _unitData.LuckRatio );
 
         TypeWeapons typeWeapon = GetConfig.GetWeaponsConfig.GetTypeWeapons;
 
-        _attack = WeaponFactory.CreateWeapon(typeWeapon, this);
+        _attack = WeaponFactory.CreateWeapon( typeWeapon , this );
 
 
         _animatorComponent = gameObject.AddComponent<AnimatorComponent>();
-        _animatorComponent.Container(this);
+        _animatorComponent.Container( this );
 
-     
 
     }
-
- 
 
     public void SetState(IUnitState newState)
     {
@@ -129,47 +131,34 @@ public abstract class UnitComponent : MonoBehaviour
         //TODO=> плей анимации смерти
     }
 
-    ////TODO=>TEMP ?
-    private void Awake()
-    {
-        Container(FindObjectOfType<GameHub>());
-        _animator = GetComponent<Animator>();
-       
-
-    }
-     
-    protected virtual void Start()
-    {
-      
-        Initialized();
-
-    }
+   
+  
  
-    public void UpdateLevel( )
+    public void UpdateLevel(int level = 1)
     {
-         
+
+        _unitData.Level = level;
 
         if (TryGetComponent(out Friends friends))
         {
-            int costUpdate = ( int )GetConfig.GetRatio[ 0 ] * GetUnitData.Level;
+            int costUpdate = ( int )GetConfig.GetRatio[ 0 ] * GetUnitData.Level ;
             _gameHub.GetWalletEngine.GetWallet.TakeCurrency( costUpdate );
 
 
-            _unitData.DamageRatio += GetConfig.GetRatio[1] * _unitData.Level;  
-            _unitData.SpeedAttackRatio += GetConfig.GetRatio[2] * _unitData.Level;  
-            _unitData.LuckRatio += GetConfig.GetRatio[3] * _unitData.Level; 
+            _unitData.DamageRatio += GetConfig.GetRatio[1] * _unitData.Level  ;
+            ;  
+            _unitData.SpeedAttackRatio += GetConfig.GetRatio[2] * _unitData.Level  ;
+            ;  
+            _unitData.LuckRatio += GetConfig.GetRatio[ 3 ] * _unitData.Level;
+            ; 
 
             _damage.SetLuck(_unitData.Luck + _unitData.LuckRatio);
             _damage.SetDamage(_unitData.Damage + _unitData.DamageRatio);
             _damage.SetSpeedAttack(Mathf.Max(0, _unitData.SpeedAttack - _unitData.SpeedAttackRatio));
+             
 
-           
-                _unitData.Level += 1;
-         
             Sprite levelSprite = _gameHub.GetGameSettings.GetSpriteLevel(_unitData.Level);
-
-
-
+             
            
             friends.SetSpriteLevel(levelSprite);
         }
@@ -179,6 +168,9 @@ public abstract class UnitComponent : MonoBehaviour
         }
         Debug.Log($"Level: {_unitData.Level}");
         Debug.Log($"DamageRatio: {_unitData.DamageRatio}, SpeedAttackRatio: {_unitData.SpeedAttackRatio}, LuckRatio: {_unitData.LuckRatio}");
+    
+    
+    
     }
 
 }/// <summary>
@@ -210,6 +202,9 @@ public struct UnitData
     public float DamageRatio { get; set; }
     public float SpeedAttackRatio { get; set; }
     public float LuckRatio { get; set; }
+
+
+
 
 }
 

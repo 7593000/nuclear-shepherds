@@ -44,16 +44,17 @@ public sealed class PoolEnemy : MonoBehaviour
     {
         Debug.Log("Создан +1 юнит");
         UnitComponent unit = Instantiate(unitConfig.GetPrefab, _parent);
-
+      
         Enemy enemyUnit = unit as Enemy;
         if (enemyUnit == null)
         {
+            enemyUnit.Initialized( _gameHub );
             Debug.LogError("Prefab не является типом Enemy!");
             return null;
         }
 
         enemyUnit.gameObject.SetActive(false);
-        enemyUnit.Container(_gameHub);
+        enemyUnit.Initialized( _gameHub);
         return enemyUnit;
     }
 

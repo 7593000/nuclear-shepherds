@@ -77,14 +77,8 @@ public class GameHub : MonoBehaviour
             GameState.Instance.IsLoading = false;
     }
   
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.G))
-        {
-            _unitPositionEngine.PlacementUnits();
-
-        }
-    }
+   
+    
     private void OnEnable()
     {
         InitializeComponents();

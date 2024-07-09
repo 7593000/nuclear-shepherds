@@ -65,22 +65,20 @@ public class Enemy : UnitComponent, IHealth, IMovable
 
     }
 
-    protected override void Initialized()
+    protected override void AddComponentsUnit()
+
     {
-        base.Initialized();
-        _health.Container(this);
-        _protection = new Protection(this);
+        base.AddComponentsUnit();
+        _health.Container( this );
+        _protection = new Protection( this );
         CollectResettableComponents();
-
+        SetState( MoveState );
+      
+      
 
     }
 
-    protected override void Start()
-    {
-        base.Start();
-        SetState(MoveState);
-    }
-
+ 
 
 
     public void ResetUnit()

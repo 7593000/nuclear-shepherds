@@ -239,6 +239,7 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IBeginDragHandle
 
                     if (unit != null)
                     {
+                        unit.Initialized( _gameHub );
                         Vector3Int cellPosition = _gameHub.GetTileMap._tilemap.WorldToCell(_dragShadow.transform.position);
                         unit.transform.position = _dragShadow.transform.position;
                         unit.CellPosition = cellPosition;
