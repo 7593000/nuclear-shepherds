@@ -61,13 +61,17 @@ public class AttackState : IUnitState
             unit.SetState( unit.IdleState );
         }
 
-        if ( unit.GetTargetForAttack.IsDead )
-        {
-            if ( unit.GetTypeUnit == TypeUnit.ENEMY )
+        if(unit.GetTypeUnit == TypeUnit.ENEMY){
+        
+            if (unit.GetTargetForAttack.IsDead)
             {
-                unit.SetState( unit.SearchState );
+                if (unit.GetTypeUnit == TypeUnit.ENEMY)
+                {
+                    unit.SetState(unit.SearchState);
+                }
             }
-        }
+        } 
+     
 
 
 

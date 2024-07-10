@@ -9,6 +9,7 @@ public sealed class SaveLoadEngine
 {
     private GameData _data;
     private string _fileName;
+    private const string NAMEFILE = "NuclearShepherds";
     private const int MAXSAVECOUNT = 5;
 
     public SaveLoadEngine(GameData data)
@@ -20,7 +21,7 @@ public sealed class SaveLoadEngine
     public void SaveData()
     {
         string dateAndTime = DateTime.Now.ToString("dd-MM-yyyy_HH-mm");
-        _fileName = "NuclearShepherds-" + dateAndTime + ".fns";
+        _fileName = NAMEFILE+"-" + dateAndTime + ".fns";
 
         string path = Path.Combine(Application.persistentDataPath, _fileName);
         SavePrefs();

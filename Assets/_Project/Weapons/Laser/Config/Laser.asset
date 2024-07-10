@@ -13,7 +13,12 @@ MonoBehaviour:
   m_Name: Laser
   m_EditorClassIdentifier: 
   _type: 6
-  _duration: 2
+  _numberStriking: 1
+  _radiusAoE: 0
   _speedAttack: 1
+  _rechargeTime: 0
+  _weaponAmmo: 0
   _damage: 20
+  _distance: 10
+  _audioClip: {fileID: 0}
   _sprite: {fileID: 21300000, guid: c49f542f69d45c544926a89b67723ad8, type: 3}

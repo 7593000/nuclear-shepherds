@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d26c15ee3fe0a09409c2112b20f5e458, type: 3}
+  m_Name: Turret
+  m_EditorClassIdentifier: 
+  _id: 54
+  _unitType: 1
+  _name: "\u0422\u0443\u0440\u0435\u043B\u044C"
+  _health: 0
+  _luck: 0.908
+  _occupiedArea: 0
+  _speed: 0
+  _typeWeapon: 6
+  _config: {fileID: 11400000, guid: 66a2e95831cbed44a864d8963c9b28aa, type: 2}
+  _cost: 500
+  _costUpgrade: 500
+  _damageRatio: 1.2
+  _speedAttackRatio: 0.01
+  _luckRatio: 0.05
+  _firearms: 0
+  _fire: 0
+  _energyWeapons: 0
+  _explosionProtection: 0
+  _unitPrefab: {fileID: 6797377760339903826, guid: c34828b9a056e8340b64b7928f132434, type: 3}
+  _sprite: {fileID: 21300000, guid: 1dc4cf73fcc6f9f489fbdecb1ade8bda, type: 3}

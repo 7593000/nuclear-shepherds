@@ -1,6 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 
 public class AttackTrigger : MonoBehaviour
@@ -8,7 +6,7 @@ public class AttackTrigger : MonoBehaviour
     private UnitComponent _unit;
 
     private CircleCollider2D _collider;
- 
+
     private List<UnitComponent> _enemies = new();
 
 
@@ -19,7 +17,7 @@ public class AttackTrigger : MonoBehaviour
         _unit = unit;
         _collider = GetComponent<CircleCollider2D>();
         _collider.radius = _unit.GetConfig.GetWeaponsConfig.GetDistance;
-       
+
     }
 
 
@@ -101,5 +99,5 @@ public class AttackTrigger : MonoBehaviour
         }
     }
 
-     
+
 }
