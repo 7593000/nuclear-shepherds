@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Minigun
   m_EditorClassIdentifier: 
   _type: 7
-  _numberStriking: 1
-  _radiusAoE: 0
-  _speedAttack: 2
-  _rechargeTime: 0
-  _weaponAmmo: 0
-  _damage: 8
-  _distance: 0
+  _numberStriking: 5
+  _radiusAoE: 2
+  _speedAttack: 0
+  _rechargeTime: 5
+  _weaponAmmo: 200
+  _damage: 10
+  _distance: 10
   _audioClip: {fileID: 0}
   _sprite: {fileID: 21300000, guid: 229491765edb94047984698cd51d0cfa, type: 3}

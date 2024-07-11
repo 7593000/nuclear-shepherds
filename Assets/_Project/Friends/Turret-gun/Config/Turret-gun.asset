@@ -16,7 +16,7 @@ MonoBehaviour:
   _unitType: 1
   _name: "\u0422\u0443\u0440\u0435\u043B\u044C-\u0433\u0430\u043D"
   _health: 0
-  _luck: 0.4
+  _luck: 0.787
   _occupiedArea: 1
   _speed: 0
   _typeWeapon: 7

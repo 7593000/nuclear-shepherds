@@ -8,9 +8,9 @@ using UnityEngine;
 public sealed class UnitsUpdateEngine : MonoBehaviour
 {
     [SerializeField, Tooltip("Время для обновления статусов")]
-    private float _timerUpdate = 0.5f;
+    private float _timerUpdate = 2f;
     [SerializeField, Tooltip("Время для обновления статусов, анимация")]
-    private float _timerUpdateDirect = 1.5f;
+    private float _timerUpdateDirect = 1f;
     [SerializeField, Tooltip("Минимальное время задержки для атаки")]
     private float _minAttackDelay = 0.1f;
 

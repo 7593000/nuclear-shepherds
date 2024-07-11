@@ -21,7 +21,7 @@ public class Explosion : MonoBehaviour
             if (hitCollider.gameObject.TryGetComponent<IHealth>(out IHealth enemyHealth))
             {
                 _strikingObjects.Add(enemyHealth);
-                Debug.Log("_strikingObjects" +_strikingObjects.Count);
+               
             }
         }
         
@@ -33,6 +33,7 @@ public class Explosion : MonoBehaviour
 
     public void Deactivation()
     {
+        Debug.Log( "DEAC" );
         gameObject.SetActive(false);
     }
 

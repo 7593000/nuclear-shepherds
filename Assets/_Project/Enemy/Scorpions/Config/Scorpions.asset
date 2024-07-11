@@ -26,7 +26,7 @@ MonoBehaviour:
   _damageRatio: 0
   _speedAttackRatio: 0
   _luckRatio: 0
-  _firearms: 5
+  _firearms: 6
   _fire: 5
   _energyWeapons: 10
   _explosionProtection: 5

@@ -21,7 +21,9 @@ public class AnimatorComponent : MonoBehaviour
        
         switch (state)
         {
-
+            case StateUnit.NONE:
+                StopAnimation();
+                break;
             case StateUnit.IDLE:
                 Animation("Idle");
 
@@ -39,7 +41,8 @@ public class AnimatorComponent : MonoBehaviour
         }
 
     }
-
+    private void StopAnimation() {
+     } 
     private void Animation(string parameters)
     {
         if (_activeParameters == null)
@@ -50,8 +53,8 @@ public class AnimatorComponent : MonoBehaviour
         _positionX = _unit.GetDirectionView[0];
         _positionY = _unit.GetDirectionView[1];
 
-        _animator.ResetTrigger(_activeParameters);
-
+     _animator.ResetTrigger(_activeParameters);
+         
         _animator.SetFloat("PositionX", _positionX);
         _animator.SetFloat("PositionY", _positionY);
         _animator.SetTrigger(parameters);
