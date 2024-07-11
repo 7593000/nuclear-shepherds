@@ -25,57 +25,38 @@ public class AttackState : IUnitState
         unit.GetGameHub.GetUnitsUpdateEngine.RemoveUnit( unit , StateUnitList.ATTACK );
 
     }
-
-    public void UpdateState( UnitComponent unit )
+    public void UpdateState(UnitComponent unit)
     {
-        if ( unit.GetTargetForAttack != null )
+        if (unit.GetTargetForAttack != null)
         {
-
-
             _damage = unit.GetDamageClass.DamageTarget();
 
-            if ( _damage >= 0 )
+            if (_damage >= 0)
             {
-
                 float damageAndCrit = CalculatingDamage();
-
-                unit.StartAnimation.ToRun( StateUnit.ATTACK );
-
-                _attack.Attack( damageAndCrit ); ///Передать урон классу оружия для нанесения урона врагу 
-
+                unit.StartAnimation.ToRun(StateUnit.ATTACK);
+                _attack.Attack(damageAndCrit); // Передать урон классу оружия для нанесения урона врагу
             }
-            else if ( _damage == -1 )// -1  : оружие на кулдауне
+            else if (_damage == -1) // -1 : оружие на кулдауне
             {
-
-                unit.StartAnimation.ToRun( StateUnit.IDLE );
+                unit.StartAnimation.ToRun(StateUnit.IDLE);
             }
-            else if ( _damage == -100 ) //-100 : оружие на перезагрузке 
+            else if (_damage == -100) // -100 : оружие на перезарядке 
             {
-
-                unit.StartAnimation.ToRun( StateUnit.IDLE ); //TODO => добавить аним. перезарядки
+                unit.StartAnimation.ToRun(StateUnit.IDLE); // TODO: добавить анимацию перезарядки
             }
 
+            if (unit.GetTypeUnit == TypeUnit.ENEMY && unit.GetTargetForAttack.IsDead)
+            {
+                unit.SetState(unit.SearchState);
+            }
         }
         else
         {
-            unit.SetState( unit.IdleState );
+            unit.SetState(unit.IdleState);
         }
-
-        if(unit.GetTypeUnit == TypeUnit.ENEMY){
-        
-            if (unit.GetTargetForAttack.IsDead)
-            {
-                if (unit.GetTypeUnit == TypeUnit.ENEMY)
-                {
-                    unit.SetState(unit.SearchState);
-                }
-            }
-        } 
-     
-
-
-
     }
+
     /// <summary>
     /// Рассчет наносимого урона: урон * удача
     /// </summary>

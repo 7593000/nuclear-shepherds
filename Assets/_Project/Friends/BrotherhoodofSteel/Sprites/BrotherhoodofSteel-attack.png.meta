@@ -1,0 +1,1190 @@
+fileFormatVersion: 2
+guid: 584abc1064cbd9c49aa0032ecac78917
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 736
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.46875, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5e7c1f1aa21124498df8b14829ad085
+      internalID: 2124439475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 736
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.4375, y: 0.14583334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0faa896b8f2de444e814490e9bd1facd
+      internalID: -987107881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 736
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.484375, y: 0.14583334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36e6b81b52628484ab9f10c89f9b9bb1
+      internalID: -1440087431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 736
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.515625, y: 0.14583334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69edc565637e7654dac8f0da98a318f3
+      internalID: -1066774296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 736
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.46875, y: 0.15625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 777e7bb578a5b06498af8df512a168e9
+      internalID: -143604816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 736
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.453125, y: 0.1875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc219545f395ce949bf4ed9b615e8b7b
+      internalID: -1752822941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 736
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.46875, y: 0.16666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e4dec8f2f21450458e5ee1332494d5f
+      internalID: -2919597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 736
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.515625, y: 0.15625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea8b84823fabf734496fbe40e9f277a9
+      internalID: 859701871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.4375, y: 0.20833334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 529d522d2eea0524ca69070a0aba1290
+      internalID: -1355633873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_9
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 640
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.453125, y: 0.19791667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3104de59ef771bb4cad356760b11723b
+      internalID: -1167585739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_10
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 640
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48958334, y: 0.15625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06ee2f62e22314246bb20ace5ef39464
+      internalID: -1019909595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_12
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 640
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.46875, y: 0.15625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42d50aee51636ff49a01db27d0a55836
+      internalID: -552588135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_13
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 640
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5416667, y: 0.125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf7d620b554e7b34d9ee1e901a82f298
+      internalID: -598559143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_15
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 640
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.625, y: 0.15625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1952211b9147ca14d9320111e1ff1051
+      internalID: 1075214027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_16
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 640
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5729167, y: 0.15625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48cd3d2610a1d3c45af0f8fdd0374b73
+      internalID: -1474368759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_18
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 640
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c1fb306a5b280e4d91202037ad94303
+      internalID: -1191009186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 544
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.20833334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90ffbc01a01a65a4d809f6662bcebd42
+      internalID: 313097556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_20
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 544
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.4375, y: 0.1875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8cdd3a1a368a5d4a8a7d41934e8b0d5
+      internalID: 1831662679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_21
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 544
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.46875, y: 0.1875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccade601f052a044b94b11dfad0eef41
+      internalID: 773915622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_22
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 544
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.484375, y: 0.13541667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a9923b3c99bdc545a9e8436c6627d65
+      internalID: 2109233694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_23
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 544
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e77118d65afc91428672381c4426602
+      internalID: 1993763769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_24
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 544
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5625, y: 0.15625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfef0bfb5cb189f428dfce2dda7f6bd6
+      internalID: -1855506467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_25
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 544
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.640625, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbe8f35c73c91954788bad5a2c52a296
+      internalID: 306312159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_26
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 544
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.515625, y: 0.14583334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d85242a721cc9e4f88134ea6c398618
+      internalID: 1719849138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 479798cb4c12d2945a1ea922910faab8
+      internalID: -926637352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_28
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 448
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc682b472b6016942860bdacf6557d44
+      internalID: 1067295211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_29
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 448
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bba670aa4273023418fe443edcd78684
+      internalID: -178283701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_30
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 448
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08d98b18ead76944799798b440e83153
+      internalID: -1474384567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_31
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 448
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcef1ea434a01f34e857425dfcf4f1dd
+      internalID: -268366919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_32
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 448
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21507167624dbad448ada57a41b99325
+      internalID: -963301396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_33
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 448
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8455e54f4f82f614a98df2ef8a3201fd
+      internalID: 1540303382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_34
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 448
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e7225a0e04d2bb4597342914e6b7fd9
+      internalID: -564796274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 352
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0835daf5ee571cb46987acc9c1c698fd
+      internalID: 504040988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_36
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 352
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.484375, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6def9897a1c931342bff6ca602e9dbbb
+      internalID: -392799826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_37
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 352
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48958334, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89d104b803501a641b8ff9abed1564c6
+      internalID: -1239747365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_39
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 352
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48958334, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 332bbc8339ffffd47823b0daad5e5ad8
+      internalID: 1644712653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_40
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 352
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48958334, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f4f466fe9a502948b6f0809d444f2a4
+      internalID: -1537491880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_42
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 352
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.38541666, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 981578cb9d346dd4f97f177f942dac21
+      internalID: 959672078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_43
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 352
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.33333334, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2352dfb8e175064a830cd752c5854f6
+      internalID: -1130154977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_45
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 352
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e12b6e5bc81ae74184d9c747515b03b
+      internalID: 285503131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_46
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3722be12775a8a4aafdb514517478e6
+      internalID: -1468303101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_47
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 256
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab6f3606581cc894cb3dabcd94b7590b
+      internalID: -1945316478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_48
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92991ba896fc7444da53cc48137a1acf
+      internalID: -821800612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_49
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 256
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac5ed18ddb1797040b7a3f50695235cf
+      internalID: 137396977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_50
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 132635ec19211e648be8f78058ed81a1
+      internalID: 1107182961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_51
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 256
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4606b0066c314e439cc0e2fdb3de342
+      internalID: -31083302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_53
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 256
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4512a80caa42d34686394c1657e2fb6
+      internalID: 63110747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-attack_54
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 256
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94fd321b093fed74ea32e7c24549f416
+      internalID: 1290361815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      BrotherhoodofSteel-attack_0: 2124439475
+      BrotherhoodofSteel-attack_1: -987107881
+      BrotherhoodofSteel-attack_10: -1019909595
+      BrotherhoodofSteel-attack_11: -1253831986
+      BrotherhoodofSteel-attack_12: -552588135
+      BrotherhoodofSteel-attack_13: -598559143
+      BrotherhoodofSteel-attack_14: -869620746
+      BrotherhoodofSteel-attack_15: 1075214027
+      BrotherhoodofSteel-attack_16: -1474368759
+      BrotherhoodofSteel-attack_17: -56042289
+      BrotherhoodofSteel-attack_18: -1191009186
+      BrotherhoodofSteel-attack_19: 313097556
+      BrotherhoodofSteel-attack_2: -1440087431
+      BrotherhoodofSteel-attack_20: 1831662679
+      BrotherhoodofSteel-attack_21: 773915622
+      BrotherhoodofSteel-attack_22: 2109233694
+      BrotherhoodofSteel-attack_23: 1993763769
+      BrotherhoodofSteel-attack_24: -1855506467
+      BrotherhoodofSteel-attack_25: 306312159
+      BrotherhoodofSteel-attack_26: 1719849138
+      BrotherhoodofSteel-attack_27: -926637352
+      BrotherhoodofSteel-attack_28: 1067295211
+      BrotherhoodofSteel-attack_29: -178283701
+      BrotherhoodofSteel-attack_3: -1066774296
+      BrotherhoodofSteel-attack_30: -1474384567
+      BrotherhoodofSteel-attack_31: -268366919
+      BrotherhoodofSteel-attack_32: -963301396
+      BrotherhoodofSteel-attack_33: 1540303382
+      BrotherhoodofSteel-attack_34: -564796274
+      BrotherhoodofSteel-attack_35: 504040988
+      BrotherhoodofSteel-attack_36: -392799826
+      BrotherhoodofSteel-attack_37: -1239747365
+      BrotherhoodofSteel-attack_38: 968898949
+      BrotherhoodofSteel-attack_39: 1644712653
+      BrotherhoodofSteel-attack_4: -143604816
+      BrotherhoodofSteel-attack_40: -1537491880
+      BrotherhoodofSteel-attack_41: 352303552
+      BrotherhoodofSteel-attack_42: 959672078
+      BrotherhoodofSteel-attack_43: -1130154977
+      BrotherhoodofSteel-attack_44: 18592987
+      BrotherhoodofSteel-attack_45: 285503131
+      BrotherhoodofSteel-attack_46: -1468303101
+      BrotherhoodofSteel-attack_47: -1945316478
+      BrotherhoodofSteel-attack_48: -821800612
+      BrotherhoodofSteel-attack_49: 137396977
+      BrotherhoodofSteel-attack_5: -1752822941
+      BrotherhoodofSteel-attack_50: 1107182961
+      BrotherhoodofSteel-attack_51: -31083302
+      BrotherhoodofSteel-attack_52: 1304014763
+      BrotherhoodofSteel-attack_53: 63110747
+      BrotherhoodofSteel-attack_54: 1290361815
+      BrotherhoodofSteel-attack_6: -2919597
+      BrotherhoodofSteel-attack_7: 859701871
+      BrotherhoodofSteel-attack_8: -1355633873
+      BrotherhoodofSteel-attack_9: -1167585739
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

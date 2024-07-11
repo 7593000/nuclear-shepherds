@@ -1,4 +1,4 @@
- 
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
 
@@ -16,6 +16,9 @@ public class Damage
     [SerializeField] private int _weaponAmmo;
     [SerializeField] private float _luck;
     private float _damage;
+
+    private Task _cooldownTask;
+    private Task _rechargeTask;
 
     public Damage(WeaponsConfig weapon, float luck)
     {
@@ -60,32 +63,28 @@ public class Damage
     /// <returns>Значение урона или -1, если атака невозможна</returns>
     public float DamageTarget()
     {
-        if (!WeaponAmmoCount())
+        if (_isRecharge || !WeaponAmmoCount())
         {
-            
-            // Запуск перезарядки
-            RechargeWeapon();
-
+            if (!_isRecharge)
+            {
+                // Запуск перезарядки
+                _rechargeTask = RechargeWeapon();
+            }
             return -100;
-
-
         }
 
-
-        if (_canAttack && !_isRecharge )
+        if (_canAttack)
         {
-            float damage = _damage ; //todo => temp
+            float damage = _damage; //todo => temp
             _weaponAmmo--;
-           
-            if(_speedAttack  > 0f)
+
+            if (_speedAttack > 0f)
             {
-                CooldownWeapon();
+                _cooldownTask = CooldownWeapon();
             }
-         
-           
+
             return damage;
         }
-       
 
         return -1;
     }
@@ -99,69 +98,30 @@ public class Damage
         return _weaponAmmo > 0;
     }
 
-    ///// <summary>
-    ///// Рассчет наносимого урона: урон * удача
-    ///// </summary>
-    ///// <returns>Значение урона</returns>
-    //private float CalculatingDamage()
-    //{
-    //    if (CritCalculation())
-    //    {
-    //        return _damage + (_damage * _luck);
-    //    }
-    //    return _damage;
-    //}
-
-    ///// <summary>
-    ///// Расчет крита
-    ///// </summary>
-    ///// <returns>true, если критический удар произошел, иначе false</returns>
-    //private bool CritCalculation() => RandomRange() < _luck;
-
-    ///// <summary>
-    ///// Генерация случайного числа
-    ///// </summary>
-    ///// <returns>Случайное число от 0 до 1</returns>
-    //public float RandomRange()
-    //{
-    //    return Random.Range(0f, 1f);
-    //}
-
     #region ASYNC METHOD
-    // TODO=> вынести в один метод
+
     /// <summary>
-    /// Запуск отчета  скорость атаки
+    /// Запуск отчета скорость атаки
     /// </summary>
     /// <param name="typeCoolDown">Время задержки</param>
-    private async void CooldownWeapon( )
+    private async Task CooldownWeapon()
     {
         _canAttack = false;
-        await AttackCooldown(_speedAttack);
+        await Task.Delay((int)(_speedAttack * 1000));
         _canAttack = true;
     }
 
     /// <summary>
     /// Запуск отчета перезарядки
     /// </summary> 
-    private async void RechargeWeapon()
+    private async Task RechargeWeapon()
     {
-        _isRecharge = true; //todo -> _isRecharge на удаление, мейби
+        _isRecharge = true;
         _canAttack = false;
-        await AttackCooldown(_rechargeTime);
+        await Task.Delay((int)(_rechargeTime * 1000));
         _isRecharge = false;
         _canAttack = true;
-     
-    _weaponAmmo = _weapon.GetWeaponAmmo;
-    }
-
-    /// <summary>
-    /// Задержка атаки
-    /// </summary>
-    /// <param name="timer">Время задержки в секундах</param>
-    /// <returns>Task для асинхронного ожидания</returns>
-    private async Task AttackCooldown(float timer)
-    {
-        await Task.Delay((int)(timer * 1000));
+        _weaponAmmo = _weapon.GetWeaponAmmo;
     }
 
     #endregion

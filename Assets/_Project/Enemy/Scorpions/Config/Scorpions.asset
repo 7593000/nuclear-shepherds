@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d26c15ee3fe0a09409c2112b20f5e458, type: 3}
   m_Name: Scorpions
   m_EditorClassIdentifier: 
+  _id: 0
   _unitType: 3
   _name: "\u0421\u043A\u043E\u0440\u043F\u0438\u043E\u043D"
   _health: 150
@@ -25,8 +26,9 @@ MonoBehaviour:
   _damageRatio: 0
   _speedAttackRatio: 0
   _luckRatio: 0
-  _firearms: 4
-  _fire: 0
-  _energyWeapons: 0
+  _firearms: 5
+  _fire: 5
+  _energyWeapons: 10
+  _explosionProtection: 5
   _unitPrefab: {fileID: 2017256330531113244, guid: 3a493526b9879c7418f625f3ef6cd6e7, type: 3}
   _sprite: {fileID: 730597633, guid: 4b9f86277abc7bf43a6b561c81aafda8, type: 3}

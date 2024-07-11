@@ -20,6 +20,8 @@ public class GameHub : MonoBehaviour
     [SerializeField]
     private PoolEnemy _poolEnemy;
     [SerializeField]
+    private PoolExplosion _poolExplosion;
+    [SerializeField]
     private BrahminManager _brahminEngine;
     [SerializeField]
     private BottomPanel _bottomPanel;
@@ -38,6 +40,7 @@ public class GameHub : MonoBehaviour
     public WalletEngine GetWalletEngine => _walletEngine;
     public WaveEngine GetWaveEngine => _waveEngine;
     public PoolEnemy GetPoolEnemy => _poolEnemy;
+    public PoolExplosion GetPoolExplosion => _poolExplosion;
     public WindowInfoUnit GetWindowInfoUnit => _windowInfoUnit;
 
 

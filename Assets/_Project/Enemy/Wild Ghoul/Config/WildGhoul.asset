@@ -18,7 +18,7 @@ MonoBehaviour:
   _health: 100
   _luck: 0.55
   _occupiedArea: 1
-  _speed: 10
+  _speed: 2
   _typeWeapon: 1
   _config: {fileID: 11400000, guid: 9b53894a397d5f2438fce9d92c255ea0, type: 2}
   _cost: 50
@@ -26,9 +26,9 @@ MonoBehaviour:
   _damageRatio: 0
   _speedAttackRatio: 0
   _luckRatio: 0
-  _firearms: 2
-  _fire: 0
-  _energyWeapons: 1
-  _explosionProtection: 0
+  _firearms: 10
+  _fire: 5
+  _energyWeapons: 25
+  _explosionProtection: 10
   _unitPrefab: {fileID: 4936857353151220823, guid: 05244c1ea530104489f11a019eab71a1, type: 3}
   _sprite: {fileID: -940772182, guid: f13fff25564cc12408229b392c9a1f4b, type: 3}

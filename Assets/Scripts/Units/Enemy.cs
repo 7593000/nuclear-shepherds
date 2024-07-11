@@ -34,10 +34,11 @@ public class Enemy : UnitComponent, IHealth, IMovable
 
         if (!IsDead)
         {
+            float protectedDamage = damage * (_protection.CalculationProtection(type) / 100f);
 
-            float damageProtect = Mathf.Max(0, damage - _protection.CalculationProtection(type));
+            float resultDamage = Mathf.Max(0, damage - protectedDamage);
 
-            float health = _health.TakeDamage(damageProtect);
+            float health = _health.TakeDamage(resultDamage);
 
             if (health <= 0)
             {

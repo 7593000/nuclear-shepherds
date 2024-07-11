@@ -26,9 +26,9 @@ MonoBehaviour:
   _damageRatio: 0
   _speedAttackRatio: 0
   _luckRatio: 0
-  _firearms: 26
-  _fire: 27
-  _energyWeapons: 10
-  _explosionProtection: 19
+  _firearms: 90
+  _fire: 80
+  _energyWeapons: 15
+  _explosionProtection: 15
   _unitPrefab: {fileID: 2849158851114539490, guid: 3b730c33576a1114b911ff1010d909b9, type: 3}
   _sprite: {fileID: 1459946517, guid: 44d2e73ab22eb8848947e4f022250a6a, type: 3}

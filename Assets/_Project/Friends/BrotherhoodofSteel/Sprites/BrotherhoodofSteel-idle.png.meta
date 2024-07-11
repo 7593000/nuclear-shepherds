@@ -1,0 +1,1447 @@
+fileFormatVersion: 2
+guid: e0474c4df189f2e498fde07f0e022832
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 736
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.46875, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 919562e13855faa4c9ba7c8ffe90f95e
+      internalID: 781175045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 736
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.46875, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff40031b7121d664d9321dd588abb8b2
+      internalID: -428616195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 736
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.46875, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43ac0393a84716e4086d3050dbd9a8f4
+      internalID: 1517293411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 736
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.46875, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2efd042bb3c3dba49b7e7f0a77469014
+      internalID: -1633717869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 736
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.46875, y: 0.114583336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e605d4274c9bc34c8a389ff7beab413
+      internalID: 1611438733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 736
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.46875, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb61e8447f5e75d44ba1b1c295b2ca59
+      internalID: -1051831722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 736
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.46875, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 108c10cbb5a079e4383fd7b4a804546d
+      internalID: 681688499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 736
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.46875, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45b266024a09be24faf1f243edb0b732
+      internalID: -2098862115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 736
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.46875, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb32d7fbb809876428c7cfab324d9416
+      internalID: 473734694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 736
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.46875, y: 0.114583336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de8fd672edb359e4bb4b9f5a7ee11f1b
+      internalID: 830239991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.46875, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cda67291d8ac544da7eaa2fb44b31a1
+      internalID: 1165293435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_11
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 640
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.46875, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ff5e0e9b9022f2419c9670dd87938ab
+      internalID: 1736870187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_12
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 640
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.46875, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d1f31bec3c34494b9cd8a63716636c8
+      internalID: -734840719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_13
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 640
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.46875, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ded31e5f1bb0bf941bcceea169f9b314
+      internalID: -281870269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_14
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 640
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.46875, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5509f35fe2f42a4698f0773b44e5c30
+      internalID: 498998252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_15
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 640
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.46875, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a79032085826c843b3b9e944d542568
+      internalID: 336342064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_16
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 640
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.46875, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66c111c8112407543914662fd0d8f663
+      internalID: 506025133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_17
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 640
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.46875, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ddc1b335ddb41a45bf86d4680ebfb6b
+      internalID: -1686327674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_18
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 640
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.46875, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d717686478ffcc94fa64ceaa0afb31c7
+      internalID: -208427659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_19
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 640
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.46875, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05db018e78ea97c4598007830303e9bc
+      internalID: -1788763242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 544
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.46875, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d31fefb7115dca40977247deb12183e
+      internalID: -1247869627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_21
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 544
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.46875, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25098ff37bde8b3459ceb92de7006706
+      internalID: -480560510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_22
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 544
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.46875, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2ef9940e56eb2d44bc4ca1cda5ec2eb
+      internalID: -2039387074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_23
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 544
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.46875, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95db54a1ab62b304b9b13c0d3dbfd321
+      internalID: 1794979163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_24
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 544
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.46875, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8c39b79625f0514c8320d6003855b8d
+      internalID: -128873144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_25
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 544
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.46875, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1f2c5a5dd4a4e24b9f4119d2b1c0a61
+      internalID: 473988543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_26
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 544
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.46875, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abcb0dc060aec7e419272e3764398b29
+      internalID: 174219063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_27
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 544
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.46875, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74b90c70732317948adbb056fa6de11f
+      internalID: -1587957461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_28
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 544
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.46875, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 486ffcb6e6535b24f9d509979d6493cb
+      internalID: 484529264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_29
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 544
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.46875, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5648b07376ed79b4c809b9df2bfe34f9
+      internalID: 1225654568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.53125, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9df767ce5c45a5846a412aa870c404b4
+      internalID: 844233385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_31
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 448
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.53125, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b4faa85a43084b40991993629f07411
+      internalID: 314053383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_32
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 448
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.53125, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66426d87a3079cb478f634314460f3a0
+      internalID: -1062719645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_33
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 448
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.53125, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 669ca8a5c16fa7f4a83beb18b02dd573
+      internalID: -159077621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_34
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 448
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.53125, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6553214c213961148bb422a2627b7edb
+      internalID: -1652645070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_35
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 448
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.53125, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ba4e1d6d55836643986fd6563a295ca
+      internalID: -1595770581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_36
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 448
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.53125, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 786fad84932bda149afd127bcf270bdf
+      internalID: 1559826763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_37
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 448
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.53125, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b529dc75c0568cf45b7edc047e90e67d
+      internalID: 375653693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_38
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 448
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.53125, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1465f5a45467de144991cf5af04a6c98
+      internalID: -346962109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_39
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 448
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.515625, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea6c94428581b624cb18aa2d8803cf7d
+      internalID: -297222006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 352
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.515625, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf85eda02a7d49e47bafe4894f8c5741
+      internalID: -1423758718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_41
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 352
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.515625, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eacdbd5b787cc714fbc2399f55a94e8f
+      internalID: 1863462383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_42
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 352
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f01a66a7e630f9498873a67cc1f829e
+      internalID: 452978365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_43
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 352
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.484375, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4735e0521559cde43b51e645356d6d43
+      internalID: -2100240567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_44
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 352
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.484375, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0865dee49717dcf45872bd7485ced093
+      internalID: 929378424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_45
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 352
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.484375, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f73ceab7ef551d459799ecc46e76992
+      internalID: 1132790207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_46
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 352
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.484375, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7964bd947c75e548afcccd6dac961f2
+      internalID: 158043514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_47
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 352
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.484375, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bd5cff7f84f7644581759697d12a042
+      internalID: 1506472654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_48
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 352
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.484375, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1383d77613c5a424c88d44f20947430c
+      internalID: -1204274944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_49
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 352
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.46875, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff3767fed241a7848b0b4c7add9d7a6f
+      internalID: 339357627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54b4b3d10a07fe24a99d86b61bf42aff
+      internalID: -1837727494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_51
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 256
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01bf4b1ed9b116c41b8e958ab23024d8
+      internalID: 301747923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_52
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.10416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 759a4413344f5594ba9138f243d2f72e
+      internalID: -274173581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_53
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 256
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.114583336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87b7f017a78e84044b636df2428908b2
+      internalID: 1331120850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_54
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.114583336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d083d55e230ec3540818b54e14e3b8b0
+      internalID: -79742702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_55
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 256
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.114583336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0f7cef350d2fb04188e1d7bffcdd582
+      internalID: 916988653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_56
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 256
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.114583336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bfa76acaeee4f24e933ce57006c1454
+      internalID: 1522134148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_57
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 256
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.114583336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cb90ab830105284e923768d37cab7d8
+      internalID: 1819977132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_58
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 256
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.114583336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5507413b2c46b33479df894c6c51f1f1
+      internalID: 915298726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrotherhoodofSteel-idle_59
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 256
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.114583336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2e9117aa9c55014e8ae55ec0ce3fc64
+      internalID: -1448323298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      BrotherhoodofSteel-idle_0: 781175045
+      BrotherhoodofSteel-idle_1: -428616195
+      BrotherhoodofSteel-idle_10: 1165293435
+      BrotherhoodofSteel-idle_11: 1736870187
+      BrotherhoodofSteel-idle_12: -734840719
+      BrotherhoodofSteel-idle_13: -281870269
+      BrotherhoodofSteel-idle_14: 498998252
+      BrotherhoodofSteel-idle_15: 336342064
+      BrotherhoodofSteel-idle_16: 506025133
+      BrotherhoodofSteel-idle_17: -1686327674
+      BrotherhoodofSteel-idle_18: -208427659
+      BrotherhoodofSteel-idle_19: -1788763242
+      BrotherhoodofSteel-idle_2: 1517293411
+      BrotherhoodofSteel-idle_20: -1247869627
+      BrotherhoodofSteel-idle_21: -480560510
+      BrotherhoodofSteel-idle_22: -2039387074
+      BrotherhoodofSteel-idle_23: 1794979163
+      BrotherhoodofSteel-idle_24: -128873144
+      BrotherhoodofSteel-idle_25: 473988543
+      BrotherhoodofSteel-idle_26: 174219063
+      BrotherhoodofSteel-idle_27: -1587957461
+      BrotherhoodofSteel-idle_28: 484529264
+      BrotherhoodofSteel-idle_29: 1225654568
+      BrotherhoodofSteel-idle_3: -1633717869
+      BrotherhoodofSteel-idle_30: 844233385
+      BrotherhoodofSteel-idle_31: 314053383
+      BrotherhoodofSteel-idle_32: -1062719645
+      BrotherhoodofSteel-idle_33: -159077621
+      BrotherhoodofSteel-idle_34: -1652645070
+      BrotherhoodofSteel-idle_35: -1595770581
+      BrotherhoodofSteel-idle_36: 1559826763
+      BrotherhoodofSteel-idle_37: 375653693
+      BrotherhoodofSteel-idle_38: -346962109
+      BrotherhoodofSteel-idle_39: -297222006
+      BrotherhoodofSteel-idle_4: 1611438733
+      BrotherhoodofSteel-idle_40: -1423758718
+      BrotherhoodofSteel-idle_41: 1863462383
+      BrotherhoodofSteel-idle_42: 452978365
+      BrotherhoodofSteel-idle_43: -2100240567
+      BrotherhoodofSteel-idle_44: 929378424
+      BrotherhoodofSteel-idle_45: 1132790207
+      BrotherhoodofSteel-idle_46: 158043514
+      BrotherhoodofSteel-idle_47: 1506472654
+      BrotherhoodofSteel-idle_48: -1204274944
+      BrotherhoodofSteel-idle_49: 339357627
+      BrotherhoodofSteel-idle_5: -1051831722
+      BrotherhoodofSteel-idle_50: -1837727494
+      BrotherhoodofSteel-idle_51: 301747923
+      BrotherhoodofSteel-idle_52: -274173581
+      BrotherhoodofSteel-idle_53: 1331120850
+      BrotherhoodofSteel-idle_54: -79742702
+      BrotherhoodofSteel-idle_55: 916988653
+      BrotherhoodofSteel-idle_56: 1522134148
+      BrotherhoodofSteel-idle_57: 1819977132
+      BrotherhoodofSteel-idle_58: 915298726
+      BrotherhoodofSteel-idle_59: -1448323298
+      BrotherhoodofSteel-idle_6: 681688499
+      BrotherhoodofSteel-idle_7: -2098862115
+      BrotherhoodofSteel-idle_8: 473734694
+      BrotherhoodofSteel-idle_9: 830239991
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

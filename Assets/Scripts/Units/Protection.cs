@@ -38,7 +38,7 @@ public class Protection
                 break;
 
             case TypeWeapons.FLAMETHROWER:
-                protect = 0;
+                protect = _fire;
                 break;
 
             case TypeWeapons.ROCKETLAUNCHER:
@@ -48,7 +48,7 @@ public class Protection
 
             case TypeWeapons.ELECTRICCHARGES:
             case TypeWeapons.LASER:
-                protect = 0;
+                protect = _energyWeapons;
                 break;
  
 
