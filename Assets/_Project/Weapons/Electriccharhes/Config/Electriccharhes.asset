@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Electriccharhes
   m_EditorClassIdentifier: 
   _type: 8
-  _numberStriking: 4
+  _numberStriking: 5
   _radiusAoE: 2
   _speedAttack: 0
-  _rechargeTime: 7
+  _rechargeTime: 4
   _weaponAmmo: 1
   _damage: 25
   _distance: 8

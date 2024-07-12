@@ -19,7 +19,7 @@ MonoBehaviour:
   _luck: 0.708
   _occupiedArea: 1
   _speed: 0
-  _typeWeapon: 2
+  _typeWeapon: 8
   _config: {fileID: 11400000, guid: 2a3629d124f0b2c4a941a28b14efa2e0, type: 2}
   _cost: 900
   _costUpgrade: 1500

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.ParticleSystem;
 
 public class Enemy : UnitComponent, IHealth, IMovable
 
@@ -9,14 +10,16 @@ public class Enemy : UnitComponent, IHealth, IMovable
     [SerializeField] private bool _busyWave = false;
     public static event Action<int> OnDeath;
 
+    private ParticleSystem _particle;
+
     private List<IReset> _resetDataComponents = new();
-     
+
     /// <summary>
     /// Проверка врага: Свободен ли он для добавление в список волны.
     /// </summary>
     public bool BusyWave { get => _busyWave; set => _busyWave = value; }
 
-   
+    public ParticleSystem GetParticle => _particle;
 
     public bool IsDead { get; set; }
 
@@ -34,6 +37,14 @@ public class Enemy : UnitComponent, IHealth, IMovable
 
         if (!IsDead)
         {
+            if(type == TypeWeapons.ELECTRICCHARGES)
+            {
+                if(!_particle.isPlaying)
+                {
+                    _particle.Play();
+                }
+              
+            }
             float protectedDamage = damage * (_protection.CalculationProtection(type) / 100f);
 
             float resultDamage = Mathf.Max(0, damage - protectedDamage);
@@ -70,16 +81,19 @@ public class Enemy : UnitComponent, IHealth, IMovable
 
     {
         base.AddComponentsUnit();
-        _health.Container( this );
-        _protection = new Protection( this );
+
+        if(_particle==null) _particle =GetComponentInChildren<ParticleSystem>();  
+
+        _health.Container(this);
+        _protection = new Protection(this);
         CollectResettableComponents();
-        SetState( MoveState );
-      
-      
+        SetState(MoveState);
+
+
 
     }
 
- 
+
 
 
     public void ResetUnit()

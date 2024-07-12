@@ -14,16 +14,18 @@ public static class WeaponFactory
             case TypeWeapons.GUN:
                 return new SightingWeapons( unit );// Класс для оружия прицельного действия: пистолет, оружие ближнего боя
 
-            case TypeWeapons.ELECTRICCHARGES:
+           
             case TypeWeapons.LASER:
             case TypeWeapons.FLAMETHROWER:
             case TypeWeapons.MINIGUN: //TODO=> PiercingWeapon ? 
                 return new PiercingWeapon( unit );//Класс для оружия, которе наносит урон по длине выстрела
-
+           
             case TypeWeapons.SHELLS:
             case TypeWeapons.ROCKETLAUNCHER:
                 return new AoEweapons( unit );//Класс для оружия АоЕ действия в точке.
 
+            case TypeWeapons.ELECTRICCHARGES:
+                return new DischargeElectricity(unit);
             default:
                 return null;
         }

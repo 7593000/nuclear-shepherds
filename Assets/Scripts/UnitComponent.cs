@@ -94,8 +94,7 @@ public abstract class UnitComponent : MonoBehaviour
 
         _attack = WeaponFactory.CreateWeapon( typeWeapon , this );
 
-
-        _animatorComponent = gameObject.AddComponent<AnimatorComponent>();
+        if(_animatorComponent==null)  _animatorComponent = gameObject.AddComponent<AnimatorComponent>();
         _animatorComponent.Container( this );
 
 
