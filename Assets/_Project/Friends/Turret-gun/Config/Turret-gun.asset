@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d26c15ee3fe0a09409c2112b20f5e458, type: 3}
   m_Name: Turret-gun
   m_EditorClassIdentifier: 
-  _id: 124
+  _id: 900087
   _unitType: 1
   _name: "\u0422\u0443\u0440\u0435\u043B\u044C-\u0433\u0430\u043D"
   _health: 0

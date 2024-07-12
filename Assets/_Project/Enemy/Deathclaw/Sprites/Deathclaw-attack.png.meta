@@ -1,0 +1,1447 @@
+fileFormatVersion: 2
+guid: 1daaa06cfda9fb340b8eadd04e296383
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Deathclaw-attack_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 982
+        width: 63
+        height: 83
+      alignment: 9
+      pivot: {x: 0.44444448, y: 0.19277108}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdbe7a59bf49c2948b7cdb6997ab9d40
+      internalID: -1811117371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_1
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 980
+        width: 61
+        height: 88
+      alignment: 9
+      pivot: {x: 0.44262293, y: 0.20454547}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56fdc94398b69034aa2d641ab81b0eab
+      internalID: 1847372465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_2
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 979
+        width: 67
+        height: 89
+      alignment: 9
+      pivot: {x: 0.47761193, y: 0.17977528}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c0b8b3e7ce00434cbe110969bfacbef
+      internalID: 499641258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_3
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 979
+        width: 63
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f28e78de644181b449605c0d5da380f8
+      internalID: -3023708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_4
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 966
+        width: 58
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6966517689f7426498472cba113212b4
+      internalID: 1698559370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_5
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 980
+        width: 62
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b343fe881b2648746a9e94e96ee58ff9
+      internalID: 264536438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_6
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 981
+        width: 61
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85bc432849a7713448ab6d0d8f803662
+      internalID: -1814176032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_7
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 867
+        width: 62
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dda182e9dbd24b4e8f364ebbfadb6fb
+      internalID: -1345389489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_8
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 870
+        width: 64
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d26d087b36906f4eba9898d2f2024fd
+      internalID: -1310278027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_9
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 870
+        width: 64
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1e69371eeac1754f9193f5309c11153
+      internalID: -1985894425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_10
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 874
+        width: 103
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7da45aa978c4f1549a62128dc4601d9f
+      internalID: 1742883741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_11
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 875
+        width: 98
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bffde86f08f64745bb7a6d20ee900f2
+      internalID: -174134583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_12
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 873
+        width: 96
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50a6ff3b691fd9149bd8a949a35e6b86
+      internalID: 1078784784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_13
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 776
+        width: 96
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04455bb926b7c2f42860d77291c470ad
+      internalID: -1708603199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_14
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 770
+        width: 119
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 208965fb0c4db9d4292339fe4289d93c
+      internalID: -218138204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_15
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 781
+        width: 106
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38e11f9317b2f1f47a881f02527f2b7c
+      internalID: -122240512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_16
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 780
+        width: 108
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8ae8ff6c02e52d4d840abc5787b5a40
+      internalID: -1430764549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_17
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 780
+        width: 105
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5c745276dba5864ca27c9314ef19c77
+      internalID: 1563451937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_18
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 685
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df2c7b712e56b7446b9d0a353ee5becb
+      internalID: 1913752790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_19
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 683
+        width: 116
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e33e47737f7079b4e9220c514917ad83
+      internalID: 65628339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_20
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 685
+        width: 68
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeceb49eee9084b4c82b854ac195ec78
+      internalID: 324348620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_21
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 685
+        width: 76
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86151918082433546bcda5108e9e24e5
+      internalID: 1326142190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_22
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 684
+        width: 83
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7866d2e392c7ffb4aafe2bda098041d0
+      internalID: -2092931984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_23
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 684
+        width: 81
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c712922dd71cf74fab97752364df4b5
+      internalID: 1702724743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_24
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 590
+        width: 92
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9e81955240a8a2408ab0c8d24a5f696
+      internalID: 694657511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_25
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 591
+        width: 67
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2108bef5eedf4e42b5c2ffc3a01e9fe
+      internalID: 641037250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_26
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 590
+        width: 62
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13924371575d61b4482a02ba794ed4fa
+      internalID: -1740394261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_27
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 590
+        width: 65
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e7c2aae7b013d943a0ad9b745f4fdb6
+      internalID: 29320657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_28
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 589
+        width: 69
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37c5ad14e34214644bc35e5167f3df19
+      internalID: -134389477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_29
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 589
+        width: 69
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6807dafcc4e26f43a2948077caf4074
+      internalID: 2050329287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_30
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 590
+        width: 63
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5526ff241958f4141ae2eb243e50e9fe
+      internalID: 9676814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_31
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 494
+        width: 61
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d11c55a0e8c3272419da4bd83c591dcf
+      internalID: 627161489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_32
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 497
+        width: 67
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65040be7407b8d24a82de1cfe1611968
+      internalID: 84317734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_33
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 497
+        width: 63
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7a023d78963d9f4bbde21fd680bf13d
+      internalID: -1361469067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_34
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 498
+        width: 58
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07c5253e654146f43836f466100737eb
+      internalID: -1744344120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_35
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 496
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a85d537ca047c4e4dbdeb02c6c3308a0
+      internalID: 117937047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_36
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 496
+        width: 61
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5a11a2e984b5964ca594cb98041a502
+      internalID: 1590605151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_37
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 493
+        width: 62
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dea51bd78b378a84f9b608f83122a484
+      internalID: 788062185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_38
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 398
+        width: 64
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2209d849d98e58241a8ca8416b7d8aa5
+      internalID: 199873956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_39
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 398
+        width: 64
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2e5b33c949864a45b4736086b5b91ed
+      internalID: 2054288413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_40
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 397
+        width: 103
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fb309232fa61ab47a3641a358bcfb47
+      internalID: -1942043644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_41
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 397
+        width: 98
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0592bd3ac8b6450498b83305a399da05
+      internalID: -423182949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_42
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 398
+        width: 96
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8412d2b5b41a6de458073c890c14675d
+      internalID: 1935245146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_43
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 399
+        width: 96
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bef30489ce2fc54d88f840b0bf60585
+      internalID: -856710268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_44
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 303
+        width: 119
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04bad5c89f5d2b04ab2354a0034a306d
+      internalID: -1960835485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_45
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 303
+        width: 116
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 301dc71f6123a3f47ae1573c78842e4b
+      internalID: 8271253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_46
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 303
+        width: 108
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a6e35e6b9bdbae4eb9baf4f0619c81a
+      internalID: 1427880419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_47
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 302
+        width: 105
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93a14dbedf46cad44a8d275265387123
+      internalID: -1115778246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_48
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 301
+        width: 105
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35bf0f4a7356c9b43908bfe4d57f0ca6
+      internalID: -986422742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_49
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 205
+        width: 105
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9722f9f672453f4eb5b3ae00a9bb18a
+      internalID: 789779990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_50
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 183
+        width: 68
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31cec09f23d729245806a0cceb9e8bff
+      internalID: -1165150710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_51
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 180
+        width: 76
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96d8f5366392245439f0383fa6895448
+      internalID: -429445394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_52
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 180
+        width: 83
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb1c757c6ef152343844ffb3ce7338b5
+      internalID: -1614163870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_53
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 180
+        width: 81
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c8d9a40940bc2944987b358f11844a5
+      internalID: 1431921590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_54
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 174
+        width: 92
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fa09f152db76e4439133442fc3cc8a5
+      internalID: -105743663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_55
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 69
+        width: 67
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 186eb2dabca43294192044fd09cd6f65
+      internalID: 1528713987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_56
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 70
+        width: 62
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc468f9e177997241a4f941f300fe5a6
+      internalID: 423346118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_57
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 72
+        width: 65
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 489e78121ef30eb469f6af25e4cb43f4
+      internalID: -1489756075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_58
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 75
+        width: 69
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e76af563158a8b4698bbeeb900bcdb2
+      internalID: -772169883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-attack_59
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 75
+        width: 69
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bb04d424b74a6d48bda38b28a49f553
+      internalID: -854091831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Deathclaw-attack_0: -1811117371
+      Deathclaw-attack_1: 1847372465
+      Deathclaw-attack_10: 1742883741
+      Deathclaw-attack_11: -174134583
+      Deathclaw-attack_12: 1078784784
+      Deathclaw-attack_13: -1708603199
+      Deathclaw-attack_14: -218138204
+      Deathclaw-attack_15: -122240512
+      Deathclaw-attack_16: -1430764549
+      Deathclaw-attack_17: 1563451937
+      Deathclaw-attack_18: 1913752790
+      Deathclaw-attack_19: 65628339
+      Deathclaw-attack_2: 499641258
+      Deathclaw-attack_20: 324348620
+      Deathclaw-attack_21: 1326142190
+      Deathclaw-attack_22: -2092931984
+      Deathclaw-attack_23: 1702724743
+      Deathclaw-attack_24: 694657511
+      Deathclaw-attack_25: 641037250
+      Deathclaw-attack_26: -1740394261
+      Deathclaw-attack_27: 29320657
+      Deathclaw-attack_28: -134389477
+      Deathclaw-attack_29: 2050329287
+      Deathclaw-attack_3: -3023708
+      Deathclaw-attack_30: 9676814
+      Deathclaw-attack_31: 627161489
+      Deathclaw-attack_32: 84317734
+      Deathclaw-attack_33: -1361469067
+      Deathclaw-attack_34: -1744344120
+      Deathclaw-attack_35: 117937047
+      Deathclaw-attack_36: 1590605151
+      Deathclaw-attack_37: 788062185
+      Deathclaw-attack_38: 199873956
+      Deathclaw-attack_39: 2054288413
+      Deathclaw-attack_4: 1698559370
+      Deathclaw-attack_40: -1942043644
+      Deathclaw-attack_41: -423182949
+      Deathclaw-attack_42: 1935245146
+      Deathclaw-attack_43: -856710268
+      Deathclaw-attack_44: -1960835485
+      Deathclaw-attack_45: 8271253
+      Deathclaw-attack_46: 1427880419
+      Deathclaw-attack_47: -1115778246
+      Deathclaw-attack_48: -986422742
+      Deathclaw-attack_49: 789779990
+      Deathclaw-attack_5: 264536438
+      Deathclaw-attack_50: -1165150710
+      Deathclaw-attack_51: -429445394
+      Deathclaw-attack_52: -1614163870
+      Deathclaw-attack_53: 1431921590
+      Deathclaw-attack_54: -105743663
+      Deathclaw-attack_55: 1528713987
+      Deathclaw-attack_56: 423346118
+      Deathclaw-attack_57: -1489756075
+      Deathclaw-attack_58: -772169883
+      Deathclaw-attack_59: -854091831
+      Deathclaw-attack_6: -1814176032
+      Deathclaw-attack_7: -1345389489
+      Deathclaw-attack_8: -1310278027
+      Deathclaw-attack_9: -1985894425
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

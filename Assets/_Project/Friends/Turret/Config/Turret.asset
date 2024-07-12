@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d26c15ee3fe0a09409c2112b20f5e458, type: 3}
   m_Name: Turret
   m_EditorClassIdentifier: 
-  _id: 54
+  _id: 110098
   _unitType: 1
   _name: "\u0422\u0443\u0440\u0435\u043B\u044C"
   _health: 0

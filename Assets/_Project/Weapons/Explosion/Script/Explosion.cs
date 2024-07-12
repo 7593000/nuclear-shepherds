@@ -33,7 +33,7 @@ public class Explosion : MonoBehaviour
 
     public void Deactivation()
     {
-        Debug.Log( "DEAC" );
+        
         gameObject.SetActive(false);
     }
 

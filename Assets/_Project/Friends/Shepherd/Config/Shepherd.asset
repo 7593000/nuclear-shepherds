@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d26c15ee3fe0a09409c2112b20f5e458, type: 3}
   m_Name: Shepherd
   m_EditorClassIdentifier: 
-  _id: 123
+  _id: 2342864
   _unitType: 1
   _name: "\u041F\u0430\u0441\u0442\u0443\u0445"
   _health: 0
@@ -32,4 +32,3 @@ MonoBehaviour:
   _explosionProtection: 0
   _unitPrefab: {fileID: 6797377760339903826, guid: 1991ce10dffff1b4d8f025f77108f3cb, type: 3}
   _sprite: {fileID: 21300000, guid: e031eba9eb0c3f849b6bc76c19e87110, type: 3}
-  GetId: 0

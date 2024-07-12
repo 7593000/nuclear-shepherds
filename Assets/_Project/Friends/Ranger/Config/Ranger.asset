@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d26c15ee3fe0a09409c2112b20f5e458, type: 3}
   m_Name: Ranger
   m_EditorClassIdentifier: 
+  _id: 389843
   _unitType: 1
   _name: "\u0420\u0435\u0439\u043D\u0434\u0436\u0435\u0440"
   _health: 0
@@ -28,5 +29,6 @@ MonoBehaviour:
   _firearms: 0
   _fire: 0
   _energyWeapons: 0
+  _explosionProtection: 0
   _unitPrefab: {fileID: 6797377760339903826, guid: 536b3cd9fc39093469a145ecabc38dd6, type: 3}
   _sprite: {fileID: 21300000, guid: 5167404a075e84f4f8d9abc66f908859, type: 3}
