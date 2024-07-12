@@ -13,7 +13,12 @@ MonoBehaviour:
   m_Name: Electriccharhes
   m_EditorClassIdentifier: 
   _type: 8
-  _duration: 2
-  _speedAttack: 3
+  _numberStriking: 4
+  _radiusAoE: 2
+  _speedAttack: 0
+  _rechargeTime: 7
+  _weaponAmmo: 1
   _damage: 25
+  _distance: 8
+  _audioClip: {fileID: 0}
   _sprite: {fileID: 21300000, guid: 9435a893be86db74d8dd12875de21587, type: 3}

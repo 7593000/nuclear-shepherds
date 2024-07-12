@@ -1,5 +1,3 @@
-using System.Collections;
- 
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -11,21 +9,32 @@ public class CameraNavigation : MonoBehaviour, IPointerEnterHandler, IPointerExi
     [SerializeField] private Border _activeBorder;
     [SerializeField] private bool _isMove = false;
 
+    // Добавьте переменные для границ
+    [SerializeField] private float _minX = -5f;
+    [SerializeField] private float _maxX = 75f;
+    [SerializeField] private float _minY = -5f;
+    [SerializeField] private float _maxY = 32f;
+
+    private void Start()
+    {
+        _camera = Camera.main;
+    }
 
     private void Update()
     {
         if (_isMove && _activeBorder != null)
         {
             Vector3 direction = GetDirection(_activeBorder);
-            _camera.transform.position += direction * _speedMove * Time.deltaTime;
+            Vector3 newPosition = _camera.transform.position + direction * _speedMove * Time.deltaTime;
+
+            // Ограничьте новое положение в пределах заданных границ
+            newPosition.x = Mathf.Clamp(newPosition.x, _minX, _maxX);
+            newPosition.y = Mathf.Clamp(newPosition.y, _minY, _maxY);
+
+            _camera.transform.position = newPosition;
         }
     }
 
-    private void Start()
-    {
-
-        _camera = Camera.main;
-    }
     private Vector3 GetDirection(Border border)
     {
         // Пример логики направления движения в зависимости от границы
@@ -48,14 +57,18 @@ public class CameraNavigation : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
             case BorderType.ANGLETL:
                 return new Vector3(-1, 1, 0);
+
             case BorderType.ANGLEBR:
                 return new Vector3(1, -1, 0);
+
             case BorderType.ANGLEBL:
                 return new Vector3(-1, -1, 0);
+
             default:
                 return Vector3.zero;
         }
     }
+
     public void OnPointerEnter(PointerEventData eventData)
     {
         GameObject hoveredObject = eventData.pointerEnter;
@@ -67,22 +80,12 @@ public class CameraNavigation : MonoBehaviour, IPointerEnterHandler, IPointerExi
                 _activeBorder = border;
                 _isMove = true;
             }
-           
         }
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-         
-           
-            
-                _isMove = false;
-                _activeBorder = null;
-         
-       
-
-
-
-
+        _isMove = false;
+        _activeBorder = null;
     }
 }
