@@ -12,18 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d26c15ee3fe0a09409c2112b20f5e458, type: 3}
   m_Name: Brahmin
   m_EditorClassIdentifier: 
+  _id: 0
   _unitType: 2
   _name: "\u0411\u0440\u0430\u043C\u0438\u043D"
-  _health: 100
-  _luck: 0.518
-  _distance: 0
+  _health: 200
+  _luck: 1
   _occupiedArea: 0
   _speed: 1
-  _cost: 0
   _typeWeapon: 1
   _config: {fileID: 11400000, guid: 9b53894a397d5f2438fce9d92c255ea0, type: 2}
-  _firearms: 1
-  _fire: 1
-  _energyWeapons: 1
-  _unitPrefab: {fileID: 0}
+  _cost: 0
+  _costUpgrade: 0
+  _damageRatio: 0
+  _speedAttackRatio: 0
+  _luckRatio: 0
+  _firearms: 15
+  _fire: 5
+  _energyWeapons: 5
+  _explosionProtection: 5
+  _unitPrefab: {fileID: 8443176421583126447, guid: d12aff91515a7fe49a150ddd75b3e22e, type: 3}
   _sprite: {fileID: -1723787956, guid: 259a9b63dc858704197259a4e0f646eb, type: 3}
+  _soundIdle: {fileID: 8300000, guid: 8f47b6d06096f694c8741877101cf47c, type: 3}

@@ -32,8 +32,9 @@ public sealed class BrahminManager : MonoBehaviour
 
             Brahmin brahmin = Instantiate( _brahminPrefab , positionCell , Quaternion.identity );
             brahmin.transform.SetParent( _parent );
-            brahmin.Initialized( this , _gameHub );
+           brahmin.Initialized( _gameHub );
             _brahminList.Add( brahmin );
+           
 
         }
         OnBrahmin?.Invoke( _brahminList.Count );

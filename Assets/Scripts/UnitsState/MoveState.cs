@@ -37,7 +37,7 @@ public class MoveState : IUnitState
     public void ExitState(UnitComponent unit)
     {
         unit.GetGameHub.GetUnitsUpdateEngine.RemoveUnit(unit, StateUnitList.MOVE);
-        unit.StartAnimation.ToRun(StateUnit.IDLE);
+      // unit.StartAnimation.ToRun(StateUnit.IDLE);
     }
 
     public void UpdateState(UnitComponent unit)

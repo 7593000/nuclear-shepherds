@@ -135,6 +135,6 @@ public enum SoundType
 {
     Music,
     SFX,
- 
+ SFXPlayOne,
     UI
 }

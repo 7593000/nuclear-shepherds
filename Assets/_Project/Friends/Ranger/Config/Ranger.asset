@@ -32,3 +32,4 @@ MonoBehaviour:
   _explosionProtection: 0
   _unitPrefab: {fileID: 6797377760339903826, guid: 536b3cd9fc39093469a145ecabc38dd6, type: 3}
   _sprite: {fileID: 21300000, guid: 5167404a075e84f4f8d9abc66f908859, type: 3}
+  _soundIdle: {fileID: 8300000, guid: 69547f75919490049a0c09908a06849f, type: 3}

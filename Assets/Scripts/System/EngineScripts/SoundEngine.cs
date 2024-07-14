@@ -9,7 +9,7 @@ public class SoundEngine : MonoBehaviour
  
     private static SoundEngine _instance;
 
-    [SerializeField] private PoolAudioSource _poolSFXloop;
+    [SerializeField] private PoolAudioSource _poolAdioSource;
 
     [SerializeField] private AudioSource _sourceMusic; // для музыки
     [SerializeField] private AudioSource _sourceSFX; // для звуковых эффектов
@@ -36,10 +36,10 @@ public class SoundEngine : MonoBehaviour
 
     private void Awake()
     {
-        if ( _poolSFXloop == null )
+        if ( _poolAdioSource == null )
         {
-            _poolSFXloop = GetComponent<PoolAudioSource>();
-            _poolSFXloop.Initialized();
+            _poolAdioSource = GetComponent<PoolAudioSource>();
+            _poolAdioSource.Initialized();
         }
 
         if ( _instance != null && _instance != this )
@@ -51,19 +51,7 @@ public class SoundEngine : MonoBehaviour
         _instance = this;
         DontDestroyOnLoad( gameObject );
 
-        InitializeAudioSource( ref _sourceMusic , true );
-      //  InitializeAudioSource( ref _sourceSFX , false );
-        //InitializeAudioSource( ref _sourceUI , false );
-    }
-
-    private void InitializeAudioSource( ref AudioSource source , bool loop )
-    {
-        if ( source == null )
-        {
-            source = gameObject.AddComponent<AudioSource>();
-            source.loop = loop;
-            source.playOnAwake = false;
-        }
+      
     }
 
     public void PlaySound( AudioClip clip , SoundType soundType , bool loop = false )
@@ -75,6 +63,9 @@ public class SoundEngine : MonoBehaviour
                 break;
             case SoundType.SFX:
                 PlaySFX( clip , loop );
+                break;
+            case SoundType.SFXPlayOne:
+                PlayOneShot( clip );
                 break;
             case SoundType.UI:
                 PlayUI( clip );
@@ -123,14 +114,17 @@ public class SoundEngine : MonoBehaviour
 
     private void PlaySFX( AudioClip clip , bool loop )
     {
-        AudioSource source = _poolSFXloop.GetAudioSource();
+        AudioSource source = _poolAdioSource.GetAudioSource();
         source.clip = clip;
         source.loop = loop;
         source.Play();
         _activeSFXSources.Add( source );
         StartCoroutine( ReturnToPool( source ) );
     }
-
+    private void PlayOneShot(AudioClip clip )
+    {
+        _sourceSFX.PlayOneShot( clip );
+    }
     public void StopSFX( AudioClip clip )
     {
         List<AudioSource> sourcesToRemove = new List<AudioSource>();
@@ -142,7 +136,7 @@ public class SoundEngine : MonoBehaviour
                
               
                 sourcesToRemove.Add( source );
-                _poolSFXloop.ReturnAudioSource( source );
+                _poolAdioSource.ReturnAudioSource( source );
             }
         }
 
@@ -161,7 +155,7 @@ public class SoundEngine : MonoBehaviour
     {
         yield return new WaitWhile( () => source.isPlaying );
         _activeSFXSources.Remove( source );
-        _poolSFXloop.ReturnAudioSource( source );
+        _poolAdioSource.ReturnAudioSource( source );
     }
 
 

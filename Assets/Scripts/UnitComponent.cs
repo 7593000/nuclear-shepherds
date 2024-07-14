@@ -7,7 +7,7 @@ public abstract class UnitComponent : MonoBehaviour
     //private List<IReset> _resetDataComponents = new();
 
     [SerializeField] protected Animator _animator;
-    private AnimatorComponent _animatorComponent;
+    [SerializeField] private AnimatorComponent _animatorComponent;
     [SerializeField] protected UnitConfig _config;
     [SerializeField] public Health _health;
     [SerializeField] protected GameHub _gameHub;
