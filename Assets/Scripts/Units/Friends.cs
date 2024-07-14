@@ -2,6 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using static UnityEngine.UI.CanvasScaler;
 [RequireComponent( typeof( LineRenderer ) )]
 public class Friends : UnitComponent, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
@@ -96,9 +97,8 @@ public class Friends : UnitComponent, IPointerClickHandler, IPointerEnterHandler
         _lineRenderer.useWorldSpace = false;
         CreateCircle();
         _trigger.Initialized( this );
-        
         SetState( IdleState );
-       SoundEngine.Instance.PlaySound( GetConfig.GetSoundIdle , SoundType.SFX );
+       SoundEngine.Instance.PlaySound( GetConfig.GetSoundIdle , SoundType.SFXPlayOne, false , this.transform );
 
     }
 

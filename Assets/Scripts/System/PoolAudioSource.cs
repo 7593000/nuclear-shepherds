@@ -25,7 +25,7 @@ public class PoolAudioSource : MonoBehaviour
 
     public AudioSource GetAudioSource()
     {
-        // Проверяем наличие доступного источника, который не воспроизводит звук
+ 
         int initialCount = _audioSources.Count;
         for ( int i = 0; i < initialCount; i++ )
         {
@@ -38,7 +38,7 @@ public class PoolAudioSource : MonoBehaviour
             _audioSources.Enqueue( source );
         }
 
-        // Если нет доступных источников, берем самый старый активный источник
+  
         if ( _activeAudioSources.Count > 0 )
         {
             AudioSource oldestSource = _activeAudioSources[ 0 ];
@@ -49,16 +49,14 @@ public class PoolAudioSource : MonoBehaviour
             return oldestSource;
         }
 
-        // Если все источники заняты и активных источников нет, возвращаем null
+    
         return null;
     }
 
     public void ReturnAudioSource( AudioSource source )
     {
         source.Stop();
-        source.clip = null;
-        source.loop = false;
-        source.volume = 0.5f;
+      
         _activeAudioSources.Remove( source );
         _audioSources.Enqueue( source );
     }

@@ -35,7 +35,7 @@ public class IdleState : IUnitState
 
     public void UpdateState( UnitComponent unit )
     {
-        GameHub.Logger( _randomTimer.ToString() );
+       
         if ( _randomTimer <= 0 )
         {
           
@@ -44,7 +44,8 @@ public class IdleState : IUnitState
             unit.GetDirectionView[ 0 ] = _listPosition[ randomIndex ][ 0 ];
             unit.GetDirectionView[ 1 ] = _listPosition[ randomIndex ][ 1 ];
             unit.StartAnimation.ToRun( StateUnit.IDLE );
-            SoundEngine.Instance.PlaySound( unit.GetConfig.GetSoundIdle , SoundType.SFXPlayOne );
+           // SoundEngine.Instance.PlaySound( unit.GetConfig.GetSoundIdle , SoundType.SFXPlayOne, false, unit.transform );
+            SoundEngine.Instance.PlaySound( unit.GetConfig.GetSoundIdle , SoundType.SFX, false, unit.transform );
             _randomTimer = RandomTimerForIdleAnim();
         }
         _randomTimer--;

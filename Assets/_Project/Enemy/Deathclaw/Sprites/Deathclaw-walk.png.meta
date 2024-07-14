@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -108,7 +108,1015 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Deathclaw-walk_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 992
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3334d502d4b102744937b0e33947dc54
+      internalID: -730205987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 992
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b9c94f7b26bd5546a86797858b32348
+      internalID: -275508971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 992
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d74b22326309a88478a2292cb4bc89cd
+      internalID: -1698027617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_3
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 992
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed99af916daef3349a408841bde6f945
+      internalID: 1832875774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_4
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 992
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f14883d4be2b60c49977426940e5f1d0
+      internalID: 1652902025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_5
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 992
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07dfa9cdbdd837646ac19f969142ac38
+      internalID: -1882628820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_6
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 992
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 914cf01207d2b114d961e3aae645f6b4
+      internalID: -1598365358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 896
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0dc7b85d1d5f644cbbda2350b547f13
+      internalID: -1670881406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_8
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 896
+        width: 128
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8decc8490324a8f4caf813ab06be1185
+      internalID: 886026452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_9
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 896
+        width: 128
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09d9fc289f7f5204a9e3a77973730731
+      internalID: -1489502220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_11
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 896
+        width: 128
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b12fca1ecd58a1498bdbd78a3ba3bc4
+      internalID: -334050266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_12
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 896
+        width: 128
+        height: 96
+      alignment: 9
+      pivot: {x: 0.49025473, y: 0.58770686}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a318a288865c32468db7e66fa790143
+      internalID: 2046043233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 800
+        width: 128
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffba30c7fb72203429ad564f7e47ff94
+      internalID: -1673783663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_15
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 800
+        width: 128
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdc43a85ad41109498bdb63c0b5d36c7
+      internalID: -642476613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_17
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 800
+        width: 128
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f97a220e788be974eb9f2171d0871d8f
+      internalID: -344059521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_18
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 800
+        width: 128
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56f9225d0089ae04a8741f8f57389d82
+      internalID: 1725227022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_19
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 800
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e80bb30957ed9049a5b141b5d02c326
+      internalID: -603020919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_20
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 800
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c1ce90592a346d4ebf147ca8427775f
+      internalID: -286845598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 704
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3878da518e801484bafa6c7803a0e226
+      internalID: 602789560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_22
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 704
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc737b5d0340f5941b96547808112f60
+      internalID: -1104480166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_23
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 704
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ada2a708e201f424790b321daf746ee7
+      internalID: 561478309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_24
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 704
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3754b400cfd67664ba8fbd20f2a59c33
+      internalID: -1424437861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_25
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 704
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 731b72fe296407c4fbb368f0aadcc75a
+      internalID: 1194013016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_26
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 704
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60b3186b0862e404c85346561a3c28fe
+      internalID: 1190846483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_27
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 704
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61df79e1fcd7677438a1e3e0512a6ec5
+      internalID: 1516404499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 608
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79b9833aba10b5a45973e2ec4f37b795
+      internalID: 462771813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_29
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 608
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3729f8d8349dd942941ebdf2631b964
+      internalID: 1151010971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_30
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 608
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c3066d20b93339498da890c6784d8b2
+      internalID: 1973804952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_31
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 608
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0317475eb1bd315429014c80d50d08a4
+      internalID: 78929540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_32
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 608
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2428fcf7740f078438532b1f5175937c
+      internalID: 1315947815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_33
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 608
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1d1e5c67279af24fb8a1c996c77957c
+      internalID: -2007160400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_34
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 608
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b08991502c33f9d48af64c770ec38f40
+      internalID: -1384785875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 128
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 896f6d1b540462a43850415d53ee9947
+      internalID: 326657063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_36
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 512
+        width: 128
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15c0ad0f5e9bcf744be203158f2f4335
+      internalID: -858743740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_38
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 512
+        width: 128
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c6edd1334e8b2440b97a23745e42adb
+      internalID: -1520196629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_39
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 512
+        width: 128
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a67c8e1807cf1e4586ab0c80946e2b0
+      internalID: -1427074991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_40
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 128
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b89f46ac00b843459744231040cab9c
+      internalID: -1333670075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 416
+        width: 128
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f26c9fee1b62d394898131f530cb5784
+      internalID: 293069577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_43
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 416
+        width: 128
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10a9268bf4c28d04e965c5896e98f101
+      internalID: -800614510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_45
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 416
+        width: 128
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56c7c170477219d47bfdf52444e05944
+      internalID: -310198038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_46
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 416
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 498d70b9312421242ad49998efc3be51
+      internalID: 859994251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_47
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 416
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 632b45ab04efa5a478449e0df8382665
+      internalID: -423749150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_48
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 416
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 347066baf8c8b344da8ebd43dc42e1d1
+      internalID: 797438700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01642606b29e99d4e870967bb79f565a
+      internalID: 2072226822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_50
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 320
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7985b2a5c70c1134e968ce2ba28b3dc3
+      internalID: 7011163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_51
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 320
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5a0c9fd712650a4e948e212d23f0a0a
+      internalID: 1726237248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_52
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 320
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2270f44106b2fa74faf3d6f1409dd47e
+      internalID: -1954860259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deathclaw-walk_53
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 320
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 492f40fcc1612a549a13edc3c6086f49
+      internalID: -1320876239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +1127,61 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Deathclaw-walk_0: -730205987
+      Deathclaw-walk_1: -275508971
+      Deathclaw-walk_10: 298174359
+      Deathclaw-walk_11: -334050266
+      Deathclaw-walk_12: 2046043233
+      Deathclaw-walk_13: -1360162184
+      Deathclaw-walk_14: -1673783663
+      Deathclaw-walk_15: -642476613
+      Deathclaw-walk_16: -1476054404
+      Deathclaw-walk_17: -344059521
+      Deathclaw-walk_18: 1725227022
+      Deathclaw-walk_19: -603020919
+      Deathclaw-walk_2: -1698027617
+      Deathclaw-walk_20: -286845598
+      Deathclaw-walk_21: 602789560
+      Deathclaw-walk_22: -1104480166
+      Deathclaw-walk_23: 561478309
+      Deathclaw-walk_24: -1424437861
+      Deathclaw-walk_25: 1194013016
+      Deathclaw-walk_26: 1190846483
+      Deathclaw-walk_27: 1516404499
+      Deathclaw-walk_28: 462771813
+      Deathclaw-walk_29: 1151010971
+      Deathclaw-walk_3: 1832875774
+      Deathclaw-walk_30: 1973804952
+      Deathclaw-walk_31: 78929540
+      Deathclaw-walk_32: 1315947815
+      Deathclaw-walk_33: -2007160400
+      Deathclaw-walk_34: -1384785875
+      Deathclaw-walk_35: 326657063
+      Deathclaw-walk_36: -858743740
+      Deathclaw-walk_37: 650761905
+      Deathclaw-walk_38: -1520196629
+      Deathclaw-walk_39: -1427074991
+      Deathclaw-walk_4: 1652902025
+      Deathclaw-walk_40: -1333670075
+      Deathclaw-walk_41: -814998664
+      Deathclaw-walk_42: 293069577
+      Deathclaw-walk_43: -800614510
+      Deathclaw-walk_44: 569143218
+      Deathclaw-walk_45: -310198038
+      Deathclaw-walk_46: 859994251
+      Deathclaw-walk_47: -423749150
+      Deathclaw-walk_48: 797438700
+      Deathclaw-walk_49: 2072226822
+      Deathclaw-walk_5: -1882628820
+      Deathclaw-walk_50: 7011163
+      Deathclaw-walk_51: 1726237248
+      Deathclaw-walk_52: -1954860259
+      Deathclaw-walk_53: -1320876239
+      Deathclaw-walk_6: -1598365358
+      Deathclaw-walk_7: -1670881406
+      Deathclaw-walk_8: 886026452
+      Deathclaw-walk_9: -1489502220
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

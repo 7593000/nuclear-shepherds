@@ -8,7 +8,7 @@ public class GameSettings : MonoBehaviour
     private GameData _gameData;
     private SaveLoadEngine _saveLoadEngine;
    [SerializeField] private AudioClip _musicBackground;//пусть будет тут 
-
+    [SerializeField] private float _soundVolume = 0.6f;
     [SerializeField] private List<UnitConfig> _configEnemyUnit = new();
     [SerializeField] private List<UnitConfig> _configFriendUnit = new();
     [SerializeField, Tooltip("Спрайты уровеней")] private Sprite[] _spriteLevel;
@@ -37,6 +37,11 @@ public class GameSettings : MonoBehaviour
     /// Получить имена файлов сохранялок
     /// </summary>
     public string GetSaveGame => _saveLoadEngine.LoadData();
+
+    /// <summary>
+    /// Получить уровень громкости для SFX
+    /// </summary>
+    public float GetSoundValue => _soundVolume;
 
     public void Initialized(GameHub gameHub)
     {

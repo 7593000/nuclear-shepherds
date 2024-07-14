@@ -1,4 +1,3 @@
-
 using UnityEngine;
 
 /// <summary>
@@ -11,46 +10,36 @@ public class AttackState : IUnitState
     private float _luck;
     private bool _playSound = false;
     private bool _loop = false;
-    private AudioClip[] _AttackClip;
+    private AudioClip[] _attackClips;
+
     public void EnterState( UnitComponent unit )
     {
         _attack = unit.GetAttack;
         _luck = unit.GetConfig.GetLuck;
-        _AttackClip = unit.GetConfig.GetWeaponsConfig.GetAudioClip;
+        _attackClips = unit.GetConfig.GetWeaponsConfig.GetAudioClip;
         unit.GetGameHub.GetUnitsUpdateEngine.AddUnit( unit , StateUnitList.ATTACK );
         unit.GetGameHub.GetUnitsUpdateEngine.AddUnit( unit , StateUnitList.DIRECT );
-
-
-
-
-
     }
 
     public void ExitState( UnitComponent unit )
     {
         _playSound = false;
-
-        if ( _loop == true )
+        if ( _loop )
         {
-
-            SoundEngine.Instance.StopSound( SoundType.SFX , _AttackClip[0] );
-
+            SoundEngine.Instance.StopSound( SoundType.SFX , _attackClips[ 0 ] );
         }
-
         unit.GetGameHub.GetUnitsUpdateEngine.RemoveUnit( unit , StateUnitList.DIRECT );
         unit.GetGameHub.GetUnitsUpdateEngine.RemoveUnit( unit , StateUnitList.ATTACK );
-
     }
+
     public void UpdateState( UnitComponent unit )
     {
-
         if ( unit.GetTargetForAttack != null )
         {
             _damage = unit.GetDamageClass.DamageTarget();
 
             if ( _damage >= 0 )
             {
-
                 float damageAndCrit = CalculatingDamage();
                 unit.StartAnimation.ToRun( StateUnit.ATTACK );
 
@@ -58,24 +47,17 @@ public class AttackState : IUnitState
                 {
                     _playSound = true;
 
-
-                    if ( unit.GetConfig.GetWeaponsConfig.GetSpeedAttack <= 0 )
-                    {
-                        _loop = true;
-                    }
-
-                    SoundEngine.Instance.PlaySound( _AttackClip[0] , SoundType.SFX , _loop );
+                    _loop = unit.GetConfig.GetWeaponsConfig.GetSpeedAttack <= 0;
+                    SoundEngine.Instance.PlaySound( _attackClips[ 0 ] , SoundType.SFX , _loop , unit.transform );
                 }
 
-               
                 _attack.Attack( damageAndCrit ); // ѕередать урон классу оружи€ дл€ нанесени€ урона врагу
-
             }
-            else if ( _damage == -1 ) // -1 : оружие на кулдауне
+            else if ( _damage == -1 ) // -1: оружие на кулдауне
             {
                 unit.StartAnimation.ToRun( StateUnit.IDLE );
             }
-            else if ( _damage == -100 ) // -100 : оружие на перезар€дке 
+            else if ( _damage == -100 ) // -100: оружие на перезар€дке 
             {
                 unit.StartAnimation.ToRun( StateUnit.IDLE ); // TODO: добавить анимацию перезар€дки
             }
@@ -97,11 +79,7 @@ public class AttackState : IUnitState
     /// <returns>«начение урона</returns>
     private float CalculatingDamage()
     {
-        if ( CritCalculation() )
-        {
-            return _damage + ( _damage * _luck );
-        }
-        return _damage;
+        return CritCalculation() ? _damage + ( _damage * _luck ) : _damage;
     }
 
     /// <summary>
@@ -118,5 +96,4 @@ public class AttackState : IUnitState
     {
         return Random.Range( 0f , 1f );
     }
-
 }

@@ -1,20 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static Unity.VisualScripting.Member;
-
 
 public class SoundEngine : MonoBehaviour
 {
- 
     private static SoundEngine _instance;
 
     [SerializeField] private PoolAudioSource _poolAdioSource;
-
     [SerializeField] private AudioSource _sourceMusic; // для музыки
     [SerializeField] private AudioSource _sourceSFX; // для звуковых эффектов
     [SerializeField] private AudioSource _sourceUI; // для звуков UI
 
+    [SerializeField]
+    private float _maxDistance = 50.0f;
+    [SerializeField]
+    private float _minDistance = 1.0f;
+    private Transform _cameraTransform;
+   
+    private Dictionary<Transform , AudioSource> _activeSource = new();
     private List<AudioSource> _activeSFXSources = new();
 
     public static SoundEngine Instance
@@ -36,6 +39,8 @@ public class SoundEngine : MonoBehaviour
 
     private void Awake()
     {
+        _cameraTransform = Camera.main.transform;
+       
         if ( _poolAdioSource == null )
         {
             _poolAdioSource = GetComponent<PoolAudioSource>();
@@ -50,11 +55,10 @@ public class SoundEngine : MonoBehaviour
 
         _instance = this;
         DontDestroyOnLoad( gameObject );
-
-      
+        StartCoroutine( UpdateDistanceTarget() );
     }
 
-    public void PlaySound( AudioClip clip , SoundType soundType , bool loop = false )
+    public void PlaySound( AudioClip clip , SoundType soundType , bool loop = false , Transform target = null )
     {
         switch ( soundType )
         {
@@ -62,10 +66,10 @@ public class SoundEngine : MonoBehaviour
                 PlayMusic( clip );
                 break;
             case SoundType.SFX:
-                PlaySFX( clip , loop );
+                PlaySFX( clip , loop , target );
                 break;
             case SoundType.SFXPlayOne:
-                PlayOneShot( clip );
+                PlayOneShot( clip , target );
                 break;
             case SoundType.UI:
                 PlayUI( clip );
@@ -97,7 +101,6 @@ public class SoundEngine : MonoBehaviour
                 _sourceMusic.volume = volume;
                 break;
             case SoundType.SFX:
-               
                 _sourceSFX.volume = volume;
                 break;
             case SoundType.UI:
@@ -112,35 +115,44 @@ public class SoundEngine : MonoBehaviour
         _sourceMusic.Play();
     }
 
-    private void PlaySFX( AudioClip clip , bool loop )
+    private void PlaySFX( AudioClip clip , bool loop , Transform target )
     {
         AudioSource source = _poolAdioSource.GetAudioSource();
+        if (   target != null )
+        {
+            _activeSource[ target ] = source;
+        }
+        
         source.clip = clip;
         source.loop = loop;
         source.Play();
         _activeSFXSources.Add( source );
-        StartCoroutine( ReturnToPool( source ) );
+
+      
+
+        StartCoroutine( ReturnToPool( source , target ) );
     }
-    private void PlayOneShot(AudioClip clip )
+
+    private void PlayOneShot( AudioClip clip , Transform target )
     {
+        _sourceSFX.volume = GetDistanceForValue( target );
         _sourceSFX.PlayOneShot( clip );
     }
+
     public void StopSFX( AudioClip clip )
     {
         List<AudioSource> sourcesToRemove = new List<AudioSource>();
 
-        foreach ( var source in _activeSFXSources )
+        foreach ( AudioSource source in _activeSFXSources )
         {
             if ( source.clip == clip )
             {
-               
-              
                 sourcesToRemove.Add( source );
                 _poolAdioSource.ReturnAudioSource( source );
             }
         }
 
-        foreach ( var source in sourcesToRemove )
+        foreach ( AudioSource source in sourcesToRemove )
         {
             _activeSFXSources.Remove( source );
         }
@@ -151,14 +163,42 @@ public class SoundEngine : MonoBehaviour
         _sourceUI.PlayOneShot( clip );
     }
 
-    private IEnumerator ReturnToPool( AudioSource source )
+    private IEnumerator ReturnToPool( AudioSource source , Transform target )
     {
         yield return new WaitWhile( () => source.isPlaying );
+
+        if ( target != null && _activeSource.ContainsKey( target ) )
+        {
+            _activeSource.Remove( target );
+        }
+
         _activeSFXSources.Remove( source );
         _poolAdioSource.ReturnAudioSource( source );
     }
 
+    private IEnumerator UpdateDistanceTarget()
+    {
+        while ( true )
+        {
+            foreach ( var item in _activeSource )
+            {
+                Transform target = item.Key;
+                AudioSource source = item.Value;
 
-    
+                if ( target.gameObject.activeSelf )
+                {
+                    float distance = Vector3.Distance( target.position , _cameraTransform.position );
+                    float volume = Mathf.Clamp01( 1 - ( distance - _minDistance ) / ( _maxDistance - _minDistance ) );
+                    source.volume = volume;
+                }
+            }
+            yield return new WaitForSeconds( 0.5f );  
+        }
+    }
+
+    private float GetDistanceForValue( Transform target )
+    {
+        float distance = Vector3.Distance( target.position , _cameraTransform.position );
+        return Mathf.Clamp01( 1 - ( distance - _minDistance ) / ( _maxDistance - _minDistance ) );
+    }
 }
-
