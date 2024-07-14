@@ -20,7 +20,7 @@ MonoBehaviour:
   _occupiedArea: 0
   _speed: 0
   _typeWeapon: 6
-  _config: {fileID: 11400000, guid: 66a2e95831cbed44a864d8963c9b28aa, type: 2}
+  _config: {fileID: 11400000, guid: 0d4319474e03a6a4b84ef843b0b236ba, type: 2}
   _cost: 500
   _costUpgrade: 500
   _damageRatio: 1.2
@@ -32,3 +32,4 @@ MonoBehaviour:
   _explosionProtection: 0
   _unitPrefab: {fileID: 6797377760339903826, guid: c34828b9a056e8340b64b7928f132434, type: 3}
   _sprite: {fileID: 21300000, guid: 1dc4cf73fcc6f9f489fbdecb1ade8bda, type: 3}
+  _soundIdle: {fileID: 8300000, guid: 9ac953cd2cf405c499eabf29cadeef67, type: 3}

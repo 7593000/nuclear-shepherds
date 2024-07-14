@@ -17,6 +17,7 @@ public class IdleState : IUnitState
     };
     public void EnterState( UnitComponent unit )
     {
+     
         unit.GetGameHub.GetUnitsUpdateEngine.AddUnit( unit , StateUnitList.OTHER );
         unit.StartAnimation.ToRun( StateUnit.IDLE );
 
@@ -29,6 +30,7 @@ public class IdleState : IUnitState
     public void ExitState( UnitComponent unit )
     {
         unit.GetGameHub.GetUnitsUpdateEngine.RemoveUnit( unit , StateUnitList.OTHER );
+        SoundEngine.Instance.StopSound( SoundType.SFX, unit.GetConfig.GetSoundIdle );
     }
 
     public void UpdateState( UnitComponent unit )
@@ -36,10 +38,13 @@ public class IdleState : IUnitState
         GameHub.Logger( _randomTimer.ToString() );
         if ( _randomTimer <= 0 )
         {
+          
+
             int randomIndex = RandomPosition();
             unit.GetDirectionView[ 0 ] = _listPosition[ randomIndex ][ 0 ];
             unit.GetDirectionView[ 1 ] = _listPosition[ randomIndex ][ 1 ];
             unit.StartAnimation.ToRun( StateUnit.IDLE );
+            SoundEngine.Instance.PlaySound( unit.GetConfig.GetSoundIdle , SoundType.SFX );
             _randomTimer = RandomTimerForIdleAnim();
         }
         _randomTimer--;
@@ -48,7 +53,7 @@ public class IdleState : IUnitState
 
     private float RandomTimerForIdleAnim()
     {
-        return Random.Range( 2f , 20f );
+        return Random.Range( 10f , 30f );
 
 
     }

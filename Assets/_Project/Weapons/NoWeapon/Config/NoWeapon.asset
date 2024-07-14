@@ -20,5 +20,6 @@ MonoBehaviour:
   _weaponAmmo: 1
   _damage: 2
   _distance: 1.1
-  _audioClip: {fileID: 0}
+  _audioClip:
+  - {fileID: 8300000, guid: fe8c52bb44a582843a5ecfd08a0338e9, type: 3}
   _sprite: {fileID: 21300000, guid: 70b9076d7e9658d49a656a928a1ecf0b, type: 3}

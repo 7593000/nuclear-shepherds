@@ -49,7 +49,10 @@ public class DischargeElectricity : IAttack
     }
     private void AoeDamage( float damage )
     {
+        if(_unit.GetTarget != null )
+        {
 
+      
         Collider2D[] hitColliders = Physics2D.OverlapCircleAll( _unit.GetTarget.position , _damageRadius );
 
 
@@ -60,6 +63,7 @@ public class DischargeElectricity : IAttack
 
                 enemyHealth.TakeDamage( _unit.GetConfig.GetWeaponsConfig.GetTypeWeapons , damage );
             }
+        }
         }
     }
 }

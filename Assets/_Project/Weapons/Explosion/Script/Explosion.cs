@@ -6,7 +6,7 @@ public class Explosion : MonoBehaviour
 {
     [SerializeField, Tooltip("Радиус поражения взрыва")]
     private float _explosionRadius = 2f;
-     
+    
     private List<IHealth> _strikingObjects = new();
 
   
@@ -39,14 +39,6 @@ public class Explosion : MonoBehaviour
 
 
 
-#if UNITY_EDITOR
-
-private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, _explosionRadius);
-    }
-
-#endif
+ 
 
 }

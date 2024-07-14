@@ -75,7 +75,7 @@ public class Damage
 
         if (_canAttack)
         {
-            float damage = _damage; //todo => temp
+            float damage = _damage;  
             _weaponAmmo--;
 
             if (_speedAttack > 0f)

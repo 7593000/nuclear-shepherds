@@ -98,8 +98,8 @@ public class Friends : UnitComponent, IPointerClickHandler, IPointerEnterHandler
         _trigger.Initialized( this );
         
         SetState( IdleState );
-      
-      
+       SoundEngine.Instance.PlaySound( GetConfig.GetSoundIdle , SoundType.SFX );
+
     }
 
     private void CreateCircle()

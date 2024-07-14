@@ -58,7 +58,9 @@ public class UnitConfig : ScriptableObject
     [Space]
     [SerializeField, Tooltip( "Спрайт юнита" )]
     private Sprite _sprite;
-
+    [SerializeField,Tooltip("Звук бездействия")]
+    private AudioClip _soundIdle;
+ 
     public int GetId => _id;
 
 
@@ -145,8 +147,10 @@ public class UnitConfig : ScriptableObject
     /// Получить спрайт юнита
     /// </summary>
     public Sprite GetSprite => _sprite;
-
-
+    public AudioClip GetSoundIdle => _soundIdle;
  
-    
+
+
+
+
 }

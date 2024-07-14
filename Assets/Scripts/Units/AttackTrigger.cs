@@ -21,8 +21,14 @@ public class AttackTrigger : MonoBehaviour
     }
 
 
-    //TODO=> проверка нахождения кого-то в триггере .. 
-    // не срабатывает триггер если разместить юнита рядом с врагом 
+ 
+
+
+
+
+
+
+
     private void OnTriggerEnter2D(Collider2D other)
     {
 
@@ -39,8 +45,11 @@ public class AttackTrigger : MonoBehaviour
                 if (enemy != null && !_enemies.Contains(unit) && !enemy.IsDead)
                 {
                     _enemies.Add(unit);
-
-                    SelectEnemyForAttack();
+                    if(unit.GetTargetForAttack == null )
+                    {
+                        SelectEnemyForAttack();
+                    }
+                    
                 }
             }
         }

@@ -128,3 +128,13 @@ public enum BorderType : byte
     ANGLEBR,
     ANGLEBL
 }
+/// <summary>
+/// Перечисление типов звука 
+/// </summary>
+public enum SoundType
+{
+    Music,
+    SFX,
+ 
+    UI
+}

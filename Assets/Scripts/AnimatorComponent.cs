@@ -9,6 +9,9 @@ public class AnimatorComponent : MonoBehaviour
     private Animator _animator;
     private StateUnit _currentStatus;
     private string _activeParameters;
+
+
+
     public void Container(UnitComponent unit)
     {
         _unit = unit;
@@ -41,6 +44,8 @@ public class AnimatorComponent : MonoBehaviour
         }
 
     }
+
+
     private void StopAnimation()
     {
     }
@@ -62,6 +67,7 @@ public class AnimatorComponent : MonoBehaviour
         _activeParameters = parameters;
     }
 
+    
     public void ChangeDirection()
     {
         if (_unit.GetTarget == null)

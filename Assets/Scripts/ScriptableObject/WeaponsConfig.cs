@@ -21,7 +21,7 @@ public class WeaponsConfig : ScriptableObject
     private float _distance;
     [Space]
     [SerializeField,Tooltip("Звук выстрела")]
-    private AudioClip _audioClip;
+    private AudioClip[] _audioClip;
 
 #if UNITY_EDITOR
     [SerializeField, Tooltip( "Спрайт оружия для визуализации в инспекторе" )]
@@ -54,8 +54,11 @@ public class WeaponsConfig : ScriptableObject
     /// Дистанция атаки
     /// </summary>
     public float GetDistance => _distance;
-    public AudioClip GetAudioClip => _audioClip;
-
+    /// <summary>
+    /// Получить звук использования оружием
+    /// </summary>
+    public AudioClip[] GetAudioClip => _audioClip;
+       
 #if UNITY_EDITOR
     public Sprite GetSprite => _sprite;
 #endif

@@ -7,6 +7,7 @@ public class GameSettings : MonoBehaviour
     private GameHub _gameHub;
     private GameData _gameData;
     private SaveLoadEngine _saveLoadEngine;
+   [SerializeField] private AudioClip _musicBackground;//пусть будет тут 
 
     [SerializeField] private List<UnitConfig> _configEnemyUnit = new();
     [SerializeField] private List<UnitConfig> _configFriendUnit = new();
@@ -55,6 +56,9 @@ public class GameSettings : MonoBehaviour
         }
 
         _saveLoadEngine = new SaveLoadEngine(_gameData);
+
+        SoundEngine.Instance.PlaySound( _musicBackground , SoundType.Music);
+        SoundEngine.Instance.SetVolume(0.6f, SoundType.Music);
     }
 
     /// <summary>

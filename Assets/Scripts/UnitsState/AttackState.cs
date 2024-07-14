@@ -9,51 +9,85 @@ public class AttackState : IUnitState
     private IAttack _attack;
     private float _damage = 0;
     private float _luck;
+    private bool _playSound = false;
+    private bool _loop = false;
+    private AudioClip[] _AttackClip;
     public void EnterState( UnitComponent unit )
     {
-        _attack = unit.GetAttack; //todo=> del
+        _attack = unit.GetAttack;
         _luck = unit.GetConfig.GetLuck;
+        _AttackClip = unit.GetConfig.GetWeaponsConfig.GetAudioClip;
         unit.GetGameHub.GetUnitsUpdateEngine.AddUnit( unit , StateUnitList.ATTACK );
         unit.GetGameHub.GetUnitsUpdateEngine.AddUnit( unit , StateUnitList.DIRECT );
+
+
+
 
 
     }
 
     public void ExitState( UnitComponent unit )
     {
+        _playSound = false;
+
+        if ( _loop == true )
+        {
+
+            SoundEngine.Instance.StopSound( SoundType.SFX , _AttackClip[0] );
+
+        }
+
         unit.GetGameHub.GetUnitsUpdateEngine.RemoveUnit( unit , StateUnitList.DIRECT );
         unit.GetGameHub.GetUnitsUpdateEngine.RemoveUnit( unit , StateUnitList.ATTACK );
 
     }
-    public void UpdateState(UnitComponent unit)
+    public void UpdateState( UnitComponent unit )
     {
-        if (unit.GetTargetForAttack != null)
+
+        if ( unit.GetTargetForAttack != null )
         {
             _damage = unit.GetDamageClass.DamageTarget();
 
-            if (_damage >= 0)
+            if ( _damage >= 0 )
             {
+
                 float damageAndCrit = CalculatingDamage();
-                unit.StartAnimation.ToRun(StateUnit.ATTACK);
-                _attack.Attack(damageAndCrit); // Передать урон классу оружия для нанесения урона врагу
+                unit.StartAnimation.ToRun( StateUnit.ATTACK );
+
+                if ( !_playSound )
+                {
+                    _playSound = true;
+
+
+                    if ( unit.GetConfig.GetWeaponsConfig.GetSpeedAttack <= 0 )
+                    {
+                        _loop = true;
+                    }
+
+                    SoundEngine.Instance.PlaySound( _AttackClip[0] , SoundType.SFX , _loop );
+                }
+
+               
+                _attack.Attack( damageAndCrit ); // Передать урон классу оружия для нанесения урона врагу
+
             }
-            else if (_damage == -1) // -1 : оружие на кулдауне
+            else if ( _damage == -1 ) // -1 : оружие на кулдауне
             {
-                unit.StartAnimation.ToRun(StateUnit.IDLE);
+                unit.StartAnimation.ToRun( StateUnit.IDLE );
             }
-            else if (_damage == -100) // -100 : оружие на перезарядке 
+            else if ( _damage == -100 ) // -100 : оружие на перезарядке 
             {
-                unit.StartAnimation.ToRun(StateUnit.IDLE); // TODO: добавить анимацию перезарядки
+                unit.StartAnimation.ToRun( StateUnit.IDLE ); // TODO: добавить анимацию перезарядки
             }
 
-            if (unit.GetTypeUnit == TypeUnit.ENEMY && unit.GetTargetForAttack.IsDead)
+            if ( unit.GetTypeUnit == TypeUnit.ENEMY && unit.GetTargetForAttack.IsDead )
             {
-                unit.SetState(unit.SearchState);
+                unit.SetState( unit.SearchState );
             }
         }
         else
         {
-            unit.SetState(unit.IdleState);
+            unit.SetState( unit.IdleState );
         }
     }
 

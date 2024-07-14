@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 /// <summary>
 ///  ласс оружи€ наносимый јо≈ урон в точке: ракетницы 
@@ -9,7 +10,7 @@ public class AoEweapons : IAttack
     private PoolExplosion _poolExplosion;
     private Explosion _explosion;
     private List<IHealth> _strikingObjects = new();
-
+    private AudioClip _explosionSFX;
 
     public AoEweapons(UnitComponent unit)
     {
@@ -19,18 +20,19 @@ public class AoEweapons : IAttack
 
         if (_poolExplosion == null) GameHub.Logger("Pool: " + _poolExplosion);
 
-
+        _explosionSFX = _unit.GetConfig.GetWeaponsConfig.GetAudioClip[1];
     }
-
+   
     public void Attack(float damage)
     {
 
-         
+       
 
         _explosion = _poolExplosion.GetExplosion();
         _explosion.transform.position = _unit.GetTarget.transform.position;
         _explosion.gameObject.SetActive(true);
-
+        SoundEngine.Instance.PlaySound( _explosionSFX , SoundType.SFX );
+      
         _strikingObjects = _explosion.Explode();
        
 
