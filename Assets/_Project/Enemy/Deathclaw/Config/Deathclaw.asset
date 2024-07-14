@@ -30,6 +30,6 @@ MonoBehaviour:
   _fire: 10
   _energyWeapons: 10
   _explosionProtection: 10
-  _unitPrefab: {fileID: 4936857353151220823, guid: 05244c1ea530104489f11a019eab71a1, type: 3}
-  _sprite: {fileID: -940772182, guid: f13fff25564cc12408229b392c9a1f4b, type: 3}
+  _unitPrefab: {fileID: 4936857353151220823, guid: 62eb8c271f8318c45819d874ea31cc03, type: 3}
+  _sprite: {fileID: -1384785875, guid: bafb5cff76fd6a9429f18ccab0be06d3, type: 3}
   _soundIdle: {fileID: 0}

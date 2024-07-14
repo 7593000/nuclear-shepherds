@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d26c15ee3fe0a09409c2112b20f5e458, type: 3}
+  m_Name: Glow Ghoul
+  m_EditorClassIdentifier: 
+  _id: 0
+  _unitType: 3
+  _name: "\u0421\u0432\u0435\u0442\u044F\u0449\u0438\u0439\u0441\u044F  \u0433\u0443\u043B\u044C"
+  _health: 250
+  _luck: 0.658
+  _occupiedArea: 1
+  _speed: 2
+  _typeWeapon: 1
+  _config: {fileID: 11400000, guid: 9b53894a397d5f2438fce9d92c255ea0, type: 2}
+  _cost: 70
+  _costUpgrade: 0
+  _damageRatio: 0
+  _speedAttackRatio: 0
+  _luckRatio: 0
+  _firearms: 30
+  _fire: 40
+  _energyWeapons: 50
+  _explosionProtection: 10
+  _unitPrefab: {fileID: 4936857353151220823, guid: 258c9a3a941097a4089c62d33d070dd0, type: 3}
+  _sprite: {fileID: -335390588, guid: 2488c0146480fba4eb0a1f4784e2bf48, type: 3}
+  _soundIdle: {fileID: 0}

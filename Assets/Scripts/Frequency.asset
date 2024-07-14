@@ -25,3 +25,6 @@ MonoBehaviour:
   - _enemyConfig: {fileID: 11400000, guid: 2fae0fb220ededf45adab5a4a040836a, type: 2}
     _percentageAppearance: 86.4
     _percentageRatio: 5
+  - _enemyConfig: {fileID: 11400000, guid: ffe72a6fbde9f5e4fb4d7ead1ca4e532, type: 2}
+    _percentageAppearance: 86.4
+    _percentageRatio: 5
