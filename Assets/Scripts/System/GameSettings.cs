@@ -173,7 +173,7 @@ public class GameSettings : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.V))
         {
-            if (_maxCheatMoney < _gameHub.GetWalletEngine.GetWallet.Coins  )
+            if ( _maxCheatMoney >= _gameHub.GetWalletEngine.GetWallet.Coins )
                 _gameHub.GetWalletEngine.MoreMoney(500);
         }
     }
