@@ -25,7 +25,7 @@ public abstract class UnitComponent : MonoBehaviour
     /// </summary>
     public IHealth GetTargetForAttack;
     /// <summary>
-    /// Выбранная цель для действий : индекс цели в списке  TODO=> перенести метод в класс врагов
+    /// Выбранная цель для действий : индекс цели в списке  
     /// </summary>
     public int GetSelectedGoal;
     /// <summary>

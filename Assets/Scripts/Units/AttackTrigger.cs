@@ -45,10 +45,10 @@ public class AttackTrigger : MonoBehaviour
                 if (enemy != null && !_enemies.Contains(unit) && !enemy.IsDead)
                 {
                     _enemies.Add(unit);
-                    if(unit.GetTargetForAttack == null )
-                    {
+
+                  
                         SelectEnemyForAttack();
-                    }
+                     
                     
                 }
             }

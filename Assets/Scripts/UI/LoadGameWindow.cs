@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using static UnityEditor.Progress;
 
 public class LoadGameWindow : MonoBehaviour
 {
@@ -24,9 +23,9 @@ public class LoadGameWindow : MonoBehaviour
             for (int i = 0; i < count; i++)
             {
                 LoadGameItem item = Instantiate(_itemPrefab, _parent);
-                 item.Initialized();
+                item.Initialized();
                 item.ShowHideItems(false);
-               _dataItems.Add(item);
+                _dataItems.Add(item);
             }
         }
 
@@ -40,7 +39,7 @@ public class LoadGameWindow : MonoBehaviour
 
         for (int i = save.Length; i < _dataItems.Count; i++)
         {
-            
+
             _dataItems[i].ShowHideItems(false);
             _dataItems[i].gameObject.SetActive(false);
         }
@@ -57,7 +56,7 @@ public class LoadGameWindow : MonoBehaviour
     /// </summary>
     public void LoadWindowStatus()
     {
-         
+
         _visible = !_visible;
         _group.alpha = _visible ? 1 : 0;
         _group.blocksRaycasts = _visible;
@@ -67,7 +66,7 @@ public class LoadGameWindow : MonoBehaviour
 
     public void PrintAllSaveFiles(string[] pathSave)
     {
-       
+
 
         for (int i = 0; i < pathSave.Length; i++)
         {
@@ -82,7 +81,7 @@ public class LoadGameWindow : MonoBehaviour
 
     public void BackToMenu()
     {
-        
+
 
         _visible = !_visible;
         _group.alpha = _visible ? 1 : 0;

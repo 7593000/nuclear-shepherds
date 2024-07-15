@@ -147,6 +147,7 @@ public sealed class UnitsUpdateEngine : MonoBehaviour
                 if (_moveStateUnits[i].gameObject.activeSelf)
                 {
                     _moveStateUnits[i].UpdateUnit();
+
                 }
                 else
                 {

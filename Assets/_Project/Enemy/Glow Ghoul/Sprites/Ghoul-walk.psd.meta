@@ -443,7 +443,7 @@ TextureImporter:
         serializedVersion: 2
         x: 192
         y: 704
-        width: 32
+        width: 64
         height: 64
       alignment: 9
       pivot: {x: 0.5, y: 0.125}
@@ -1294,27 +1294,6 @@ TextureImporter:
       bones: []
       spriteID: 0e8fd8e24195bfc4db0f1a1f02a8c53a
       internalID: -51846875
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ghoul-walk_17
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 704
-        width: 32
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.125}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0faa8c928eced0e40a35c4b4a6544d58
-      internalID: -1098298902
       vertices: []
       indices: 
       edges: []

@@ -51,6 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 6762626167054836849}
+  _animatorComponent: {fileID: 0}
   _config: {fileID: 11400000, guid: 2fae0fb220ededf45adab5a4a040836a, type: 2}
   _health: {fileID: 5192163626394658848}
   _gameHub: {fileID: 0}
@@ -64,6 +65,7 @@ MonoBehaviour:
   GetSelectedGoal: 0
   GetTarget: {fileID: 0}
   CellPosition: {x: 0, y: 0, z: 0}
+  _typeFraction: 2
   _busyWave: 0
 --- !u!212 &234248184540370895
 SpriteRenderer:

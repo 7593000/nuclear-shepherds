@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Net;
 using UnityEngine;
 /// <summary>
 /// Класс для оружия, которе наносит урон по длине выстрела: Лазер. огнемет, электро 
@@ -13,28 +12,28 @@ public class PiercingWeapon : IAttack
     private float _radius;
     private int _maxTargets; // Максимальное количество целей
     private RaycastHit2D[] _hits;
-  
+
     public PiercingWeapon(UnitComponent unit)
     {
         _unit = unit;
         _radius = unit.GetConfig.GetWeaponsConfig.GetRadiusAoE;
         _maxTargets = unit.GetConfig.GetWeaponsConfig.GetNumberStriking;
         _typeWeapon = _unit.GetConfig.GetWeaponsConfig.GetTypeWeapons;
-        
+
         _hits = new RaycastHit2D[_maxTargets];
     }
 
     public void Attack(float damage)
     {
-        
-            DetectTargets();
-        
+
+        DetectTargets();
+
         foreach (IHealth target in _targetsAttack)
         {
             target.TakeDamage(_typeWeapon, damage);
         }
 
-      
+
 
     }
 
@@ -70,6 +69,6 @@ public class PiercingWeapon : IAttack
 
 
 
-    
+
 
 }

@@ -4909,6 +4909,7 @@ MonoBehaviour:
   GetSelectedGoal: 0
   GetTarget: {fileID: 0}
   CellPosition: {x: 0, y: 0, z: 0}
+  _typeFraction: 1
   _busyWave: 0
 --- !u!212 &6555289921087049510
 SpriteRenderer:

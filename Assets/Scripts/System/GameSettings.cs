@@ -9,7 +9,7 @@ public class GameSettings : MonoBehaviour
     private GameHub _gameHub;
     private GameData _gameData;
     private SaveLoadEngine _saveLoadEngine;
-   [SerializeField] private AudioClip _musicBackground;//пусть будет тут 
+    [SerializeField] private AudioClip _musicBackground;//пусть будет тут 
     [SerializeField] private float _soundVolume = 0.6f;
     [SerializeField] private List<UnitConfig> _configEnemyUnit = new();
     [SerializeField] private List<UnitConfig> _configFriendUnit = new();
@@ -17,11 +17,11 @@ public class GameSettings : MonoBehaviour
     [SerializeField, Tooltip("Начальное количество браминов")] private int _brahmin = 10;
     [SerializeField, Tooltip("Стартовое значение волны")] private int _wave = 0;
     [SerializeField, Tooltip("Стартовое количество монет")] private int _startCoins = 140;
-    
+    private int _maxCheatMoney = 10000;
     private List<UnitComponent> _friendsActive = new();
     public IReadOnlyList<UnitConfig> GetFriendsConfigs => _configFriendUnit;
     public IReadOnlyList<UnitConfig> GetEnemiesConfigs => _configEnemyUnit;
-    public IReadOnlyList<UnitComponent> GetFriendsActive=>_friendsActive;
+    public IReadOnlyList<UnitComponent> GetFriendsActive => _friendsActive;
     /// <summary>
     /// Получить максимальный уровень юнита
     /// </summary>
@@ -32,8 +32,8 @@ public class GameSettings : MonoBehaviour
     public int GetStartCoins => _gameData.Coins;
 
     public GameData GetGameData => _gameData;
- 
- 
+
+
 
     /// <summary>
     /// Получить уровень громкости для SFX
@@ -49,17 +49,17 @@ public class GameSettings : MonoBehaviour
         {
             Debug.Log("Загрузка gameData из  GameState.");
             _gameData = GameState.Instance.LoadedGameData;
-         
+
         }
         else
         {
             Debug.Log("Инициализация новых данных");
-            _gameData = new GameData(_brahmin,_wave, _startCoins);
+            _gameData = new GameData(_brahmin, _wave, _startCoins);
         }
 
         _saveLoadEngine = new SaveLoadEngine();
 
-        SoundEngine.Instance.PlaySound( _musicBackground , SoundType.Music);
+        SoundEngine.Instance.PlaySound(_musicBackground, SoundType.Music);
         SoundEngine.Instance.SetVolume(0.6f, SoundType.Music);
     }
 
@@ -69,17 +69,17 @@ public class GameSettings : MonoBehaviour
     /// <param name="unit"></param>
     public void AddUnit(UnitComponent unit)
     {
-       
+
         _friendsActive.Add(unit);
     }
 
     public void RemoveUnit(UnitComponent unit)
     {
-         
-        if(_friendsActive.Contains(unit)) _friendsActive.Remove(unit);
+
+        if (_friendsActive.Contains(unit)) _friendsActive.Remove(unit);
     }
 
-    public void UpdateLevelUnit( )
+    public void UpdateLevelUnit()
     {
         if (_gameData == null)
         {
@@ -94,11 +94,11 @@ public class GameSettings : MonoBehaviour
 
 
         foreach (var unit in _friendsActive)
-        { 
+        {
             int unitId = unit.GetConfig.GetId;
             Vector3Int cellPosition = unit.CellPosition;
             int unitLevel = unit.GetUnitData.Level;
-           
+
 
             if (!_gameData.UnitsData.ContainsKey(unitId))
             {
@@ -109,10 +109,10 @@ public class GameSettings : MonoBehaviour
             _gameData.UnitsData[unitId][cellPosition] = unitLevel;
         }
 
-        
-      
 
-       
+
+
+
     }
 
     public void SaveGame()
@@ -125,8 +125,8 @@ public class GameSettings : MonoBehaviour
         _saveLoadEngine.SaveData(_gameData);
     }
 
-    
-   
+
+
     public Sprite GetSpriteLevel(int index)
     {
         if (index - 1 < _spriteLevel.Length)
@@ -166,5 +166,15 @@ public class GameSettings : MonoBehaviour
         }
 
 
+    }
+
+    private void Update()
+    {
+
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            if (_maxCheatMoney < _gameHub.GetWalletEngine.GetWallet.Coins  )
+                _gameHub.GetWalletEngine.MoreMoney(500);
+        }
     }
 }

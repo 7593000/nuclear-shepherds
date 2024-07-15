@@ -1,6 +1,5 @@
-using System.Collections.Generic;
 using UnityEngine;
- 
+
 public class GameState : MonoBehaviour
 {
     private static GameState _instance;
@@ -42,4 +41,3 @@ public class GameState : MonoBehaviour
     }
 
 }
- 

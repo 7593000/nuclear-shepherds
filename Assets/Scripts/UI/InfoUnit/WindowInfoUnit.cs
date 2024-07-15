@@ -82,7 +82,7 @@ public class WindowInfoUnit : MonoBehaviour
 
     private void ShowInfo()
     {
-        Debug.Log( _unit.GetUnitData.Level );
+       
 
 
         bool isMaxLevel = CheckedLevel();

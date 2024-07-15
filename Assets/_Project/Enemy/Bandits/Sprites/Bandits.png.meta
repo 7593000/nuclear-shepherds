@@ -1,0 +1,1183 @@
+fileFormatVersion: 2
+guid: dc8876f8badfcba4086ffb29918d3892
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 347
+        width: 36
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ae75502edfb1e7439970144cd9976dd
+      internalID: -1847416426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 347
+        width: 36
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7edc79de23e95ba44bde137de527253f
+      internalID: 1768983955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_2
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 347
+        width: 37
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c891edf7ce26e334dbe06e3fcfd0105b
+      internalID: -1593844395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_3
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 347
+        width: 36
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a390f4203f453674eb5a25961e87f3a9
+      internalID: 1411560950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_4
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 347
+        width: 37
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cce39174decd584f8c3a45e60a777ec
+      internalID: -364534555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_5
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 347
+        width: 34
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d2d66579b312b0449b08cb678e7e7ec
+      internalID: 755780285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_6
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 347
+        width: 31
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0ce8cc1b1d3ea5489a61fcdb05d4e84
+      internalID: -2055223321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_7
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 347
+        width: 34
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f694504cc25d5b44b91d588ae0483eb4
+      internalID: 521680118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_8
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 280
+        width: 30
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d0175bde91b18f499a731922a4ece17
+      internalID: 778198060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_9
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 280
+        width: 32
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 559b5b0f36b707942be5f0567f19140a
+      internalID: 1711931311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_10
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 280
+        width: 45
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afd501bc11f13a54aa37fef170bbf252
+      internalID: 163979790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_11
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 280
+        width: 33
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54a6565e4e15419489ac7d0c4aae3bd2
+      internalID: -1906723519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_12
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 280
+        width: 29
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a7c0ee7e47171246bdeee0f10271032
+      internalID: 1226008538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_13
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 280
+        width: 37
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8be8556e51cfa2f4dbb00e48237935d4
+      internalID: -1126173962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_14
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 280
+        width: 46
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aba3f6ea5eba37848bd62d1d3d95a281
+      internalID: -1511767004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_15
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 280
+        width: 35
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd25f94716beba04f81e13155856cdb2
+      internalID: -1000942256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_16
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 213
+        width: 26
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70d16cf6d00cd3641b1baf789aacaef6
+      internalID: 1703582090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_17
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 213
+        width: 28
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bad763eae4f43074a8f30b736d9a2742
+      internalID: 1659989997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_18
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 213
+        width: 28
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f0ae9de4db8c4d42955047d6d5a5909
+      internalID: -1627004211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_19
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 213
+        width: 27
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a28b070e524ae544882e340226903abf
+      internalID: 186664149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_20
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 213
+        width: 26
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5fe0b264ecc1504cbb84ad282dd821b
+      internalID: -416834653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_21
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 213
+        width: 24
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d5019dee6131c44d866c35c8a7bb50a
+      internalID: -1134898465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_22
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 213
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 823ac9444f4105e4ba0e7c41e3c7fea0
+      internalID: 1095711365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_23
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 213
+        width: 24
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 535caeaef468749449cff37d5b8c5af8
+      internalID: 235436031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_24
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 146
+        width: 36
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66dd753c2a176a749aad6a874014eec3
+      internalID: -1125297995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_25
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 146
+        width: 37
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e6ad1587bd8e754fbc8c6eb54feb99a
+      internalID: 589988968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_26
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 146
+        width: 39
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc7ab02e690d49b4d9b6b36871c33638
+      internalID: 1939724673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_27
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 146
+        width: 37
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbad5a371a684ec4f842ccab17fe3000
+      internalID: -163811260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_28
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 146
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fb1d1f0d9240f44b98d4d048cf144ba
+      internalID: -1277488018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_29
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 146
+        width: 33
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c59b68c5f860ab048975ef81113d4484
+      internalID: 1786731202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_30
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 146
+        width: 30
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd90a9c90c7686a4a9c6667a4cf748cc
+      internalID: -1163528591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_31
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 146
+        width: 33
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbb58cfa3a235d74686967e3b55ee7d4
+      internalID: -176715969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_32
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 79
+        width: 28
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d2e6be8f767c9048a14b71eec5934db
+      internalID: 1984665537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_33
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 79
+        width: 33
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c79d815fb9fb3a04db55f6deb66776d3
+      internalID: -975529035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_34
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 79
+        width: 45
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e677fe59974f5c24791c6130ff97cce6
+      internalID: 2108870491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_35
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 79
+        width: 33
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55933c584e471cf439c2eae83a6a40c2
+      internalID: 1939751833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_36
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 79
+        width: 29
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ad1da2f1f60f884eb562231989d7dd9
+      internalID: -1308598395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_37
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 79
+        width: 37
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bbf34bf9b6ac174295a3c032fd6044e
+      internalID: -1357030180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_38
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 79
+        width: 45
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8a98a0def38c0842bbdba691f3dc049
+      internalID: -1342041821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_39
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 79
+        width: 34
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00b0293bbe8afa24c81dae946c5b02a2
+      internalID: 1760897985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_40
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 13
+        width: 26
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9f27cad0d4fa3844805c93a4df73a64
+      internalID: -268704046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_41
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 13
+        width: 28
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c50a14fc27907f4c9ee3304494a64ee
+      internalID: -527708119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_42
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 13
+        width: 29
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d04ab70b2f7c85049b2b79a25aa6eec3
+      internalID: -157678517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_43
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 13
+        width: 29
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f1d53070b04109479f046f0b02a5e98
+      internalID: 2131313514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_44
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 13
+        width: 28
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46fc8acb0a612ec46afa2386031869cd
+      internalID: 1241143466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_45
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 13
+        width: 26
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3313eb258626263439cc4c81f2a338a5
+      internalID: -545568561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_46
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 13
+        width: 31
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9efb4996eca2f642b5cc3e2f8bd9b51
+      internalID: -1103279004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit-hummer-walk_47
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 13
+        width: 24
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d10c73a43f2e4014292a51b5c66131cd
+      internalID: 1144833468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Bandit-hummer-walk_0: -1847416426
+      Bandit-hummer-walk_1: 1768983955
+      Bandit-hummer-walk_10: 163979790
+      Bandit-hummer-walk_11: -1906723519
+      Bandit-hummer-walk_12: 1226008538
+      Bandit-hummer-walk_13: -1126173962
+      Bandit-hummer-walk_14: -1511767004
+      Bandit-hummer-walk_15: -1000942256
+      Bandit-hummer-walk_16: 1703582090
+      Bandit-hummer-walk_17: 1659989997
+      Bandit-hummer-walk_18: -1627004211
+      Bandit-hummer-walk_19: 186664149
+      Bandit-hummer-walk_2: -1593844395
+      Bandit-hummer-walk_20: -416834653
+      Bandit-hummer-walk_21: -1134898465
+      Bandit-hummer-walk_22: 1095711365
+      Bandit-hummer-walk_23: 235436031
+      Bandit-hummer-walk_24: -1125297995
+      Bandit-hummer-walk_25: 589988968
+      Bandit-hummer-walk_26: 1939724673
+      Bandit-hummer-walk_27: -163811260
+      Bandit-hummer-walk_28: -1277488018
+      Bandit-hummer-walk_29: 1786731202
+      Bandit-hummer-walk_3: 1411560950
+      Bandit-hummer-walk_30: -1163528591
+      Bandit-hummer-walk_31: -176715969
+      Bandit-hummer-walk_32: 1984665537
+      Bandit-hummer-walk_33: -975529035
+      Bandit-hummer-walk_34: 2108870491
+      Bandit-hummer-walk_35: 1939751833
+      Bandit-hummer-walk_36: -1308598395
+      Bandit-hummer-walk_37: -1357030180
+      Bandit-hummer-walk_38: -1342041821
+      Bandit-hummer-walk_39: 1760897985
+      Bandit-hummer-walk_4: -364534555
+      Bandit-hummer-walk_40: -268704046
+      Bandit-hummer-walk_41: -527708119
+      Bandit-hummer-walk_42: -157678517
+      Bandit-hummer-walk_43: 2131313514
+      Bandit-hummer-walk_44: 1241143466
+      Bandit-hummer-walk_45: -545568561
+      Bandit-hummer-walk_46: -1103279004
+      Bandit-hummer-walk_47: 1144833468
+      Bandit-hummer-walk_5: 755780285
+      Bandit-hummer-walk_6: -2055223321
+      Bandit-hummer-walk_7: 521680118
+      Bandit-hummer-walk_8: 778198060
+      Bandit-hummer-walk_9: 1711931311
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

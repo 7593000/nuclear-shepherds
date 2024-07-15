@@ -22,7 +22,7 @@ public sealed class WaveEngine : MonoBehaviour
     private Coroutine _coroutineStartWave;
     [SerializeField]   private AudioClip _sirena;
     [SerializeField, Tooltip(" Текущая волна")] private int _waveNumber = 0;
-
+    [SerializeField] private float _pauseSpawn = 0.8f;
    [SerializeField, Tooltip("Количество вражеских юнитов в  волне")]
    private int _numberEnemiesInWave;
    
@@ -45,9 +45,9 @@ public sealed class WaveEngine : MonoBehaviour
 
         _waveNumber = _gameHub.GetGameSettings.GetGameData.Wave;
 
-        Debug.Log("текущая волна установлена на: " + _waveNumber);
+      
         _numberEnemiesInWave = _config.GetNumberEnemiesInWave + (_config.GetAddEnemy * _waveNumber);
-        Debug.Log("Количество вражеских юнитов на волне : " + _numberEnemiesInWave);
+ 
         
 
         CreateDictionaryData();
@@ -171,18 +171,51 @@ public sealed class WaveEngine : MonoBehaviour
     }
 
 
+    private (Vector3, int) FractionEnemy(Enemy enemy)
+    {
+        Vector3 position;
+        int startIndex;
+        switch (enemy.GetFraction)
+        {
+            case TypeFraction.NONE:
+                int randomIndexNone = Random.Range(0, _startEnemyPosition.Length);
+                position = _startEnemyPosition[randomIndexNone].transform.position;
+                startIndex = randomIndexNone;
+                break;
+            case TypeFraction.MUTANTS:
+                position = _startEnemyPosition[0].transform.position;
+                startIndex = 0;
+                break;
+            case TypeFraction.BANDITS:
+                position = _startEnemyPosition[1].transform.position;
+                startIndex = 1;
+                break;
+            default:
+                int randomIndexDefault = Random.Range(0, _startEnemyPosition.Length);
+                position = _startEnemyPosition[randomIndexDefault].transform.position;
+                startIndex = randomIndexDefault;
+                break;
+        }
+
+        return (position,startIndex);
+    }
+
 
     private IEnumerator StartSpawnEnemy()
     {
-
+        
+         
         // Спавн врагов
         for (int i = 0; i < _enemyList.Count; i++)
         {
-            _enemyList[i].transform.position = _startEnemyPosition[1].transform.position;
+            (Vector3 positionEnemy, int startIndex) = FractionEnemy(_enemyList[i]);
+
+            _enemyList[i].transform.position = positionEnemy;
+            _enemyList[i].GetSelectedGoal = startIndex;
             _enemyList[i].Initialized(_gameHub);
             _enemyList[i].gameObject.SetActive(true);
             
-            yield return new WaitForSeconds(0.8f);
+            yield return new WaitForSeconds(_pauseSpawn);
         }
 
         // Проверка активности врагов

@@ -18,6 +18,7 @@ public class SearchState : IUnitState
         _movable = unit.GetComponent<IMovable>();
 
         unit.GetGameHub.GetUnitsUpdateEngine.AddUnit(unit, StateUnitList.MOVE);
+        unit.GetGameHub.GetUnitsUpdateEngine.AddUnit(unit, StateUnitList.DIRECT);
         _activeDistanceSqr = unit.GetConfig.GetWeaponsConfig.GetDistance * unit.GetConfig.GetWeaponsConfig.GetDistance;
         _brahmin = SearchTargetAttack(unit);
 
@@ -36,6 +37,7 @@ public class SearchState : IUnitState
     public void ExitState(UnitComponent unit)
     {
         unit.GetGameHub.GetUnitsUpdateEngine.RemoveUnit(unit, StateUnitList.MOVE);
+        unit.GetGameHub.GetUnitsUpdateEngine.RemoveUnit(unit, StateUnitList.DIRECT);
 
     }
 
@@ -85,7 +87,7 @@ public class SearchState : IUnitState
     }
 
 
-    ///TODO => Решить , какой метод поиска брамина оставить.. рандом или ближайщего 
+  
    
 
     /// <summary>

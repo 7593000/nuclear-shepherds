@@ -1,8 +1,4 @@
-using System;
-using Unity.VisualScripting;
-using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class ShadowSprite : MonoBehaviour
 {
@@ -14,19 +10,19 @@ public class ShadowSprite : MonoBehaviour
     {
         // Проверяем и инициализируем LineRenderer
         _lineRenderer ??= GetComponent<LineRenderer>();
-      
+
     }
-    public void Initialize( Canvas canvas )
+    public void Initialize(Canvas canvas)
     {
         _canvas = canvas;
     }
 
-    public void CreateCircle( float radius , int segments = 46 )
+    public void CreateCircle(float radius, int segments = 46)
     {
 
-        if ( _lineRenderer == null )
+        if (_lineRenderer == null)
         {
-            Debug.LogError( "LineRenderer не добавлен" );
+            Debug.LogError("LineRenderer не добавлен");
             return;
         }
         _lineRenderer.positionCount = segments + 1;
@@ -35,15 +31,15 @@ public class ShadowSprite : MonoBehaviour
         float scaledRadius = radius / canvasScale.x;
 
         float angle = 0f;
-        for ( int i = 0; i < _segments + 1; i++ )
+        for (int i = 0; i < _segments + 1; i++)
         {
-            float x = Mathf.Sin( Mathf.Deg2Rad * angle ) * scaledRadius;
-            float y = Mathf.Cos( Mathf.Deg2Rad * angle ) * scaledRadius;
+            float x = Mathf.Sin(Mathf.Deg2Rad * angle) * scaledRadius;
+            float y = Mathf.Cos(Mathf.Deg2Rad * angle) * scaledRadius;
 
-            _lineRenderer.SetPosition( i , new Vector3( x , y , 0 ) );
+            _lineRenderer.SetPosition(i, new Vector3(x, y, 0));
             angle += 360f / _segments;
         }
     }
 
-   
+
 }

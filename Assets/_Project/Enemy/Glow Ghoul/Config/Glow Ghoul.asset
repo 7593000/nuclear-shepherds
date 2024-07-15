@@ -18,7 +18,7 @@ MonoBehaviour:
   _health: 250
   _luck: 0.658
   _occupiedArea: 1
-  _speed: 2
+  _speed: 1
   _typeWeapon: 1
   _config: {fileID: 11400000, guid: 9b53894a397d5f2438fce9d92c255ea0, type: 2}
   _cost: 70

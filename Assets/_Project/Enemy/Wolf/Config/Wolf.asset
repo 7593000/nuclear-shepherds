@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d26c15ee3fe0a09409c2112b20f5e458, type: 3}
+  m_Name: Wolf
+  m_EditorClassIdentifier: 
+  _id: 0
+  _unitType: 3
+  _name: "\u0414\u0438\u043A\u0430\u044F \u0441\u043E\u0431\u0430\u043A\u0430"
+  _health: 100
+  _luck: 0.726
+  _occupiedArea: 1
+  _speed: 3
+  _typeWeapon: 1
+  _config: {fileID: 11400000, guid: 9b53894a397d5f2438fce9d92c255ea0, type: 2}
+  _cost: 25
+  _costUpgrade: 0
+  _damageRatio: 0
+  _speedAttackRatio: 0
+  _luckRatio: 0
+  _firearms: 5
+  _fire: 5
+  _energyWeapons: 5
+  _explosionProtection: 5
+  _unitPrefab: {fileID: 4936857353151220823, guid: ee15b589e4ab3224a9f24af07d1decc3, type: 3}
+  _sprite: {fileID: -2134221408, guid: 42f04cfe5b537f64ebb702fcccdd5bd9, type: 3}
+  _soundIdle: {fileID: 0}

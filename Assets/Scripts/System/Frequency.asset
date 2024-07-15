@@ -16,15 +16,21 @@ MonoBehaviour:
   _numberEnemiesInWave: 5
   _timeNewWave: 10
   _enemy:
-  - _enemyConfig: {fileID: 11400000, guid: 38f6ca7ac0e803e47836cb9bd765e620, type: 2}
+  - _enemyConfig: {fileID: 11400000, guid: 7065d27f19a825e4bbb3f7168177709b, type: 2}
     _percentageAppearance: 100
+    _percentageRatio: 17.9
+  - _enemyConfig: {fileID: 11400000, guid: 38f6ca7ac0e803e47836cb9bd765e620, type: 2}
+    _percentageAppearance: 52.8
     _percentageRatio: 50
   - _enemyConfig: {fileID: 11400000, guid: b2a8436023fc97044b03eb7aa4a61b8d, type: 2}
-    _percentageAppearance: 1
-    _percentageRatio: 5
+    _percentageAppearance: 3.4
+    _percentageRatio: 10.7
   - _enemyConfig: {fileID: 11400000, guid: 2fae0fb220ededf45adab5a4a040836a, type: 2}
     _percentageAppearance: 0
-    _percentageRatio: 4
+    _percentageRatio: 2
   - _enemyConfig: {fileID: 11400000, guid: ffe72a6fbde9f5e4fb4d7ead1ca4e532, type: 2}
     _percentageAppearance: 0
     _percentageRatio: 1
+  - _enemyConfig: {fileID: 11400000, guid: 95f5409d542a7de46bd1051ad61abc83, type: 2}
+    _percentageAppearance: 38
+    _percentageRatio: 8.3

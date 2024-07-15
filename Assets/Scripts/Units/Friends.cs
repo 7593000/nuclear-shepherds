@@ -1,19 +1,17 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using static UnityEngine.UI.CanvasScaler;
-[RequireComponent( typeof( LineRenderer ) )]
+[RequireComponent(typeof(LineRenderer))]
 public class Friends : UnitComponent, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
 
-    
+
     private LineRenderer _lineRenderer;
     [SerializeField] private AttackTrigger _trigger;
     private int _segments = 46;
     [SerializeField] private Image _imagelevelSprite;
-   
-    
+
+
     public void SetSpriteLevel(Sprite img)
     {
         if (img == null)
@@ -29,38 +27,38 @@ public class Friends : UnitComponent, IPointerClickHandler, IPointerEnterHandler
         }
 
         _imagelevelSprite.sprite = img;
-   
-   
+
+
     }
-     
 
 
-    public void OnPointerClick( PointerEventData eventData )
+
+    public void OnPointerClick(PointerEventData eventData)
     {
         GameObject clickedObject = eventData.pointerCurrentRaycast.gameObject;
 
-        if ( clickedObject != null )
+        if (clickedObject != null)
         {
             UnitComponent hit = clickedObject.GetComponentInParent<UnitComponent>();
 
-            if ( hit != null )
+            if (hit != null)
             {
                 _lineRenderer.enabled = true;
-                _gameHub.GetWindowInfoUnit.WindowInfo( this );
+                _gameHub.GetWindowInfoUnit.WindowInfo(this);
             }
         }
 
     }
 
-    public void OnPointerEnter( PointerEventData eventData )
+    public void OnPointerEnter(PointerEventData eventData)
     {
         GameObject clickedObject = eventData.pointerCurrentRaycast.gameObject;
 
-        if ( clickedObject != null )
+        if (clickedObject != null)
         {
             UnitComponent hit = clickedObject.GetComponentInParent<UnitComponent>();
 
-            if ( hit != null )
+            if (hit != null)
             {
                 _lineRenderer.enabled = true;
                 //todo - > установить курсор
@@ -69,7 +67,7 @@ public class Friends : UnitComponent, IPointerClickHandler, IPointerEnterHandler
 
     }
 
-    public void OnPointerExit( PointerEventData eventData )
+    public void OnPointerExit(PointerEventData eventData)
     {
         //Todo => установить стандартный курсор
         _lineRenderer.enabled = false;
@@ -77,13 +75,13 @@ public class Friends : UnitComponent, IPointerClickHandler, IPointerEnterHandler
     public override void DeactiveUnit()
     {
         base.DeactiveUnit();
-        _gameHub.GetGameSettings.RemoveUnit( this );
+        _gameHub.GetGameSettings.RemoveUnit(this);
     }
-  
+
 
     private void Start()
     {
-        
+
 
         if (_imagelevelSprite == null)
         {
@@ -96,21 +94,21 @@ public class Friends : UnitComponent, IPointerClickHandler, IPointerEnterHandler
         _lineRenderer.positionCount = _segments + 1;
         _lineRenderer.useWorldSpace = false;
         CreateCircle();
-        _trigger.Initialized( this );
-        SetState( IdleState );
-       SoundEngine.Instance.PlaySound( GetConfig.GetSoundIdle , SoundType.SFXPlayOne, false , this.transform );
+        _trigger.Initialized(this);
+        SetState(IdleState);
+        SoundEngine.Instance.PlaySound(GetConfig.GetSoundIdle, SoundType.SFXPlayOne, false, this.transform);
 
     }
 
     private void CreateCircle()
     {
         float angle = 0f;
-        for ( int i = 0; i < _segments + 1; i++ )
+        for (int i = 0; i < _segments + 1; i++)
         {
-            float x = Mathf.Sin( Mathf.Deg2Rad * angle ) * _config.GetWeaponsConfig.GetDistance;
-            float y = Mathf.Cos( Mathf.Deg2Rad * angle ) * _config.GetWeaponsConfig.GetDistance;
+            float x = Mathf.Sin(Mathf.Deg2Rad * angle) * _config.GetWeaponsConfig.GetDistance;
+            float y = Mathf.Cos(Mathf.Deg2Rad * angle) * _config.GetWeaponsConfig.GetDistance;
 
-            _lineRenderer.SetPosition( i , new Vector3( x , y , 0 ) );
+            _lineRenderer.SetPosition(i, new Vector3(x, y, 0));
             angle += 360f / _segments;
 
         }

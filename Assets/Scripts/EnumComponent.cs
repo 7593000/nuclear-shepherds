@@ -1,19 +1,18 @@
 
-public enum LevelEnemy : byte //TODO=> DEL
-{
-    LEVEL1,
-    LEVEL2, 
-    LEVEL3, 
-    LEVEL4, 
-    LEVEL5, 
-    LEVEL6
-}
+ 
 public enum TypeUnit : byte
 {
     NONE,
     BRO,
     BRAHMIN,
     ENEMY
+}
+
+public enum TypeFraction : byte
+{
+    NONE,
+    MUTANTS,
+    BANDITS
 }
 
 /// <summary>

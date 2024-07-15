@@ -47,7 +47,7 @@ public class Health : MonoBehaviour, IReset
     private void UnitIsDead()
     {
 
-        Debug.Log("Цель мертва");
+
 
         _healthUnit.IsDead = true;
         HealthBotVisible(false);

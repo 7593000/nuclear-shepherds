@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
 
@@ -75,7 +74,7 @@ public class Damage
 
         if (_canAttack)
         {
-            float damage = _damage;  
+            float damage = _damage;
             _weaponAmmo--;
 
             if (_speedAttack > 0f)

@@ -20,8 +20,12 @@ public class MoveState : IUnitState
             unit.SetState(unit.NoneState);
             return;
         }
+        
+       
+        
         _goalCount = unit.GetGameHub.GetPointsTarget.GetTargets.Count;
         _activeDistanceSqr = _activeDistance * _activeDistance;
+
 
         _targetPoint = unit.GetGameHub.GetPointsTarget.GetTargets[unit.GetSelectedGoal];
 
@@ -30,14 +34,14 @@ public class MoveState : IUnitState
         unit.GetDirectionView = _targetPoint.GetAngleForanimation;
 
         unit.GetGameHub.GetUnitsUpdateEngine.AddUnit(unit, StateUnitList.MOVE);
-
+        unit.GetGameHub.GetUnitsUpdateEngine.AddUnit(unit, StateUnitList.DIRECT);
         unit.StartAnimation.ToRun(StateUnit.MOVE);
     }
 
     public void ExitState(UnitComponent unit)
     {
         unit.GetGameHub.GetUnitsUpdateEngine.RemoveUnit(unit, StateUnitList.MOVE);
-      // unit.StartAnimation.ToRun(StateUnit.IDLE);
+        unit.GetGameHub.GetUnitsUpdateEngine.RemoveUnit(unit, StateUnitList.DIRECT);
     }
 
     public void UpdateState(UnitComponent unit)

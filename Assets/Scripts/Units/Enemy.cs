@@ -1,11 +1,13 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.ParticleSystem;
 
 public class Enemy : UnitComponent, IHealth, IMovable
 
 {
+    [Space]
+    [SerializeField, Tooltip("Принадлежность к фракции")] private TypeFraction _typeFraction;
+    [SerializeField]
     private Protection _protection;
     [SerializeField] private bool _busyWave = false;
     public static event Action<int> OnDeath;
@@ -18,7 +20,7 @@ public class Enemy : UnitComponent, IHealth, IMovable
     /// Проверка врага: Свободен ли он для добавление в список волны.
     /// </summary>
     public bool BusyWave { get => _busyWave; set => _busyWave = value; }
-
+    public TypeFraction GetFraction => _typeFraction;
     public ParticleSystem GetParticle => _particle;
 
     public bool IsDead { get; set; }
@@ -37,13 +39,13 @@ public class Enemy : UnitComponent, IHealth, IMovable
 
         if (!IsDead)
         {
-            if(type == TypeWeapons.ELECTRICCHARGES)
+            if (type == TypeWeapons.ELECTRICCHARGES)
             {
-                if(!_particle.isPlaying)
+                if (!_particle.isPlaying)
                 {
                     _particle.Play();
                 }
-              
+
             }
             float protectedDamage = damage * (_protection.CalculationProtection(type) / 100f);
 
@@ -82,7 +84,7 @@ public class Enemy : UnitComponent, IHealth, IMovable
     {
         base.AddComponentsUnit();
 
-        if(_particle==null) _particle =GetComponentInChildren<ParticleSystem>();  
+        if (_particle == null) _particle = GetComponentInChildren<ParticleSystem>();
 
         _health.Container(this);
         _protection = new Protection(this);

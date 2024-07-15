@@ -22,19 +22,19 @@ public class AoEweapons : IAttack
 
         _explosionSFX = _unit.GetConfig.GetWeaponsConfig.GetAudioClip[1];
     }
-   
+
     public void Attack(float damage)
     {
 
-       
+
 
         _explosion = _poolExplosion.GetExplosion();
         _explosion.transform.position = _unit.GetTarget.transform.position;
         _explosion.gameObject.SetActive(true);
-        SoundEngine.Instance.PlaySound( _explosionSFX , SoundType.SFX );
-      
+        SoundEngine.Instance.PlaySound(_explosionSFX, SoundType.SFX);
+
         _strikingObjects = _explosion.Explode();
-       
+
 
         foreach (var enemy in _strikingObjects)
         {

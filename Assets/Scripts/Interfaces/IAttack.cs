@@ -1,9 +1,6 @@
-
-using UnityEngine;
-
-public interface IAttack 
+public interface IAttack
 {
     void Attack(float damage);
-  
+
 
 }

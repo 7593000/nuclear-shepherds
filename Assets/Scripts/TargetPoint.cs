@@ -1,6 +1,5 @@
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class TargetPoint : MonoBehaviour
 {
@@ -16,12 +15,12 @@ public class TargetPoint : MonoBehaviour
 
 #if UNITY_EDITOR
     public Sprite _spriteHelp;
-    public  Sprite GetSprite => _spriteHelp;
-    
+    public Sprite GetSprite => _spriteHelp;
+
     [SerializeField, Range(0.0f, 2.0f)]
     private float _radius = 0.4f;
     public float AnglePoint { get; set; }
-  
+
 
 
     void OnDrawGizmos()

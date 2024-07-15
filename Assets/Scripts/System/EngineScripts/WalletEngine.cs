@@ -36,4 +36,12 @@ public sealed class WalletEngine : MonoBehaviour
     {
         _wallet.AddCurrency(value);
     }
+    /// <summary>
+    /// Чит на деньги
+    /// </summary>
+   
+    public void MoreMoney(int value)
+    {
+        _wallet.AddCurrency(value);
+    }
 }
