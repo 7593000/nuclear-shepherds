@@ -10,16 +10,26 @@ public class SoundEngine : MonoBehaviour
     [SerializeField] private AudioSource _sourceMusic; // для музыки
     [SerializeField] private AudioSource _sourceSFX; // для звуковых эффектов
     [SerializeField] private AudioSource _sourceUI; // для звуков UI
-
+    private Camera _mainCamera;
     [SerializeField]
     private float _maxDistance = 50.0f;
     [SerializeField]
     private float _minDistance = 1.0f;
-    private Transform _cameraTransform;
+  //  [SerializeField] private Transform _cameraTransform;
    
     private Dictionary<Transform , AudioSource> _activeSource = new();
     private List<AudioSource> _activeSFXSources = new();
-
+    public Camera MainCamera
+    {
+        get
+        {
+            if (_mainCamera == null)
+            {
+                FindAndSetMainCamera();
+            }
+            return _mainCamera;
+        }
+    }
     public static SoundEngine Instance
     {
         get
@@ -39,8 +49,9 @@ public class SoundEngine : MonoBehaviour
 
     private void Awake()
     {
-        _cameraTransform = Camera.main.transform;
        
+       
+        
         if ( _poolAdioSource == null )
         {
             _poolAdioSource = GetComponent<PoolAudioSource>();
@@ -49,15 +60,21 @@ public class SoundEngine : MonoBehaviour
 
         if ( _instance != null && _instance != this )
         {
+           
             Destroy( gameObject );
             return;
         }
 
         _instance = this;
         DontDestroyOnLoad( gameObject );
+        FindAndSetMainCamera();
+
         StartCoroutine( UpdateDistanceTarget() );
     }
-
+    void FindAndSetMainCamera()
+    {
+        _mainCamera = Camera.main;
+    }
     public void PlaySound( AudioClip clip , SoundType soundType , bool loop = false , Transform target = null )
     {
         switch ( soundType )
@@ -135,7 +152,7 @@ public class SoundEngine : MonoBehaviour
 
     private void PlayOneShot( AudioClip clip , Transform target )
     {
-        _sourceSFX.volume = GetDistanceForValue( target );
+       // _sourceSFX.volume = GetDistanceForValue( target );
         _sourceSFX.PlayOneShot( clip );
     }
 
@@ -187,7 +204,7 @@ public class SoundEngine : MonoBehaviour
 
                 if ( target.gameObject.activeSelf )
                 {
-                    float distance = Vector3.Distance( target.position , _cameraTransform.position );
+                    float distance = Vector3.Distance( target.position , MainCamera.transform.position );
                     float volume = Mathf.Clamp01( 1 - ( distance - _minDistance ) / ( _maxDistance - _minDistance ) );
                     source.volume = volume;
                 }
@@ -198,7 +215,7 @@ public class SoundEngine : MonoBehaviour
 
     private float GetDistanceForValue( Transform target )
     {
-        float distance = Vector3.Distance( target.position , _cameraTransform.position );
+        float distance = Vector3.Distance( target.position , MainCamera.transform.position  );
         return Mathf.Clamp01( 1 - ( distance - _minDistance ) / ( _maxDistance - _minDistance ) );
     }
 }

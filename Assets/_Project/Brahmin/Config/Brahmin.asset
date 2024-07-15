@@ -15,7 +15,7 @@ MonoBehaviour:
   _id: 0
   _unitType: 2
   _name: "\u0411\u0440\u0430\u043C\u0438\u043D"
-  _health: 200
+  _health: 100
   _luck: 1
   _occupiedArea: 0
   _speed: 1

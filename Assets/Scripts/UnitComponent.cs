@@ -126,7 +126,7 @@ public abstract class UnitComponent : MonoBehaviour
         SetState( NoneState );
         gameObject.SetActive(false);
         
-        Debug.Log("Юнит уничтожен");
+       
         //TODO=> плей анимации смерти
     }
 
@@ -161,14 +161,7 @@ public abstract class UnitComponent : MonoBehaviour
            
             friends.SetSpriteLevel(levelSprite);
         }
-        else
-        {
-            Debug.LogError("Error Friends не найден");
-        }
-        Debug.Log($"Level: {_unitData.Level}");
-        Debug.Log($"DamageRatio: {_unitData.DamageRatio}, SpeedAttackRatio: {_unitData.SpeedAttackRatio}, LuckRatio: {_unitData.LuckRatio}");
-    
-    
+        
     
     }
 

@@ -10,7 +10,7 @@ public sealed class BrahminManager : MonoBehaviour
     [SerializeField] private Brahmin _brahminPrefab;
     [SerializeField] private Transform _parent;
     [SerializeField, Tooltip( "Количество браминов в игре" ), Range( 1 , 10f )]
-    private int _countBrahmin = 6;
+    private int _countBrahmin;
 
     [SerializeField]
     private List<Brahmin> _brahminList = new();
@@ -26,6 +26,7 @@ public sealed class BrahminManager : MonoBehaviour
     public void Initialized( GameHub gameHub )
     {
         _gameHub = gameHub;
+        _countBrahmin = _gameHub.GetGameSettings.GetGameData.Brahmin;
         for ( int i = 0; i < _countBrahmin; i++ )
         {
             Vector3 positionCell = _position.TransferFreeRandomCell();
@@ -56,12 +57,10 @@ public sealed class BrahminManager : MonoBehaviour
 
         if ( _brahminList.Count == 0 )
         {
-            Debug.Log( "GAMEOVER" );
-#if UNITY_EDITOR
-            UnityEditor.EditorApplication.isPlaying = false;
-#elif UNITY_STANDALONE_WIN && !UNITY_EDITOR
-    Application.Quit();
-#endif
+
+            _gameHub.GetGameSettings.LoadSceneAsync("GameOver");
+
+ 
         }
     }
 

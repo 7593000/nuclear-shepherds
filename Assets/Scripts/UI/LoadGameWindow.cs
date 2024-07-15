@@ -1,73 +1,88 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
-using UnityEngine.EventSystems;
+using static UnityEditor.Progress;
 
-public class LoadGameWindow : MonoBehaviour, IPointerClickHandler
+public class LoadGameWindow : MonoBehaviour
 {
-    private GameSettings _gameSettings;
+
     private CanvasGroup _group;
     private bool _visible = false;
     [SerializeField] private LoadGameItem _itemPrefab;
     [SerializeField] private Transform _parent;
     private List<LoadGameItem> _dataItems = new();
-    private string[] _items = null;
 
-    public void Initialized( GameSettings settings )
+    [SerializeField] private TMP_Text _h;
+
+    public void Initialized(string[] save)
     {
-        _dataItems.Clear();
-        _gameSettings = settings;
-        int items = _gameSettings.GetMaxSaveGame;
-        for ( int i = 0; i < items; i++ )
+
+        if (save.Length > _dataItems.Count)
         {
-            LoadGameItem item = Instantiate( _itemPrefab , _parent );
-            item.Initialized();
+            int count = save.Length - _dataItems.Count;
 
-            _dataItems.Add( item );
-
+            for (int i = 0; i < count; i++)
+            {
+                LoadGameItem item = Instantiate(_itemPrefab, _parent);
+                 item.Initialized();
+                item.ShowHideItems(false);
+               _dataItems.Add(item);
+            }
         }
 
- 
-
-    }
-
-    private void CountItems( string loadData )
-    {
-        if ( loadData == null )
-        { return; }
-        _items = loadData.Split( new char[] { ',' } , System.StringSplitOptions.RemoveEmptyEntries );
-
-        for ( int i = 0; i < _items.Length; i++ )
+        for (int i = 0; i < save.Length; i++)
         {
-            _dataItems[ i ].ItemStatus( _items[ i ] );
-
+            _dataItems[i].ItemStatus(save[i]);
+            _dataItems[i].ShowHideItems(true);
+            _dataItems[i].gameObject.SetActive(true);
         }
 
 
+        for (int i = save.Length; i < _dataItems.Count; i++)
+        {
+            
+            _dataItems[i].ShowHideItems(false);
+            _dataItems[i].gameObject.SetActive(false);
+        }
+
+
+
     }
+
+
 
 
     /// <summary>   
     /// Активировать или скрыть меню загрузки
     /// </summary>
-    public void LoadWindowStatus( string path )
+    public void LoadWindowStatus()
     {
-
-        CountItems( path );
-
-
+         
         _visible = !_visible;
         _group.alpha = _visible ? 1 : 0;
         _group.blocksRaycasts = _visible;
         _group.interactable = _visible;
     }
-    public void BackToMenu()
+
+
+    public void PrintAllSaveFiles(string[] pathSave)
     {
-        for ( int i = 0; i < _items.Length; i++ )
+       
+
+        for (int i = 0; i < pathSave.Length; i++)
         {
-            _dataItems[ i ].ItemStatus( _items[ i ] );
+            _dataItems[i].ItemStatus(pathSave[i]);
 
         }
 
+
+    }
+
+
+
+    public void BackToMenu()
+    {
+        
 
         _visible = !_visible;
         _group.alpha = _visible ? 1 : 0;
@@ -76,24 +91,14 @@ public class LoadGameWindow : MonoBehaviour, IPointerClickHandler
     }
     private void Start()
     {
+        _h.color = GameMenu.H1;
+        _h.fontStyle = GameMenu.FONTSTYLEH1;
+        _h.SetAllDirty();
         _group = GetComponent<CanvasGroup>();
         _group.blocksRaycasts = false;
         _group.interactable = false;
         _group.alpha = 0f;
     }
 
-    public void OnPointerClick( PointerEventData eventData )
-    {
-        GameObject clickedObject = eventData.pointerCurrentRaycast.gameObject;
 
-        if ( clickedObject != null )
-        {
-
-            LoadGameItem itemData = clickedObject.GetComponent<LoadGameItem>();
-            if ( itemData != null )
-            {
-                _gameSettings.LoadGame( itemData.GetPath );
-            }
-        }
-    }
 }

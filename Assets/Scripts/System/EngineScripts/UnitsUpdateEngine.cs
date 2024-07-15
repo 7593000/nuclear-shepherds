@@ -122,29 +122,13 @@ public sealed class UnitsUpdateEngine : MonoBehaviour
             yield return new WaitForSeconds(_minAttackDelay); // Минимальная задержка для атаки
         }
     }
-    //private IEnumerator UpdateDistanceTarget()
-    //{
-    //    while ( true )
-    //    {
-    //        for ( int i = 0; i < _distanceForSuond.Count; i++ )
-    //        {
-    //            if ( _distanceForSuond[ i ].gameObject.activeSelf )
-    //            {
-    //                _distanceForSuond[ i ].UpdateUnit(); 
-    //                float distance = Vector3.Distance( _distanceForSuond[ i ].transform.position , _cameraTransform.position );
-
-    //                float volume = Mathf.Clamp01( 1 - ( distance - minDistance ) / ( maxDistance - minDistance ) );
-    //            }
-    //        }
-    //        yield return new WaitForSeconds( 1f );  
-    //    }
-    //}
+    
     private void OnEnable()
     {
         StartCoroutine(UpdateOtherStates());
         StartCoroutine(FollowGoal());
         StartCoroutine(UpdateAttackStates());
-      //  StartCoroutine(UpdateDistanceTarget());
+     
     }
 
     private void OnDisable()
@@ -152,8 +136,7 @@ public sealed class UnitsUpdateEngine : MonoBehaviour
         StopCoroutine(UpdateOtherStates());
         StopCoroutine(FollowGoal());
         StopCoroutine(UpdateAttackStates());
-    //    StopCoroutine( UpdateDistanceTarget());
-    }
+     }
 
     private void Update()
     {

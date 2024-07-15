@@ -276,7 +276,7 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IBeginDragHandle
     }
 
     #endregion
-
+    
 
 }
 

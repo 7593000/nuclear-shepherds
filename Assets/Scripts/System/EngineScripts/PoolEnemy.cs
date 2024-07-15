@@ -42,14 +42,14 @@ public sealed class PoolEnemy : MonoBehaviour
     /// <returns>Созданный юнит</returns>
     private Enemy InstantiateEnemy(UnitConfig unitConfig)
     {
-        Debug.Log("Создан +1 юнит");
+       
         UnitComponent unit = Instantiate(unitConfig.GetPrefab, _parent);
       
         Enemy enemyUnit = unit as Enemy;
         if (enemyUnit == null)
         {
             enemyUnit.Initialized( _gameHub );
-            Debug.LogError("Prefab не является типом Enemy!");
+          
             return null;
         }
 
@@ -84,7 +84,7 @@ public sealed class PoolEnemy : MonoBehaviour
             Debug.LogError("ERROR:  UnitConfig null.");
         }
 
-        Debug.Log("Не найден свободный юнит, создаем новый.");
+         
         Enemy tempUnit = InstantiateEnemy(config);
         if (tempUnit != null)
         {

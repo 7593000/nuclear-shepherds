@@ -6,8 +6,7 @@ public class AnimatorComponent : MonoBehaviour
 
     private int _positionX;
     private int _positionY;
-    private Animator _animator;
-    private StateUnit _currentStatus;
+    private Animator _animator; 
     private string _activeParameters;
 
 

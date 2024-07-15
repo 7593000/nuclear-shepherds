@@ -8,7 +8,7 @@ using UnityEngine;
 /// </summary>
 public sealed class WaveEngine : MonoBehaviour
 {
-    public event System.Action<int> OnWave; //TODO => убрать систем.. переделать Random
+    public event System.Action<int> OnWave;  
 
     private GameHub _gameHub;
     [SerializeField] private FrequencyOoccurrence _config;
@@ -20,8 +20,8 @@ public sealed class WaveEngine : MonoBehaviour
 
     private Coroutine _coroutineCreateUnit;
     private Coroutine _coroutineStartWave;
-
-    [SerializeField, Tooltip(" Текущая волна")] private int _waveNumber = 1;
+    [SerializeField]   private AudioClip _sirena;
+    [SerializeField, Tooltip(" Текущая волна")] private int _waveNumber = 0;
 
    [SerializeField, Tooltip("Количество вражеских юнитов в  волне")]
    private int _numberEnemiesInWave;
@@ -92,8 +92,7 @@ public sealed class WaveEngine : MonoBehaviour
     private void CreateEnemyUnits()
     {
         
-        //_enemyList.Clear();
-
+       
 
 
         int count = 0;
@@ -141,13 +140,7 @@ public sealed class WaveEngine : MonoBehaviour
 
 
     private void StartWave()
-    {
-        //if (_coroutineCreateUnit != null)
-        //{
-        //    StopCoroutine(StartSpawnEnemy());
-        //    _coroutineCreateUnit = null;
-        //}
-        //_coroutineCreateUnit = StartCoroutine(StartSpawnEnemy());
+    { 
 
         if (_coroutineStartWave != null) return;
 
@@ -161,7 +154,7 @@ public sealed class WaveEngine : MonoBehaviour
 
         yield return new WaitForSeconds(_config.GetTimeNewWave);
 
-        //todo=> ADD SOUND START WAVE
+        SoundEngine.Instance.PlaySound(_sirena, SoundType.SFXPlayOne);
 
             StartCoroutine(StartSpawnEnemy());
 
@@ -189,7 +182,7 @@ public sealed class WaveEngine : MonoBehaviour
             _enemyList[i].Initialized(_gameHub);
             _enemyList[i].gameObject.SetActive(true);
             
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.8f);
         }
 
         // Проверка активности врагов

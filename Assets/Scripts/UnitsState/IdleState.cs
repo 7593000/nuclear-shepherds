@@ -44,7 +44,7 @@ public class IdleState : IUnitState
             unit.GetDirectionView[ 0 ] = _listPosition[ randomIndex ][ 0 ];
             unit.GetDirectionView[ 1 ] = _listPosition[ randomIndex ][ 1 ];
             unit.StartAnimation.ToRun( StateUnit.IDLE );
-           // SoundEngine.Instance.PlaySound( unit.GetConfig.GetSoundIdle , SoundType.SFXPlayOne, false, unit.transform );
+           
             SoundEngine.Instance.PlaySound( unit.GetConfig.GetSoundIdle , SoundType.SFX, false, unit.transform );
             _randomTimer = RandomTimerForIdleAnim();
         }
@@ -54,7 +54,7 @@ public class IdleState : IUnitState
 
     private float RandomTimerForIdleAnim()
     {
-        return Random.Range( 10f , 30f );
+        return Random.Range( 30f , 100f );
 
 
     }
