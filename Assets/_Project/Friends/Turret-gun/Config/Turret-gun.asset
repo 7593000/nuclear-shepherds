@@ -21,8 +21,8 @@ MonoBehaviour:
   _speed: 0
   _typeWeapon: 7
   _config: {fileID: 11400000, guid: e378543124b40c748bea94c6fc629173, type: 2}
-  _cost: 500
-  _costUpgrade: 600
+  _cost: 800
+  _costUpgrade: 800
   _damageRatio: 1.1
   _speedAttackRatio: 0.08
   _luckRatio: 0.05
@@ -33,4 +33,3 @@ MonoBehaviour:
   _unitPrefab: {fileID: 6797377760339903826, guid: bcf6cf50266eff145987d38cc64c595f, type: 3}
   _sprite: {fileID: 21300000, guid: d8bc3b6770b563244b29a87fab03833f, type: 3}
   _soundIdle: {fileID: 8300000, guid: 0cfe3836b49d7d44b8c339af2612ab25, type: 3}
-  _soundAttack: {fileID: 8300000, guid: b15dd9539ddc1524d87d84c5f85e7190, type: 3}

@@ -167,13 +167,14 @@ public class SoundEngine : MonoBehaviour
     public void StopSFX(AudioClip clip)
     {
         List<AudioSource> sourcesToRemove = new();
-
+        
         foreach (AudioSource source in _activeSFXSources)
         {
             if (source.clip == clip)
             {
+                StartCoroutine( StopAfterPlaying( source ) );
                 sourcesToRemove.Add(source);
-                _poolAdioSource.ReturnAudioSource(source);
+              
             }
         }
 
@@ -190,6 +191,7 @@ public class SoundEngine : MonoBehaviour
 
     private IEnumerator ReturnToPool(AudioSource source, Transform target)
     {
+       
         yield return new WaitWhile(() => source.isPlaying);
 
         if (target != null && _activeSource.ContainsKey(target))
@@ -199,6 +201,13 @@ public class SoundEngine : MonoBehaviour
 
         _activeSFXSources.Remove(source);
         _poolAdioSource.ReturnAudioSource(source);
+    }
+    private IEnumerator StopAfterPlaying( AudioSource source )
+    {
+        source.loop = false;
+        yield return new WaitWhile( () => source.isPlaying );
+      
+        _poolAdioSource.ReturnAudioSource( source );
     }
 
     private IEnumerator UpdateDistanceTarget()

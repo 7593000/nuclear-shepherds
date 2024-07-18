@@ -55,8 +55,9 @@ public class PoolAudioSource : MonoBehaviour
 
     public void ReturnAudioSource( AudioSource source )
     {
+        source.loop = false;
         source.Stop();
-      
+        source.clip = null;
         _activeAudioSources.Remove( source );
         _audioSources.Enqueue( source );
     }

@@ -16,14 +16,14 @@ MonoBehaviour:
   _unitType: 1
   _name: "\u0422\u0443\u0440\u0435\u043B\u044C"
   _health: 0
-  _luck: 0.908
+  _luck: 0.723
   _occupiedArea: 0
   _speed: 0
   _typeWeapon: 6
   _config: {fileID: 11400000, guid: 0d4319474e03a6a4b84ef843b0b236ba, type: 2}
-  _cost: 500
-  _costUpgrade: 500
-  _damageRatio: 1.2
+  _cost: 760
+  _costUpgrade: 750
+  _damageRatio: 1.1
   _speedAttackRatio: 0.01
   _luckRatio: 0.05
   _firearms: 0

@@ -154,7 +154,7 @@ public sealed class WaveEngine : MonoBehaviour
 
         yield return new WaitForSeconds(_config.GetTimeNewWave);
 
-        SoundEngine.Instance.PlaySound(_sirena, SoundType.SFXPlayOne);
+        SoundEngine.Instance.PlaySound(_sirena, SoundType.SFX   );
 
             StartCoroutine(StartSpawnEnemy());
 
