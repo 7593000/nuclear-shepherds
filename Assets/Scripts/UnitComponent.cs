@@ -127,7 +127,7 @@ public abstract class UnitComponent : MonoBehaviour
         gameObject.SetActive(false);
         
        
-        //TODO=> плей анимации смерти
+        
     }
 
    

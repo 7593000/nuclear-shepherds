@@ -10,15 +10,17 @@ public class SoundEngine : MonoBehaviour
     [SerializeField] private AudioSource _sourceMusic; // для музыки
     [SerializeField] private AudioSource _sourceSFX; // для звуковых эффектов
     [SerializeField] private AudioSource _sourceUI; // для звуков UI
-    private Camera _mainCamera;
+    [SerializeField] private Camera _mainCamera;
     [SerializeField]
     private float _maxDistance = 50.0f;
     [SerializeField]
     private float _minDistance = 1.0f;
-  //  [SerializeField] private Transform _cameraTransform;
-   
-    private Dictionary<Transform , AudioSource> _activeSource = new();
+
+    private Dictionary<AudioClip, UnitComponent > _soundOnPlayShot = new();
+
+    private Dictionary<Transform, AudioSource> _activeSource = new();
     private List<AudioSource> _activeSFXSources = new();
+
     public Camera MainCamera
     {
         get
@@ -34,75 +36,79 @@ public class SoundEngine : MonoBehaviour
     {
         get
         {
-            if ( _instance == null )
+            if (_instance == null)
             {
                 _instance = FindObjectOfType<SoundEngine>();
-                if ( _instance == null )
+                if (_instance == null)
                 {
-                    GameObject soundEngineObject = new GameObject( "SoundEngine" );
+                    GameObject soundEngineObject = new("SoundEngine");
                     _instance = soundEngineObject.AddComponent<SoundEngine>();
                 }
             }
             return _instance;
         }
     }
-
+    private void OnEnable()
+    {
+        FindAndSetMainCamera();
+    }
     private void Awake()
     {
-       
-       
-        
-        if ( _poolAdioSource == null )
+
+
+
+        if (_poolAdioSource == null)
         {
             _poolAdioSource = GetComponent<PoolAudioSource>();
             _poolAdioSource.Initialized();
         }
 
-        if ( _instance != null && _instance != this )
+        if (_instance != null && _instance != this)
         {
-           
-            Destroy( gameObject );
+
+            Destroy(gameObject);
             return;
         }
 
         _instance = this;
-        DontDestroyOnLoad( gameObject );
+        DontDestroyOnLoad(gameObject);
         FindAndSetMainCamera();
 
-        StartCoroutine( UpdateDistanceTarget() );
+        StartCoroutine(UpdateDistanceTarget());
     }
     void FindAndSetMainCamera()
     {
         _mainCamera = Camera.main;
     }
-    public void PlaySound( AudioClip clip , SoundType soundType , bool loop = false , Transform target = null )
+    public void PlaySound(AudioClip clip, SoundType soundType, bool loop = false, Transform target = null)
     {
-        switch ( soundType )
+        switch (soundType)
         {
             case SoundType.Music:
-                PlayMusic( clip );
+                PlayMusic(clip);
                 break;
             case SoundType.SFX:
-                PlaySFX( clip , loop , target );
+                PlaySFX(clip, loop, target);
                 break;
             case SoundType.SFXPlayOne:
-                PlayOneShot( clip , target );
+              
+                PlayOneShot(clip, target);
                 break;
             case SoundType.UI:
-                PlayUI( clip );
+                PlayUI(clip);
                 break;
         }
     }
 
-    public void StopSound( SoundType soundType , AudioClip clip = null )
+    public void StopSound(SoundType soundType, AudioClip clip = null)
     {
-        switch ( soundType )
+        switch (soundType)
         {
             case SoundType.Music:
                 _sourceMusic.Stop();
                 break;
             case SoundType.SFX:
-                StopSFX( clip );
+                StopSFX(clip);
                 break;
             case SoundType.UI:
                 _sourceUI.Stop();
@@ -110,9 +116,9 @@ public class SoundEngine : MonoBehaviour
         }
     }
 
-    public void SetVolume( float volume , SoundType soundType )
+    public void SetVolume(float volume, SoundType soundType)
     {
-        switch ( soundType )
+        switch (soundType)
         {
             case SoundType.Music:
                 _sourceMusic.volume = volume;
@@ -126,96 +132,104 @@ public class SoundEngine : MonoBehaviour
         }
     }
 
-    private void PlayMusic( AudioClip clip )
+    private void PlayMusic(AudioClip clip)
     {
         _sourceMusic.clip = clip;
         _sourceMusic.Play();
     }
 
-    private void PlaySFX( AudioClip clip , bool loop , Transform target )
+    private void PlaySFX(AudioClip clip, bool loop, Transform target)
     {
         AudioSource source = _poolAdioSource.GetAudioSource();
-        if (   target != null )
+        if (target != null)
         {
-            _activeSource[ target ] = source;
+            _activeSource[target] = source;
         }
-        
+
         source.clip = clip;
         source.loop = loop;
         source.Play();
-        _activeSFXSources.Add( source );
+        _activeSFXSources.Add(source);
 
-      
 
-        StartCoroutine( ReturnToPool( source , target ) );
+
+        StartCoroutine(ReturnToPool(source, target));
     }
 
-    private void PlayOneShot( AudioClip clip , Transform target )
+    private void PlayOneShot(AudioClip clip, Transform target)
     {
-       // _sourceSFX.volume = GetDistanceForValue( target );
-        _sourceSFX.PlayOneShot( clip );
+        if (target == null) _sourceSFX.volume = 1;
+        else _sourceSFX.volume = GetDistanceForValue(target);
+
+        _sourceSFX.PlayOneShot(clip);
     }
 
-    public void StopSFX( AudioClip clip )
+    public void StopSFX(AudioClip clip)
     {
-        List<AudioSource> sourcesToRemove = new List<AudioSource>();
+        List<AudioSource> sourcesToRemove = new();
 
-        foreach ( AudioSource source in _activeSFXSources )
+        foreach (AudioSource source in _activeSFXSources)
         {
-            if ( source.clip == clip )
+            if (source.clip == clip)
             {
-                sourcesToRemove.Add( source );
-                _poolAdioSource.ReturnAudioSource( source );
+                sourcesToRemove.Add(source);
+                _poolAdioSource.ReturnAudioSource(source);
             }
         }
 
-        foreach ( AudioSource source in sourcesToRemove )
+        foreach (AudioSource source in sourcesToRemove)
         {
-            _activeSFXSources.Remove( source );
+            _activeSFXSources.Remove(source);
         }
     }
 
-    private void PlayUI( AudioClip clip )
+    private void PlayUI(AudioClip clip)
     {
-        _sourceUI.PlayOneShot( clip );
+        _sourceUI.PlayOneShot(clip);
     }
 
-    private IEnumerator ReturnToPool( AudioSource source , Transform target )
+    private IEnumerator ReturnToPool(AudioSource source, Transform target)
     {
-        yield return new WaitWhile( () => source.isPlaying );
+        yield return new WaitWhile(() => source.isPlaying);
 
-        if ( target != null && _activeSource.ContainsKey( target ) )
+        if (target != null && _activeSource.ContainsKey(target))
         {
-            _activeSource.Remove( target );
+            _activeSource.Remove(target);
         }
 
-        _activeSFXSources.Remove( source );
-        _poolAdioSource.ReturnAudioSource( source );
+        _activeSFXSources.Remove(source);
+        _poolAdioSource.ReturnAudioSource(source);
     }
 
     private IEnumerator UpdateDistanceTarget()
     {
-        while ( true )
+        while (true)
         {
-            foreach ( var item in _activeSource )
+            foreach (var item in _activeSource)
             {
                 Transform target = item.Key;
                 AudioSource source = item.Value;
 
-                if ( target.gameObject.activeSelf )
+                if (target.gameObject.activeSelf)
                 {
-                    float distance = Vector3.Distance( target.position , MainCamera.transform.position );
-                    float volume = Mathf.Clamp01( 1 - ( distance - _minDistance ) / ( _maxDistance - _minDistance ) );
+                    float distance = Vector3.Distance(target.position, MainCamera.transform.position);
+                    float volume = Mathf.Clamp01(1 - (distance - _minDistance) / (_maxDistance - _minDistance));
                     source.volume = volume;
                 }
             }
-            yield return new WaitForSeconds( 0.5f );  
+            yield return new WaitForSeconds(0.5f);
         }
     }
 
-    private float GetDistanceForValue( Transform target )
+
+
+
+    private float GetDistanceForValue(Transform target)
     {
-        float distance = Vector3.Distance( target.position , MainCamera.transform.position  );
-        return Mathf.Clamp01( 1 - ( distance - _minDistance ) / ( _maxDistance - _minDistance ) );
+        if (target == null) Debug.Log("GetDistanceForValue ERROR TARGET");
+        if (MainCamera == null) Debug.Log("ERROR CAMERA");
+
+        float distance = Vector3.Distance(target.position, MainCamera.transform.position);
+        return Mathf.Clamp01(1 - (distance - _minDistance) / (_maxDistance - _minDistance));
     }
 }

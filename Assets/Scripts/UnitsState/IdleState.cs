@@ -30,7 +30,7 @@ public class IdleState : IUnitState
     public void ExitState( UnitComponent unit )
     {
         unit.GetGameHub.GetUnitsUpdateEngine.RemoveUnit( unit , StateUnitList.OTHER );
-        SoundEngine.Instance.StopSound( SoundType.SFX, unit.GetConfig.GetSoundIdle );
+     //   SoundEngine.Instance.StopSound( SoundType.SFXPlayOne, unit.GetConfig.GetSoundIdle );
     }
 
     public void UpdateState( UnitComponent unit )
@@ -45,7 +45,7 @@ public class IdleState : IUnitState
             unit.GetDirectionView[ 1 ] = _listPosition[ randomIndex ][ 1 ];
             unit.StartAnimation.ToRun( StateUnit.IDLE );
            
-            SoundEngine.Instance.PlaySound( unit.GetConfig.GetSoundIdle , SoundType.SFX, false, unit.transform );
+            SoundEngine.Instance.PlaySound( unit.GetConfig.GetSoundIdle , SoundType.SFXPlayOne, false, unit.transform );
             _randomTimer = RandomTimerForIdleAnim();
         }
         _randomTimer--;

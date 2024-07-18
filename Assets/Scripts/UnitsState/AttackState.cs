@@ -41,7 +41,7 @@ public class AttackState : IUnitState
             if ( _damage >= 0 )
             {
                 float damageAndCrit = CalculatingDamage();
-                unit.StartAnimation.ToRun( StateUnit.ATTACK );
+             
 
                 if ( !_playSound )
                 {
@@ -50,6 +50,7 @@ public class AttackState : IUnitState
                     _loop = unit.GetConfig.GetWeaponsConfig.GetSpeedAttack <= 0;
                     SoundEngine.Instance.PlaySound( _attackClips[ 0 ] , SoundType.SFX , _loop , unit.transform );
                 }
+                unit.StartAnimation.ToRun(StateUnit.ATTACK);
 
                 _attack.Attack( damageAndCrit ); // Передать урон классу оружия для нанесения урона врагу
             }
