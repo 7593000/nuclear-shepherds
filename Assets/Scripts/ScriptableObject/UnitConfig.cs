@@ -19,8 +19,7 @@ public class UnitConfig : ScriptableObject
     [SerializeField, Tooltip( "Шанс поразить цель" ), Range( 0.1f , 1f )]
     private float _luck;
  
-    [SerializeField, Tooltip( "Занимаемое количество клеток на карте при установки юнита" ), Range( 1 , 19 )]
-    private int _occupiedArea;
+ 
 
     [SerializeField, Tooltip( "Сокорсть движения" )]
     private float _speed;
@@ -60,7 +59,10 @@ public class UnitConfig : ScriptableObject
     private Sprite _sprite;
     [SerializeField,Tooltip("Звук бездействия")]
     private AudioClip _soundIdle;
- 
+    [SerializeField, Tooltip( "Звук смерти" )]
+    private AudioClip _soundDead;
+
+
     public int GetId => _id;
 
 
@@ -104,12 +106,7 @@ public class UnitConfig : ScriptableObject
     /// Получить тип используемого оружия
     /// </summary>
     public TypeWeapons GetTypeWeapons => _typeWeapon;
-
-    /// <summary>
-    /// Получить количество занимаемых клеток на поле
-    /// </summary>
-    public int GetOccupiedArea => _occupiedArea;
-
+ 
     /// <summary>
     /// Получить скорость передвижения юнита
     /// </summary>
@@ -148,7 +145,9 @@ public class UnitConfig : ScriptableObject
     /// </summary>
     public Sprite GetSprite => _sprite;
     public AudioClip GetSoundIdle => _soundIdle;
- 
+    public AudioClip GetSoundDead => _soundDead;
+
+
 
 
 

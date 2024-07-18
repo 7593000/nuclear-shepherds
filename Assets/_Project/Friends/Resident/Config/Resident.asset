@@ -14,22 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _id: 1176131824
   _unitType: 1
-  _name: "\u0416\u0438\u0442\u0435\u043B\u044C"
+  _name: "\u0416\u0438\u0442\u0435\u043B\u044C \u0443\u0431\u0435\u0436\u0438\u0449\u0430"
   _health: 0
-  _luck: 0.699
-  _occupiedArea: 1
+  _luck: 0.8
   _speed: 0
   _typeWeapon: 2
   _config: {fileID: 11400000, guid: 66a2e95831cbed44a864d8963c9b28aa, type: 2}
   _cost: 0
-  _costUpgrade: 2000
-  _damageRatio: 2
-  _speedAttackRatio: 0.08
-  _luckRatio: 0.05
+  _costUpgrade: 0
+  _damageRatio: 0
+  _speedAttackRatio: 0
+  _luckRatio: 0
   _firearms: 0
   _fire: 0
   _energyWeapons: 0
   _explosionProtection: 0
-  _unitPrefab: {fileID: 6797377760339903826, guid: 1991ce10dffff1b4d8f025f77108f3cb, type: 3}
-  _sprite: {fileID: 21300000, guid: e031eba9eb0c3f849b6bc76c19e87110, type: 3}
-  GetId: 0
+  _unitPrefab: {fileID: 6529943733143567686, guid: 994a1f4ad545f6746886c47f3afa8c49, type: 3}
+  _sprite: {fileID: 21300000, guid: eaed120399410b2419ece7df296b1f89, type: 3}
+  _soundIdle: {fileID: 8300000, guid: 29d70fcac3e01c54288595020848969e, type: 3}

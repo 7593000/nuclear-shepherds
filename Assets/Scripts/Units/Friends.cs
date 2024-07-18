@@ -61,7 +61,7 @@ public class Friends : UnitComponent, IPointerClickHandler, IPointerEnterHandler
             if (hit != null)
             {
                 _lineRenderer.enabled = true;
-                //todo - > установить курсор
+                
             }
         }
 
@@ -69,7 +69,7 @@ public class Friends : UnitComponent, IPointerClickHandler, IPointerEnterHandler
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        //Todo => установить стандартный курсор
+       
         _lineRenderer.enabled = false;
     }
     public override void DeactiveUnit()

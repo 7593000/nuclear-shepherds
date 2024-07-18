@@ -42,8 +42,9 @@ public class Brahmin : UnitComponent, IHealth, IMovable
             if (health <= 0)
             {
                 _manager.DeadBrahmin(this);
-                DeactiveUnit();
+                //  DeactiveUnit();
 
+                SetState( DeadState );
 
 
             }

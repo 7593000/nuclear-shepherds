@@ -74,6 +74,7 @@ public abstract class UnitComponent : MonoBehaviour
     }
     protected virtual void AddComponentsUnit()
     {
+
         if ( _gameHub == null )
             _gameHub = FindObjectOfType<GameHub>();
 

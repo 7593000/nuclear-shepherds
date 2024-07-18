@@ -5,7 +5,9 @@ public class DeadState : IUnitState
 {
     public void EnterState( UnitComponent unit )
     {
-       
+        unit.GetAnimator.SetTrigger( "Dead" );
+        if ( unit.GetConfig.GetSoundDead )
+            SoundEngine.Instance.PlaySound( unit.GetConfig.GetSoundDead , SoundType.SFXPlayOne, unit.transform );
     }
 
     public void ExitState( UnitComponent unit )

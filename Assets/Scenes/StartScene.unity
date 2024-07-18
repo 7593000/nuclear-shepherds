@@ -529,6 +529,7 @@ MonoBehaviour:
   _sourceMusic: {fileID: 1609070198}
   _sourceSFX: {fileID: 1609070197}
   _sourceUI: {fileID: 1609070196}
+  _mainCamera: {fileID: 0}
   _maxDistance: 50
   _minDistance: 1
 --- !u!4 &1609070201
