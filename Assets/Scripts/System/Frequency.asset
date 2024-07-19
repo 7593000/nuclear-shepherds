@@ -27,10 +27,13 @@ MonoBehaviour:
     _percentageRatio: 10.7
   - _enemyConfig: {fileID: 11400000, guid: 2fae0fb220ededf45adab5a4a040836a, type: 2}
     _percentageAppearance: 0
-    _percentageRatio: 2
+    _percentageRatio: 1
   - _enemyConfig: {fileID: 11400000, guid: ffe72a6fbde9f5e4fb4d7ead1ca4e532, type: 2}
     _percentageAppearance: 0
-    _percentageRatio: 1
+    _percentageRatio: 5
   - _enemyConfig: {fileID: 11400000, guid: 95f5409d542a7de46bd1051ad61abc83, type: 2}
-    _percentageAppearance: 38
-    _percentageRatio: 8.3
+    _percentageAppearance: 20
+    _percentageRatio: 5
+  - _enemyConfig: {fileID: 11400000, guid: 1da3d0eeba328174aaebf2d655f2cdf5, type: 2}
+    _percentageAppearance: 0
+    _percentageRatio: 3.4

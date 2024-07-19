@@ -17,7 +17,6 @@ MonoBehaviour:
   _name: "\u041A\u043E\u0433\u043E\u0442\u044C \u0441\u043C\u0435\u0440\u0442\u0438"
   _health: 1000
   _luck: 0.55
-  _occupiedArea: 1
   _speed: 1.8
   _typeWeapon: 1
   _config: {fileID: 11400000, guid: 9b53894a397d5f2438fce9d92c255ea0, type: 2}
@@ -33,3 +32,4 @@ MonoBehaviour:
   _unitPrefab: {fileID: 4936857353151220823, guid: 62eb8c271f8318c45819d874ea31cc03, type: 3}
   _sprite: {fileID: -1384785875, guid: bafb5cff76fd6a9429f18ccab0be06d3, type: 3}
   _soundIdle: {fileID: 0}
+  _soundDead: {fileID: 0}
