@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,14 +43,14 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -106,9 +106,1156 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: MrHandy-attack_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 928
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 300e9e01e5fe5d44898bd8ec1a6c5c1b
+      internalID: -656933704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 928
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 358b95af731f66f498fc9057560cf6bd
+      internalID: 1754354064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 928
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ca9e9c0c25b29f429a16d49a605c2a1
+      internalID: -1701956619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_3
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 928
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bc02a40bc90f3740abc873ebcacf15e
+      internalID: -649653855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_4
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 928
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45e73779c0adce64d85336cef2695ec8
+      internalID: 102826830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_5
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 928
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cb10f2b9d997fc4ebeb05cb10bbd36e
+      internalID: -363556295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_6
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 928
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7b676382facf79439a812301a0122d5
+      internalID: 1823714192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 800
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6465a728e4ff6f4f9ced7aef94bb4e3
+      internalID: -1331098138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_8
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 800
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61ce15b26bd28984fba4f023aa660805
+      internalID: 1084593377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_9
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 800
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bec99fc1e31448d49a0a6ac4f8b0bc1d
+      internalID: 734314795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_10
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 800
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e87e32ab4fb5c3f4ebc824f0d61ab868
+      internalID: 371191417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_11
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 800
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e128d18cea5f45488d8935278d79c07
+      internalID: -592189949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_12
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 800
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bbb8d4deb5b49042b7d08e2541ff12b
+      internalID: 1266174526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_13
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 800
+        width: 127
+        height: 128
+      alignment: 9
+      pivot: {x: 0.63779527, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d41287074512b244fa8c35e557eed192
+      internalID: 285069515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 672
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35f10f85a7f7d9b4797d74638f04e44d
+      internalID: 1031444894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_15
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 672
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 288987aadd7b7404095acdded784760d
+      internalID: 1400308978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_16
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 672
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3284f8f16d3c044fa7b38c9206c4b1f
+      internalID: 1913252503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_17
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 672
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 583f63f622de20e4288f06cdeeb50280
+      internalID: -2142521553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_18
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 672
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10f89b2d03dcee445b9041e2cb394877
+      internalID: -1913318912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_19
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 672
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8670f5cce3c4d384492048e9454b6be2
+      internalID: 690015286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_20
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 672
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f878aef0359451f4c85983242c2a7912
+      internalID: 1608607982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 544
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12ab554ce593ecd46b7a602770c8eb16
+      internalID: -1952559638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_22
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 544
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b258266c8b42ac40990a6708c69dd51
+      internalID: -995676188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_23
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 544
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3831e70008d67d44a33a4a6fceb806e
+      internalID: -1877919708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_24
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 544
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd4f945f2fdaf0b4fb16a1f84c2d9ab3
+      internalID: -1558888710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_25
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 544
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3d68dab5d7e6ae49ad5a0428c862561
+      internalID: -108778252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_26
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 544
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abad8abc89cdbdb429f8e9490fdffe6a
+      internalID: -923005632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_27
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 544
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d943e02cc288904fb2f48b963e86593
+      internalID: -1182787774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 416
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb60640663c99504796323479a07dcb0
+      internalID: 1347823863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_29
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 416
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66a9eb5c37f109e4683de771e124aaf3
+      internalID: -190363091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_30
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 416
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22131aa97c5da8943bb1113c29747906
+      internalID: 1536613872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_31
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 416
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a082d965746b3b048bb37d0f67fd339f
+      internalID: -21256685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_32
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 416
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3435c6067b63ca2438621691bd1e6cbb
+      internalID: -408355796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_33
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 416
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4b38d2963e2d24469bca6dbe016b345
+      internalID: 1013456874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_34
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 416
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11405d8f2b0afcb43abbe26037762164
+      internalID: 2089906291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acc93451897dc524aa2553529d318b87
+      internalID: -600866687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_36
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 288
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45e19ff1fe88c004bbe7b0272e77a067
+      internalID: -1406564506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_37
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 288
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e5750147ef93c444a5509cbb47fd091
+      internalID: -1434977898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_38
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 288
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee8e299d412a3714cb69b57ce7df7a21
+      internalID: -1200777200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_39
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 288
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9315019ba22bb4f40a5b034bd3910a33
+      internalID: 1357762426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_40
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 288
+        width: 95
+        height: 128
+      alignment: 9
+      pivot: {x: 0.49473685, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3e31136bce8d53469c8479e19a8de8c
+      internalID: -687507301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_41
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62d2459ece896114d93e0ae3f70add39
+      internalID: 80313892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_42
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 160
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 923fcf5581532504ea87dbe672f4337a
+      internalID: -957464324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_43
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 160
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 142dbd64c75bd5842be578835bb7052c
+      internalID: -585646154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_44
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 160
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07158b4ae22cc734f809b2a535986948
+      internalID: 1051243558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_45
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 160
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a48dab9b625b6e48a890fc5cf5d5b7f
+      internalID: -102523443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_46
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 160
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64d85f9bb632ce74c879a62b0fe2cd55
+      internalID: 359818425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_47
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 160
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e49abc482d04a884d83be900a78c2cfc
+      internalID: 350570879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 147d12fe712736943ac42da7cdf20970
+      internalID: 1144169121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_49
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fb7de0d49be2bb44b32b4bc07cf126c
+      internalID: 100258680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_50
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82f43bda4a65c3c43b60493b05b7b8c9
+      internalID: 2070172947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_51
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 32
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd9205e8e09ca19409cfd5375ca436db
+      internalID: 1506180780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_52
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 32
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e94b4d0b504f1849a38efcc538a0f20
+      internalID: -692910486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MrHandy-attack_53
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 32
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.328125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ac81e164046f0f47a9d22f39246ba65
+      internalID: 2145925668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +1266,61 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MrHandy-attack_0: -656933704
+      MrHandy-attack_1: 1754354064
+      MrHandy-attack_10: 371191417
+      MrHandy-attack_11: -592189949
+      MrHandy-attack_12: 1266174526
+      MrHandy-attack_13: 285069515
+      MrHandy-attack_14: 1031444894
+      MrHandy-attack_15: 1400308978
+      MrHandy-attack_16: 1913252503
+      MrHandy-attack_17: -2142521553
+      MrHandy-attack_18: -1913318912
+      MrHandy-attack_19: 690015286
+      MrHandy-attack_2: -1701956619
+      MrHandy-attack_20: 1608607982
+      MrHandy-attack_21: -1952559638
+      MrHandy-attack_22: -995676188
+      MrHandy-attack_23: -1877919708
+      MrHandy-attack_24: -1558888710
+      MrHandy-attack_25: -108778252
+      MrHandy-attack_26: -923005632
+      MrHandy-attack_27: -1182787774
+      MrHandy-attack_28: 1347823863
+      MrHandy-attack_29: -190363091
+      MrHandy-attack_3: -649653855
+      MrHandy-attack_30: 1536613872
+      MrHandy-attack_31: -21256685
+      MrHandy-attack_32: -408355796
+      MrHandy-attack_33: 1013456874
+      MrHandy-attack_34: 2089906291
+      MrHandy-attack_35: -600866687
+      MrHandy-attack_36: -1406564506
+      MrHandy-attack_37: -1434977898
+      MrHandy-attack_38: -1200777200
+      MrHandy-attack_39: 1357762426
+      MrHandy-attack_4: 102826830
+      MrHandy-attack_40: -687507301
+      MrHandy-attack_41: 80313892
+      MrHandy-attack_42: -957464324
+      MrHandy-attack_43: -585646154
+      MrHandy-attack_44: 1051243558
+      MrHandy-attack_45: -102523443
+      MrHandy-attack_46: 359818425
+      MrHandy-attack_47: 350570879
+      MrHandy-attack_48: 1144169121
+      MrHandy-attack_49: 100258680
+      MrHandy-attack_5: -363556295
+      MrHandy-attack_50: 2070172947
+      MrHandy-attack_51: 1506180780
+      MrHandy-attack_52: -692910486
+      MrHandy-attack_53: 2145925668
+      MrHandy-attack_6: 1823714192
+      MrHandy-attack_7: -1331098138
+      MrHandy-attack_8: 1084593377
+      MrHandy-attack_9: 734314795
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -106,9 +106,1408 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: WildGhoul-attack_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 736
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.20833334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66a644e82c6eb564fb44530eff40b1ed
+      internalID: -1281376744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 736
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.421875, y: 0.19791667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 231c355ede158e444ac8fa01ddad2ebd
+      internalID: 682258638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 736
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.390625, y: 0.20833334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25ae2699309211449b339c2bffa06b73
+      internalID: -1548942653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 736
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.421875, y: 0.19791667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb874b696026d5a439b81055860aa243
+      internalID: -1242083147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 736
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.421875, y: 0.20833334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efb4696e967f6294ebca76d7cfaa5a47
+      internalID: 973379365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 736
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.453125, y: 0.22916667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d6d0afb9e295af49832db07aa8f214d
+      internalID: -1669153476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 736
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.421875, y: 0.19791667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2d9051408ff0884b80e598193fef0f2
+      internalID: 1314890353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 736
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.453125, y: 0.20833334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 939bda3c8b7a7bb4085dde96d7025de3
+      internalID: 1644925208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 736
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.53125, y: 0.21875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 633b991df7c873e4c964eac87cd24a00
+      internalID: -136611110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 736
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.609375, y: 0.22916667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2405a68868f7ec544b5ac4dab0af18fb
+      internalID: 2062251187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_10
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 736
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.578125, y: 0.21875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f955a3784d1a08f4d99fa8693ee7fec2
+      internalID: 2077494829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2395833}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b05bc769d9309bc45b8e4e191864e1c5
+      internalID: 165458514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_12
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 640
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.4375, y: 0.23958334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a45e1525d17aa1e44983a47ea444e412
+      internalID: 1070115665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_13
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 640
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.359375, y: 0.23958334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7613720a003053b44be11080bcb7d6c2
+      internalID: 1059417476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_14
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 640
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.375, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9456a6b0bc3ab0d46b403b73a3834e57
+      internalID: -315183574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_15
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 640
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.21875, y: 0.27083334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dea9c52fac908846af50cfd814a4ec3
+      internalID: 2034141092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_16
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 640
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.34375, y: 0.28125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7de9c77bd62f9e340b9c59d92dbc1ac0
+      internalID: 2038347572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_17
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 640
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.328125, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b4cd6905078e544d99665279daefe67
+      internalID: -620886625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_18
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 640
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.40625, y: 0.23958334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 419f08c790636634283e343b1b335f06
+      internalID: 1649381790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_19
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 640
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.46875, y: 0.22916667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e44c3711cf5d5fd4db4a55ba6a865f5a
+      internalID: 1465915669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_20
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 640
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5625, y: 0.21875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fa3d3b7683ad0d49a223cbf48a78b50
+      internalID: 1558434066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_21
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 640
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.59375, y: 0.22916667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbc805be9f38a4a408b7cb5ab82cda94
+      internalID: 1649525245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 544
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.453125, y: 0.21875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbbbc61943945bf41a4d3e3ddbd87039
+      internalID: -1049233512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_23
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 544
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.390625, y: 0.27083334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dcdee6fcf7aea644bcd430f1b16bb63
+      internalID: -822963422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_24
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 544
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.328125, y: 0.2916667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c78275b22c762ea468472f373f6a3019
+      internalID: 993917187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_25
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 544
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.3125, y: 0.3229167}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bd5def65643dd14eb78967780cb1181
+      internalID: -1895964986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_26
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 544
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.203125, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9473c22e96bc2e4ca896b14d952e63b
+      internalID: 1826036918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_27
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 544
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.203125, y: 0.33333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f9b2085f42c24e429545404eb554ce5
+      internalID: 1611850778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_28
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 544
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.265625, y: 0.33333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d85c54abf0940e940a6215a2f053d25b
+      internalID: -915137159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_29
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 544
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.359375, y: 0.28125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b13c617b0a985f048953dfac71da832b
+      internalID: -1680237320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_30
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 544
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.375, y: 0.22916667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d76854639fb8f444d8eebc5b5db7468f
+      internalID: 2081861404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_31
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 544
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.4375, y: 0.1875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 681826eda4b0f6947bc8ae1d5ac98e17
+      internalID: 1712561922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_32
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 544
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.453125, y: 0.1875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dee1062fb9362994b871888868a14c4a
+      internalID: 413628139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.53125, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e93235389fab7c94c982eaf10530483e
+      internalID: -2007192333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_34
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 448
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.59375, y: 0.28125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cffea21a9ada7fb4ea30dff02ae7ee0b
+      internalID: 2046144737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_35
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 448
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5625, y: 0.3125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17490dca32312a54e8c3ea1005c18ef5
+      internalID: -763475400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_36
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 448
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.640625, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9397dad9f89a3a499c3c5e7a3da28a1
+      internalID: 14508932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_37
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 448
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.546875, y: 0.40625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fce06779340a41c4f934e41c7dcec0e5
+      internalID: -1127846396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_38
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 448
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3854167}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62827f7e979f88549b29890006655dcc
+      internalID: -568330486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_39
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 448
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.53125, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 365906f0cebe5de41a8d8825c10251e2
+      internalID: -743032086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_40
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 448
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.46875, y: 0.3125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e29b551ba003974ebb208fcce5c0276
+      internalID: -2004731183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_41
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 448
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.40625, y: 0.27083334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da0b9cf46104c97479ef90d1e9bd9ef7
+      internalID: 1433978730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_42
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 448
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.328125, y: 0.23958334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 434da35ec50f2e74e8bb7e1bdac7cb52
+      internalID: -1594951245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_43
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 448
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.359375, y: 0.22916667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f6e69873780bc340b55129079745cce
+      internalID: -1818121981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 352
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5625, y: 0.2604167}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2853071d0374dbd4e92560546a205fec
+      internalID: 1357981098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_45
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 352
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.609375, y: 0.2604167}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 444f72d6b8cc28b49a3d37c7d5f17c1a
+      internalID: -1554891185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_46
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 352
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.703125, y: 0.27083334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab40dc41c39f9ea4cbb39e5cbdb24205
+      internalID: 2138574617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_47
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 352
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.6875, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8221c840c406b341a8ed191293446e9
+      internalID: -661725375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_48
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 352
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.859375, y: 0.3125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f363f289f82880b47b8cce7b89554ede
+      internalID: -2078936473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_49
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 352
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.734375, y: 0.36458334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7cb3cbd62fde8644b798a6a9aba3e0a
+      internalID: -757117833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_50
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 352
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.75, y: 0.2916667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 907cdcd8fdf66054899863ef5a199e77
+      internalID: 1275879639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_51
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 352
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.671875, y: 0.2604167}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93b6500806f8e0d408f712aa73cadcde
+      internalID: -380380934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_52
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 352
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.578125, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78dc8ed32ce2e134587c6d13b967e3bf
+      internalID: -360902309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_53
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 352
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.484375, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c829f8197deb8f54f87904fe64f34c49
+      internalID: 562931718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_54
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 352
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.4375, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e59849eebd24cc946986e0dd2707bc70
+      internalID: -1311660975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_55
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2395833}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df3603e97d390144abd69a1e90c4fe01
+      internalID: 1576531477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_56
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 256
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.53125, y: 0.23958334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c372c76968f72a4385d3f716c044a5e
+      internalID: 803709470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_57
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.625, y: 0.23958334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bc295f5a269aa343b2857fc5e2e4228
+      internalID: 271866432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_58
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 256
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.625, y: 0.20833334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5677c3a0cc7238741b03b4e5df73e15a
+      internalID: -1049537115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_59
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.75, y: 0.23958334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c1d1133571507a4cbc0e8cce71b95fc
+      internalID: -1898404265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_60
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 256
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.75, y: 0.27083334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b78155a70165e404e866994a40d70e22
+      internalID: 1199233421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_61
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 256
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.6875, y: 0.22916667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 751600b1ad1b075468689d1bbc287053
+      internalID: 958891892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_62
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 256
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.609375, y: 0.20833334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3ea3ea781a444643bdff893264091af
+      internalID: 1824063487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_63
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 256
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.59375, y: 0.21875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94f24c0f8311b9b4f8efed538a0ab672
+      internalID: 1780732102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_64
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 256
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.546875, y: 0.22916667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e8d84ef601ca074991cf012451a5099
+      internalID: 673515273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WildGhoul-attack_65
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 256
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.546875, y: 0.22916667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ddbd65a906113d41a0d08a5fc8fb1eb
+      internalID: 1808653731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +1518,73 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      WildGhoul-attack_0: -1281376744
+      WildGhoul-attack_1: 682258638
+      WildGhoul-attack_10: 2077494829
+      WildGhoul-attack_11: 165458514
+      WildGhoul-attack_12: 1070115665
+      WildGhoul-attack_13: 1059417476
+      WildGhoul-attack_14: -315183574
+      WildGhoul-attack_15: 2034141092
+      WildGhoul-attack_16: 2038347572
+      WildGhoul-attack_17: -620886625
+      WildGhoul-attack_18: 1649381790
+      WildGhoul-attack_19: 1465915669
+      WildGhoul-attack_2: -1548942653
+      WildGhoul-attack_20: 1558434066
+      WildGhoul-attack_21: 1649525245
+      WildGhoul-attack_22: -1049233512
+      WildGhoul-attack_23: -822963422
+      WildGhoul-attack_24: 993917187
+      WildGhoul-attack_25: -1895964986
+      WildGhoul-attack_26: 1826036918
+      WildGhoul-attack_27: 1611850778
+      WildGhoul-attack_28: -915137159
+      WildGhoul-attack_29: -1680237320
+      WildGhoul-attack_3: -1242083147
+      WildGhoul-attack_30: 2081861404
+      WildGhoul-attack_31: 1712561922
+      WildGhoul-attack_32: 413628139
+      WildGhoul-attack_33: -2007192333
+      WildGhoul-attack_34: 2046144737
+      WildGhoul-attack_35: -763475400
+      WildGhoul-attack_36: 14508932
+      WildGhoul-attack_37: -1127846396
+      WildGhoul-attack_38: -568330486
+      WildGhoul-attack_39: -743032086
+      WildGhoul-attack_4: 973379365
+      WildGhoul-attack_40: -2004731183
+      WildGhoul-attack_41: 1433978730
+      WildGhoul-attack_42: -1594951245
+      WildGhoul-attack_43: -1818121981
+      WildGhoul-attack_44: 1357981098
+      WildGhoul-attack_45: -1554891185
+      WildGhoul-attack_46: 2138574617
+      WildGhoul-attack_47: -661725375
+      WildGhoul-attack_48: -2078936473
+      WildGhoul-attack_49: -757117833
+      WildGhoul-attack_5: -1669153476
+      WildGhoul-attack_50: 1275879639
+      WildGhoul-attack_51: -380380934
+      WildGhoul-attack_52: -360902309
+      WildGhoul-attack_53: 562931718
+      WildGhoul-attack_54: -1311660975
+      WildGhoul-attack_55: 1576531477
+      WildGhoul-attack_56: 803709470
+      WildGhoul-attack_57: 271866432
+      WildGhoul-attack_58: -1049537115
+      WildGhoul-attack_59: -1898404265
+      WildGhoul-attack_6: 1314890353
+      WildGhoul-attack_60: 1199233421
+      WildGhoul-attack_61: 958891892
+      WildGhoul-attack_62: 1824063487
+      WildGhoul-attack_63: 1780732102
+      WildGhoul-attack_64: 673515273
+      WildGhoul-attack_65: 1808653731
+      WildGhoul-attack_7: 1644925208
+      WildGhoul-attack_8: -136611110
+      WildGhoul-attack_9: 2062251187
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

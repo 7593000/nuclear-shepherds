@@ -37,7 +37,7 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IBeginDragHandle
     private bool _tilemapStatus = false;
     [SerializeField] private bool _transfer = false;
     private Vector3 _positionForUnit;
-
+    [SerializeField] private Transform _parent;
 
 
     public void Initialized(GameHub gameHub)
@@ -235,7 +235,7 @@ public class BottomPanel : MonoBehaviour, IPointerClickHandler, IBeginDragHandle
             {
                 if (_wallet.TakeCurrency(_activeCard.GetPrice))
                 {
-                    UnitComponent unit = Instantiate(_activeCard.GetConfig.GetPrefab);
+                    UnitComponent unit = Instantiate(_activeCard.GetConfig.GetPrefab, _parent);
 
                     if (unit != null)
                     {
